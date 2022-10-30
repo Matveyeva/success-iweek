@@ -107,9 +107,24 @@ input[type="submit"] {
 }
 .container{
 	width: 100%;
-	max-width: 1320px;
+	width: 1320px;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-left: auto;
 	margin-right: auto;	
+	@media(max-width:1364px){
+		width: 1140px;
+	}
+	@media(max-width:1199px){
+		width: 960px;
+	}
+	@media(max-width:991px){
+		width: 760px;
+	}
+	@media(max-width:767px){
+		width: 540px;
+	}
+	@media(max-width:574px){
+		width: 100px;
+	}
 }
