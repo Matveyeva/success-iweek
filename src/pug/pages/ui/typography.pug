@@ -1,0 +1,74 @@
+include ../../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ../../ui/ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Типографика
+
+				.container-dashboard__content
+					ul
+						li
+							.text-44 Заголовок или текст  44px
+							pre.
+								.text-44 Заголовок или текст 44px
+						hr
+						li
+							.text-32 Заголовок или текст 32px
+							pre.
+								.text-32 Заголовок или текст 32px
+						hr
+						li
+							.text-24 Заголовок или текст 24px
+							pre.
+								.text-24 Заголовок или текст 24px
+						hr
+						li
+							.text-18 Бесплатно 18 / 1.67
+							pre.
+								.text-18 Бесплатно 18 / 1.67
+						hr
+						li
+							.text-14 Диагностика 14 / 1.43
+							pre.
+								.text-14 Диагностика 14 / 1.43
+						hr
+						li
+							.text-bold text font-weight: 700
+							pre.
+								.text-bold text font-weight: 700
+						hr
+						li
+							.text-demi text font-weight: 600
+							pre.
+								.text-demi text font-weight: 600
+						hr
+						li
+							.text-medium text font-weight: 500
+							pre.
+								.text-medium text font-weight: 500
+
+						hr
+						li
+							.li-box(style="background-color: blue;")
+								.text-white Текст белого цвета
+							pre.
+								.text-white Текст белого цвета
+
+					
