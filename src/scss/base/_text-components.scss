@@ -1,0 +1,45 @@
+/*text-components*/
+.text-32 sup{
+	color: $gray3;
+	font-size: 0.6em;
+	margin-left: 8px;
+}
+
+.text-icon{
+	display: inline-block;
+	padding-left: 28px;
+	position: relative;
+	color: #000;
+	font-family: $med;
+	line-height: 20px;
+	&::after{
+		position: absolute;
+		top: 50%;
+		transform:translateY(-50%);
+		left: 0;
+		content: '';
+		width: 20px;
+		height: 20px;
+		
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+.text-icon>*+*{margin-left: 8px;}
+.text-icon.text-phone{
+	&::after{background-image: url('../../img/svg/call.svg');}
+}
+.text-phone.text-white{
+	&::after{background-image: url('../../img/svg/call2.svg');}
+}
+.text-icon.text-address{
+	&::after{
+		background-image: url('../../img/svg/map.svg');
+	}
+}
+.text-icon.text-extrim{
+	&::after{
+		background-image: url('../../img/svg/extrim.svg');
+	}
+}
