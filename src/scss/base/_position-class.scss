@@ -1,0 +1,24 @@
+/*position class*/
+.flex-box{
+	display: flex;
+}
+.flex-center{
+   justify-content: center;
+   align-items: center;
+}
+.flex-x-center{
+	justify-content: center;
+}
+.flex-x-right{
+	justify-content: flex-end;
+}
+.flex-y-center{
+	align-items: center;
+}
+.m-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+.w-100{
+	width: 100%!important;
+}
