@@ -25,20 +25,34 @@
 .text-medium{
 	font-family: $med;
 }
-.text-14{
-	font-size: 14px;
-	line-height: 1.43;
-}
+
 .text-18{
 	font-size: 18px;
 	line-height: 1.67;
 }
-
+.text-16{
+	font-size: 16px;
+	line-height: 20px;
+}
+.text-14{
+	font-size: 14px;
+	line-height: 1.43;
+}
+.text-12{
+	font-size: 12px;
+	line-height: 1.33;
+}
 .text-white{
 	color: #fff!important;
 }
 .text-red{
 	color: $coral!important;
+}
+.text-gray{
+	color: $gray;
+}
+.text-gray3{
+	color: $gray3;
 }
 /*text-components*/
 .text-32 sup{
@@ -48,5 +62,5 @@
 }
 
 .text-icon{
-	column-gap: 6px;
+	column-gap: 8px;
 }
