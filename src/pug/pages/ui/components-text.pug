@@ -72,8 +72,17 @@ html(lang="ru")
 
 						li
 							.li-box(style="background: linear-gradient(225deg, #578DF6 22.38%, #5757F6 75.99%);padding:10px;padding-bottom:10px")
-								.header-title.text-white
-									h1.text-44 Лучшие специалисты в сфере стоматологии
-									.text-24.text-medium Оказываем экстренную помощь
+								.header-title
+									h1.text-44.text-white Лучшие специалисты в сфере стоматологии
+									.text-24 Оказываем экстренную помощь
+							pre.
+								.header-title
+									h1.text-44.text-white Лучшие специалисты в сфере стоматологии
+									.text-24 Оказываем экстренную помощь
 
-						
+
+						li
+							+card-header('ИП Вердашев А.И.', 'Константинов Константин Констатинопольский', 'Стаж 17 лет')
+							pre.
+								+doctor-card-header('ИП Вердашев А.И.', 'Константинов Константин Констатинопольский', 'Стаж 17 лет')
+
