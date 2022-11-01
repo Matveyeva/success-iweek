@@ -1,3 +1,11 @@
 .card-header{
 	.text-gray{margin-bottom: 2px;}	
 }
+.card-serv-wrapper{
+	gap: 32px;
+	flex-wrap: wrap;
+	.card-serv-item{
+		white-space: nowrap;
+		width: fit-content;
+	}
+}

@@ -7,7 +7,7 @@
 
 .text-icon{
 	display: inline-block;
-	padding-left: 28px;
+	// padding-left: 28px;
 	position: relative;
 	color: #000;
 	font-weight: 500;
@@ -28,15 +28,21 @@
 }
 .text-icon>*+*{margin-left: 8px;}
 .text-icon.text-phone{
-	&::after{background-image: url('../../img/svg/call.svg');}
+	&::after{background-image: url('../../img/svg/call.svg');
+	
+	}
+	padding-left: 28px;
 }
 .text-phone.text-white{
 	&::after{background-image: url('../../img/svg/call2.svg');}
+	padding-left: 28px;
+	
 }
 .text-icon.text-address{
 	&::after{
-		background-image: url('../../img/svg/map.svg');
+		background-image: url('../../img/svg/map.svg');	
 	}
+	padding-left: 28px;	
 	span{
 		margin-left: 10px;
 		display: inline-block;
@@ -44,8 +50,10 @@
 }
 .text-icon.text-extrim{
 	&::after{
-		background-image: url('../../img/svg/extrim.svg');
-	}
+		background-image: url('../../img/svg/extrim.svg');}
+		padding-left: 28px;
+		
+	
 }
 .header-title{
 	.text-24{

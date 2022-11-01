@@ -34,13 +34,13 @@ html(lang="ru")
 							.text-icon.flex-box.flex-y-center
 								.text-icon__img
 									svg.svg-extra(width="20" height="20" )
-										use(xlink:href="../img/svg-sprite.svg#extra")
+										use(xlink:href="../svg-sprite.svg#extra")
 								.text-red.text-14 Экстренная ситуация
 							pre.
 								.text-icon.flex-box.flex-y-center
 									.text-icon__img
 										svg.svg-extra(width="20" height="20" )
-											use(xlink:href="./img/svg-sprite.svg#extra")
+											use(xlink:href="./svg-sprite.svg#extra")
 									.text-red.text-14 Экстренная ситуация
 						li
 							.text-icon.text-extrim
@@ -105,10 +105,31 @@ html(lang="ru")
 								+card-price('Консультация', 'Бесплатно')
 								+card-price('Консультация', 'Бесплатно')
 								+card-price('Консультация', 'Бесплатно')
+								
 								.card-serv-item
 									.text-icon.text-extrim
 										.text-red.text-14 Экстренная ситуация
 									.text-18 от 5 700 руб.
+							pre.
+								.card-serv-wrapper.flex-box
+									+card-price('Консультация', 'Бесплатно')
+									+card-price('Консультация', 'Бесплатно')
+									+card-price('Консультация', 'Бесплатно')
+									
+									.card-serv-item
+										.text-icon.text-extrim
+											.text-red.text-14 Экстренная ситуация
+										.text-18 от 5 700 руб.
+						li
+							
+							.sale-block.text-indigo
+								.text-icon.flex-box.flex-y-center.text-indigo
+									.text-icon__img
+										svg.svg-flag(width="20" height="20" )
+											use(xlink:href="../svg-sprite.svg#svg-flag")
+									.text-14 Акции
+								.text-18 Лечение 8 зуба — бесплатно!
+
 
 
 
