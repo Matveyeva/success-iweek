@@ -80,6 +80,10 @@ gulp.task("copy:img", function(callback) {
     return gulp.src("./src/img/**/*.*").pipe(gulp.dest("./build/img/"));
     callback();
 });
+gulp.task("copy:svgSprite", function(callback) {
+    return gulp.src("./src/*.svg").pipe(gulp.dest("./build/"));
+    callback();
+});
 gulp.task("copy:fonts", function(callback) {
     return gulp.src("./src/fonts/**/*.*").pipe(gulp.dest("./build/fonts/"));
     callback();
@@ -158,7 +162,7 @@ gulp.task(
     "default",
     gulp.series(
         gulp.parallel("clean:build"),
-        gulp.parallel("scss", "pug", "copy:img", "copy:js", "copy:fonts", "copy:libs", "copy:video"),
+        gulp.parallel("scss", "pug","copy:svgSprite", "copy:img", "copy:js", "copy:fonts", "copy:libs", "copy:video"),
         gulp.parallel("html:prettify"),
         gulp.parallel("server", "watch"),
         gulp.parallel("imagemin")

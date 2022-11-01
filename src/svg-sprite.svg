@@ -1,0 +1,25 @@
+<svg display="none" xmlns="http://www.w3.org/2000/svg">
+	<!-- экстренная помощь -->
+	<symbol id="extra" viewBox="0 0 20 20">
+		<g>
+			<path d="M18.3334 10H15.0001L12.5001 17.5L7.50008 2.5L5.00008 10H1.66675" stroke="#EC6660" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+		</g>
+	</symbol>
+	
+	<!-- экстренная помощь white -->
+	<symbol id="extra-white" viewBox="0 0 24 24">
+		<g>
+			<path d="M22 12H18L15 21L9 3L6 12H2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+		</g>
+	</symbol>
+	<!-- заготовка -->
+	<symbol id="" viewBox="">
+		<g>
+			
+		</g>
+	</symbol>
+
+</svg>
+<!-- <svg width="39" height="23">
+	<use xlink:href="./img/svg-sprite.svg#comment-icon"></use>
+</svg> -->
