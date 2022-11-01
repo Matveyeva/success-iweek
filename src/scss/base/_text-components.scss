@@ -10,7 +10,7 @@
 	padding-left: 28px;
 	position: relative;
 	color: #000;
-	font-family: $med;
+	font-weight: 500;
 	line-height: 20px;
 	&::after{
 		position: absolute;
@@ -37,9 +37,21 @@
 	&::after{
 		background-image: url('../../img/svg/map.svg');
 	}
+	span{
+		margin-left: 10px;
+		display: inline-block;
+	}
 }
 .text-icon.text-extrim{
 	&::after{
 		background-image: url('../../img/svg/extrim.svg');
+	}
+}
+.header-title{
+	.text-24{
+		color: rgba(248, 251, 255, .5);
+		font-weight: 400;
+		margin-top: 8px;
+
 	}
 }
