@@ -1,10 +1,11 @@
 /*position class*/
-.flex-box{
+.flex-box,.flex-center,.flex-x-center,.flex-x-right,.flex-y-center{
 	display: flex!important;
 }
 .flex-center{
    justify-content: center;
    align-items: center;
+   display: flex!important;
 }
 .flex-x-center{
 	justify-content: center;

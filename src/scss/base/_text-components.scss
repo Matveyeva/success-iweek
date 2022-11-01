@@ -7,7 +7,6 @@
 
 .text-icon{
 	display: inline-block;
-	// padding-left: 28px;
 	position: relative;
 	color: #000;
 	font-weight: 500;
@@ -52,15 +51,12 @@
 	&::after{
 		background-image: url('../../img/svg/extrim.svg');}
 		padding-left: 28px;
-		
-	
 }
 .header-title{
 	.text-24{
 		color: rgba(248, 251, 255, .5);
 		font-weight: 400;
 		margin-top: 8px;
-
 	}
 }
 

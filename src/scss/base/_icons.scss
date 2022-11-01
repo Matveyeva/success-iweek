@@ -9,3 +9,41 @@
 svg{
 	display: inline-block;
 }
+.svg-heart{
+	stroke:#828282;
+	fill: transparent;
+	cursor:pointer;
+	transition: .3s;
+}
+.svg-heart:hover{
+	stroke:#EC6660;
+	fill: transparent;
+}
+
+.check-label{
+	background: #FFFFFF;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	
+	input{
+		width: 0.01px;
+		height: 0.01px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+
+	}
+	input:checked + svg{
+		
+		stroke:#EC6660;
+		fill: #EC6660;
+		&:hover{
+			stroke: #C5403A;
+			fill:#C5403A;
+		}
+	}
+}
