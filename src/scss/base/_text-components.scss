@@ -27,19 +27,19 @@
 }
 .text-icon>*+*{margin-left: 8px;}
 .text-icon.text-phone{
-	&::after{background-image: url('../../img/svg/call.svg');
+	&::after{background-image: url('../../img/call.svg');
 	
 	}
 	padding-left: 28px;
 }
 .text-phone.text-white{
-	&::after{background-image: url('../../img/svg/call2.svg');}
+	&::after{background-image: url('../../img/call2.svg');}
 	padding-left: 28px;
 	
 }
 .text-icon.text-address{
 	&::after{
-		background-image: url('../../img/svg/map.svg');	
+		background-image: url('../../img/map.svg');	
 	}
 	padding-left: 28px;	
 	span{
@@ -49,7 +49,7 @@
 }
 .text-icon.text-extrim{
 	&::after{
-		background-image: url('../../img/svg/extrim.svg');}
+		background-image: url('../../img/extrim.svg');}
 		padding-left: 28px;
 }
 .header-title{
