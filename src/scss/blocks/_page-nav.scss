@@ -1,0 +1,22 @@
+.page-nav{
+	&>ul{
+		display: flex;
+		column-gap: 36px;
+		li{
+			position: relative;
+			padding-bottom: 35px;
+			border-bottom: 4px solid transparent;
+			a{
+				color: #fff;
+				font-size: 18px;
+				display: block;
+			}
+		}
+		li:hover{
+			border-bottom: 4px solid #E7E7E7;
+		}
+		li.active{
+			border-bottom-color: $blue;
+		}
+	}
+}
