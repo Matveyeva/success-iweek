@@ -1,0 +1,21 @@
+.category-label{
+	column-gap: 12px;
+	height: 64px;
+	line-height: 60px;
+	padding-top: 4px;
+	padding-left: 24px;
+	padding-right: 24px;
+	background-color: #fff;
+	border-radius: 8px;
+	border-bottom: 4px solid transparent;
+	transition: .2s;
+	color: $gray;
+	&:hover{
+		border-bottom-color: $orange;
+		color: $gray;
+	}
+	&:active{
+		border-bottom-color: $dorange;
+		color: $gray;
+	}
+}

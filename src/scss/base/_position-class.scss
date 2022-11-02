@@ -5,7 +5,6 @@
 .flex-center{
    justify-content: center;
    align-items: center;
-   display: flex!important;
 }
 .flex-x-center{
 	justify-content: center;
@@ -17,7 +16,7 @@
 	align-items: center;
 }
 .flex-box-inline{
-	display: inline-flex;
+	display: inline-flex!important;
 }
 .m-auto{
 	margin-left: auto;
