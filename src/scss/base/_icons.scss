@@ -12,7 +12,6 @@ svg{
 .svg-heart{
 	stroke:#828282;
 	fill: transparent;
-	cursor:pointer;
 	transition: .3s;
 }
 .svg-heart:hover{
@@ -27,7 +26,7 @@ svg{
 	width: 24px;
 	height: 24px;
 	position: relative;
-	
+	cursor:pointer;
 	input{
 		width: 0.01px;
 		height: 0.01px;

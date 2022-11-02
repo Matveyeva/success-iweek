@@ -1,5 +1,5 @@
 /*position class*/
-.flex-box,.flex-center,.flex-x-center,.flex-x-right,.flex-y-center{
+.flex-box{
 	display: flex!important;
 }
 .flex-center{
@@ -15,6 +15,9 @@
 }
 .flex-y-center{
 	align-items: center;
+}
+.flex-box-inline{
+	display: inline-flex;
 }
 .m-auto{
 	margin-left: auto;
