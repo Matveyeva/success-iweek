@@ -1,4 +1,4 @@
-.btn, .btn-small, .btn--primary{
+.btn, .btn-small, .btn-primary{
 	height: 64px;
 	line-height: 64px;
 	color: #fff;
@@ -38,13 +38,24 @@
 		background-color: $dorange;
 	}
 }
-.btn--primary{
+.btn-small.btn-small--outline{
+	background-color: #fff;
+	color: $gray;
+	box-shadow: none;
+	&:hover{
+		background-color: #fff;
+		color: $indigo;
+	}
+}
+.btn-primary{
 	height: 32px;
 	line-height: 32px;
 	border-radius: 4px;
 	font-size: 14px;
 	font-weight: 400;
 	background-color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
 	background-color: $indigo;
 		&:hover{
 		background-color: $lindigo;
