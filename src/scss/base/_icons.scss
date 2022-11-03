@@ -6,6 +6,14 @@
 .svg-flag{
 	fill:transparent;
 }
+.svg-tg, .svg-wa{
+	fill: #73DF8F;
+	transition: .3s;
+	&:hover{
+		fill: #fff;
+	}
+}
+
 svg{
 	display: inline-block;
 }

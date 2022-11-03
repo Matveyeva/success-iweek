@@ -57,6 +57,9 @@
 		color: rgba(248, 251, 255, .5);
 		font-weight: 400;
 		margin-top: 8px;
+		@media (max-width: 767px) {
+		 margin-top: 12px;
+		}	
 	}
 }
 
