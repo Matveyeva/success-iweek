@@ -1,0 +1,47 @@
+.header{
+	min-height: 587px;
+	background: #272740;
+	position: relative;
+	overflow: hidden;
+	padding-top: 57px;
+	padding-bottom: 48px;
+	&:after{
+		content: '';
+		width: 71%;
+		padding-top: 500px;
+		position: absolute;
+		left: 50%;
+		bottom:0;
+		transform: translate(-50%, 110%);
+		background: rgb(236, 102, 96, .85);
+		
+		filter: blur(200px);
+		
+
+	}
+	.header-top{
+		margin-bottom: 64px;
+	}
+
+	.header-center{
+		.header-title{
+			margin-bottom: 36px;
+		}
+		.header-button{margin-top: 12px;}
+	}
+}
+.header-categories{
+	flex-wrap: wrap;
+	gap:12px;
+}
+
+.header-menu{
+	height: 111px;
+	background-color: rgba(0, 0, 0, .85);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 5;
+	padding-top: 40px;
+}

@@ -1,3 +1,4 @@
+
 include ../../layouts/_mixins-links.pug
 block variables
 
@@ -35,8 +36,9 @@ html(lang="ru")
 							object(type="image/svg+xml" data="../img/extra-white.svg" width="24")
 							span Button 
 						pre.
-							object(type="image/svg+xml" data="../img/extra-white.svg" width="24")
-							span Button
+							.btn.btn--accent
+								object(type="image/svg+xml" data="../img/extra-white.svg" width="24")
+								span Button
 					li
 						.btn-small Button
 					pre.
@@ -57,3 +59,5 @@ html(lang="ru")
 							
 					pre.
 						.btn-primary Button
+
+		include ../../layouts/_ui.pug

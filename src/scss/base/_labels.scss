@@ -9,6 +9,7 @@
 	border-radius: 8px;
 	border-bottom: 4px solid transparent;
 	transition: .2s;
+	font-size: 16px;
 	color: $gray;
 	&:hover{
 		border-bottom-color: $orange;
@@ -17,5 +18,12 @@
 	&:active{
 		border-bottom-color: $dorange;
 		color: $gray;
+	}
+	@media (max-width: 767px) {
+		height: 50px;
+		line-height: 50px;
+		font-size: 14px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
