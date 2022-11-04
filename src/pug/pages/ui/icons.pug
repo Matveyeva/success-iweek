@@ -55,14 +55,14 @@ html(lang="ru")
 						
 						li
 							.text-18 gamburger
-							.toggle-menu
+							.toggle-menu#toggle-menu
 							pre.
 								.toggle-menu
 						li
 							.text-18 gamburger active
 							.toggle-menu.active
 							pre.
-								.toggle-menu.active
+								.toggle-menu#toggle-menu.active
 						li
 							object(type="image/svg+xml" data="../img/extrim.svg" )
 								
@@ -150,3 +150,5 @@ html(lang="ru")
 									input(type="checkbox")
 									svg.svg-heart(width="16" height="16" )
 										use(xlink:href="./svg-sprite.svg#svg-heart")
+
+		include ../../layouts/_ui.pug
