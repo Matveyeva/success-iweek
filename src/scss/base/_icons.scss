@@ -94,6 +94,9 @@ svg{
 	background-repeat: no-repeat;
 	background-size: contain;
 	flex-shrink: 0;
+	@media(min-width:992px){
+		display: none!important;
+	}
 }
 .toggle-menu.active{
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15 5L5 15' stroke='%23EB5757' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M5 5L15 15' stroke='%23EB5757' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");

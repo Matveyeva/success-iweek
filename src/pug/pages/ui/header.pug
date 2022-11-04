@@ -23,11 +23,11 @@ html(lang="ru")
 				.header-content
 					.container
 						//========= header top ==========
-						.header-top.flex-box.flex-between.flex-y-center
+						.header-top.flex-box.flex-between
 							.header-top__left
 								a(href="#!").custom-logo
 									object(type="image/svg+xml" data="../svg-logo.svg" class="logo")
-							
+								.toggle-menu#toggle-menu
 							//========= header top  right ==========
 							.header-top__right
 								.header-wrapper.flex-box.flex-y-center
@@ -45,6 +45,26 @@ html(lang="ru")
 									.btn.btn-mini
 										object(type="image/svg+xml" data="../img/person.svg" width="16" height="16")
 										.text-white Кабинет
+								
+								//========== mobile-visible block ==========
+								.mobile-menu-block
+									//========== mobile-menu ==========
+									.page-nav-mobile
+										ul
+											li
+												a(href="#") Клиники
+											li.active
+												a(href="#") Цены
+											li
+												a(href="#") Детская стоматология
+											li
+												a(href="#") О нас
+									
+									//========== btn-cooperate ==========
+									buttin.btn-cooperate.flex-between(type="button")
+										span.text-18.text-white Сотрудничать с нами 
+										.icon-plus
+										
 
 						//========= header center ==========
 						.header-center
@@ -78,7 +98,7 @@ html(lang="ru")
 										a(href="#") Детская стоматология
 									li
 										a(href="#") О нас
-							.btn-cooperate
+							buttin.btn-cooperate(type="button")
 								.icon-plus
 								span.text-18.text-white Сотрудничать с нами 
 		
