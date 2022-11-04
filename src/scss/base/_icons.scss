@@ -82,3 +82,19 @@ svg{
 		}
 	}
 }
+.toggle-menu{
+	border: 1px solid #494966;
+	border-radius: 4px;
+	width: 36px;
+	height: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.5 10H17.5' stroke='%2373DF8F' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M2.5 5H17.5' stroke='%2373DF8F' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M2.5 15H17.5' stroke='%2373DF8F' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-size: contain;
+	flex-shrink: 0;
+}
+.toggle-menu.active{
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15 5L5 15' stroke='%23EB5757' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M5 5L15 15' stroke='%23EB5757' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+}
