@@ -13,7 +13,14 @@
 		fill: #fff;
 	}
 }
-
+.svg-logo{
+	width: 136px;
+	height: 37px;
+	@media (max-width: 1199px) {
+		width: 121px;
+		height: 32px;
+	}
+}
 svg{
 	display: inline-block;
 }

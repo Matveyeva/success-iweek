@@ -23,6 +23,14 @@
 }
 .btn.btn--accent{
 	background-color: $coral;
+	@media (max-width: 1199px) {
+		height: 50px;
+		line-height: 50px;
+		font-size: 14px;
+		font-weight: 400;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 	&:hover{
 		background-color: $orange;
 	}
