@@ -54,6 +54,9 @@
 	}
 	.header-top__right{
 		width: 100%;
-		padding-top: 15px;
+		margin-top: 15px;
+		max-height: 0;
+		overflow:  hidden;
+		transition: .2s;
 	}
 }
