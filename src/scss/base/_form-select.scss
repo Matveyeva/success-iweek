@@ -1,0 +1,51 @@
+.mySelect{
+	position: relative;
+	label.text-16{margin-bottom: 8px;display: inline-block}
+}
+.mySelect-drop{
+	display: flex;
+	padding-left: 16px;
+	padding-right: 16px;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 16px rgba(87, 141, 246, 0.2);
+	border-radius: 4px;
+	display: none;
+	margin-top: 8px;
+}
+.mySelect-options{
+	height: 52px;
+	font-size: 14px;
+	display: block;
+	width: 100%;
+	color: $gray;
+	cursor:pointer;
+	&:hover{
+		color: $indigo;
+	}
+	&+ .mySelect-options{
+		border-top: 1px solid $wlgray;
+	}
+}
+
+.mySelect-drop.active{
+	display: block;
+}
+.mySelect-icon{
+
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	z-index: 2;
+	width: 16px;
+	height: 16px;
+	transition: .3s;
+	pointer-events: none;
+
+}
+.mySelect-icon.active{
+	transform: rotate(-180deg);
+
+}

@@ -23,8 +23,79 @@ html(lang="ru")
 				h2 Форма
 
 				.container-dashboard__content
-
-
+					ul.ui-components
+						li
+							.form-box
+								label.text-16.text-gray3 label text
+								input(type="text" placeholder="Фамилия").form-input
+							pre.
+								.form-box
+									label.text-16.text-gray3 label text
+									input(type="text" placeholder="Фамилия").form-input
+						br
+						li
+							h3 Custom-select
+							br
+							.mySelect
+								.mySelect-input
+									label.text-16.text-gray3 Специальность
+									.mySelect-icon.icon-carret-mini
+									input.selectValue.input-slim(type='text' readonly='' value='Услуга, Специалист')
+								.mySelect-drop
+									input.mySelect-options(type='text' readonly='' value='Стоматолог')
+									input.mySelect-options(type='text' readonly='' value='Ортодонт')
+									input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
+									input.mySelect-options(type='text' readonly='' value='Ветеринар')
+						br
+						li
+							h3 Чекбоксы
+							label.checkbox-label.flex-box.flex-y-center
+								input(type='checkbox' name='form-checkbox' class='real-checkbox')
+								span.custom-checkbox 
+								span.custom-checkbox__text Normal on
+							pre.
+								label.checkbox-label.flex-box.flex-y-center
+									input(type='checkbox' name='form-checkbox' class='checkbox')
+									span.custom-checkbox 
+									span.custom-checkbox__text Normal on
+						li
+							h3 Радиокнопки
+							label.radiobutton-label.flex-box
+								input(type='radio' name='currency' value='usd' class='real-radio') 
+								span.custom-radio 
+								span.custom-radio__text USD
+							label.radiobutton-label.flex-box
+								input(type='radio' name='currency' value='gel' class='real-radio')
+								span.custom-radio
+								span.custom-radio__text GEL
+							label.radiobutton-label.flex-box
+								input(type='radio' name='currency' value='rub' class='real-radio')
+								span.custom-radio
+								span.custom-radio__text RUB
+							pre.
+								label.radiobutton-label.flex-box
+									input(type='radio' name='currency' value='usd' class='real-radio') 
+									span.custom-radio 
+									span.custom-radio__text USD
+								label.flex-box
+									input(type='radio' name='currency' value='gel' class='real-radio')
+									span.custom-radio
+									span.custom-radio__text GEL
+								label.flex-box
+									input(type='radio' name='currency' value='rub' class='real-radio')
+									span.custom-radio
+									span.custom-radio__text RUB
+						li
+							h3 Switch-toggle
+							label.switch-toggle.flex-box.flex-y-center
+								input(type='checkbox' id='check' class='toggle-switch')
+								span.real-switch
+								span.custom-switch__text Normal on
+							pre.
+								label.switch-toggle.flex-box.flex-y-center
+									input(type='checkbox' id='check' class='toggle-switch')
+									span.real-switch
+									span.custom-switch__text Normal on
 
 				
 		include ../../layouts/_ui.pug
