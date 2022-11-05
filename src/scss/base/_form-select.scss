@@ -1,6 +1,9 @@
 .mySelect{
-	position: relative;
+	
 	label.text-16{margin-bottom: 8px;display: inline-block}
+	&-input{
+		position: relative;
+	}
 }
 .mySelect-drop{
 	display: flex;

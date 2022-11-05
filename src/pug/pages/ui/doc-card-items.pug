@@ -62,6 +62,35 @@ html(lang="ru")
 								.rating-group
 									+starRating('4.4')
 									a(href="#!").text-14.text-indigo 9 отзывов
+						li
+							.doc-card__filter-group.flex-box.gap-16
+								//========= single filter select =======
+								.mySelect
+									.mySelect-input
+										.mySelect-icon.icon-carret-mini
+										input.selectValue.input-slim(type='text' readonly='' value='Услуга')
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Стоматолог')
+										input.mySelect-options(type='text' readonly='' value='Ортодонт')
+										input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
+										input.mySelect-options(type='text' readonly='' value='Ветеринар')
+								
+								//========= single filter select =======
+								.mySelect
+									.mySelect-input
+										.mySelect-icon.icon-carret-mini
+										input.selectValue.input-slim(type='text' readonly='' value='Ближайшее время приема')
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Ближайшее время приема')
+										input.mySelect-options(type='text' readonly='' value='Ортодонт')
+										input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
+										input.mySelect-options(type='text' readonly='' value='Ветеринар')
+
+								//========= switch-toggle =======
+								label.switch-toggle.flex-box.flex-y-center
+									input(type='checkbox' id='check' class='toggle-switch')
+									span.real-switch
+									span.custom-switch__text Экстренная помощь
 
 							
 						
