@@ -25,6 +25,39 @@ html(lang="ru")
 				.container-dashboard__content
 					ul.ui-components
 						li
+							.doc-card-cat
+								.label-light-wrapper.gap-8.flex-wrapper
+									+label-light('Диагностика')
+									+label-light('Хирургия')
+									+label-light('Пародонтология')
+							pre.
+								.doc-card-cat
+									.label-light-wrapper.gap-8.flex-wrapper
+										+label-light('Диагностика')
+										+label-light('Хирургия')
+										+label-light('Пародонтология')
+
+						li
+							.doc-card__foto
+								label.check-label.flex-center.flex-box
+									input(type="checkbox")
+									svg.svg-heart(width="16" height="16" )
+										use(xlink:href="../svg-sprite.svg#svg-heart")
+								img(src="../img/doctor.png", width="140" height="140" alt="alt")
+						li
+							    p.rating-block(data-rating)
+									span.rating-block-passive
+										i
+										i
+										i
+										i
+										i
+									span.rating-block-active(data-count='4.5')
+										i
+										i
+										i
+										i
+										i
 
 							
 						

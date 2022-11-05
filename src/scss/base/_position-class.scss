@@ -1,5 +1,5 @@
 /*position class*/
-.flex-box{
+.flex-box,.flex-wrapper{
 	display: flex!important;
 }
 .flex-center{
@@ -21,8 +21,14 @@
 .flex-box-inline{
 	display: inline-flex!important;
 }
+.flex-wrapper{
+	flex-wrap: wrap;
+}
 .gap-12{
 	gap: 12px;
+}
+.gap-8{
+	gap: 8px;
 }
 .m-auto{
 	margin-left: auto;

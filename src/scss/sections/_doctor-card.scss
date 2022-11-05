@@ -9,3 +9,19 @@
 		width: fit-content;
 	}
 }
+.doc-card__foto{
+	position: relative;
+	border: 1px solid #E7E7E7;
+	border-radius: 8px;
+	img{
+		width: 140px;
+		height: 140px;
+		object-fit: cover;
+	}
+	.check-label{
+		position: absolute;
+		top: -8px;
+		left: -8px;
+		z-index: 2;
+	}
+}
