@@ -1,0 +1,111 @@
+include ../../layouts/_mixins-links.pug
+block variables
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+		link(rel="stylesheet", href="../css/main.css")
+		
+		title UI-KIT
+
+	body.body-dashboard.page-404
+
+		include ../../ui/ui-navigation.pug
+
+		block content
+			
+			header.header.flex-box
+				.header-content
+					.container
+						//========= header top ==========
+						.header-top.flex-box.flex-between
+							.header-top__left
+								a(href="#!").custom-logo
+									object(type="image/svg+xml" data="../svg-logo.svg" class="logo")
+								.toggle-menu#toggle-menu
+							//========= header top  right ==========
+							.header-top__right#header-mobile-menu
+								.header-wrapper.flex-box.flex-y-center
+									.header-contacts.flex-box.flex-y-center
+										.soc-block.flex-box.flex-y-center
+											a(href="#!")
+												svg.svg-tg(width="24" height="24")
+													use(xlink:href="../svg-sprite.svg#svg-tg")
+											a(href="#!")
+												svg.svg-wa(width="24" height="24")
+													use(xlink:href="../svg-sprite.svg#svg-wa")
+										.phone-block
+											a(href="#!").text-icon.text-phone.text-white +995 551 90 01 17
+
+									.btn.btn-mini
+										object(type="image/svg+xml" data="../img/person.svg" width="16" height="16")
+										.text-white Кабинет
+								
+								//========== mobile-visible block ==========
+								.mobile-menu-block
+									//========== mobile-menu ==========
+									.page-nav-mobile
+										ul
+											li
+												a(href="#") Клиники
+											li.active
+												a(href="#") Цены
+											li
+												a(href="#") Детская стоматология
+											li
+												a(href="#") О нас
+									
+									//========== btn-cooperate ==========
+									buttin.btn-cooperate.flex-between(type="button")
+										span.text-18.text-white Сотрудничать с нами 
+										.icon-plus
+										
+
+						//========= header center ==========
+						.header-center
+							.header-title.text-white
+								h1.text-404.flex-box.flex-y-center
+									span 404
+									object(type="image/svg+xml" data="../img/emoji.svg" )
+								.text-44 Страница не найдена
+								
+							.header-center-group
+								.text-24.text-white Возможно, вы ищете что-то подобное
+								.header-categories.flex-box
+									+catLabel('diagnost', 'Диагностика')
+									+catLabel('terap', 'Терапия')
+									+catLabel('hirurg', 'Хирургия')
+									+catLabel('implant', 'Имплантация')
+									+catLabel('apple', 'Детская стоматология')
+									+catLabel('paradent', 'Пародонтология')
+							
+							.header-button
+								.btn.btn--accent
+									object(type="image/svg+xml" data="../img/extra-white.svg" width="24")
+									span У меня экстренная ситуация
+					
+				//========= header-menu ==========
+				.header-menu.flex-box.flex-between
+					.container
+						.header-menu-content.flex-box.flex-between.flex-y-center
+							.page-nav
+								ul
+									li
+										a(href="#") Клиники
+									li.active
+										a(href="#") Цены
+									li
+										a(href="#") Детская стоматология
+									li
+										a(href="#") О нас
+							buttin.btn-cooperate(type="button")
+								.icon-plus
+								span.text-18.text-white Сотрудничать с нами 
+		
+		
+		include ../../layouts/_ui.pug

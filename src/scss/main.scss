@@ -12,9 +12,12 @@
 //blocks
 @import "blocks/_page-nav.scss";
 @import "blocks/_header-contacts.scss";
+
 //sections
 @import "sections/_header.scss";
 @import "sections/_doctor-card.scss";
  
-  //ui
+ //pages
+@import "pages/_page-404.scss";
+//ui
  @import "ui/_ui-navigation";

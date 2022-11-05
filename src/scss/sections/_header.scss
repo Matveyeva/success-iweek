@@ -53,6 +53,7 @@
 	@media (max-width: 991px) {
 		padding-top: 17px;
 		padding-bottom: 48px;
+		min-height: 525px;
 		.header-top{
 		margin-bottom: 22px;}
 	}
@@ -64,6 +65,9 @@
 .header-categories{
 	flex-wrap: wrap;
 	gap:12px;
+	@media (max-width: 991px) {
+		gap:8px;
+	}
 }
 /*header-menu-desktop*/
 .header-menu{

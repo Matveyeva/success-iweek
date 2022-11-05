@@ -1,0 +1,54 @@
+.page-404{
+	.header:after{
+		display: none;
+	}
+	.header-title .text-404{
+		column-gap: 32px;
+		object{
+			width: 120px;
+			height: 120px;
+			
+		}
+		@media (max-width: 991px) {
+			svg{
+				width: 64px;
+				height: 64px;
+			}
+			column-gap:15px;
+			object{
+
+				width: 64px;
+				height: 64px;
+			}
+			
+		}
+	}
+	.header .header-center .header-title{
+		padding-bottom: 64px;
+		border-bottom: 1px solid #494966;
+		margin-bottom: 0;
+		@media (max-width: 991px) {
+		  padding-bottom: 20px;
+		}
+	}
+	.header-center-group{
+		padding-top: 56px;
+		.text-24{
+			margin-bottom: 36px;
+			@media (max-width: 991px) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	@media (max-width: 991px){
+		.header .header-top {
+			margin-bottom: 12px;
+		}
+		.header-title{
+			padding-bottom: 20px;
+		}
+		.header-center-group{
+			padding-top: 25px;
+		}
+	}
+}

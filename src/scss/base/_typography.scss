@@ -1,10 +1,20 @@
 /*======= типографика ======*/
+.text-404{
+	font-size: 244px;
+	line-height: 1;
+	font-weight: 500;
+	@media (max-width: 991px) {
+		font-size: 128px;
+	}
+
+}
 .text-44,.text-32,.text-24{
 	font-size: 44px;
 	line-height: 1.27;
 	font-weight: 700;
 	@media(max-width:11991px){
 		font-size: 34px;
+		font-weight: 500;
 		
 	}
 	@media(max-width:991px){
