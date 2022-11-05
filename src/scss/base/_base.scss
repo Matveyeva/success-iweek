@@ -18,7 +18,14 @@ body {
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 }
-
+main{
+	padding-top: 60px;
+	padding-bottom: 64px;
+	@media (max-width: 991px) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
 .noscroll {
 	overflow: hidden;
 	touch-action: none;

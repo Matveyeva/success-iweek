@@ -1,0 +1,17 @@
+.doc-card
+	//====== card img =======
+	.doc-card__left	
+		.doc-card__foto
+			label.check-label.flex-center.flex-box
+				input(type="checkbox")
+				svg.svg-heart(width="16" height="16" )
+					use(xlink:href="./svg-sprite.svg#svg-heart")
+			img(src="./img/doc.png", width="140" height="140" alt="alt")
+		
+		.doc-card__rating
+	
+	//====== card doc info =======
+	.doc-card__center
+		+doctor-card-header('ИП Вердашев А.И.', 'Константинов Константин Констатинопольский', 'Стаж 17 лет')
+	//====== card select time =======
+	.doc-card__right
