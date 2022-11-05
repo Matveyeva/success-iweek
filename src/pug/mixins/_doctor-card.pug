@@ -8,3 +8,18 @@ mixin card-price(text1, text2)
 	.card-serv-item
 		.text-14.text-gray3 !{text1}
 		.text-18 !{text2}
+
+mixin starRating(num)
+	p.rating-block(data-rating)
+		span.rating-block-passive
+			i
+			i
+			i
+			i
+			i
+		span.rating-block-active(data-count=''+ num)
+			i
+			i
+			i
+			i
+			i

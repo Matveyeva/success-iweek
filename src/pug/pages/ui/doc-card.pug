@@ -1,3 +1,4 @@
+
 include ../../layouts/_mixins-links.pug
 block variables
 
@@ -20,19 +21,10 @@ html(lang="ru")
 
 		block content
 			.container-dashboard
-				h2 Лейблы
+				h2 Карточка доктора
 
-				.container-dashboard__content
-					ul.ui-components
-						li
-							.li-box(style="background-color: blue;padding:10px;padding-bottom:10px")
-								+catLabel('diagnost', 'Диагностика')
-							pre.
-								+catLabel('diagnost', 'Диагностика')
-						li
-							+label-light('Хирургия')
-							pre.
-								+label-light('Хирургия')
-								
+				include ../../sections/doc-card.pug
+				pre.
+					include ../../sections/doc-card.pug
 
 		include ../../layouts/_ui.pug
