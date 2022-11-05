@@ -40,3 +40,13 @@
 .rating-group{
 	.text-14{margin-top: 6px;}
 }
+.doc-card__center >*+*{
+	margin-top: 24px;
+
+}
+.doc-card__body{
+	.doc-card__info{
+		padding-bottom: 32px;
+		border-bottom: 1px solid  #E7E7E7;;
+	}
+}

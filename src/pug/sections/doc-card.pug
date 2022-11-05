@@ -13,9 +13,29 @@
 				+starRating('4.4')
 				a(href="#!").text-14.text-indigo 9 отзывов
 				
-	
-	//====== card doc info =======
-	.doc-card__center
-		+card-header('ИП Вердашев А.И.', 'Константинов Константин Констатинопольский', 'Стаж 17 лет')
-	//====== card select time =======
-	.doc-card__right
+	.doc-card__body
+		.doc-card__info.flex-box
+			//====== card doc info =======
+			.doc-card__center
+				+card-header('ИП Вердашев А.И.', 'Константинов Константин Констатинопольский', 'Стаж 17 лет')
+				
+				.doc-card-cat
+					.label-light-wrapper.gap-8.flex-wrapper
+						+label-light('Диагностика')
+						+label-light('Хирургия')
+						+label-light('Пародонтология')
+				
+				.card-serv-wrapper.flex-box
+					+card-price('Консультация', 'Бесплатно')
+					+card-price('Диагностика', '3 000 руб.')
+					+card-price('Хирургия', 'от 10 000 руб.')
+					
+					.card-serv-item
+						.text-icon.text-extrim
+							.text-red.text-14 Экстренная ситуация
+						.text-18 от 5 700 руб.
+			
+			//====== card select time =======
+			.doc-card__form
+		
+		.doc-card__footer
