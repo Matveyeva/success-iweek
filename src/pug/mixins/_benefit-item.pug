@@ -1,0 +1,7 @@
+mixin benefitItem(imgSrc, title, text)
+	.benefit-item.flex-box.flex-y-center.gap-12
+		.benefit-item__img.flex-box.flex-center
+			object(type="image/svg+xml" data="../img/"+ imgSrc +".svg" )
+		.benefit-item__text
+			.text-medium #{title}
+			.text-12.text-gray3 #{text}

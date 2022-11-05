@@ -62,8 +62,17 @@
 		}	
 	}
 }
-
-/****************/
-.mb-8{
-	margin-bottom: 8px;
+.benefit-item{
+	column-gap: 12px;
+	.text-medium{
+		margin-bottom: 2px;
+	}
+}
+.benefit-item__img{
+	width: 48px;
+	height: 48px;
+	background: #FFFFFF;
+	border: 1px solid #E7E7E7;
+	flex-shrink: 0;
+	border-radius: 50%;
 }

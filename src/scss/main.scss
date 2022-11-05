@@ -12,12 +12,17 @@
 //blocks
 @import "blocks/_page-nav.scss";
 @import "blocks/_header-contacts.scss";
+@import "blocks/_benefits-items.scss";
 
 //sections
 @import "sections/_header.scss";
 @import "sections/_doctor-card.scss";
  
  //pages
+@import "pages/_main-page.scss"; 
 @import "pages/_page-404.scss";
+
+
+
 //ui
  @import "ui/_ui-navigation";
