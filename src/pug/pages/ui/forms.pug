@@ -48,6 +48,21 @@ html(lang="ru")
 									input.mySelect-options(type='text' readonly='' value='Ветеринар')
 						br
 						li
+							h3 Custom-select absolute
+							br
+							.mySelect.mySelect--absolute
+								label.text-16.text-gray3 Специальность
+								.mySelect-input.mySelect-input--icon-left
+									.mySelect-icon-left.icon-filter
+									.mySelect-icon.icon-carret-mini
+									input.selectValue.input-slim(type='text' readonly='' value='Услуга, Специалист')
+								.mySelect-drop
+									input.mySelect-options(type='text' readonly='' value='Стоматолог')
+									input.mySelect-options(type='text' readonly='' value='Ортодонт')
+									input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
+									input.mySelect-options(type='text' readonly='' value='Ветеринар')
+						br
+						li
 							h3 Чекбоксы
 							label.checkbox-label.flex-box.flex-y-center
 								input(type='checkbox' name='form-checkbox' class='real-checkbox')

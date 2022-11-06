@@ -1,0 +1,64 @@
+
+include ../../layouts/_mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ../../ui/ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Фильтры на моб версии
+				.modal-frame.filters-modal(frame-modal="filters-modal")
+					.modal-frame__head.flex-box.flex-y-center.flex-between
+						.text-24 Фильтр
+						.icon-close(frame-close)
+						
+					.modal-frame__body
+						.filters-modal__wrapper
+							//==== block select ======
+							.filters-modal__group
+								//========= single filter select =======
+								.mySelect.mySelect--absolute
+									.mySelect-input
+										.mySelect-icon.icon-carret-mini
+										input.selectValue.input-slim(type='text' readonly='' value='Услуга')
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Стоматолог')
+										input.mySelect-options(type='text' readonly='' value='Ортодонт')
+										input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
+										input.mySelect-options(type='text' readonly='' value='Ветеринар')
+								
+								//========= single filter select =======
+								.mySelect.mySelect--absolute
+									.mySelect-input
+										.mySelect-icon.icon-carret-mini
+										input.selectValue.input-slim(type='text' readonly='' value='Ближайшее время приема')
+									.mySelect-drop
+										input.mySelect-options(type='text' readonly='' value='Ближайшее время приема')
+										input.mySelect-options(type='text' readonly='' value='Ортодонт')
+										input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
+										input.mySelect-options(type='text' readonly='' value='Ветеринар')
+							
+							//==== block radio ======
+							.filters-modal__group
+								
+							
+				
+				pre.
+					
+
+		include ../../layouts/_ui.pug
