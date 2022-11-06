@@ -25,6 +25,19 @@ html(lang="ru")
 				.container-dashboard__content
 					ul.ui-components
 						li
+							.checkboxes-wrapper.flex-wrapper.flex-y-center
+								//====single item ======
+								label.checkbox-label.flex-box.flex-y-center
+									input(type='checkbox' name='form-checkbox' class='real-checkbox')
+									span.custom-checkbox 
+									span.custom-checkbox__text Врачи поблизости
+								//====single item ======
+								label.checkbox-label.flex-box.flex-y-center
+									input(type='checkbox' name='form-checkbox' class='real-checkbox')
+									span.custom-checkbox 
+									span.custom-checkbox__text Круглосуточно 24/7
+
+						li
 							.doc-card-cat
 								.label-light-wrapper.gap-8.flex-wrapper
 									+label-light('Диагностика')

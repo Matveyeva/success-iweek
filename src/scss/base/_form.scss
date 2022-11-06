@@ -75,7 +75,7 @@ input[type='checkbox'].toggle-switch {
 		width: 10px;
 		height: 8px;
 		background: transparent;
-		background-image: url('../img/svg/check.svg');
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.42682 0.282078C9.59806 0.109242 9.83075 0.0112165 10.074 0.00942442C10.3173 0.00763237 10.5514 0.10222 10.7252 0.272515C10.899 0.44281 10.9983 0.674965 11.0014 0.918244C11.0045 1.16152 10.9112 1.39614 10.7418 1.57083L5.84182 7.69645C5.75764 7.78709 5.65606 7.85983 5.54315 7.91033C5.43024 7.96083 5.3083 7.98806 5.18463 7.9904C5.06096 7.99273 4.93809 7.97012 4.82335 7.92391C4.70861 7.8777 4.60436 7.80885 4.51682 7.72145L1.26807 4.47395C1.09543 4.30123 0.998477 4.067 0.998535 3.8228C0.998594 3.57859 1.09566 3.34441 1.26838 3.17177C1.44111 2.99913 1.67533 2.90217 1.91954 2.90223C2.16375 2.90229 2.39793 2.99936 2.57057 3.17208L5.13995 5.74208L9.40245 0.310828C9.41019 0.300946 9.41854 0.291553 9.42745 0.282703L9.42682 0.282078Z' fill='white'/%3e%3c/svg%3e");
 		background-size: contain;
 		background-repeat: no-repeat;
 		position: absolute;
@@ -98,7 +98,12 @@ input[type='checkbox'].toggle-switch {
 		border-color: $indigo;
 	}
 }
-
+.checkboxes-wrapper{
+	gap:24px;
+	@media (max-width: 1199px) {
+		gap:15px;
+	}
+}
 //radio-button
 .radiobutton-label {
 	.custom-radio {
@@ -136,7 +141,11 @@ input[type='checkbox'].toggle-switch {
 		transition: 0.2s ease-in;
 	}
 }
-
+.custom-checkbox__text{
+	font-size: 16px;
+	color: $gray;
+	font-weight: 500;
+}
 //toggle-switch
 .switch-toggle {
 	.real-switch {
