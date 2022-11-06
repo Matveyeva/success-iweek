@@ -27,6 +27,14 @@
 .gap-16{
 	gap: 16px;
 }
+.gap-15{
+	&>*+*{
+		margin-top: 15px;
+	}
+}
+.gap-15 +.gap-15{
+	margin-top: 20px;
+}
 .gap-12{
 	gap: 12px;
 }
@@ -44,3 +52,6 @@
 	width: 100%!important;
 }
 
+.border-b{
+	border-bottom: 1px solid  #E7E7E7;
+}

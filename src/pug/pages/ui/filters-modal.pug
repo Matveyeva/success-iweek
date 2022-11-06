@@ -30,34 +30,74 @@ html(lang="ru")
 					.modal-frame__body
 						.filters-modal__wrapper
 							//==== block select ======
-							.filters-modal__group
-								//========= single filter select =======
-								.mySelect.mySelect--absolute
-									.mySelect-input
-										.mySelect-icon.icon-carret-mini
-										input.selectValue.input-slim(type='text' readonly='' value='Услуга')
-									.mySelect-drop
-										input.mySelect-options(type='text' readonly='' value='Стоматолог')
-										input.mySelect-options(type='text' readonly='' value='Ортодонт')
-										input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
-										input.mySelect-options(type='text' readonly='' value='Ветеринар')
-								
-								//========= single filter select =======
-								.mySelect.mySelect--absolute
-									.mySelect-input
-										.mySelect-icon.icon-carret-mini
-										input.selectValue.input-slim(type='text' readonly='' value='Ближайшее время приема')
-									.mySelect-drop
-										input.mySelect-options(type='text' readonly='' value='Ближайшее время приема')
-										input.mySelect-options(type='text' readonly='' value='Ортодонт')
-										input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
-										input.mySelect-options(type='text' readonly='' value='Ветеринар')
+							.filters-modal__group.border-b
+								.gap-15
+									//========= single filter select =======
+									.mySelect.mySelect--absolute
+										.mySelect-input
+											.mySelect-icon.icon-carret-mini
+											input.selectValue.input-slim(type='text' readonly='' value='Услуга')
+										.mySelect-drop
+											input.mySelect-options(type='text' readonly='' value='Стоматолог')
+											input.mySelect-options(type='text' readonly='' value='Ортодонт')
+											input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
+											input.mySelect-options(type='text' readonly='' value='Ветеринар')
+									
+									//========= single filter select =======
+									.mySelect.mySelect--absolute
+										.mySelect-input
+											.mySelect-icon.icon-carret-mini
+											input.selectValue.input-slim(type='text' readonly='' value='Ближайшее время приема')
+										.mySelect-drop
+											input.mySelect-options(type='text' readonly='' value='Ближайшее время приема')
+											input.mySelect-options(type='text' readonly='' value='Ортодонт')
+											input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
+											input.mySelect-options(type='text' readonly='' value='Ветеринар')
+					
+								//==== block radio ======
+								.gap-15
+									label.radiobutton-label.flex-box
+										input(type='radio' name='currency' value='usd' class='real-radio' checked) 
+										span.custom-radio 
+										span.custom-radio__text По рейтингу
+									label.radiobutton-label.flex-box
+										input(type='radio' name='currency' value='gel' class='real-radio')
+										span.custom-radio
+										span.custom-radio__text По стоимости
+									label.radiobutton-label.flex-box
+										input(type='radio' name='currency' value='rub' class='real-radio')
+										span.custom-radio
+										span.custom-radio__text По отзывам
 							
-							//==== block radio ======
-							.filters-modal__group
-								
+							.filters-modal__group.border-b
+								//========= switch-toggle =======
+								label.switch-toggle.flex-box.flex-y-center
+									input(type='checkbox' id='check' class='toggle-switch')
+									span.real-switch
+									span.custom-switch__text Экстренная помощь
 							
-				
+							.filters-modal__group
+								.gap-15
+									//====single item ======
+									label.checkbox-label.flex-box.flex-y-center
+										input(type='checkbox' name='form-checkbox' class='real-checkbox')
+										span.custom-checkbox 
+										span.custom-checkbox__text Врачи поблизости
+									//====single item ======
+									label.checkbox-label.flex-box.flex-y-center
+										input(type='checkbox' name='form-checkbox' class='real-checkbox')
+										span.custom-checkbox 
+										span.custom-checkbox__text Круглосуточно 24/7
+									//====single item ======
+									label.checkbox-label.flex-box.flex-y-center
+										input(type='checkbox' name='form-checkbox' class='real-checkbox')
+										span.custom-checkbox 
+										span.custom-checkbox__text Выезд на дом
+									//====single item ======
+									label.checkbox-label.flex-box.flex-y-center
+										input(type='checkbox' name='form-checkbox' class='real-checkbox')
+										span.custom-checkbox 
+										span.custom-checkbox__text Детские клиники / Врачи
 				pre.
 					
 

@@ -4,6 +4,15 @@
 	border-radius: 8px;
 	.modal-frame__head{
 		padding-bottom: 15px;
-		border-bottom: 1px solid  #E7E7E7;;
+		
+	}
+}
+.filters-modal__group{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.gap-15{
+	&>*+*{
+		margin-top: 15px;
 	}
 }
