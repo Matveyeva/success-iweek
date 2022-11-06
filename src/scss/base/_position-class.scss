@@ -1,6 +1,10 @@
 /*position class*/
-.flex-box,.flex-wrapper{
+.flex-box,.flex-wrapper,.flex-column{
 	display: flex!important;
+}
+.flex-column{
+	flex-direction: column;
+	&>*{width: 100%;}
 }
 .flex-center{
    justify-content: center;
@@ -45,6 +49,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+.mt-auto{margin-top: auto;}
 .mb-8{
 	margin-bottom: 8px;
 }

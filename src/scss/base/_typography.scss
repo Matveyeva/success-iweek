@@ -91,3 +91,9 @@
 .text-indigo{
 	color: $indigo!important;
 }
+.text-link{
+	color: #000;
+	&:hover{
+		color:$indigo ;
+	}
+}

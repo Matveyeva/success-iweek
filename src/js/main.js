@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	
 	const toggleMenu = document.querySelector('#toggle-menu');
 	const mobMenu = document.querySelector('#header-mobile-menu');
+	const bodyEl = document.querySelector('body');
 	if(toggleMenu){
 		toggleMenu.addEventListener('click', function(){
 			if(toggleMenu.classList.contains('active')){
@@ -76,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function (){
         item.addEventListener('click', function(e){
           for(let item of  modalFrames){
             item.classList.remove('visible');
-            headerTop.classList.remove('offset-left');
             
             bodyEl.classList.remove('noscroll');
             overlay.classList.remove('active');
@@ -91,13 +91,7 @@ document.addEventListener("DOMContentLoaded", function (){
               frame.classList.add('visible');
               bodyEl.classList.add('noscroll');
                overlay.classList.add('active');
-                headerTop.classList.add('offset-left');
-              console.log(headerTop);
-               if(mobileMenu.classList.contains('active')){
-                 mobileMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-                 headerTop.classList.remove('offset-left');
-               }
+               
             }
           }
         });
@@ -109,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function (){
           item.closest('[frame-modal]').classList.remove('visible');
           bodyEl.classList.remove('noscroll');
           overlay.classList.remove('active');
-           headerTop.classList.remove('offset-left');
           
         });
       }

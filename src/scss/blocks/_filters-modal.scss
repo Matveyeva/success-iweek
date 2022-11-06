@@ -1,3 +1,17 @@
+.modal-frame[frame-modal]{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;	
+	z-index: 5;
+	transform: translateX(120%);
+	transition: .3s;
+	max-width: 400px;
+
+}
+[frame-modal].visible{
+	transform: translateX(0);
+}
 .modal-frame{
 	padding: 18px 15px 25px;
 	background: #F8FBFF;
@@ -15,4 +29,10 @@
 	&>*+*{
 		margin-top: 15px;
 	}
+}
+.modal-frame__footer{
+	text-align: center;
+	&>*+*{margin-top: 15px;}
+	padding-top: 20px;
+	
 }

@@ -16,13 +16,16 @@ html(lang="ru")
 		title UI-KIT
 
 	body.body-dashboard
-
+		#overlay
 		include ../../ui/ui-navigation.pug
 
 		block content
 			.container-dashboard
 				h2 Фильтры на моб версии
-				.modal-frame.filters-modal(frame-modal="filters-modal")
+				button.special-btn.text-14.text-gray3(frame-btn="filters-modal") Фильтр
+					
+				
+				.modal-frame.filters-modal.flex-column(frame-modal="filters-modal")
 					.modal-frame__head.flex-box.flex-y-center.flex-between
 						.text-24 Фильтр
 						.icon-close(frame-close)
@@ -98,6 +101,10 @@ html(lang="ru")
 										input(type='checkbox' name='form-checkbox' class='real-checkbox')
 										span.custom-checkbox 
 										span.custom-checkbox__text Детские клиники / Врачи
+				
+					.modal-frame__footer.mt-auto
+						button.btn-primary.w-100.btn-40 Сохранить
+						button.text-14.text-link Сбросить
 				pre.
 					
 

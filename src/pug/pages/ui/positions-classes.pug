@@ -29,6 +29,11 @@ html(lang="ru")
 								display: flex!important;
 							}
 						pre.
+							.flex-column{
+								flex-direction: column;
+								&>*{width: 100%;}
+							}
+						pre.
 							.flex-wrapper{
 								flex-wrap: wrap;
 							}
@@ -67,7 +72,11 @@ html(lang="ru")
 								margin-left: auto;
 								margin-right: auto;
 							}
-						
+						pre.
+							.mt-auto{
+								margin-top: auto;
+								
+							}
 						pre.
 							.w-100{
 								width: 100%!important;
