@@ -1,16 +1,14 @@
-//======== основной контент главной страницы =========
-main.main-page-content
-	.container
-		include ../blocks/_benefits-items.pug
-		section.doc-cards
-			//======= title =======	
-			.section-title
-				h2.text-32 Поиск специалиста
-					sup 327
-			
-			//======= filters =======
-			.section-filters.block-1200
-				.doc-card__filter-group.flex-box.gap-16
+//================== mobile filters ==============
+.modal-frame.filters-modal.flex-column(frame-modal="filters-modal")
+	.modal-frame__head.flex-box.flex-y-center.flex-between
+		.text-24 Фильтр
+		.icon-close(frame-close)
+		
+	.modal-frame__body
+		.filters-modal__wrapper
+			//==== block select ======
+			.filters-modal__group.border-b
+				.gap-15
 					//========= single filter select =======
 					.mySelect.mySelect--absolute
 						.mySelect-input
@@ -32,15 +30,31 @@ main.main-page-content
 							input.mySelect-options(type='text' readonly='' value='Ортодонт')
 							input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
 							input.mySelect-options(type='text' readonly='' value='Ветеринар')
-
-					//========= switch-toggle =======
-					label.switch-toggle.flex-box.flex-y-center
-						input(type='checkbox' id='check' class='toggle-switch')
-						span.real-switch
-						span.custom-switch__text Экстренная помощь
-				
-				//======= checkbox group =======	
-				.checkboxes-wrapper.flex-wrapper.flex-y-center
+	
+				//==== block radio ======
+				.gap-15
+					label.radiobutton-label.flex-box
+						input(type='radio' name='currency' value='usd' class='real-radio' checked) 
+						span.custom-radio 
+						span.custom-radio__text По рейтингу
+					label.radiobutton-label.flex-box
+						input(type='radio' name='currency' value='gel' class='real-radio')
+						span.custom-radio
+						span.custom-radio__text По стоимости
+					label.radiobutton-label.flex-box
+						input(type='radio' name='currency' value='rub' class='real-radio')
+						span.custom-radio
+						span.custom-radio__text По отзывам
+			
+			.filters-modal__group.border-b
+				//========= switch-toggle =======
+				label.switch-toggle.flex-box.flex-y-center
+					input(type='checkbox' id='check' class='toggle-switch')
+					span.real-switch
+					span.custom-switch__text Экстренная помощь
+			
+			.filters-modal__group
+				.gap-15
 					//====single item ======
 					label.checkbox-label.flex-box.flex-y-center
 						input(type='checkbox' name='form-checkbox' class='real-checkbox')
@@ -61,8 +75,7 @@ main.main-page-content
 						input(type='checkbox' name='form-checkbox' class='real-checkbox')
 						span.custom-checkbox 
 						span.custom-checkbox__text Детские клиники / Врачи
-			
-			.section-filters-mobile.hidden-1200
-				button.special-btn.text-14.text-gray3(frame-btn="filters-modal") Фильтр
-			//======== cards-wrapper =========
-			.doc-cards-wrapper
+
+	.modal-frame__footer.mt-auto
+		button.btn-primary.w-100.btn-40 Сохранить
+		button.text-14.text-link Сбросить
