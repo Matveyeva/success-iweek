@@ -3,9 +3,12 @@ header.header.flex-box
 		.container
 			//========= header top ==========
 			.header-top.flex-box.flex-between
-				.header-top__left
+				.header-top__left.flex-verical-center
 					a(href="#!").custom-logo
 						object(type="image/svg+xml" data="../svg-logo.svg" class="logo")
+					
+					.select-city-block
+						+custom-select-dark('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'])
 					.toggle-menu#toggle-menu
 				
 				//========= header top  right ==========
@@ -25,7 +28,8 @@ header.header.flex-box
 						.btn.btn-mini
 							object(type="image/svg+xml" data="../img/person.svg" width="16" height="16")
 							.text-white Кабинет
-						//=============.mySelect ================
+						
+						//=============Выбор страны и валюты на экранах от 992 пикс ================
 						.mySelect.mySelect--absolute.mySelect--dark.mySelect--radio.mySelect--currency
 							.mySelect-input
 								.mySelect-icon.icon-carret-white
@@ -59,7 +63,18 @@ header.header.flex-box
 						buttin.btn-cooperate.flex-between(type="button")
 							span.text-18.text-white Сотрудничать с нами 
 							.icon-plus
-							
+						//=============Выбор страны и валюты на экранах от 375 до 991 пикс ================	
+						.mobile-menu-currency
+							ul
+								li
+									+custom-radio('country-mob','EN', 'English')(class="role-country")
+									+custom-radio('currency-mob', 'USD','USD')(class="role-currency")
+								li
+									+custom-radio('country-mob', 'RU','Русский', 'checked')(class="role-country")
+									+custom-radio('currency-mob', 'RUB','RUB', 'checked')(class="role-currency")
+								li
+									+custom-radio('country-mob', 'GE', 'Georgian')(class="role-country")
+									+custom-radio('currency-mob', 'GEL','GEL')(class="role-currency")
 
 			//========= header center ==========
 			.header-center
