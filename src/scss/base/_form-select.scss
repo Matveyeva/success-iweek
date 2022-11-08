@@ -74,18 +74,13 @@
 	}
 }
 .mySelect.mySelect--dark{
-	.selectValue,.mySelect-drop,.mySelect-options{
+	.selectValue{
 		border: 1px solid #494966;
 		border-radius: 4px;
 		background: $gray;
 		color: #fff;
 	}
-	.mySelect-options{
-		border:0;
-	}
-	.mySelect-options + .mySelect-options{
-		border-top: 1px solid #494966;
-	}
+	
 	&:hover{
 		.selectValue{
 			background: #494966;
@@ -97,4 +92,27 @@
 			border-color: #161628;
 		}
 	}
+
+}
+/*=========== mySelect--radio ============*/
+.mySelect--radio{
+	.mySelect-drop__row{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		height: 52px;
+		align-items: center;
+		column-gap: 30px;
+		label:first-child{min-width: 95px;}
+	}
+	
+}
+.mySelect.mySelect--currency{
+	.mySelect-input{width: 121px;}
+	.mySelect-drop{
+		min-width: 200px;
+		left: auto!important;
+		right:0;
+
+	}
+	
 }

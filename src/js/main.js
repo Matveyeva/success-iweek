@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	/** custom select*/
 	const mySelectBlocks = Array.from(document.getElementsByClassName('mySelect'));
-	console.log(mySelectBlocks);
 	if(mySelectBlocks.length > 0){
 		mySelectBlocks.forEach((item, i) =>{
 			const mySelect = item.querySelector('.mySelect-input');
@@ -107,4 +106,28 @@ document.addEventListener("DOMContentLoaded", function (){
         });
       }
     }
+
+	/*.============== mySelect--radio ============*/
+	const radioSelect = document.querySelector('.mySelect--radio');
+	if(radioSelect){
+		const countryList = radioSelect.querySelectorAll('.role-country');
+		const currencyList = radioSelect.querySelectorAll('.role-currency');
+		const radioSelectInput = radioSelect.querySelector('.selectValue');
+
+		// Country select
+		for(let cntr of countryList){
+			cntr.addEventListener('click', function(e){
+				const radioSelectCntr = this.children[0].getAttribute('value');
+				radioSelectInput.value = `${radioSelectCntr} • ${radioSelectInput.value.split(`•`)[1].trim()}`
+			})
+		}
+		// Currency select
+		for(let curr of currencyList){
+			curr.addEventListener('click', function(e){
+				const radioSelectCurr = this.children[0].getAttribute('value');
+				radioSelectInput.value = `${radioSelectInput.value.split(`•`)[0].trim()} • ${radioSelectCurr}`
+			})
+		}
+	}
+
 });

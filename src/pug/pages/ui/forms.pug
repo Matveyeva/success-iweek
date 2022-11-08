@@ -54,6 +54,24 @@ html(lang="ru")
 						
 						br
 						li
+							.mySelect.mySelect--absolute.mySelect--dark.mySelect--radio
+								.mySelect-input.mySelect-input--icon-left
+									.mySelect-icon-left.icon-city
+									.mySelect-icon.icon-carret-white
+									input.selectValue.input-slim(type='text' readonly='' value='RU • RUB')
+								.mySelect-drop
+									.mySelect-drop__row
+										+custom-radio('country','EN', 'English')(class="role-country")
+										+custom-radio('currency', 'USD','USD')(class="role-current")
+										
+									.mySelect-drop__row
+										+custom-radio('country', 'RU','Русский', 'checked')(class="role-country")
+										+custom-radio('currency', 'RUB','RUB', 'checked')(class="role-current")
+									.mySelect-drop__row
+										+custom-radio('country', 'GE', 'Georgian')(class="role-country")
+										+custom-radio('currency', 'GEL','GEL')(class="role-current")
+										
+						li
 							h3 Чекбоксы
 							label.checkbox-label.flex-box.flex-y-center
 								input(type='checkbox' name='form-checkbox' class='real-checkbox')
