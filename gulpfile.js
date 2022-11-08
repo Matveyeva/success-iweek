@@ -101,14 +101,6 @@ gulp.task("copy:video", function(callback) {
     return gulp.src("./src/video/**/*.*").pipe(gulp.dest("./build/video/"));
     callback();
 });
-// группировка меди запросов
-// gulp.task('groupmedia', function (callback) {
-
-//     return gulp.src('./build/css/main.css')
-//         .pipe(gcmq())
-//         .pipe(gulp.dest('./build/css/'));
-//         callback();
-// });
 
 // Слежение за HTML и CSS и обновление браузера
 gulp.task("watch", function() {

@@ -31,6 +31,7 @@
 	.custom-logo{
 		display: flex;
 		width: 136px;
+		margin-right: 24px;
 		@media (max-width: 1199px) {
 			width: 121px;
 			svg{
@@ -60,6 +61,14 @@
 	@media (max-width: 767px) {
 		padding-top: 17px;
 		padding-bottom: 35px;
+	}
+}
+.select-city-block{
+	max-width: 150px;
+	@media (max-width: 1199px) {
+		margin-right: 15px;
+		margin-left: auto;
+		
 	}
 }
 .header-categories{

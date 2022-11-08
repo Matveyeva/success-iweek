@@ -119,7 +119,7 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height
 	}
 
 }
-.icon-carret, .icon-carret-mini,.icon-filter,.special-btn:after,.special-btn:before{
+.icon-carret,.icon-carret-white,.icon-carret-mini,.icon-filter,.special-btn:after,.special-btn:before,.icon-city{
 	cursor:pointer;
 	width: 24px;
 	height: 24px;
@@ -139,4 +139,12 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height
 	height: 16px;
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.5 0.5C0.5 0.223858 0.723858 0 1 0H13C13.2761 0 13.5 0.223858 13.5 0.5V2.5C13.5 2.62352 13.4543 2.74267 13.3716 2.83448L9 7.69187V12.5C9 12.7152 8.86228 12.9063 8.65811 12.9743L5.65811 13.9743C5.50564 14.0252 5.33803 13.9996 5.20764 13.9056C5.07726 13.8116 5 13.6607 5 13.5V7.69187L0.628353 2.83448C0.545722 2.74267 0.5 2.62352 0.5 2.5V0.5Z' fill='%23272740'/%3e%3c/svg%3e");
 	
+}
+.icon-city{
+	width: 16px;
+	height: 16px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='16' viewBox='0 0 12 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 16C6 16 12 10.3137 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 10.3137 6 16 6 16ZM6 9C4.34315 9 3 7.65685 3 6C3 4.34315 4.34315 3 6 3C7.65685 3 9 4.34315 9 6C9 7.65685 7.65685 9 6 9Z' fill='%2373DF8F'/%3e%3c/svg%3e");
+}
+.icon-carret-white{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7 6.29289L12.6464 0.646447C12.8417 0.451184 13.1583 0.451184 13.3536 0.646447C13.5488 0.841709 13.5488 1.15829 13.3536 1.35355L7.35355 7.35355C7.15829 7.54882 6.84171 7.54882 6.64645 7.35355L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z' fill='%23FFFFFF'/%3e%3c/svg%3e");
 }

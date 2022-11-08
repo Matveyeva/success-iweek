@@ -1,5 +1,5 @@
 /*position class*/
-.flex-box,.flex-wrapper,.flex-column{
+.flex-box,.flex-wrapper,.flex-column,.flex-verical-center{
 	display: flex!important;
 }
 .flex-column{
@@ -19,7 +19,7 @@
 .flex-x-right{
 	justify-content: flex-end;
 }
-.flex-y-center{
+.flex-y-center,.flex-verical-center{
 	align-items: center;
 }
 .flex-box-inline{

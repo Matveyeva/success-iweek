@@ -40,7 +40,7 @@
 	position: absolute;
 	top: 12px;
 	right: 12px;
-	z-index: 2;
+	z-index: 1;
 	width: 16px;
 	height: 16px;
 	transition: .3s;
@@ -71,5 +71,30 @@
 	.mySelect-icon-left{
 		right: 0;
 		left: 12px;
+	}
+}
+.mySelect.mySelect--dark{
+	.selectValue,.mySelect-drop,.mySelect-options{
+		border: 1px solid #494966;
+		border-radius: 4px;
+		background: $gray;
+		color: #fff;
+	}
+	.mySelect-options{
+		border:0;
+	}
+	.mySelect-options + .mySelect-options{
+		border-top: 1px solid #494966;
+	}
+	&:hover{
+		.selectValue{
+			background: #494966;
+		}
+	}
+	&:active{
+		.selectValue{
+			background: #161628;
+			border-color: #161628;
+		}
 	}
 }

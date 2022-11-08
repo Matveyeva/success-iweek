@@ -36,31 +36,22 @@ html(lang="ru")
 						li
 							h3 Custom-select
 							br
-							.mySelect
-								label.text-16.text-gray3 Специальность
-								.mySelect-input
-									.mySelect-icon.icon-carret-mini
-									input.selectValue.input-slim(type='text' readonly='' value='Услуга, Специалист')
-								.mySelect-drop
-									input.mySelect-options(type='text' readonly='' value='Стоматолог')
-									input.mySelect-options(type='text' readonly='' value='Ортодонт')
-									input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
-									input.mySelect-options(type='text' readonly='' value='Ветеринар')
+							+custom-select('Специальность','Услуга, Специалист', ['Стоматолог','Ортодонт','Консультация имплантолога','Ветеринар' ])
+							pre.
+								+custom-select('Специальность','Услуга, Специалист', ['Стоматолог','Ортодонт','Консультация имплантолога','Ветеринар' ])
 						br
 						li
 							h3 Custom-select absolute
 							br
-							.mySelect.mySelect--absolute
-								label.text-16.text-gray3 Специальность
-								.mySelect-input.mySelect-input--icon-left
-									.mySelect-icon-left.icon-filter
-									.mySelect-icon.icon-carret-mini
-									input.selectValue.input-slim(type='text' readonly='' value='Услуга, Специалист')
-								.mySelect-drop
-									input.mySelect-options(type='text' readonly='' value='Стоматолог')
-									input.mySelect-options(type='text' readonly='' value='Ортодонт')
-									input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
-									input.mySelect-options(type='text' readonly='' value='Ветеринар')
+							+custom-select-abs('Специальность','Услуга, Специалист', ['Стоматолог','Ортодонт','Консультация имплантолога','Ветеринар' ])
+							pre.
+								+custom-select('Специальность','Услуга, Специалист', ['Стоматолог','Ортодонт','Консультация имплантолога','Ветеринар' ])
+						li(style="background-color: blue;padding:10px;padding-bottom:10px")
+							h3.text-white Custom-select dark
+							br
+							+custom-select-dark('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'])
+						
+						
 						br
 						li
 							h3 Чекбоксы
