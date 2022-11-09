@@ -78,3 +78,11 @@
 	padding-top: 16px;
 	.radiobutton-checkbox{text-align: center;}
 }
+
+.doc-card__footer{
+	padding-top: 32px;
+	.doc-card__contacts-item:first-child{
+		flex-grow:1;
+		gap:26px;
+	}
+}
