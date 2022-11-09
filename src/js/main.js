@@ -129,5 +129,21 @@ document.addEventListener("DOMContentLoaded", function (){
 			})
 		}
 	}
-
+	/*============== swiper select date =============*/
+	
+	// var swiper = new Swiper(".swiper-date", {
+	// 	slidesPerView: 3,
+    //     navigation: {
+    //       nextEl: ".swiper-button-next",
+    //       prevEl: ".swiper-button-prev",
+    //     },
+    //   });
+	$('.swiper-date').owlCarousel({
+		items:3,
+		navText: ["<span class='arrow-left  owl-nav icon-btn'></span>", "<span class=' arrow-right owl-nav  icon-btn'></span>"],
+		nav: true,
+		autoWidth:true,
+		dots: false
+		// stagePadding: 50,
+	})
 });

@@ -120,6 +120,41 @@ html(lang="ru")
 									input(type='checkbox' id='check' class='toggle-switch')
 									span.real-switch
 									span.custom-switch__text Normal on
+						li
+							h3 Чекбокс время приема к врачу
+							.radiobutton-time__group
+								label.radiobutton-time.flex-box.flex-y-center
+									input(type='radio' name='time-radiobtn' class='timetable-radiobtn')
+									span.radiobutton-checkbox 15:20
+
+							pre.
+								.radiobutton-time__group
+									label.radiobutton-time.flex-box.flex-y-center
+										input(type='radio' name='time-radiobtn' class='timetable-radiobtn')
+										span.radiobutton-checkbox 15:20
+						li
+							h3 Переключатель фильтра
+							.filter-toggle__block.flex-box.flex-y-center
+								label.filter-toggle-item.filter-toggle-item--left 
+									input(type='radio' name='toggle-radiobtn' class='filter-radiobtn') 
+									span.filter-toggle-text По рейтингу
+								label.filter-toggle-item.filter-toggle-item--center 
+									input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+									span.filter-toggle-text По стоимости
+								label.filter-toggle-item.filter-toggle-item--right 
+									input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+									span.filter-toggle-text По отзывам
+							pre. 
+								.filter-toggle__block.flex-box.flex-y-center
+									label.filter-toggle-item.filter-toggle-item--left
+										input(type='radio' name='toggle-radiobtn' class='filter-radiobtn') 
+										span.filter-toggle-text По рейтингу
+									label.filter-toggle-item.filter-toggle-item--center
+										input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+										span.filter-toggle-text По стоимости
+									label.filter-toggle-item.filter-toggle-item--right
+										input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+										span.filter-toggle-text По отзывам
 
 				
 		include ../../layouts/_ui.pug

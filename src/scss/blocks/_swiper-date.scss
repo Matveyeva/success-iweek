@@ -1,0 +1,36 @@
+.swiper-date{
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+.radiobutton-badge{
+	span{
+		display: block;
+		text-align: center;
+		background-color: #fff;
+		color: $gray;
+	}
+	input:checked + span{
+		background-color: $gray;
+		color: #fff;
+	}
+}
+}
+.swiper-date-wrapper{
+	position: relative;
+	height: 32px;
+	
+}
+.owl-carousel .arrow-left, .owl-carousel .arrow-right{
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	left: -37px;
+}
+.owl-carousel .arrow-right{
+	left: auto;
+	right: -37px;
+}
+// .owl-carousel .owl-nav .disabled >span{
+// 	opacity: 0.3;
+// 	pointer-events: none;
+// }

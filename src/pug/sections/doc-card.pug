@@ -14,7 +14,7 @@
 				a(href="#!").text-14.text-indigo 9 отзывов
 				
 	.doc-card__body
-		.doc-card__info.flex-box
+		.doc-card__info
 			//====== card doc info =======
 			.doc-card__center
 				+card-header('ИП Вердашев А.И.', 'Константинов Константин Констатинопольский', 'Стаж 17 лет')
@@ -37,6 +37,28 @@
 		
 			//====== card select time =======
 			.doc-card__form
-				
+				.swiper-date-wrapper
+					.owl-carousel.swiper-date
+						.owl-carousel-slide
+							label.radiobutton-badge
+								input(type='radio' name='date-radiobtn' )
+								span.label-light Вторник, 18
+						.owl-carousel-slide
+							label.radiobutton-badge
+								input(type='radio' name='date-radiobtn' )
+								span.label-light Среда, 19
+						.owl-carousel-slide
+							label.radiobutton-badge
+								input(type='radio' name='date-radiobtn' )
+								span.label-light Четверг, 20
+						.owl-carousel-slide
+							label.radiobutton-badge
+								input(type='radio' name='date-radiobtn' )
+								span.label-light Пятница, 21
+						.owl-carousel-slide
+							label.radiobutton-badge
+								input(type='radio' name='date-radiobtn' )
+								span.label-light Суббота, 22
 	
 		.doc-card__footer
+
