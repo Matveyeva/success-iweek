@@ -37,20 +37,24 @@
 }
 label {
 	cursor: pointer;
+	position: relative;
+	
 	align-items: center;
 }
 
 //checkbox
 input[type='checkbox'].real-checkbox,
-input[type='radio'].real-radio,
+input[type='radio'].real-radio,.label-radio,
 input[type='checkbox'].toggle-switch,
-input[type='checkbox'].timetable-checkbox,
+input[type='checkbox'].timetable-checkbox,.timetable-radiobtn,
 input[type='checkbox'].filter-checkbox {
 	width: 0;
 	height: 0;
 	position: absolute;
 	opacity: 0;
 	z-index: -1;
+	top:0;
+	left:0;
 }
 
 .checkbox-label {
@@ -222,7 +226,7 @@ input[type='checkbox'].filter-checkbox {
 		background-color: $indigo;
 		color: $white;
 		display: inline-block;
-		width: 70;
+		width: 70px;
 		height: 32px;
 		border-radius: 4px;
 		padding: 6px 17px;

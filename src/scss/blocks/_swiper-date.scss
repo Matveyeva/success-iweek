@@ -13,20 +13,21 @@
 		background-color: $gray;
 		color: #fff;
 	}
-}
+	}
 }
 .swiper-date-wrapper{
 	position: relative;
 	height: 32px;
 	
 }
-.owl-carousel .arrow-left, .owl-carousel .arrow-right{
+.owl-carousel.owl-carousel--custom .owl-nav{height:0;}
+.owl-carousel.owl-carousel--custom .arrow-left, .owl-carousel.owl-carousel--custom .arrow-right{
 	position: absolute;
 	top:50%;
 	transform: translateY(-50%);
 	left: -37px;
 }
-.owl-carousel .arrow-right{
+.owl-carousel.owl-carousel--custom .arrow-right{
 	left: auto;
 	right: -37px;
 }

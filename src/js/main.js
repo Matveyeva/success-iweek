@@ -140,10 +140,16 @@ document.addEventListener("DOMContentLoaded", function (){
     //   });
 	$('.swiper-date').owlCarousel({
 		items:3,
-		navText: ["<span class='arrow-left  owl-nav icon-btn'></span>", "<span class=' arrow-right owl-nav  icon-btn'></span>"],
+		navText: ["<span class='arrow-left icon-btn'></span>", "<span class=' arrow-right   icon-btn'></span>"],
 		nav: true,
 		autoWidth:true,
 		dots: false
 		// stagePadding: 50,
-	})
+	});
+	// $(".next").click(function(){
+	// 	owl.trigger("next.owl.carousel");
+	// });
+	// $(".prev").click(function(){
+	// 	owl.trigger("prev.owl.carousel");
+	// });
 });

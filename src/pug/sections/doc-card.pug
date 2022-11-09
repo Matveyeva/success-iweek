@@ -38,27 +38,40 @@
 			//====== card select time =======
 			.doc-card__form
 				.swiper-date-wrapper
-					.owl-carousel.swiper-date
+					.owl-carousel.owl-carousel--custom.swiper-date
 						.owl-carousel-slide
 							label.radiobutton-badge
-								input(type='radio' name='date-radiobtn' )
+								input.label-radio(type='radio' name='date-radiobtn' )
 								span.label-light Вторник, 18
 						.owl-carousel-slide
 							label.radiobutton-badge
-								input(type='radio' name='date-radiobtn' )
+								input.label-radio(type='radio' name='date-radiobtn' )
 								span.label-light Среда, 19
 						.owl-carousel-slide
 							label.radiobutton-badge
-								input(type='radio' name='date-radiobtn' )
+								input.label-radio(type='radio' name='date-radiobtn' )
 								span.label-light Четверг, 20
 						.owl-carousel-slide
 							label.radiobutton-badge
-								input(type='radio' name='date-radiobtn' )
+								input.label-radio(type='radio' name='date-radiobtn' )
 								span.label-light Пятница, 21
 						.owl-carousel-slide
 							label.radiobutton-badge
-								input(type='radio' name='date-radiobtn' )
+								input.label-radio(type='radio' name='date-radiobtn' )
 								span.label-light Суббота, 22
+				
+				.select-time-wrapper.flex-wrapper
+					+timeRadio('15:30')
+					+timeRadio('16:30')
+					+timeRadio('17:00')
+					+timeRadio('17:30')
+					+timeRadio('18:00')
+					+timeRadio('18:30')
+					+timeRadio('19:00')
+					+timeRadio('19:30')
+					+timeRadio('20:00')
+					+timeRadio('...')
+
 	
 		.doc-card__footer
 
