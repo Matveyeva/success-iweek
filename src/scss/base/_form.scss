@@ -28,11 +28,17 @@
 		font-family: inherit;
 		color: $gray3;
 	}
+	@media (max-width: 767px) {
+		height:36px;
+	}
 }
 .form-box{
 	label{
 		margin-bottom: 8px;
 		display: inline-block;
+		@media (max-width: 767px) {
+			font-size: 12px;
+		}
 	}
 }
 label {
