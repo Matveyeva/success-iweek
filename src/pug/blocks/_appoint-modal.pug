@@ -7,7 +7,7 @@
 		
 	.modal-frame__body
 		form.appoint-form
-			.appoint-form__head.flex-box
+			.appoint-form__head.flex-box.border-b
 				.appoint-form__head-left
 					.doc-card__foto
 						img(src="../img/doctor.png", width="140" height="110" alt="alt")
@@ -30,3 +30,32 @@
 							span +995 551 90 01 17
 					.rating-group.hidden-768
 						+starRating('4.4')
+
+			.appoint-form__body
+				.form-box
+					label.text-14.text-gray3 Специальность
+					input(type="text" readonly value="Аллерголог").form-input
+
+				.form-box
+					label.text-14.text-gray3 Дата и время приёма
+					input(type="text" readonly value="29 октября, 15:00").form-input
+				
+				.form-box
+					label.text-14.text-gray3 Ваше имя
+					input(type="text"  placeholder="Контактное лицо").form-input
+				
+				.form-box
+					label.text-14.text-gray3 Фамилия
+					input(type="text" placeholder="Фамилия").form-input
+				
+				.form-box
+					label.text-14.text-gray3 Введите дату рождения пациента
+					input(type="text" placeholder="ДД – ММ – ГГГГ").form-input
+				
+				.form-box
+					label.text-14.text-gray3 Телефон для подтверждения записи
+					input(type="text" placeholder="+7 (___) ___-__-__").form-input
+					span.text-12.text-gray3 На этот номер вы получите SMS с кодом подтверждения и данные о записи
+				.form-btn
+					button(type="submit").btn.btn--gradient Записаться
+					.agree-text.text-12 Нажимая «Записаться», я принимаю условия пользовательского соглашения и даю согласие на обработку персональных данных

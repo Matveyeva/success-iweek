@@ -4,7 +4,7 @@ mixin custom-select(labelText, placeText, items)
 			label.text-16.text-gray3 Специальность
 		.mySelect-input
 			.mySelect-icon.icon-carret-mini
-			input.selectValue.input-slim(type='text' readonly='' value=''+ placeText)
+			input.selectValue.input-slim(type='text' readonly value=''+ placeText)
 		.mySelect-drop
 			each item in items
 				input.mySelect-options(type='text' readonly='' value=''+ item)
@@ -19,17 +19,17 @@ mixin custom-select-abs(labelText, placeText, items)
 			input.selectValue.input-slim(type='text' readonly='' value=''+ placeText)
 		.mySelect-drop
 			each item in items
-				input.mySelect-options(type='text' readonly='' value=''+ item)
+				input.mySelect-options(type='text' readonly value=''+ item)
 
 mixin custom-select-dark(placeText, items)
 	.mySelect.mySelect--absolute.mySelect--dark&attributes(attributes)
 		.mySelect-input.mySelect-input--icon-left
 			.mySelect-icon-left.icon-city
 			.mySelect-icon.icon-carret-white
-			input.selectValue.input-slim(type='text' readonly='' value=''+ placeText)
+			input.selectValue.input-slim(type='text' readonly value=''+ placeText)
 		.mySelect-drop
 			each item in items
-				input.mySelect-options(type='text' readonly='' value=''+ item)
+				input.mySelect-options(type='text' readonly value=''+ item)
 
 
 mixin custom-radio(rbName, rgVal, rbText, checkStatus)

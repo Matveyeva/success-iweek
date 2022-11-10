@@ -12,6 +12,7 @@
 }
 .appoint-form__head{
 	column-gap:16px;
+	padding-bottom: 32px;
 	.doc-card__foto{
 		flex-shrink:0;
 		margin-bottom: 16px;
@@ -22,6 +23,7 @@
 		}
 	}
 	@media (max-width: 767px) {
+		padding-bottom: 20px;
 		column-gap:12px;
 	}
 }
