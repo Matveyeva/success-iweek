@@ -46,7 +46,7 @@ label {
 input[type='checkbox'].real-checkbox,
 input[type='radio'].real-radio,.label-radio,
 input[type='checkbox'].toggle-switch,
-input[type='checkbox'].timetable-checkbox,.timetable-radiobtn,
+input[type='checkbox'].timetable-checkbox,.timetable-radiobtn,,.filter-radiobtn,
 input[type='checkbox'].filter-checkbox {
 	width: 0;
 	height: 0;
@@ -245,31 +245,33 @@ input[type='checkbox'].filter-checkbox {
 
 //Переключатель фильтра
 .filter-toggle__block {
-	width: 100%;
+	
 	height: 38px;
 	text-align: center;
 	border-radius: 4px;
 	border: 1px solid #E0E0E0;
+	
 
-
-	.filter-toggle-item {
-		padding: 9px 12px;
-		width: 33%;
+	.filter-toggle-item span{
+		padding: 0 12px;
+		line-height: 36px;
+		white-space: nowrap;
+		display: inline-block;
+		
 	}
-
-	.filter-toggle-item:hover {
+	.filter-toggle-item  +.filter-toggle-item {
+		border-left:1px solid #E0E0E0;
+	}
+	.filter-toggle-item:hover span{
 		color: $indigo;
 		transition: 0.2s ease-in;
 	}
 
-	.filter-radiobtn:checked+.filter-toggle-text {
+	.filter-radiobtn:checked+span {
 		color: $white;
 		background: $dblue;
 		transition: 0.2s ease-in;
 	}
 
-	.filter-toggle-item--center {
-		border-left: 1px solid #E0E0E0;
-		border-right: 1px solid #E0E0E0;
-	}
+
 }

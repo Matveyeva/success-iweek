@@ -4,5 +4,9 @@
 	}
 	.doc-card__filter-group{
 		margin-bottom: 20px;
+		@media(min-width:1200px){
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
 	}
 }	

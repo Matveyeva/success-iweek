@@ -33,6 +33,17 @@ main.main-page-content
 							input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
 							input.mySelect-options(type='text' readonly='' value='Ветеринар')
 
+					//========= filter-toggle =======
+					.filter-toggle__block.flex-box.flex-y-center
+						label.filter-toggle-item
+							input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+							span По рейтингу
+						label.filter-toggle-item
+							input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+							span По стоимости
+						label.filter-toggle-item
+							input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+							span По отзывам
 					//========= switch-toggle =======
 					label.switch-toggle.flex-box.flex-y-center
 						input(type='checkbox' id='check' class='toggle-switch')
