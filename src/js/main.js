@@ -130,26 +130,23 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
 	/*============== swiper select date =============*/
-	
-	// var swiper = new Swiper(".swiper-date", {
-	// 	slidesPerView: 3,
-    //     navigation: {
-    //       nextEl: ".swiper-button-next",
-    //       prevEl: ".swiper-button-prev",
-    //     },
-    //   });
+
 	$('.swiper-date').owlCarousel({
-		items:3,
+		items:2,
 		navText: ["<span class='arrow-left icon-btn'></span>", "<span class=' arrow-right   icon-btn'></span>"],
 		nav: true,
 		autoWidth:true,
-		dots: false
+		dots: false,
+		stagePadding: 50,
+		responsive : {
+			
+			424 : {
+				stagePadding:0,
+				items:3,
+			}
+		}
+
 		// stagePadding: 50,
 	});
-	// $(".next").click(function(){
-	// 	owl.trigger("next.owl.carousel");
-	// });
-	// $(".prev").click(function(){
-	// 	owl.trigger("prev.owl.carousel");
-	// });
+
 });

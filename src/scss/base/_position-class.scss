@@ -66,6 +66,24 @@
 		display: none;
 	}
 }
+.block-992{
+	display: block;
+	@media (max-width: 991px) {
+		display: none;
+	}
+}
+.hidden-fl-992{
+	display: none;
+	@media (max-width: 991px) {
+		display: flex;
+	}
+}
+.hidden-992{
+	display: none;
+	@media (max-width: 991px) {
+		display: block;
+	}
+}
 .flex-1200{
 	display:flex;
 	@media (max-width: 1199px) {
