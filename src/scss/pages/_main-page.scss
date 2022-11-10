@@ -9,4 +9,13 @@
 			justify-content: space-between;
 		}
 	}
+	.doc-cards-wrapper__btn{text-align: center;}
+	.doc-cards-wrapper__btn .btn-48{
+		margin-top: 40px;
+		@media (max-width: 767px) {
+			margin-top: 20px;
+			width: 345px;
+		}
+		
+	}
 }	
