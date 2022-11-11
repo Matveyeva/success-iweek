@@ -16,6 +16,18 @@ document.addEventListener("DOMContentLoaded", function (){
 			
 		});
 	}
+	/*========== Скрыть модалку при ресайзе выше 1200 ===========*/
+	const modalHiddenXl = document.querySelectorAll('.modal-hidden-xl');
+	if(modalHiddenXl.length > 0){
+		window.addEventListener('resize', function(){
+			if(this.innerWidth > 1199){
+				bodyEl.classList.remove('noscroll');
+				for(let item of  modalHiddenXl ){
+					item.classList.remove('visible');
+				}
+			}
+		});
+	}
 	/*=========RATING BLOCK =======*/
 	const ratingBlock = document.querySelectorAll('[data-rating]');
 	if(ratingBlock){

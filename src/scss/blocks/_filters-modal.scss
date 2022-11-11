@@ -4,15 +4,10 @@
 	right: 0;
 	bottom: 0;
 	left:0;
-	// display: flex;
-	// justify-content: center;
-	// align-items: center;
 	z-index: 5;
 	display: none;
 	overflow: hidden;
 	overflow-y: auto;
-	// transform: translateX(120%);
-	// transition: .3s;
 	background-color: rgba(0,0,0, .5);
 	.modal-frame{
 		max-width: 400px;
@@ -25,13 +20,12 @@
 
 }
 [frame-modal].visible{
-	// transform: translateX(0);
 	display: block;
 }
 .modal-frame{
 	padding: 18px 15px 25px;
 	background: #F8FBFF;
-	border-radius: 8px 0 0 8px;
+	border-radius: 8px;
 	overflow: hidden;
 	overflow-y: auto;
 	scrollbar-width: none;
@@ -62,4 +56,9 @@
 	&>*+*{margin-top: 15px;}
 	padding-top: 20px;
 	
+}
+.modal-frame-wrapper.modal-hidden-xl{
+	@media(min-width:1200px){
+		display: none;
+	}
 }
