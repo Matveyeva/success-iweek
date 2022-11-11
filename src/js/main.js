@@ -159,6 +159,40 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 		// stagePadding: 50,
 	});
+
+	$('.emergency-slider').owlCarousel({
+		items:1,
+		stagePadding: 8,
+		margin:8,
+		dots: true,
+		navText: ["<span class='arrow-prev-blue'></span>", "<span class=' arrow-next-blue   '></span>"],
+		nav: true,
+		loop:true,
+		smartSpeed:800,
+		responsive : {
+			424 : {
+				stagePadding: 32
+			},
+			768 : {
+				margin:32,
+				stagePadding: 90
+			},
+			1200 :{
+				stagePadding: 150,
+				margin:32
+			},
+			1600 : {
+				stagePadding: 250,
+				margin:32
+			},
+			1920 : {
+				items:2,
+				margin:32
+			}
+		}
+
+	});
+	
 	const floatingBtn = document.querySelector('.floating-btn');
 	if(floatingBtn){
 		document.addEventListener('scroll', function(){

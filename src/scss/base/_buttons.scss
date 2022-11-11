@@ -143,6 +143,10 @@
 	animation-name: swing;
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
+	@media (max-width: 1364px) {
+		right: 25px;
+
+	}
 	@media (max-width: 767px) {
 		top: auto;
 		left: 50%;

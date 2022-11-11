@@ -113,6 +113,7 @@ svg{
 	border-radius: 2px;
 	width: 32px;
 	height: 32px;
+	display: inline-block;
 }
 .icon-close{
 	width: 36px;
@@ -165,4 +166,15 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height
 }
 .arrow-right{
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 5C0 4.72386 0.223858 4.5 0.5 4.5L12.2929 4.5L9.14645 1.35355C8.95118 1.15829 8.95118 0.841708 9.14645 0.646446C9.34171 0.451183 9.65829 0.451183 9.85355 0.646446L13.8536 4.64645C14.0488 4.84171 14.0488 5.15829 13.8536 5.35355L9.85355 9.35355C9.65829 9.54882 9.34171 9.54882 9.14645 9.35355C8.95118 9.15829 8.95118 8.84171 9.14645 8.64645L12.2929 5.5L0.5 5.5C0.223858 5.5 0 5.27614 0 5Z' fill='%23212529'/%3e%3c/svg%3e");
+}
+.arrow-next-blue,.arrow-prev-blue{
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 12H19' stroke='%235757F6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M12 19L19 12L12 5' stroke='%235757F6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+	width: 24px;
+	height: 24px;
+	cursor:pointer;
+	display: inline-block;
+	&:hover{opacity: .5;}
+}
+.arrow-prev-blue{
+	transform: rotate(180deg);
 }
