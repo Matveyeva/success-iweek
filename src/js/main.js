@@ -157,8 +157,17 @@ document.addEventListener("DOMContentLoaded", function (){
 				items:3,
 			}
 		}
-
 		// stagePadding: 50,
 	});
+	const floatingBtn = document.querySelector('.floating-btn');
+	if(floatingBtn){
+		document.addEventListener('scroll', function(){
+			if(window.pageYOffset > 200){
+				floatingBtn.classList.add('floating-btn--visible');
+			} else{
+				floatingBtn.classList.remove('floating-btn--visible');
+			}
+		})
+	}
 
 });
