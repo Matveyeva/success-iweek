@@ -1,0 +1,107 @@
+section.faq{
+	padding-top: 80px;
+	.section-title{
+		margin-bottom: 48px;
+		text-align: center;
+		@media (max-width: 767px) {
+		margin-bottom: 25px;
+		
+		}
+	}
+	@media (max-width: 767px) {
+		padding-top: 40px;
+		}
+}
+.acor-item{
+	border-top:1px solid  #E7E7E7;
+
+	
+}
+.acor-item:last-child{
+	border-bottom:1px solid  #E7E7E7;
+}
+
+.acor-container .acor-body {
+	height: 0;
+	padding-left:0;
+	box-sizing: border-box;
+	transition: color 0.3s, padding 0.3s;
+	overflow: hidden;
+	@media(max-width:767px){
+		padding: 0;
+	}
+}
+
+.acor-container .acor-body p {
+	margin: 0 0 1em;
+	font-size: 16px;
+	line-height: 1.5;
+	
+	&:last-child{margin-bottom: 0;}
+	
+	@media(max-width:767px){
+		font-size: 15px;
+	}
+	
+}
+
+.acor-container label {
+	position: relative;	
+	cursor: pointer;
+	display: block;
+	padding: 32px  0;
+	padding-right: 60px;
+	width: 100%;
+	z-index: 5;
+	transition: color .3s;
+	
+	@media(max-width:767px){
+		font-size: 16px;
+		padding-right: 40px;
+		padding: 24px 0;
+	}
+	
+}
+
+
+.acor-container input {
+	display: none;
+}
+
+.acor-container label:before {
+	content: '';
+	position: absolute;
+	right: 30px;
+	top: 15px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.5'%3e%3cpath d='M4.37615 12.146L14.3436 21.8623C14.5187 22.0329 14.7535 22.1284 14.998 22.1284C15.2425 22.1284 15.4773 22.0329 15.6524 21.8623L25.6236 12.146C25.7053 12.0665 25.7702 11.9715 25.8145 11.8665C25.8588 11.7615 25.8816 11.6487 25.8816 11.5348C25.8816 11.4208 25.8588 11.308 25.8145 11.203C25.7702 11.098 25.7053 11.003 25.6236 10.9235C25.4562 10.76 25.2314 10.6684 24.9974 10.6684C24.7633 10.6684 24.5386 10.76 24.3711 10.9235L14.998 20.0604L5.62677 10.9235C5.45942 10.7605 5.23506 10.6693 5.00146 10.6693C4.76786 10.6693 4.54349 10.7605 4.37615 10.9235C4.2945 11.003 4.22961 11.098 4.1853 11.203C4.14099 11.308 4.11816 11.4208 4.11816 11.5348C4.11816 11.6487 4.14099 11.7615 4.1853 11.8665C4.22961 11.9715 4.2945 12.0665 4.37615 12.146Z' fill='%23ffb038'/%3e%3c/g%3e%3c/svg%3e ");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 30px; 
+	height: 30px;
+	@media(max-width:767px){
+		width: 20px; 
+		height: 20px;
+		top:20px;
+		right: 20px;
+	}
+}
+
+
+.acor-container input:checked+label:before {
+	transition: transform .35s;
+	transform: rotate(180deg);
+}
+
+.acor-container input:checked+label+.acor-body {
+	height: auto;
+	margin-top: -5px;	
+	padding: 30px 0;
+	padding-top: 15px;
+	padding-bottom: 40px;
+	@media(max-width:1199px){
+		padding: 20px 0;
+		padding-top: 10px;
+		padding-bottom: 40px;
+	}
+	@media(max-width:767px){padding-top: 5px;}
+}
