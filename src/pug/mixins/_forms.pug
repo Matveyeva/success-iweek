@@ -42,6 +42,6 @@ mixin custom-radio(rbName, rgVal, rbText, checkStatus)
 		span.custom-radio__text #{rbText}
 
 mixin timeRadio(time)
-	label.radiobutton-time.flex-box.flex-y-center
+	label.radiobutton-time.flex-box.flex-y-center(frame-btn="appoint-modal")
 		input(type='radio' name='time-radiobtn' class='timetable-radiobtn')
 		span.radiobutton-checkbox #{time}

@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function (){
             item.classList.remove('visible');
             
             bodyEl.classList.remove('noscroll');
-            overlay.classList.remove('active');
+            // overlay.classList.remove('active');
             
           }
           e.preventDefault();
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function (){
             if(frameAttr == itemAttr){
               frame.classList.add('visible');
               bodyEl.classList.add('noscroll');
-               overlay.classList.add('active');
+            //    overlay.classList.add('active');
                
             }
           }
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function (){
           e.preventDefault();
           item.closest('[frame-modal]').classList.remove('visible');
           bodyEl.classList.remove('noscroll');
-          overlay.classList.remove('active');
+        //   overlay.classList.remove('active');
           
         });
       }
