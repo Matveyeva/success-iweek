@@ -1,11 +1,15 @@
 .emergency{
 	padding-top: 80px;
-	padding-bottom: 40px;
+	padding-bottom: 135px;
 	background-color: $gray;
 	.section-title .text-24{
 		color: $lblue;
 		margin-top: 8px;
 		opacity: .5;
+	}
+	@media (max-width: 991px) {
+		padding-top: 40px;
+		
 	}
 }
 .emergency-slider-wrapper{
@@ -13,8 +17,8 @@
 	
 }
 .emergency-slider{
-	width: calc(50% + 50vw);
-	padding-bottom: 40px;
+	width: 100%;
+	padding-bottom: 60px;
 	.doc-card{
 		max-width: 1070px;
 		min-width: 345px;
@@ -56,5 +60,14 @@
 		right: 25%;
 		display: flex;
 		justify-content: space-around;
+		@media (max-width: 991px) {
+		 display: none;
+		}
+	}
+	@media(max-width:1599px){
+		width: calc(50% + 50vw);
+	}
+	@media (max-width: 991px) {
+		padding-bottom: 40px;
 	}
 }

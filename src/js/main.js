@@ -182,12 +182,10 @@ document.addEventListener("DOMContentLoaded", function (){
 				margin:32
 			},
 			1600 : {
-				stagePadding: 250,
-				margin:32
-			},
-			1920 : {
-				items:2,
-				margin:32
+				stagePadding: 150,
+				margin:32,
+				center:true,
+				items:1
 			}
 		}
 
