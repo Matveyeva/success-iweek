@@ -1,3 +1,11 @@
+.feedback{
+	padding-top: 124px;
+	padding-bottom: 64px;
+	@media (max-width: 991px) {
+		padding-top: 30px;
+		padding-bottom:30px;
+	}
+}
 .feedback-content{
 	padding: 0 80px;
 	display: grid;
@@ -11,18 +19,51 @@
 	}
 	@media (max-width: 767px) {
 		grid-template-columns: 1fr;
+		padding: 0 20px;
 	}
 	.feedback-content__col{
 		padding-top: 80px;
 		padding-bottom: 80px;
+		padding-right: 20px;
+		@media (max-width: 1364px) {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			
+		}
+		@media (max-width: 1199px) {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
 	}
 	.feedback-content__col +.feedback-content__col{
 		border-left:1px solid rgba(39, 39, 64, .2) ;
 		padding-left: 80px;
+		@media (max-width: 1199px) {
+			padding-left: 20px;
+			
+		}
+		@media (max-width: 767px) {
+			padding-left: 0;
+			border-left:0;
+			border-top:1px solid rgba(39, 39, 64, .2) ;
+		}
+	}
+}
+.appointment-group,.share-group{
+	gap:12px;
+	@media (max-width: 991px) {
+		gap:8px;
+		
+	}
+}
+.appointment-group{
+	.soc-icon-48{
+		width: 40px;
+		height: 40px;
 	}
 }
 .appointment-group__item,
 .share-group__item{
-	transition: .5s;
-	&:hover{opacity: .8;}
+	transition: .5s;	
+	&:hover{opacity: .8;}	
 }
