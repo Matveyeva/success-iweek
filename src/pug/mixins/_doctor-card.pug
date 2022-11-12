@@ -33,8 +33,8 @@ mixin doctor-card(docName,imgSrc, action)
 					label.check-label.flex-center.flex-box
 						input(type="checkbox")
 						svg.svg-heart(width="16" height="16" )
-							use(xlink:href="../svg-sprite.svg#svg-heart")
-					img(src="../img/"+ imgSrc +".png", width="140" height="140" alt="alt")
+							use(xlink:href="./img/svg-sprite.svg#svg-heart")
+					img(src="./img/"+ imgSrc +".png", width="140" height="140" alt="alt")
 					
 				//==== заголовок карточки  на моб версии ======
 				.doc-card__title-mobile(class="hidden-fl-992")
@@ -76,7 +76,7 @@ mixin doctor-card(docName,imgSrc, action)
 							.text-icon.flex-box.flex-y-center.text-indigo
 								.text-icon__img
 									svg.svg-flag(width="20" height="20" )
-										use(xlink:href="../svg-sprite.svg#svg-flag")
+										use(xlink:href="./img/svg-sprite.svg#svg-flag")
 								.text-14 Акции
 								
 							.text-18 Лечение 8 зуба — бесплатно!
@@ -129,7 +129,7 @@ mixin doctor-card(docName,imgSrc, action)
 					.doc-card__contacts-item.flex-verical-center.flex-between
 						a(href="https://yandex.ru/maps/?um=constructor%3A720db28745f688e1d9fb39958cfb6c4f99ba09c04d008593d925824a763138b4&source=constructorLink"  target="_blank").text-icon.flex-box.flex-y-center.ml-auto
 							.text-icon__img
-								object(type="image/svg+xml" data="../img/maximize.svg" )
+								object(type="image/svg+xml" data="./img/maximize.svg" )
 							.text-14 Открыть на карте
 
 mixin doctor-card-short(docName,imgSrc)
@@ -141,8 +141,8 @@ mixin doctor-card-short(docName,imgSrc)
 					label.check-label.flex-center.flex-box
 						input(type="checkbox")
 						svg.svg-heart(width="16" height="16" )
-							use(xlink:href="../svg-sprite.svg#svg-heart")
-					img(src="../img/"+ imgSrc +".png", width="140" height="140" alt="alt")
+							use(xlink:href="./img/svg-sprite.svg#svg-heart")
+					img(src="./img/"+ imgSrc +".png", width="140" height="140" alt="alt")
 					
 				//==== заголовок карточки  на моб версии ======
 				.doc-card__title-mobile(class="hidden-fl-992")
@@ -182,5 +182,5 @@ mixin doctor-card-short(docName,imgSrc)
 					.doc-card__contacts-item.flex-verical-center.flex-between
 						a(href="https://yandex.ru/maps/?um=constructor%3A720db28745f688e1d9fb39958cfb6c4f99ba09c04d008593d925824a763138b4&source=constructorLink"  target="_blank").text-icon.flex-box.flex-y-center.ml-auto
 							.text-icon__img
-								object(type="image/svg+xml" data="../img/maximize.svg" )
+								object(type="image/svg+xml" data="./img/maximize.svg" )
 							.text-14 Открыть на карте

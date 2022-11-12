@@ -5,7 +5,7 @@ header.header.flex-box
 			.header-top.flex-box.flex-between
 				.header-top__left.flex-verical-center
 					a(href="#!").custom-logo
-						object(type="image/svg+xml" data="../svg-logo.svg" class="logo")
+						object(type="image/svg+xml" data="./img/svg-logo.svg" class="logo")
 					
 					.select-city-block
 						+custom-select-dark('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'])
@@ -18,15 +18,15 @@ header.header.flex-box
 							.soc-block.flex-box.flex-y-center
 								a(href="#!")
 									svg.svg-tg(width="24" height="24")
-										use(xlink:href="../svg-sprite.svg#svg-tg")
+										use(xlink:href="./img/svg-sprite.svg#svg-tg")
 								a(href="#!")
 									svg.svg-wa(width="24" height="24")
-										use(xlink:href="../svg-sprite.svg#svg-wa")
+										use(xlink:href="./img/svg-sprite.svg#svg-wa")
 							.phone-block
 								a(href="#!").text-icon.text-phone.text-white +995 551 90 01 17
 
 						.btn.btn-mini
-							object(type="image/svg+xml" data="../img/person.svg" width="16" height="16")
+							object(type="image/svg+xml" data="./img/person.svg" width="16" height="16")
 							.text-white Кабинет
 						
 						//=============Выбор страны и валюты на экранах от 992 пикс ================
@@ -91,7 +91,7 @@ header.header.flex-box
 				
 				.header-button
 					.btn-64.btn--accent
-						object(type="image/svg+xml" data="../img/extra-white.svg" width="24")
+						object(type="image/svg+xml" data="./img/extra-white.svg" width="24")
 						span У меня экстренная ситуация
 		
 	//========= header-menu for desktop==========
@@ -108,6 +108,10 @@ header.header.flex-box
 							a(href="#") Детская стоматология
 						li
 							a(href="#") О нас
-				buttin.btn-cooperate(type="button")
-					.icon-plus
-					span.text-18.text-white Сотрудничать с нами 
+				.submenu-block
+					label
+						input(type="checkbox").hide-input
+						buttin.btn-cooperate(type="button")
+							.icon-plus
+							span.text-18.text-white Сотрудничать с нами
+						.submenu-block__drop

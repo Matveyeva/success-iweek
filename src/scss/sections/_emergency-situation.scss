@@ -18,7 +18,7 @@
 	
 }
 .emergency-slider{
-	width: 100%;
+	width: calc(50% + 50vw);
 	padding-bottom: 60px;
 	.doc-card{
 		max-width: 1070px;
@@ -65,9 +65,7 @@
 		 display: none;
 		}
 	}
-	@media(max-width:1599px){
-		width: calc(50% + 50vw);
-	}
+
 	@media (max-width: 991px) {
 		padding-bottom: 40px;
 	}
