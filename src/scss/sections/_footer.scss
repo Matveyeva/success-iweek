@@ -1,5 +1,5 @@
 .footer{
-	
+	padding-bottom: 64px;
 	.footer-copyright{
 		justify-content: space-between;
 		padding-bottom: 64px;
@@ -10,7 +10,7 @@
 			flex-direction: column;
 			&>*{width: 100%;}
 			padding-bottom: 0;
-			border-bottom: 0px;
+			
 		}
 		
 	}

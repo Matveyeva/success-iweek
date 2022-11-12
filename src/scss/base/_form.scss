@@ -268,13 +268,13 @@ input[type='checkbox'].filter-checkbox {
 	}
 	.filter-toggle-item:hover span{
 		color: $indigo;
-		transition: 0.2s ease-in;
+		transition: 0.2s ;
 	}
 
 	.filter-radiobtn:checked+span {
 		color: $white;
 		background: $dblue;
-		transition: 0.2s ease-in;
+		transition: 0.2s;
 	}
 }
 .text-sub-input, .error{

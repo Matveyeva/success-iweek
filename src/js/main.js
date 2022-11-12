@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		navText: ["<span class='arrow-prev-blue'></span>", "<span class=' arrow-next-blue   '></span>"],
 		nav: true,
 		loop:true,
-		smartSpeed:600,
+		smartSpeed:800,
 		responsive : {
 			424 : {
 				stagePadding: 32

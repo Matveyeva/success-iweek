@@ -135,9 +135,9 @@
 .floating-btn{
 	position: fixed;
 	z-index: 4;
-	top: 50%;
+	bottom: 10%;
 	right: 75px;
-	transform: translate(220%, -30%);
+	transform: translate(220%, 10%);
 	transition: .5s;
 	opacity: 0;
 	animation-name: swing;
@@ -159,7 +159,7 @@
 	
 }
 .floating-btn.floating-btn--visible{
-	transform: translate(0, -30%);
+	transform: translate(0, 10%);
 	opacity: 1;
 	@media (max-width: 767px) {
 		transform: translate(-50%, 0%);
@@ -168,12 +168,12 @@
 }
 @keyframes swing{
 	0%{
-		transform: translate(0, -30%);
+		transform: translate(0, 10%);
 	}
 	50%{
-		transform: translate(0, -70%);
+		transform: translate(0, 30%);
 	}
 	100%{
-		transform: translate(0, -30%);
+		transform: translate(0, 10%);
 	}
 }
