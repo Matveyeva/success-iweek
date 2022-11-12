@@ -56,6 +56,12 @@
 .mb-8{
 	margin-bottom: 8px;
 }
+.mb-32{
+	margin-bottom: 32px;
+	@media (max-width: 991px) {
+		margin-bottom: 20px;
+	}
+}	
 .w-100{
 	width: 100%!important;
 }
