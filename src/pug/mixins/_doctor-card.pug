@@ -39,7 +39,7 @@ mixin doctor-card(docName,imgSrc, action)
 				//==== заголовок карточки  на моб версии ======
 				.doc-card__title-mobile(class="hidden-fl-992")
 					+card-header('ИП Вердашев А.И.', docName, 'Стаж 17 лет')
-					.rating-group.hidden-992.flex-verical-center
+					.rating-group.hidden-992.flex-vertical-center
 						+starRating('4.4')
 						a(href="#!").text-14.text-indigo 9 отзывов
 				
@@ -120,13 +120,13 @@ mixin doctor-card(docName,imgSrc, action)
 
 		
 			.doc-card__footer
-				.doc-card__contacts.flex-verical-center
-					.doc-card__contacts-item.flex-verical-center
+				.doc-card__contacts.flex-vertical-center
+					.doc-card__contacts-item.flex-vertical-center
 						a(href="#!").text-icon.text-phone +995 551 90 01 17
 						a(href="#!").text-icon.text-address ул. Мелашвили 4
 							span.text-gray3 (3,5 км от вас)
 					
-					.doc-card__contacts-item.flex-verical-center.flex-between
+					.doc-card__contacts-item.flex-vertical-center.flex-between
 						a(href="https://yandex.ru/maps/?um=constructor%3A720db28745f688e1d9fb39958cfb6c4f99ba09c04d008593d925824a763138b4&source=constructorLink"  target="_blank").text-icon.flex-box.flex-y-center.ml-auto
 							.text-icon__img
 								object(type="image/svg+xml" data="./img/maximize.svg" )
@@ -147,7 +147,7 @@ mixin doctor-card-short(docName,imgSrc)
 				//==== заголовок карточки  на моб версии ======
 				.doc-card__title-mobile(class="hidden-fl-992")
 					+card-header('ИП Вердашев А.И.', docName, 'Стаж 17 лет')
-					.rating-group.hidden-992.flex-verical-center
+					.rating-group.hidden-992.flex-vertical-center
 						+starRating('4.4')
 						a(href="#!").text-14.text-indigo 9 отзывов
 				
@@ -173,13 +173,13 @@ mixin doctor-card-short(docName,imgSrc)
 						+card-price('Диагностика', '3 000 руб.')
 						+card-price('Хирургия', 'от 10 000 руб.')
 			.doc-card__footer
-				.doc-card__contacts.flex-verical-center
-					.doc-card__contacts-item.flex-verical-center
+				.doc-card__contacts.flex-vertical-center
+					.doc-card__contacts-item.flex-vertical-center
 						a(href="#!").text-icon.text-phone +995 551 90 01 17
 						a(href="#!").text-icon.text-address ул. Мелашвили 4
 							span.text-gray3 (3,5 км от вас)
 					
-					.doc-card__contacts-item.flex-verical-center.flex-between
+					.doc-card__contacts-item.flex-vertical-center.flex-between
 						a(href="https://yandex.ru/maps/?um=constructor%3A720db28745f688e1d9fb39958cfb6c4f99ba09c04d008593d925824a763138b4&source=constructorLink"  target="_blank").text-icon.flex-box.flex-y-center.ml-auto
 							.text-icon__img
 								object(type="image/svg+xml" data="./img/maximize.svg" )
