@@ -45,6 +45,7 @@ header.header.flex-box
 								.mySelect-drop__row
 									+custom-radio('country', 'GE', 'Georgian')(class="role-country")
 									+custom-radio('currency', 'GEL','GEL')(class="role-currency")
+					
 					//========== mobile-visible block ==========
 					.mobile-menu-block
 						//========== mobile-menu ==========
@@ -60,9 +61,32 @@ header.header.flex-box
 									a(href="#") О нас
 						
 						//========== btn-cooperate ==========
-						buttin.btn-cooperate.flex-between(type="button")
-							span.text-18.text-white Сотрудничать с нами 
-							.icon-plus
+						.submenu-block.submenu-block--dark.submenu-block--relative
+							label
+								input(type="checkbox").hide-input
+								.btn-cooperate.flex-between(type="button")
+									span.text-18.text-white Сотрудничать с нами
+								.submenu-block__drop
+									.submenu-block__drop-item
+										a(href="#!").flex-vertical-center
+											svg.svg-whatsapp(width="20" height="20")
+												use(xlink:href="./img/svg-sprite.svg#svg-whatsapp")
+											.text-14 Whats App
+									.submenu-block__drop-item
+										a(href="#!").flex-vertical-center
+											svg.svg-telegram(width="20" height="20")
+												use(xlink:href="./img/svg-sprite.svg#svg-telegram")
+											.text-14 Telegram
+									.submenu-block__drop-item
+										a(href="#!").flex-vertical-center
+											svg.svg-telegram(width="20" height="20")
+												use(xlink:href="./img/svg-sprite.svg#svg-telegram")
+											.text-14 Facebook Messenger
+									.submenu-block__drop-item
+										a(href="#!").flex-vertical-center
+											svg.svg-viber(width="20" height="20")
+												use(xlink:href="./img/svg-sprite.svg#svg-viber")
+											.text-14 Viber
 						//=============Выбор страны и валюты на экранах от 375 до 991 пикс ================	
 						.mobile-menu-currency
 							ul
@@ -118,21 +142,21 @@ header.header.flex-box
 						.submenu-block__drop
 							.submenu-block__drop-item
 								a(href="#!").flex-vertical-center
-									svg.svg-tg(width="24" height="24")
-										use(xlink:href="../img/svg-sprite.svg#svg-tg")
+									svg.svg-whatsapp(width="20" height="20")
+										use(xlink:href="./img/svg-sprite.svg#svg-whatsapp")
 									.text-14 Whats App
 							.submenu-block__drop-item
 								a(href="#!").flex-vertical-center
-									svg.svg-tg(width="24" height="24")
-										use(xlink:href="../img/svg-sprite.svg#svg-tg")
-									.text-14 Whats App
+									svg.svg-telegram(width="20" height="20")
+										use(xlink:href="./img/svg-sprite.svg#svg-telegram")
+									.text-14 Telegram
 							.submenu-block__drop-item
 								a(href="#!").flex-vertical-center
-									svg.svg-tg(width="24" height="24")
-										use(xlink:href="../img/svg-sprite.svg#svg-tg")
-									.text-14 Whats App
+									svg.svg-telegram(width="20" height="20")
+										use(xlink:href="./img/svg-sprite.svg#svg-telegram")
+									.text-14 Facebook Messenger
 							.submenu-block__drop-item
 								a(href="#!").flex-vertical-center
-									svg.svg-tg(width="24" height="24")
-										use(xlink:href="../img/svg-sprite.svg#svg-tg")
-									.text-14 Whats App
+									svg.svg-viber(width="20" height="20")
+										use(xlink:href="./img/svg-sprite.svg#svg-viber")
+									.text-14 Viber
