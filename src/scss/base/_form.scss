@@ -41,6 +41,18 @@
 		}
 	}
 }
+.error-text{
+	color: $red;
+	font-size: 14px;
+	margin-top: 8px;
+	font-weight: 400;
+	@media (max-width: 767px) {
+		font-size: 12px;
+	}
+}
+input.input-notvalid{
+	border-color: red;
+}
 label {
 	cursor: pointer;
 	position: relative;
