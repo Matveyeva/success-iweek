@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function (){
 		toggleMenu.addEventListener('click', function(){
 			if(toggleMenu.classList.contains('active')){
 				this.classList.remove('active');
-				mobMenu.style.maxHeight = 0+'px';
+				mobMenu.style.display = 'none';
 			}else{
 				this.classList.add('active');
 				console.log(toggleMenu.classList);
-				mobMenu.style.maxHeight = mobMenu.scrollHeight+'px';
+				mobMenu.style.display = 'block';
 			}
 			
 		});
@@ -168,23 +168,35 @@ document.addEventListener("DOMContentLoaded", function (){
 		navText: ["<span class='arrow-prev-blue'></span>", "<span class=' arrow-next-blue   '></span>"],
 		nav: true,
 		loop:true,
-		smartSpeed:800,
+		smartSpeed:600,
 		responsive : {
 			424 : {
 				stagePadding: 32
 			},
 			768 : {
 				margin:32,
-				stagePadding: 90
+				stagePadding: 0
 			},
-			1200 :{
-				stagePadding: 150,
+			992:{
+				stagePadding: 90,
 				margin:32
 			},
-			1600 : {
-				stagePadding: 350,
+			1365 : {
+				stagePadding: 150,
 				margin:32,
 				items:1
+			},
+			1440:{
+				stagePadding: 150,
+				margin:32,
+				items:1
+			},
+			1600 : {
+				stagePadding: 150,
+				margin:50,
+				items:1,
+				autoplay: true,
+				autoplayHoverPause: true,
 			}
 		}
 
