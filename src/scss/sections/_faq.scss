@@ -72,16 +72,18 @@ section.faq{
 	content: '';
 	position: absolute;
 	right: 30px;
-	top: 15px;
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.5'%3e%3cpath d='M4.37615 12.146L14.3436 21.8623C14.5187 22.0329 14.7535 22.1284 14.998 22.1284C15.2425 22.1284 15.4773 22.0329 15.6524 21.8623L25.6236 12.146C25.7053 12.0665 25.7702 11.9715 25.8145 11.8665C25.8588 11.7615 25.8816 11.6487 25.8816 11.5348C25.8816 11.4208 25.8588 11.308 25.8145 11.203C25.7702 11.098 25.7053 11.003 25.6236 10.9235C25.4562 10.76 25.2314 10.6684 24.9974 10.6684C24.7633 10.6684 24.5386 10.76 24.3711 10.9235L14.998 20.0604L5.62677 10.9235C5.45942 10.7605 5.23506 10.6693 5.00146 10.6693C4.76786 10.6693 4.54349 10.7605 4.37615 10.9235C4.2945 11.003 4.22961 11.098 4.1853 11.203C4.14099 11.308 4.11816 11.4208 4.11816 11.5348C4.11816 11.6487 4.14099 11.7615 4.1853 11.8665C4.22961 11.9715 4.2945 12.0665 4.37615 12.146Z' fill='%23ffb038'/%3e%3c/g%3e%3c/svg%3e ");
+	top: 35px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='12' viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 0.96967C0.762563 0.676777 1.23744 0.676777 1.53033 0.96967L10 9.43934L18.4697 0.96967C18.7626 0.676777 19.2374 0.676777 19.5303 0.96967C19.8232 1.26256 19.8232 1.73744 19.5303 2.03033L10.5303 11.0303C10.2374 11.3232 9.76256 11.3232 9.46967 11.0303L0.46967 2.03033C0.176777 1.73744 0.176777 1.26256 0.46967 0.96967Z' fill='%235757F6'/%3e%3c/svg%3e");
 	background-repeat: no-repeat;
-	background-size: cover;
-	width: 30px; 
-	height: 30px;
+	background-size: auto;
+	background-position: center;
+	width: 24px; 
+	height: 24px;
+	@media(max-width:1199px){top: 30px;}
 	@media(max-width:767px){
 		width: 20px; 
 		height: 20px;
-		top:20px;
+		top:22px;
 		right: 20px;
 	}
 }
@@ -95,13 +97,13 @@ section.faq{
 .acor-container input:checked+label+.acor-body {
 	height: auto;
 	margin-top: -5px;	
-	padding: 30px 0;
-	padding-top: 15px;
+	padding: 0 40px 20px 0;
+	padding-top: 0px;
 	padding-bottom: 40px;
 	@media(max-width:1199px){
 		padding: 20px 0;
 		padding-top: 10px;
 		padding-bottom: 40px;
 	}
-	@media(max-width:767px){padding-top: 5px;}
+	@media(max-width:767px){padding-top: 5px; padding-right: 30px;}
 }
