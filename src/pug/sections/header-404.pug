@@ -3,9 +3,12 @@ header.header.flex-box
 		.container
 			//========= header top ==========
 			.header-top.flex-box.flex-between
-				.header-top__left
+				.header-top__left.flex-vertical-center
 					a(href="#!").custom-logo
-						object(type="image/svg+xml" data="./img/svg-logo.svg" class="logo")
+						img(src="./img/logo.png", width="136" alt="logo")
+					
+					.select-city-block
+						+custom-select-dark('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'])
 					.toggle-menu#toggle-menu
 				//========= header top  right ==========
 				.header-top__right#header-mobile-menu

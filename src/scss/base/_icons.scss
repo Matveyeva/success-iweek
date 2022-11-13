@@ -103,7 +103,7 @@ svg{
 	background-repeat: no-repeat;
 	background-size: contain;
 	flex-shrink: 0;
-	transition: background-image .3s;
+	
 	@media(min-width:992px){
 		display: none!important;
 	}
