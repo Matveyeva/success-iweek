@@ -33,6 +33,12 @@
 	.card-serv-item{
 		white-space: nowrap;
 		width: fit-content;
+		display: flex;
+		flex-direction: column;
+		&>*{width: 100%;}
+		.text-14{
+			line-height: 2;
+		}
 	}
 	@media (max-width: 767px) {
 		column-gap: 15px;

@@ -33,6 +33,13 @@
 		@media (max-width: 1199px) {
 			padding-top: 20px;
 			padding-bottom: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			&>*{width: 100%;}
+		}
+		@media (max-width: 767px) {
+			display: block;
 		}
 	}
 	.feedback-content__col +.feedback-content__col{
@@ -58,6 +65,10 @@
 }
 .appointment-group{
 	.soc-icon-48{
+		width: 48px;
+		height: 48px;
+	}
+	@media (max-width: 1199px) {
 		width: 40px;
 		height: 40px;
 	}

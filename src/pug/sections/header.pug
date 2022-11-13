@@ -25,8 +25,9 @@ header.header.flex-box
 							.phone-block
 								a(href="#!").text-icon.text-phone.text-white +995 551 90 01 17
 
-						.btn.btn-mini
-							object(type="image/svg+xml" data="./img/person.svg" width="16" height="16")
+						a(href="#!").btn.btn-mini.dark-btn
+							svg.svg-person(width="16" height="16")
+								use(xlink:href="./img/svg-sprite.svg#svg-person")
 							.text-white Кабинет
 						
 						//=============Выбор страны и валюты на экранах от 992 пикс ================
@@ -34,7 +35,7 @@ header.header.flex-box
 							.mySelect-input
 								.mySelect-icon.icon-carret-white
 								input.selectValue.input-slim(type='text' readonly='' value='RU • RUB')
-							.mySelect-drop
+							.mySelect-drop.scroll-vertical
 								.mySelect-drop__row
 									+custom-radio('country','EN', 'English')(class="role-country")
 									+custom-radio('currency', 'USD','USD')(class="role-currency")
@@ -133,7 +134,7 @@ header.header.flex-box
 						li
 							a(href="#") О нас
 				.submenu-block
-					label
+					label.label-submenu-block
 						input(type="checkbox").hide-input
 						.btn-cooperate
 							.icon-plus
@@ -152,8 +153,8 @@ header.header.flex-box
 									.text-14 Telegram
 							.submenu-block__drop-item
 								a(href="#!").flex-vertical-center
-									svg.svg-telegram(width="20" height="20")
-										use(xlink:href="./img/svg-sprite.svg#svg-telegram")
+									svg.svg-facebook(width="20" height="20")
+										use(xlink:href="./img/svg-sprite.svg#svg-facebook")
 									.text-14 Facebook Messenger
 							.submenu-block__drop-item
 								a(href="#!").flex-vertical-center

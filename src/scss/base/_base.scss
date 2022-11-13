@@ -40,17 +40,17 @@ main{
 .scroll-vertical{
 	overflow: hidden;
 	overflow-y: auto;
-	scrollbar-color: gray red;
+	scrollbar-color: #E0E0E0 $orange;
 	scrollbar-width: 5px;
 	&::-webkit-scrollbar{
 		width: 5px;
 	}
 	&::-webkit-scrollbar-thumb{
 		width: 5px;
-		background-color: red;
+		background-color: $orange;
 	}
 	&::-webkit-scrollbar-track{
-		background-color: grey;
+		background-color: #E0E0E0;
 	}
 }
 #overlay {

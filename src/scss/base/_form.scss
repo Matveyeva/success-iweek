@@ -281,6 +281,11 @@ input[type='checkbox'].filter-checkbox {
 	margin-top: 8px;
 	
 }
+/*======== submenu-block__drop======*/
+.label-submenu-block{
+	display: inline-block;
+	padding-top: 15px;
+padding-bottom: 15px;}
 .submenu-block{
 	.submenu-block__drop{
 		display: none;
@@ -341,9 +346,6 @@ input[type='checkbox'].filter-checkbox {
 	}
 	.submenu-block__drop-item a{
 		color: #fff;
-		
-		
-		
 	}
 	.submenu-block__drop-item +.submenu-block__drop-item {
 		border-top: 1px solid  $gray;

@@ -177,3 +177,14 @@
 		transform: translate(0, 10%);
 	}
 }
+.dark-btn:hover{
+		
+	background: #494966;
+		
+	&:active{
+		
+		background: #161628;
+		border-color: #161628;		
+	}
+	
+}
