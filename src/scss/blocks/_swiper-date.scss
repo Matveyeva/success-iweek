@@ -12,11 +12,14 @@
 	}
 }
 .swiper-date{
-	width: 300px;
+	// width: 300px;
+	padding-left: 36px;
+	padding-right: 36px;
 	margin-left: auto;
 	margin-right: auto;
+	.swiper-slide{width: fit-content;}
 	@media(max-width:424px){
-		width:230px;
+		// width:230px;
 	}
 .radiobutton-badge{
 	span{
@@ -30,24 +33,35 @@
 		color: #fff;
 	}
 	}
+	.arrow-left {
+		&:after{
+			content:'';
+			position: absolute;
+			width: 5px;
+			top: 0;
+			bottom: 0;
+			right: -6px;
+			background-color: #fff;
+		}
+	}
+	.arrow-right{
+		&:after{
+			content:'';
+			position: absolute;
+			width: 5px;
+			top: 0;
+			bottom: 0;
+			left: -6px;
+			background-color: #fff;
+		}
+	}
 }
 .swiper-date-wrapper{
 	position: relative;
 	height: 32px;
 	
 }
-.owl-carousel.owl-carousel--custom .owl-nav{height:0;}
-.owl-carousel.owl-carousel--custom .arrow-left, .owl-carousel.owl-carousel--custom .arrow-right{
-	position: absolute;
-	top:50%;
-	transform: translateY(-50%);
-	left: -37px;
+.swiper-button-disabled{
+	opacity: 0.3;
+	cursor:default;
 }
-.owl-carousel.owl-carousel--custom .arrow-right{
-	left: auto;
-	right: -37px;
-}
-// .owl-carousel .owl-nav .disabled >span{
-// 	opacity: 0.3;
-// 	pointer-events: none;
-// }

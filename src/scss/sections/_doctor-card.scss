@@ -12,6 +12,7 @@
 	box-shadow: 0px 4px 16px rgba(87, 141, 246, 0.2);
 	border-radius: 16px;
 	padding: 32px;
+	color: #000;
 	@media (max-width: 991px) {
 		padding: 20px;
 		flex-direction: column;
@@ -147,8 +148,11 @@
 
 .doc-card__footer{
 	padding-top: 32px;
-	.doc-card__contacts-item:first-child{
+	.doc-card__contacts>object:first-child{
 		flex-grow:1;
+	}
+	.doc-card__contacts-item:first-child{
+		
 		gap:26px;
 	}
 	@media (max-width: 991px) {

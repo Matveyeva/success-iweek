@@ -37,6 +37,18 @@
 		padding-bottom: 40px;
 	}
 }
+.swiper{
+	.arrow-left, .arrow-right{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+	.arrow-right{
+		right: 0;
+		left: auto;
+	}
+}
 .swiper-pagination{
 
 	.swiper-pagination-bullet{

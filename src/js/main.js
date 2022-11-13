@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function (){
 	/*=============== клик по гамбургеру ===============*/
 	const toggleMenu = document.querySelector('#toggle-menu');
@@ -74,10 +75,30 @@ document.addEventListener("DOMContentLoaded", function (){
 
 				});
 			}
-
 		});
+		
 	}	
-
+	/*========== закрыть mySelect по клику вне ===========*/
+	window.addEventListener('click', function(e){
+		
+		if (!e.target.closest('.mySelect')){
+			const mySelectOpenBlocks = Array.from(document.getElementsByClassName('mySelect'));
+			
+			if(mySelectOpenBlocks.length > 0){
+				mySelectOpenBlocks.forEach((item, i) =>{
+					const mySelect = item.querySelector('.mySelect-input');
+					const mySelectInput = item.querySelector('.selectValue');
+					let mySelectOptions = item.querySelectorAll('.mySelect-options');
+					const mySelectIcon = item.querySelector('.mySelect-icon');
+					const mySelecDrop = item.querySelector('.mySelect-drop');
+					
+					mySelecDrop.classList.remove('active');
+					mySelectIcon.classList.remove('active');
+					mySelect.classList.remove('open');
+				});
+			}
+		}
+	});
      /* =============== modal с атрибутом frame-modal ===============*/ 
     const modalFramesOpen = document.querySelectorAll('[frame-btn]');
     const modalFrames = document.querySelectorAll('[frame-modal]');
@@ -90,8 +111,6 @@ document.addEventListener("DOMContentLoaded", function (){
             item.classList.remove('visible');
             
             bodyEl.classList.remove('noscroll');
-            
-            
           }
           e.preventDefault();
           const itemAttr = item.getAttribute('frame-btn');
@@ -113,6 +132,15 @@ document.addEventListener("DOMContentLoaded", function (){
           bodyEl.classList.remove('noscroll');
         });
       }
+ 	/*=============== закрыть модалки по клику вне ===============*/
+	for(let frame of modalFrames){
+		frame.addEventListener('click', function(e){
+			if(e.target === e.currentTarget)
+				this.classList.remove(`visible`)
+				bodyEl.classList.remove('noscroll');
+		});
+	}
+
     }
 
 	/*=============== mySelect--radio ===============*/
@@ -139,6 +167,16 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	/*=============== extrim cards swiper slider ===============*/
    
+	let dateSlider = new Swiper(".swiper-date", {
+
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		navigation: {
+          nextEl: ".arrow-right.icon-btn",
+          prevEl: ".arrow-left.icon-btn",
+        }
+
+	});
 
 	let docSlider = new Swiper(".emergency-slider", {
 	slidesPerView: 1.05,
@@ -182,5 +220,6 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		})
 	}
+
 
 });
