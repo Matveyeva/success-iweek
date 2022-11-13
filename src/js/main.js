@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				});
 			}
 		}
+		
 	});
      /* =============== modal с атрибутом frame-modal ===============*/ 
     const modalFramesOpen = document.querySelectorAll('[frame-btn]');

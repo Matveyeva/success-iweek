@@ -10,6 +10,9 @@
 	@media (max-width: 767px) {
 		padding-top: 20px;
 	}
+	@media (max-width: 424px) {
+		max-width: 300px;
+	}
 }
 .swiper-date{
 	// width: 300px;
@@ -38,8 +41,8 @@
 			content:'';
 			position: absolute;
 			width: 5px;
-			top: 0;
-			bottom: 0;
+			top: -2px;
+			bottom: -2px;
 			right: -6px;
 			background-color: #fff;
 		}
@@ -48,11 +51,12 @@
 		&:after{
 			content:'';
 			position: absolute;
-			width: 5px;
-			top: 0;
-			bottom: 0;
-			left: -6px;
+			width: 6px;
+			top: -2px;
+			bottom: -2px;
+			left: -8px;
 			background-color: #fff;
+			
 		}
 	}
 }
