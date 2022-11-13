@@ -18,7 +18,7 @@
 	
 }
 .emergency-slider{
-	width: 100%;
+	width: calc(50% + 50vw);
 	padding-bottom: 60px;
 	.doc-card{
 		max-width: 1070px;
@@ -32,43 +32,22 @@
 	.doc-card__info{
 		grid-template-columns: 1fr;
 	}
-	.owl-dots{
-		display: flex;
-		width: fit-content;
-		align-items: center;
-		justify-content: center;
-		column-gap: 8px;
-		margin-left: auto;
-		margin-right: auto;
-		position: absolute;
-		bottom: 0;
-		left:50%;
-		transform: translateX(-50%);
-		.owl-dot{
-			width: 12px;
-			height: 12px;
-			border-radius: 50%;
-			background-color: $indigo;
-			&.active{
-				background-color: #fff;
-			}			
-		}		
-	}
-	.owl-nav{
-		position: absolute;
-		bottom: -10px;
-		left: 25%;
-		right: 25%;
-		display: flex;
-		justify-content: space-around;
-		@media (max-width: 991px) {
-		 display: none;
-		}
-	}
-	@media(max-width:1599px){
-		width: calc(50% + 50vw);
-	}
+
 	@media (max-width: 991px) {
 		padding-bottom: 40px;
 	}
 }
+.swiper-pagination{
+
+	.swiper-pagination-bullet{
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		opacity: 1;
+		background-color: #5757F6;
+		&-active{
+			background-color: #fff;
+		}			
+	}		
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{max-width: 1290px;}

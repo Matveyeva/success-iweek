@@ -5,16 +5,18 @@ section.emergency
 				h2.text-44 Экстренная ситуация
 				.text-24 Срочная помощь 24/7
 			.emergency-slider-wrapper
-				.emergency-slider.owl-carousel
-					.owl-carousel-slide
-						//===============одна карточка врача =========================
-						+doctor-card-short('Константинов Константин Констатинопольский','doctor')
-					.owl-carousel-slide
-						//===============одна карточка врача =========================
-						+doctor-card-short('Юлия Игоревна Фролова','doctor2')
-					.owl-carousel-slide
-						//===============одна карточка врача =========================
-						+doctor-card-short('Константинов Константин Констатинопольский','doctor')
-					.owl-carousel-slide
-						//===============одна карточка врача =========================
-						+doctor-card-short('Юлия Игоревна Фролова','doctor2')
+				.emergency-slider.swiper
+					.swiper-wrapper
+						.swiper-slide
+							//===============одна карточка врача =========================
+							+doctor-card-short('Константинов Константин Констатинопольский','doctor')
+						.swiper-slide
+							//===============одна карточка врача =========================
+							+doctor-card-short('Юлия Игоревна Фролова','doctor2')
+						.swiper-slide
+							//===============одна карточка врача =========================
+							+doctor-card-short('Константинов Константин Констатинопольский','doctor')
+						.swiper-slide
+							//===============одна карточка врача =========================
+							+doctor-card-short('Юлия Игоревна Фролова','doctor2')
+					.swiper-pagination.extrim-cards-pagination

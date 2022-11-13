@@ -138,19 +138,39 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
 	/*=============== extrim cards swiper slider ===============*/
-   let swiperSliders = document.querySelectorAll('.swiper')
-	if(swiperSliders > 0){
-		let docSlider = new Swiper(".emergency-slider", {
-		slidesPerView: 1,
-		spaceBetween: 16,
-		pagination: {
-				el: ".doc-slider-pagination",
-				clickable: true,
-			},
-			speed:800,
-			loop: true
-		});
-	}
+   
+
+	let docSlider = new Swiper(".emergency-slider", {
+	slidesPerView: 1.05,
+	spaceBetween: 8,
+	
+	pagination: {
+			el: ".extrim-cards-pagination",
+			clickable: true,
+		},
+		speed:800,
+		loop: true,		
+        breakpoints: {
+		 1024: {
+           spaceBetween:16,
+          },
+		 1200: {
+           spaceBetween:16,
+		   slidesPerView: 1.3,
+		   mousewheel: true,
+          },
+          1440: {
+           spaceBetween:32,
+		   mousewheel: true,
+          },
+		  1700:{
+			slidesPerView: 1.7,
+			 spaceBetween:32,
+			 mousewheel: true,
+		  }
+		}
+	});
+	
 	/* =============== floating button ===============*/	
 	const floatingBtn = document.querySelector('.floating-btn');
 	if(floatingBtn){
