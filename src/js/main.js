@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (){
-	
+	/*=============== клик по гамбургеру ===============*/
 	const toggleMenu = document.querySelector('#toggle-menu');
 	const mobMenu = document.querySelector('#header-mobile-menu');
 	const bodyEl = document.querySelector('body');
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	}
-	/*=========RATING BLOCK =======*/
+	/*========= =============== RATING BLOCK ===============*/
 	const ratingBlock = document.querySelectorAll('[data-rating]');
 	if(ratingBlock){
 		ratingBlock.forEach( function(item, index) {
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
 
-	/** custom select*/
+	/** =============== custom select ===============*/
 	const mySelectBlocks = Array.from(document.getElementsByClassName('mySelect'));
 	if(mySelectBlocks.length > 0){
 		mySelectBlocks.forEach((item, i) =>{
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}	
 
-     /* modal*/ 
+     /* =============== modal с атрибутом frame-modal ===============*/ 
     const modalFramesOpen = document.querySelectorAll('[frame-btn]');
     const modalFrames = document.querySelectorAll('[frame-modal]');
     if( modalFrames.length > 0){
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function (){
             item.classList.remove('visible');
             
             bodyEl.classList.remove('noscroll');
-            // overlay.classList.remove('active');
+            
             
           }
           e.preventDefault();
@@ -101,25 +101,21 @@ document.addEventListener("DOMContentLoaded", function (){
             if(frameAttr == itemAttr){
               frame.classList.add('visible');
               bodyEl.classList.add('noscroll');
-            //    overlay.classList.add('active');
-               
             }
           }
         });
       }
-      /*закрыть модалки с атрибутом frame-modal*/
+      /*=============== закрыть модалки с атрибутом frame-modal по клику на крестик===============*/
       for(let item of modalFramesClose){
         item.addEventListener('click', function(e){
           e.preventDefault();
           item.closest('[frame-modal]').classList.remove('visible');
           bodyEl.classList.remove('noscroll');
-        //   overlay.classList.remove('active');
-          
         });
       }
     }
 
-	/*.============== mySelect--radio ============*/
+	/*=============== mySelect--radio ===============*/
 	const radioSelect = document.querySelector('.mySelect--radio');
 	if(radioSelect){
 		const countryList = radioSelect.querySelectorAll('.role-country');
@@ -141,67 +137,21 @@ document.addEventListener("DOMContentLoaded", function (){
 			})
 		}
 	}
-	/*============== swiper select date =============*/
-
-	$('.swiper-date').owlCarousel({
-		items:2,
-		navText: ["<span class='arrow-left icon-btn'></span>", "<span class=' arrow-right   icon-btn'></span>"],
-		nav: true,
-		autoWidth:true,
-		dots: false,
-		stagePadding: 50,
-		responsive : {
-			
-			424 : {
-				stagePadding:0,
-				items:3,
-			}
-		}
-		// stagePadding: 50,
-	});
-
-	$('.emergency-slider').owlCarousel({
-		items:1,
-		stagePadding: 8,
-		margin:8,
-		dots: true,
-		navText: ["<span class='arrow-prev-blue'></span>", "<span class=' arrow-next-blue   '></span>"],
-		nav: true,
-		loop:true,
-		smartSpeed:800,
-		responsive : {
-			424 : {
-				stagePadding: 32
+	/*=============== extrim cards swiper slider ===============*/
+   let swiperSliders = document.querySelectorAll('.swiper')
+	if(swiperSliders > 0){
+		let docSlider = new Swiper(".emergency-slider", {
+		slidesPerView: 1,
+		spaceBetween: 16,
+		pagination: {
+				el: ".doc-slider-pagination",
+				clickable: true,
 			},
-			768 : {
-				margin:32,
-				stagePadding: 0
-			},
-			992:{
-				stagePadding: 90,
-				margin:32
-			},
-			1365 : {
-				stagePadding: 150,
-				margin:32,
-				items:1
-			},
-			1440:{
-				stagePadding: 150,
-				margin:32,
-				items:1
-			},
-			1600 : {
-				stagePadding: 150,
-				margin:50,
-				items:1,
-				autoplay: true,
-				autoplayHoverPause: true,
-			}
-		}
-
-	});
-	
+			speed:800,
+			loop: true
+		});
+	}
+	/* =============== floating button ===============*/	
 	const floatingBtn = document.querySelector('.floating-btn');
 	if(floatingBtn){
 		document.addEventListener('scroll', function(){
