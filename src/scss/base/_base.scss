@@ -37,7 +37,22 @@ main{
 		padding-right: 18px;
 	}
 }
-
+.scroll-vertical{
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-color: gray red;
+	scrollbar-width: 5px;
+	&::-webkit-scrollbar{
+		width: 5px;
+	}
+	&::-webkit-scrollbar-thumb{
+		width: 5px;
+		background-color: red;
+	}
+	&::-webkit-scrollbar-track{
+		background-color: grey;
+	}
+}
 #overlay {
 	display: none;
 	position: fixed;
