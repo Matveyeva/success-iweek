@@ -9,19 +9,7 @@ section.doc-cards-frame
 		.section-filters.block-1200
 			.doc-card__filter-group.flex-box.gap-16
 				//========= single filter select =======
-				.mySelect.mySelect--absolute
-					.mySelect-input
-						.mySelect-icon.icon-carret-mini
-						input.selectValue.input-slim(type='text' readonly='' value='Услуга')
-					.mySelect-drop.scroll-vertical
-						input.mySelect-options(type='text' readonly='' value='Стоматолог')
-						input.mySelect-options(type='text' readonly='' value='Ортодонт')
-						input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
-						input.mySelect-options(type='text' readonly='' value='Ветеринар')
-						input.mySelect-options(type='text' readonly='' value='Стоматолог')
-						input.mySelect-options(type='text' readonly='' value='Ортодонт')
-						input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
-						input.mySelect-options(type='text' readonly='' value='Ветеринар')
+				+mySelect({addClass: 'mySelect--absolute', val:'Услуга', itemsArr:['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт']})
 				
 				//========= single filter select =======
 				.mySelect.mySelect--absolute

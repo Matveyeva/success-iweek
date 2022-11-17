@@ -48,6 +48,7 @@ main{
 	&::-webkit-scrollbar-thumb{
 		width: 5px;
 		background-color: $orange;
+		border-radius: 5px;
 	}
 	&::-webkit-scrollbar-track{
 		background-color: #E0E0E0;
@@ -159,3 +160,4 @@ input[type="submit"] {
 	background: linear-gradient(225deg, #578DF6 22.38%, #5757F6 75.99%);
 	border-radius: 16px;
 }
+

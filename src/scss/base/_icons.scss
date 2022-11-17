@@ -71,7 +71,7 @@ svg{
 	background-size: contain;
 
 }
-.btn-cooperate{
+.btn-coopyright{
 	display: flex;
 	align-items: center;
 	column-gap:12px;
@@ -103,7 +103,7 @@ svg{
 	background-repeat: no-repeat;
 	background-size: contain;
 	flex-shrink: 0;
-	
+	cursor:pointer;
 	@media(min-width:992px){
 		display: none!important;
 	}

@@ -61,29 +61,29 @@ header.header.flex-box
 								li
 									a(href="#") О нас
 						
-						//========== btn-cooperate ==========
-						.submenu-block.submenu-block--dark.submenu-block--relative
-							label
-								input(type="checkbox").hide-input
-								.btn-cooperate.flex-between(type="button")
+						//========== btn-coopyright ==========
+						
+						.customDrop--dark.customDrop--relative
+							.customDrop
+								.btn-coopyright.flex-between(type="button")
 									span.text-18.text-white Сотрудничать с нами
-								.submenu-block__drop
-									.submenu-block__drop-item
+								.customDrop__list
+									.customDrop__list-item
 										a(href="#!").flex-vertical-center
 											svg.svg-whatsapp(width="20" height="20")
 												use(xlink:href="./img/svg-sprite.svg#svg-whatsapp")
 											.text-14 Whats App
-									.submenu-block__drop-item
+									.customDrop__list-item
 										a(href="#!").flex-vertical-center
 											svg.svg-telegram(width="20" height="20")
 												use(xlink:href="./img/svg-sprite.svg#svg-telegram")
 											.text-14 Telegram
-									.submenu-block__drop-item
+									.customDrop__list-item
 										a(href="#!").flex-vertical-center
 											svg.svg-facebook(width="20" height="20")
 												use(xlink:href="./img/svg-sprite.svg#svg-facebook")
 											.text-14 Facebook Messenger
-									.submenu-block__drop-item
+									.customDrop__list-item
 										a(href="#!").flex-vertical-center
 											svg.svg-viber(width="20" height="20")
 												use(xlink:href="./img/svg-sprite.svg#svg-viber")
@@ -133,31 +133,6 @@ header.header.flex-box
 							a(href="#") Детская стоматология
 						li
 							a(href="#") О нас
-				.submenu-block
-					label.label-submenu-block
-						input(type="checkbox").hide-input
-						.btn-cooperate
-							.icon-plus
-							.icon-minus
-							span.text-18.text-white Сотрудничать с нами
-						.submenu-block__drop
-							.submenu-block__drop-item
-								a(href="#!").flex-vertical-center
-									svg.svg-whatsapp(width="20" height="20")
-										use(xlink:href="./img/svg-sprite.svg#svg-whatsapp")
-									.text-14 Whats App
-							.submenu-block__drop-item
-								a(href="#!").flex-vertical-center
-									svg.svg-telegram(width="20" height="20")
-										use(xlink:href="./img/svg-sprite.svg#svg-telegram")
-									.text-14 Telegram
-							.submenu-block__drop-item
-								a(href="#!").flex-vertical-center
-									svg.svg-facebook(width="20" height="20")
-										use(xlink:href="./img/svg-sprite.svg#svg-facebook")
-									.text-14 Facebook Messenger
-							.submenu-block__drop-item
-								a(href="#!").flex-vertical-center
-									svg.svg-viber(width="20" height="20")
-										use(xlink:href="./img/svg-sprite.svg#svg-viber")
-									.text-14 Viber
+				.header-menu-coopyright
+					include ../blocks/_custom-drop
+					

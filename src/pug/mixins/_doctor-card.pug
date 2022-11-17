@@ -2,7 +2,9 @@ mixin card-header(textSup, titile, textSub)
 	.card-header&attributes(attributes)
 		.text-14.text-gray !{textSup}
 		.text-24.mb-8 !{titile}
-		.text-14.text-gray3 !{textSub}
+		.card-header__list
+			.text-14.text-gray3 !{textSub}
+			.text-14.text-gray3 Высшая категория
 
 mixin card-price(text1, text2)
 	.card-serv-item
@@ -24,7 +26,7 @@ mixin starRating(num)
 			i
 			i
 
-mixin doctor-card(docName,imgSrc, action)
+mixin doctor-card(docName,imgSrc, action, selectArr)
 	a(href="#!").doc-card.flex-box
 		//====== card img =======
 		.doc-card__left
@@ -86,13 +88,15 @@ mixin doctor-card(docName,imgSrc, action)
 				//====== card select time =======
 				object
 					.doc-card__form
+						if selectArr
+							+mySelect(selectArr)
 						.swiper-date-wrapper
 							.swiper-date.swiper
 								.swiper-wrapper
 									.swiper-slide
 										label.radiobutton-badge
 											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Пн, 17
+											span.label-light Пн, 16
 									.swiper-slide
 										label.radiobutton-badge
 											input.label-radio(type='radio' name='date-radiobtn' )
@@ -162,12 +166,14 @@ mixin doctor-card-short(docName,imgSrc)
 					+card-header('ИП Вердашев А.И.', docName, 'Стаж 17 лет')
 					.rating-group.hidden-992.flex-vertical-center
 						+starRating('4.4')
-						a(href="#!").text-14.text-indigo 9 отзывов
+						object
+							a(href="#!").text-14.text-indigo 9 отзывов
 				
 				//====== рейтинг для декстоп версии (скрыт на моб версии)======
 				.rating-group.block-992
 					+starRating('4.4')
-					a(href="#!").text-14.text-indigo 9 отзывов
+					object
+						a(href="#!").text-14.text-indigo 9 отзывов
 					
 		.doc-card__body
 			.doc-card__info
@@ -187,13 +193,15 @@ mixin doctor-card-short(docName,imgSrc)
 						+card-price('Хирургия', 'от 10 000 руб.')
 			.doc-card__footer
 				.doc-card__contacts.flex-vertical-center
-					.doc-card__contacts-item.flex-vertical-center
-						a(href="#!").text-icon.text-phone +995 551 90 01 17
-						a(href="#!").text-icon.text-address ул. Мелашвили 4
-							span.text-gray3 (3,5 км от вас)
+					object
+						.doc-card__contacts-item.flex-vertical-center
+							a(href="tel:+995551900117").text-icon.text-phone +995 551 90 01 17
+							a(href="#!").text-icon.text-address ул. Мелашвили 4
+								span.text-gray3 (3,5 км от вас)
 					
-					.doc-card__contacts-item.flex-vertical-center.flex-between
-						a(href="https://yandex.ru/maps/?um=constructor%3A720db28745f688e1d9fb39958cfb6c4f99ba09c04d008593d925824a763138b4&source=constructorLink"  target="_blank").text-icon.flex-box.flex-y-center.ml-auto
-							.text-icon__img
-								object(type="image/svg+xml" data="./img/maximize.svg" )
-							.text-14 Открыть на карте
+					object
+						.doc-card__contacts-item.flex-vertical-center.flex-between
+							a(href="https://yandex.ru/maps/?um=constructor%3A720db28745f688e1d9fb39958cfb6c4f99ba09c04d008593d925824a763138b4&source=constructorLink"  target="_blank").text-icon.flex-box.flex-y-center.ml-auto
+								.text-icon__img
+									object(type="image/svg+xml" data="./img/maximize.svg" )
+								.text-14 Открыть на карте

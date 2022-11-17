@@ -11,24 +11,43 @@ document.addEventListener("DOMContentLoaded", function (){
 				mobMenu.style.display = 'none';
 			}else{
 				this.classList.add('active');
-				console.log(toggleMenu.classList);
 				mobMenu.style.display = 'block';
 			}
 			
 		});
 	}
+	/*========== Скрыть мобм меню при скролле страницы ===========*/
+	document.addEventListener('scroll', function(){
+		if(window.innerWidth < 992){
+
+			if(window.pageYOffset > 1200){
+				mobMenu.style.display = 'none';
+				toggleMenu.classList.remove('active');
+			}
+		}
+	});
+
 	/*========== Скрыть модалку при ресайзе выше 1200 ===========*/
 	const modalHiddenXl = document.querySelectorAll('.modal-hidden-xl');
-	if(modalHiddenXl.length > 0){
-		window.addEventListener('resize', function(){
+
+	window.addEventListener('resize', function(){
+		if(modalHiddenXl.length > 0){		
 			if(this.innerWidth > 1199){
 				bodyEl.classList.remove('noscroll');
 				for(let item of  modalHiddenXl ){
 					item.classList.remove('visible');
 				}
 			}
-		});
-	}
+		}
+		if(this.innerWidth > 991){
+			mobMenu.style.display = "block";
+		} 
+		if(this.innerWidth <= 991){
+			if(!toggleMenu.classList.contains('active')){
+				mobMenu.style.display = "none";
+			}
+		}
+	});
 	/*========= =============== RATING BLOCK ===============*/
 	const ratingBlock = document.querySelectorAll('[data-rating]');
 	if(ratingBlock){
@@ -221,6 +240,35 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		})
 	}
+	/* custom Drop*/ 
+	const customDrop = document.querySelectorAll('.customDrop');
+	if(customDrop.length > 0){
+		for(let item of customDrop){
+			const customDropBtn = item.querySelector('.customDrop__btn');
+			const customDropList = item.querySelector('.customDrop__list');
+			item.addEventListener('click', function(e){
+				if(this.classList.contains('active')){
+					this.classList.remove('active');
+				}
+				else{
+					this.classList.add('active');
+				}
+			});
+		}
+	}
+	/*========== Скрыть мобм меню  and customDrop  по клику вне ===========*/
+	window.addEventListener('click', function(e){			
+		if (!e.target.closest('.customDrop')){
+			for(let item of customDrop){
+				item.classList.remove('active');
+			}
+		}
+		if(window.innerWidth < 992){
+			if(!e.target.closest('.header-top') ){
+				mobMenu.style.display = 'none';
+				toggleMenu.classList.remove('active');
+			}
+		}
 
-
+	});
 });

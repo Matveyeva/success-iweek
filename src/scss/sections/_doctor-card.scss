@@ -26,7 +26,24 @@
 	}
 }
 .card-header{
-	.text-gray{margin-bottom: 2px;}	
+	.text-gray{margin-bottom: 2px;}
+	.card-header__list{
+		display: flex;
+		column-gap: 12px;
+		.text-14 +.text-14{
+			position: relative;
+			&:after{
+				content: '\2022';
+				position: absolute;
+				left: -10px;
+				color: $gray3;
+				font-size: 18px;
+				line-height: 16px;
+				
+			}
+		}
+
+	}
 }
 .card-serv-wrapper{
 	gap: 32px;
@@ -139,6 +156,9 @@
 }
 .doc-cards-wrapper{
 	padding-top: 40px;
+}
+.doc-card--select{
+	margin-bottom: 24px;
 }
 .select-time-wrapper{
 	gap:6px;
