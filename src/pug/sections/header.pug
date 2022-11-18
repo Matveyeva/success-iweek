@@ -123,16 +123,12 @@ header.header.flex-box
 	.header-menu.flex-box.flex-between
 		.container
 			.header-menu-content.flex-box.flex-between.flex-y-center
-				.page-nav
-					ul
-						li
-							a(href="#") Клиники
-						li.active
-							a(href="#") Цены
-						li
-							a(href="#") Детская стоматология
-						li
-							a(href="#") О нас
+				+page-nav([
+					{addClass: 'active', link: '#', title: 'Клиники'}, 
+					{addClass: '', link: 'prices.html', title: 'Цены'},
+					{addClass: '', link: '#', title: 'Детская стоматология'},
+					{addClass: '', link: 'about.html', title: 'О нас'},
+					])
+				
 				.header-menu-coopyright
 					include ../blocks/_custom-drop
-					

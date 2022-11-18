@@ -1,0 +1,7 @@
+mixin page-nav(arg)
+	.page-nav
+		ul
+			each item in arg
+				li(class=(item.addClass !=='' ? "active" : ''))
+					a(href=" "+ item.link) #{item.title}
+			

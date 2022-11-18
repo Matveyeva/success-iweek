@@ -68,6 +68,10 @@
 .text-18{
 	font-size: 18px;
 	line-height: 1.67;
+	@media (max-width: 767px) {
+		font-size: 14px;
+		line-height: 1.43;
+	}
 }
 .text-16{
 	font-size: 16px;
@@ -96,6 +100,7 @@
 .text-gray3{
 	color: $gray3;
 }
+.text-primary,
 .text-indigo{
 	color: $indigo!important;
 }

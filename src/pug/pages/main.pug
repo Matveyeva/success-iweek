@@ -2,7 +2,12 @@ extends ../layouts/layout.pug
 
 block content
 	button.btn.btn--orange.floating-btn.btn--shadow Записаться на прием
-	include ../sections/header.pug
+	+header([
+			{addClass: 'active', link: '#', title: 'Клиники'}, 
+			{addClass: '', link: 'prices.html', title: 'Цены'},
+			{addClass: '', link: '#', title: 'Детская стоматология'},
+			{addClass: '', link: 'about.html', title: 'О нас'},
+			])
 	include ../sections/main-page-content.pug
 	include ../blocks/_filters-modal.pug
 	include ../blocks/_appoint-modal.pug
