@@ -1,16 +1,9 @@
 mixin mySelect(arr)
 	div(class="mySelect " + arr.addClass)
-		//- .mySelect.mySelect--absolute
 		.mySelect-input
 			.mySelect-icon.icon-carret-mini
 			input.selectValue.input-slim(type='text' readonly='' value=''+ arr.val)
 		.mySelect-drop.scroll-vertical
 			each item in arr.itemsArr
 				input.mySelect-options(type='text' readonly='' value=''+ item)
-			//- input.mySelect-options(type='text' readonly='' value='Ортодонт')
-			//- input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
-			//- input.mySelect-options(type='text' readonly='' value='Ветеринар')
-			//- input.mySelect-options(type='text' readonly='' value='Стоматолог')
-			//- input.mySelect-options(type='text' readonly='' value='Ортодонт')
-			//- input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
-			//- input.mySelect-options(type='text' readonly='' value='Ветеринар')
+			
