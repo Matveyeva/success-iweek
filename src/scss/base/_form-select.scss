@@ -22,6 +22,9 @@
 	right: 12px;
 	transition:.3s;
 }
+.mySelect--dark .mySelect-input:after{
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7 6.29289L12.6464 0.646447C12.8417 0.451184 13.1583 0.451184 13.3536 0.646447C13.5488 0.841709 13.5488 1.15829 13.3536 1.35355L7.35355 7.35355C7.15829 7.54882 6.84171 7.54882 6.64645 7.35355L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z' fill='%23FFFFFF'/%3e%3c/svg%3e");
+}
 .mySelect-input.open:after{
 	transform: translateY(-50%) rotate(180deg);
 }
@@ -92,7 +95,7 @@
 		z-index: 2;
 	}
 }
-.mySelect-input.mySelect-input--icon-left{
+.mySelect-input.mySelect-input--icon{
 	.selectValue{
 		padding-left: 38px;
 	}
@@ -145,7 +148,7 @@
 	
 }
 .mySelect-input{
-	&.mySelect-input--icon-left{
+	&.mySelect-input--icon{
 		.mySelect-icon-left{
 			
 			left: 24px;
@@ -153,7 +156,26 @@
 	}
 }
 
-.mySelect-input--icon-left.mySelect--64{
+
+.mySelect-input--icon.mySelect--38, .mySelect.mySelect-input--icon{
+	.form-box__icon{
+		width: 20px;
+		height: 20px;
+		svg{
+			width: 20px;
+			height: 20px;
+			object-fit: contain;
+		}
+	}
+	 .form-input{
+		padding-left: 35px;
+	}
+	.form-box__icon{
+		left: 8px;
+	}
+	
+}
+.mySelect-input--icon.mySelect--64{
 	 .form-input{
 		padding-left: 60px;
 	}
@@ -168,20 +190,8 @@
 			left: 12px;
 		}
 		svg{
-			width: 20px;
-			height: 20px;
+			width: 20px!important;
+			height: 20px!important;
 		}
-	}
-}
-.mySelect-input--icon-left.mySelect--38{
-	.form-box__icon{
-		width: 20px;
-		height: 20px;
-	}
-	 .form-input{
-		padding-left: 35px;
-	}
-	.form-box__icon{
-		left: 8px;
 	}
 }

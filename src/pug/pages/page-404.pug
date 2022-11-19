@@ -1,12 +1,7 @@
 extends ../layouts/layout.pug
 
 block content
-	+header([
-		{addClass: '', link: '#', title: 'Клиники'}, 
-		{addClass: '', link: 'prices.html', title: 'Цены'},
-		{addClass: '', link: '#', title: 'Детская стоматология'},
-		{addClass: '', link: 'about.html', title: 'О нас'},
-		])
+	include ../sections/header-404
 block variables
 	-let bodyCl = "page-404"
 	-let title = "Упс! Такой страницы нет!";

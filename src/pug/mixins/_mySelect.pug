@@ -37,7 +37,7 @@ mixin custom-select-abs(labelText, placeText, items)
 	.mySelect.mySelect--absolute&attributes(attributes)
 		if labelText
 			label.text-16.text-gray3 #{labelText}
-		.mySelect-input.mySelect-input--icon-left
+		.mySelect-input.mySelect-input--icon
 			.mySelect-icon-left.icon-filter
 			.mySelect-icon.icon-carret-mini
 			input.selectValue.input-slim(type='text' readonly='' value=''+ placeText)
@@ -47,7 +47,7 @@ mixin custom-select-abs(labelText, placeText, items)
 
 mixin custom-select-dark(placeText, items)
 	.mySelect.mySelect--absolute.mySelect--dark&attributes(attributes)
-		.mySelect-input.mySelect-input--icon-left
+		.mySelect-input.mySelect-input--icon
 			.mySelect-icon-left.icon-city
 			.mySelect-icon.icon-carret-white
 			input.selectValue.input-slim(type='text' readonly value=''+ placeText)
