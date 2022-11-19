@@ -113,11 +113,11 @@ document.addEventListener("DOMContentLoaded", function (){
 					const mySelect = item.querySelector('.mySelect-input');
 					const mySelectInput = item.querySelector('.selectValue');
 					let mySelectOptions = item.querySelectorAll('.mySelect-options');
-					const mySelectIcon = item.querySelector('.mySelect-icon');
+					// const mySelectIcon = item.querySelector('.mySelect-icon');
 					const mySelecDrop = item.querySelector('.mySelect-drop');
 					
 					mySelecDrop.classList.remove('active');
-					mySelectIcon.classList.remove('active');
+					// mySelectIcon.classList.remove('active');
 					mySelect.classList.remove('open');
 				});
 			}
