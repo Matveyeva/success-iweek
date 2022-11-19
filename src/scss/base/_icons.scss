@@ -187,3 +187,18 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height
 .arrow-prev-blue{
 	transform: rotate(180deg);
 }
+svg{
+display: inline-block;	
+}
+.svg-search, .svg-location{
+	width: 24px;
+	height: 24px;
+	stroke:#828282;
+	fill: transparent;
+}
+
+.svg-info{
+	width: 16px;
+	height: 16px;
+	fill:#F19B48;
+}
