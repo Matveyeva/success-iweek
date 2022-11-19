@@ -9,18 +9,11 @@ section.doc-cards-frame
 		.section-filters.block-1200
 			.doc-card__filter-group.flex-box.gap-16
 				//========= single filter select =======
-				+mySelect({addClass: 'mySelect--absolute', val:'Услуга', itemsArr:['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт']})
 				
+				+custom-select-icon('Услуга', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
 				//========= single filter select =======
-				.mySelect.mySelect--absolute
-					.mySelect-input
-						.mySelect-icon.icon-carret-mini
-						input.selectValue.input-slim(type='text' readonly='' value='Ближайшее время приема')
-					.mySelect-drop.scroll-vertical
-						input.mySelect-options(type='text' readonly='' value='Ближайшее время приема')
-						input.mySelect-options(type='text' readonly='' value='Ортодонт')
-						input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
-						input.mySelect-options(type='text' readonly='' value='Ветеринар')
+				+custom-select-icon('Ближайшее время приема', ['Запись на завтра', 'Запись на выходные'], 'mySelect--absolute')
+				
 
 				//========= filter-toggle =======
 				.filter-toggle__block.flex-box.flex-y-center
