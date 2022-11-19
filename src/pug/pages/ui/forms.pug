@@ -39,7 +39,7 @@ html(lang="ru")
 											.form-box__icon
 												svg.svg-location
 													use(xlink:href="./img/svg-sprite.svg#svg-location")
-											input(type="text" placeholder="Поисковый запрос").form-input.form-input--64						
+											input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
 						li
 							.form-box.form-box--icon-left
 								label.text-16.text-gray3 инпут с иконкой слева
@@ -92,6 +92,8 @@ html(lang="ru")
 							h3.text-white Custom-select dark
 							br
 							+custom-select-dark('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'])
+							pre.
+								+custom-select-dark('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'])
 						
 						
 						br

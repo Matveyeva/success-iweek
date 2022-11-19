@@ -18,6 +18,21 @@ mixin custom-select(labelText, placeText, items)
 			each item in items
 				input.mySelect-options(type='text' readonly='' value=''+ item)
 
+mixin custom-select-icon(placeText, items, addClass,  iconName, labelText)
+	div(class="mySelect " + addClass)&attributes(attributes)
+		if labelText
+			label.text-16.text-gray3 #{labelText}
+		.mySelect-input.form-box-input
+			if  iconName
+				.form-box__icon
+					svg(class=" "+ iconName)
+						use(xlink:href="../img/svg-sprite.svg#"+ iconName +"")
+			
+			input(class="selectValue form-input" type='text' readonly value=''+ placeText)
+		.mySelect-drop.scroll-vertical
+			each item in items
+				input.mySelect-options(type='text' readonly value=''+ item)
+
 mixin custom-select-abs(labelText, placeText, items)
 	.mySelect.mySelect--absolute&attributes(attributes)
 		if labelText
