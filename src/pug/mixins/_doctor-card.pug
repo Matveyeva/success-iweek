@@ -103,8 +103,11 @@ mixin doctor-card(docName,imgSrc, action, selectArr)
 							label.radiobutton-badge.label-light
 								input.label-radio(type='radio' name='date-radiobtn' )
 								span Ср, 19
-						
-							.label-light ...
+							
+							.datepicker-block
+								.label-light  ...
+								.datepicker
+									input(type="hidden" id="datepicker_value" value="01.02.2022")
 						
 						.select-time-wrapper.flex-wrapper
 							+timeRadio('15:30')
