@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function (){
 	const toggleMenu = document.querySelector('#toggle-menu');
 	const mobMenu = document.querySelector('#header-mobile-menu');
 	const bodyEl = document.querySelector('body');
+
+	
+	bodyEl.style.opacity = 1;
+	
 	if(toggleMenu){
 		toggleMenu.addEventListener('click', function(){
 			if(toggleMenu.classList.contains('active')){
