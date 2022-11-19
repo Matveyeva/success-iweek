@@ -1,0 +1,208 @@
+mixin card-header(textSup, titile, textSub)
+	.card-header&attributes(attributes)
+		.text-14.text-gray !{textSup}
+		.text-24.mb-8 !{titile}
+		.card-header__list
+			.text-14.text-gray3 !{textSub}
+			.text-14.text-gray3 Высшая категория
+
+mixin card-price(text1, text2)
+	.card-serv-item
+		.text-14.text-gray3 !{text1}
+		.text-18 !{text2}
+
+mixin starRating(num)
+	p.rating-block(data-rating)
+		span.rating-block-passive
+			i
+			i
+			i
+			i
+			i
+		span.rating-block-active(data-count=''+ num)
+			i
+			i
+			i
+			i
+			i
+
+mixin doctor-card(docName,imgSrc, action, selectArr)
+	a(href="#!").doc-card.flex-box
+		//====== card img =======
+		.doc-card__left
+			.doc-card__foto-block
+				.doc-card__foto
+					label.check-label.flex-center.flex-box
+						input(type="checkbox")
+						svg.svg-heart(width="16" height="16" )
+							use(xlink:href="./img/svg-sprite.svg#svg-heart")
+					img(src="./img/"+ imgSrc +".png", width="140" height="140" alt="alt")
+					
+				//==== заголовок карточки  на моб версии ======
+				.doc-card__title-mobile(class="hidden-fl-992")
+					+card-header('ИП Вердашев А.И.', docName, 'Стаж 17 лет')
+					.rating-group.hidden-992.flex-vertical-center
+						+starRating('4.4')
+						object
+							a(href="www.ya.ru").text-14.text-indigo 9 отзывов
+				
+				//====== рейтинг для декстоп версии (скрыт на моб версии)======
+				.rating-group.block-992
+					+starRating('4.4')
+					object
+						a(href="www.ya.ru").text-14.text-indigo 9 отзывов
+					
+		.doc-card__body
+			.doc-card__info
+				//====== card doc info =======
+				.doc-card__center
+					+card-header('ИП Вердашев А.И.', docName, 'Стаж 17 лет')(class="block-992")
+					
+					.doc-card-cat
+						.label-light-wrapper.gap-8.flex-wrapper
+							+label-light('Диагностика')
+							+label-light('Хирургия')
+							+label-light('Пародонтология')
+					
+					.card-serv-wrapper.flex-box
+						+card-price('Консультация', 'Бесплатно')
+						+card-price('Диагностика', '3 000 руб.')
+						+card-price('Хирургия', 'от 10 000 руб.')
+						
+						.card-serv-item
+							.text-icon.weight-400.text-extrim
+								.text-red.text-14 Экстренная ситуация
+							.text-18 от 5 700 руб.
+					
+					if action
+						//======== акция =======
+						.sale-block.text-indigo
+							.text-icon.flex-box.flex-y-center.text-indigo
+								.text-icon__img
+									svg.svg-flag(width="20" height="20" )
+										use(xlink:href="./img/svg-sprite.svg#svg-flag")
+								.text-14 Акции
+								
+							.text-18 Лечение 8 зуба — бесплатно!
+			
+				//====== card select time =======
+				object
+					.doc-card__form
+						if selectArr
+							+mySelect(selectArr)
+						//=========выбор даты слайдер ===============
+						.swiper-date-wrapper
+							.swiper-date.swiper
+								.swiper-wrapper
+									.swiper-slide
+										label.radiobutton-badge
+											input.label-radio(type='radio' name='date-radiobtn' )
+											span.label-light Пн, 16
+									.swiper-slide
+										label.radiobutton-badge
+											input.label-radio(type='radio' name='date-radiobtn' )
+											span.label-light Вт, 18
+									.swiper-slide
+										label.radiobutton-badge
+											input.label-radio(type='radio' name='date-radiobtn' )
+											span.label-light Ср, 19
+									.swiper-slide
+										label.radiobutton-badge
+											input.label-radio(type='radio' name='date-radiobtn' )
+											span.label-light Чт, 20
+									.swiper-slide
+										label.radiobutton-badge
+											input.label-radio(type='radio' name='date-radiobtn' )
+											span.label-light Пт, 21
+									.swiper-slide
+										label.radiobutton-badge
+											input.label-radio(type='radio' name='date-radiobtn' )
+											span.label-light Сб, 22
+								
+								.arrow-left.icon-btn
+								.arrow-right.icon-btn
+						
+						.select-time-wrapper.flex-wrapper
+							+timeRadio('15:30')
+							+timeRadio('16:30')
+							+timeRadio('17:00')
+							+timeRadio('17:30')
+							+timeRadio('18:00')
+							+timeRadio('18:30')
+							+timeRadio('19:00')
+							+timeRadio('19:30')
+							+timeRadio('20:00')
+							+timeRadio('...')
+
+		
+			.doc-card__footer
+				.doc-card__contacts.flex-vertical-center
+					object
+						.doc-card__contacts-item.flex-vertical-center
+							a(href="tel:+995551900117").text-icon.text-phone +995 551 90 01 17
+							a(href="#!").text-icon.text-address ул. Мелашвили 4
+								span.text-gray3 (3,5 км от вас)
+					
+					object
+						.doc-card__contacts-item.flex-vertical-center.flex-between
+							a(href="https://yandex.ru/maps/?um=constructor%3A720db28745f688e1d9fb39958cfb6c4f99ba09c04d008593d925824a763138b4&source=constructorLink"  target="_blank").text-icon.flex-box.flex-y-center.ml-auto
+								.text-icon__img
+									object(type="image/svg+xml" data="./img/maximize.svg" )
+								.text-14 Открыть на карте
+
+mixin doctor-card-short(docName,imgSrc)
+	.doc-card.flex-box
+		//====== card img =======
+		.doc-card__left
+			.doc-card__foto-block
+				.doc-card__foto
+					label.check-label.flex-center.flex-box
+						input(type="checkbox")
+						svg.svg-heart(width="16" height="16" )
+							use(xlink:href="./img/svg-sprite.svg#svg-heart")
+					img(src="./img/"+ imgSrc +".png", width="140" height="140" alt="alt")
+					
+				//==== заголовок карточки  на моб версии ======
+				.doc-card__title-mobile(class="hidden-fl-992")
+					+card-header('ИП Вердашев А.И.', docName, 'Стаж 17 лет')
+					.rating-group.hidden-992.flex-vertical-center
+						+starRating('4.4')
+						object
+							a(href="#!").text-14.text-indigo 9 отзывов
+				
+				//====== рейтинг для декстоп версии (скрыт на моб версии)======
+				.rating-group.block-992
+					+starRating('4.4')
+					object
+						a(href="#!").text-14.text-indigo 9 отзывов
+					
+		.doc-card__body
+			.doc-card__info
+				//====== card doc info =======
+				.doc-card__center
+					+card-header('ИП Вердашев А.И.', docName, 'Стаж 17 лет')(class="block-992")
+					
+					.doc-card-cat
+						.label-light-wrapper.gap-8.flex-wrapper
+							+label-light('Диагностика')
+							+label-light('Хирургия')
+							+label-light('Пародонтология')
+					
+					.card-serv-wrapper.flex-box
+						+card-price('Консультация', 'Бесплатно')
+						+card-price('Диагностика', '3 000 руб.')
+						+card-price('Хирургия', 'от 10 000 руб.')
+			.doc-card__footer
+				.doc-card__contacts.flex-vertical-center
+					object
+						.doc-card__contacts-item.flex-vertical-center
+							a(href="tel:+995551900117").text-icon.text-phone +995 551 90 01 17
+							a(href="#!").text-icon.text-address ул. Мелашвили 4
+								span.text-gray3 (3,5 км от вас)
+					
+					object
+						.doc-card__contacts-item.flex-vertical-center.flex-between
+							a(href="https://yandex.ru/maps/?um=constructor%3A720db28745f688e1d9fb39958cfb6c4f99ba09c04d008593d925824a763138b4&source=constructorLink"  target="_blank").text-icon.flex-box.flex-y-center.ml-auto
+								.text-icon__img
+									object(type="image/svg+xml" data="./img/maximize.svg" )
+								.text-14 Открыть на карте

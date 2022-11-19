@@ -1,0 +1,130 @@
+mixin header(argMenu)
+	header.header.flex-box
+		.header-content
+			.container
+				//========= header top ==========
+				.header-top.flex-box.flex-between
+					.header-top__left.flex-vertical-center
+						a(href="index.html").custom-logo
+							img(src="./img/logo.png", width="136" alt="logo")
+						
+						.select-city-block
+							+custom-select-dark('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'])
+						.toggle-menu#toggle-menu
+					
+					//========= header top  right ==========
+					.header-top__right#header-mobile-menu
+						.header-wrapper.flex-box.flex-y-center
+							.header-contacts.flex-box.flex-y-center
+								.soc-block.flex-box.flex-y-center
+									a(href="#!")
+										svg.svg-tg(width="24" height="24")
+											use(xlink:href="./img/svg-sprite.svg#svg-tg")
+									a(href="#!")
+										svg.svg-wa(width="24" height="24")
+											use(xlink:href="./img/svg-sprite.svg#svg-wa")
+								.phone-block
+									a(href="#!").text-icon.text-phone.text-white +995 551 90 01 17
+
+							a(href="#!").btn.btn-mini.dark-btn
+								svg.svg-person(width="16" height="16")
+									use(xlink:href="./img/svg-sprite.svg#svg-person")
+								.text-white Кабинет
+							
+							//=============Выбор страны и валюты на экранах от 992 пикс ================
+							.mySelect.mySelect--absolute.mySelect--dark.mySelect--radio.mySelect--currency
+								.mySelect-input
+									.mySelect-icon.icon-carret-white
+									input.selectValue.input-slim(type='text' readonly='' value='RU • RUB')
+								.mySelect-drop.scroll-vertical
+									.mySelect-drop__row
+										+custom-radio('country','EN', 'English')(class="role-country")
+										+custom-radio('currency', 'USD','USD')(class="role-currency")
+										
+									.mySelect-drop__row
+										+custom-radio('country', 'RU','Русский', 'checked')(class="role-country")
+										+custom-radio('currency', 'RUB','RUB', 'checked')(class="role-currency")
+									.mySelect-drop__row
+										+custom-radio('country', 'GE', 'Georgian')(class="role-country")
+										+custom-radio('currency', 'GEL','GEL')(class="role-currency")
+						
+						//========== mobile-visible block ==========
+						.mobile-menu-block
+							//========== mobile-menu ==========
+							.page-nav-mobile
+								ul
+									li
+										a(href="#") Клиники
+									li.active
+										a(href="#") Цены
+									li
+										a(href="#") Детская стоматология
+									li
+										a(href="#") О нас
+							
+							//========== btn-coopyright ==========
+							
+							.customDrop--dark.customDrop--relative
+								.customDrop
+									.btn-coopyright.flex-between(type="button")
+										span.text-18.text-white Сотрудничать с нами
+									.customDrop__list
+										.customDrop__list-item
+											a(href="#!").flex-vertical-center
+												svg.svg-whatsapp(width="20" height="20")
+													use(xlink:href="./img/svg-sprite.svg#svg-whatsapp")
+												.text-14 Whats App
+										.customDrop__list-item
+											a(href="#!").flex-vertical-center
+												svg.svg-telegram(width="20" height="20")
+													use(xlink:href="./img/svg-sprite.svg#svg-telegram")
+												.text-14 Telegram
+										.customDrop__list-item
+											a(href="#!").flex-vertical-center
+												svg.svg-facebook(width="20" height="20")
+													use(xlink:href="./img/svg-sprite.svg#svg-facebook")
+												.text-14 Facebook Messenger
+										.customDrop__list-item
+											a(href="#!").flex-vertical-center
+												svg.svg-viber(width="20" height="20")
+													use(xlink:href="./img/svg-sprite.svg#svg-viber")
+												.text-14 Viber
+							//=============Выбор страны и валюты на экранах от 375 до 991 пикс ================	
+							.mobile-menu-currency
+								ul
+									li
+										+custom-radio('country-mob','EN', 'English')(class="role-country")
+										+custom-radio('currency-mob', 'USD','USD')(class="role-currency")
+									li
+										+custom-radio('country-mob', 'RU','Русский', 'checked')(class="role-country")
+										+custom-radio('currency-mob', 'RUB','RUB', 'checked')(class="role-currency")
+									li
+										+custom-radio('country-mob', 'GE', 'Georgian')(class="role-country")
+										+custom-radio('currency-mob', 'GEL','GEL')(class="role-currency")
+
+				//========= header center ==========
+				.header-center
+					.header-title
+						h1.text-44.text-white Лучшие специалисты в сфере стоматологии
+						.text-24 Оказываем экстренную помощь
+					.header-categories.flex-box
+						+catLabel('diagnost', 'Диагностика')
+						+catLabel('terap', 'Терапия')
+						+catLabel('hirurg', 'Хирургия')
+						+catLabel('implant', 'Имплантация')
+						+catLabel('apple', 'Детская стоматология')
+						+catLabel('paradent', 'Пародонтология')
+					
+					.header-button
+						.btn-64.btn--accent
+							object(type="image/svg+xml" data="./img/extra-white.svg" width="24")
+							span У меня экстренная ситуация
+			
+		//========= header-menu for desktop==========
+		.header-menu.flex-box.flex-between
+			.container
+				.header-menu-content.flex-box.flex-between.flex-y-center
+					+page-nav(argMenu)
+					
+					.header-menu-coopyright
+						include ../blocks/_custom-drop

@@ -1,0 +1,119 @@
+.mySelect{
+	
+	label.text-16{margin-bottom: 8px;display: inline-block}
+	&-input{
+		position: relative;
+	}
+}
+.mySelect-drop{
+	display: flex;
+	padding-left: 16px;
+	padding-right: 16px;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 16px rgba(87, 141, 246, 0.2);
+	border-radius: 4px;
+	display: none;
+	margin-top: 8px;
+	max-height: 220px;
+}
+.mySelect-options{
+	height: 52px;
+	font-size: 14px;
+	display: block;
+	width: 100%;
+	color: $gray;
+	cursor:pointer;
+	&:hover{
+		color: $indigo;
+	}
+	&+ .mySelect-options{
+		border-top: 1px solid $wlgray;
+	}
+}
+
+.mySelect-drop.active{
+	display: block;
+}
+.mySelect-icon,.mySelect-icon-left{
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	z-index: 1;
+	width: 16px;
+	height: 16px;
+	transition: .3s;
+	pointer-events: none;
+
+}
+.mySelect-icon.active{
+	transform: rotate(-180deg);
+
+}
+.mySelect.mySelect--absolute{
+	position: relative;
+	.mySelect-drop.active{
+		display: block;
+		position: absolute;
+		left: 0;
+		min-width: 100%;
+		bottom: -8px;
+		transform: translateY(100%);
+		white-space: nowrap;
+		z-index: 2;
+	}
+}
+.mySelect-input.mySelect-input--icon-left{
+	.selectValue{
+		padding-left: 38px;
+	}
+	.mySelect-icon-left{
+		right: 0;
+		left: 12px;
+	}
+}
+.mySelect.mySelect--dark{
+	.selectValue{
+		border: 1px solid #494966;
+		border-radius: 4px;
+		background: $gray;
+		color: #fff;
+	}
+	
+	&:hover{
+		.selectValue{
+			background: #494966;
+		}
+	}
+	&:active{
+		.selectValue{
+			background: #161628;
+			border-color: #161628;
+		}
+	}
+
+}
+/*=========== mySelect--radio ============*/
+.mySelect--radio{
+	.mySelect-drop__row{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		height: 52px;
+		align-items: center;
+		column-gap: 30px;
+		label:first-child{min-width: 95px;}
+	}
+	
+}
+.mySelect.mySelect--currency{
+	.mySelect-input{width: 121px;}
+	.mySelect-drop{
+		min-width: 200px;
+		left: auto!important;
+		right:0;
+
+	}
+	
+}

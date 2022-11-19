@@ -1,7 +1,8 @@
+
 include ../../layouts/_mixins-links.pug
 block variables
 
-<!DOCTYPE html>
+doctype html
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
@@ -23,14 +24,65 @@ html(lang="ru")
 				h2 Кнопки
 
 				.container-dashboard__content
-				ul
+				ul.ui-components
 					li
-						h3 Кнопка
-						button.button Button 
+						.btn Button
 						pre.
-							button.button Button
-						
-						h3 Ссылка
-						a(href="#!").button Button
+							.btn  Button
+					li
+						.btn-64.btn--accent Button
 						pre.
-							a(href="#!").button Button
+							.btn-64.btn--accent Button
+					
+					li
+						.btn.btn--orange.btn--shadow Button
+						pre.
+							.btn.btn--orange.btn--shadow Button
+					li
+						.btn-64.btn--accent
+							object(type="image/svg+xml" data="../img/extra-white.svg" width="24")
+							span Button 
+						pre.
+							.btn-64.btn--accent
+								object(type="image/svg+xml" data="../img/extra-white.svg" width="24")
+								span Button
+					li
+						.btn.btn--primary Button
+						pre.
+							.btn.btn--primary Button
+					
+					li
+						.btn-32.btn--primary Button
+						pre.
+							.btn-32.btn--primary Button
+					
+					li.li-box(style="background-color: blue;padding:10px;padding-bottom:10px")
+						.btn.btn--outline Button
+					pre.
+						.btn.btn--outline Button
+
+					li.li-box(style="background-color: blue;padding:10px;padding-bottom:10px")
+						.btn.btn-mini.dark-btn
+							svg.svg-person(width="16" height="16")
+								use(xlink:href="./img/svg-sprite.svg#svg-person")
+							.text-white Кабинет
+
+
+					pre.
+						.btn.btn-mini.dark-btn
+							svg.svg-person(width="16" height="16")
+								use(xlink:href="./img/svg-sprite.svg#svg-person")
+							.text-white Кабинет
+
+					li
+						.btn.btn--primary.w-100 Button
+						pre.
+							.btn.btn--primary.w-100 Button
+					li
+						.btn.btn--gradient Button
+						pre.
+							.btn.btn--gradient Button
+
+
+
+		include ../../layouts/_ui.pug

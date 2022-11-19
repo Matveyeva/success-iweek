@@ -1,11 +1,41 @@
 @import "base/_var";
 @import "base/_base";
+@import "base/_position-class";
 @import "base/_typography.scss";
+@import "base/_text-components.scss";
 @import "base/_icons.scss";
 @import "base/_form.scss";
+@import "base/_form-select.scss";
+@import "base/_labels.scss";
+@import "base/_buttons.scss";
 
 
 //blocks
+@import "blocks/_page-nav.scss";
+@import "blocks/_header-contacts.scss";
+@import "blocks/_benefits-items.scss";
+@import "blocks/_rating-block.scss";
+@import "blocks/_swiper-date.scss";
+@import "blocks/_filters-modal.scss";
+@import "blocks/_appoint-modal.scss";
+@import "blocks/_custom-drop.scss";
+
+//sections
+@import "sections/_header.scss";
+@import "sections/_doctor-card.scss";
+@import "sections/_partner-banner.scss";
+@import "sections/_emergency-situation.scss";
+@import "sections/_statistic.scss";
+@import "sections/_faq.scss";
+@import "sections/_feedback.scss";
+@import "sections/_footer.scss";
  
-  //ui
+ //pages
+@import "pages/_main-page.scss"; 
+@import "pages/_about-page.scss";
+@import "pages/_page-404.scss";
+
+
+
+//ui
  @import "ui/_ui-navigation";

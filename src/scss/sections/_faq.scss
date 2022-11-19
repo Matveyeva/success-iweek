@@ -1,0 +1,110 @@
+section.faq{
+	padding-top: 80px;
+	
+	.section-title{
+		margin-bottom: 48px;
+		text-align: center;
+		@media (max-width: 767px) {
+		margin-bottom: 25px;
+		
+		}
+	}
+	@media (max-width: 767px) {
+		padding-top: 40px;
+		}
+}
+.acor-item{
+	border-top:1px solid  #E7E7E7;
+
+	
+}
+.acor-item:last-child{
+	border-bottom:1px solid  #E7E7E7;
+}
+
+.acor-container .acor-body {
+	height: 0;
+	padding-left:0;
+	box-sizing: border-box;
+	transition: color 0.3s, padding 0.3s;
+	overflow: hidden;
+	@media(max-width:767px){
+		padding: 0;
+	}
+}
+
+.acor-container .acor-body p {
+	margin: 0 0 1em;
+	font-size: 16px;
+	line-height: 1.5;
+	
+	&:last-child{margin-bottom: 0;}
+	
+	@media(max-width:767px){
+		font-size: 15px;
+	}
+	
+}
+
+.acor-container label {
+	position: relative;	
+	cursor: pointer;
+	display: block;
+	padding: 32px  0;
+	padding-right: 60px;
+	width: 100%;
+	z-index: 3;
+	transition: color .3s;
+	
+	@media(max-width:767px){
+		font-size: 16px;
+		padding-right: 40px;
+		padding: 24px 0;
+	}
+	
+}
+
+
+.acor-container input {
+	display: none;
+}
+
+.acor-container label:before {
+	content: '';
+	position: absolute;
+	right: 30px;
+	top: 35px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='12' viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 0.96967C0.762563 0.676777 1.23744 0.676777 1.53033 0.96967L10 9.43934L18.4697 0.96967C18.7626 0.676777 19.2374 0.676777 19.5303 0.96967C19.8232 1.26256 19.8232 1.73744 19.5303 2.03033L10.5303 11.0303C10.2374 11.3232 9.76256 11.3232 9.46967 11.0303L0.46967 2.03033C0.176777 1.73744 0.176777 1.26256 0.46967 0.96967Z' fill='%235757F6'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+	width: 24px; 
+	height: 24px;
+	@media(max-width:1199px){top: 30px;}
+	@media(max-width:767px){
+		width: 20px; 
+		height: 20px;
+		top:22px;
+		right: 20px;
+	}
+}
+
+
+.acor-container input:checked+label:before {
+	transition: transform .35s;
+	transform: rotate(180deg);
+}
+
+.acor-container input:checked+label+.acor-body {
+	height: auto;
+	margin-top: -5px;	
+	padding: 0 40px 20px 0;
+	padding-top: 0px;
+	padding-bottom: 40px;
+	@media(max-width:1199px){
+		padding: 20px 0;
+		padding-top: 10px;
+		padding-bottom: 40px;
+	}
+	@media(max-width:767px){padding-top: 5px; padding-right: 30px;}
+}

@@ -1,0 +1,174 @@
+include ../../layouts/_mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ../../ui/ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Текстовые компоненты
+
+				.container-dashboard__content
+					ul.ui-components
+						li 
+							.text-32 Поиск специалиста
+								sup 327
+							pre.
+								.text-32 Поиск специалиста
+									sup 327	
+						li 
+							.text-icon.flex-box.flex-y-center
+								.text-icon__img
+									svg.svg-extra(width="20" height="20" )
+										use(xlink:href="../svg-sprite.svg#extra")
+								.text-red.text-14 Экстренная ситуация
+							pre.
+								.text-icon.flex-box.flex-y-center
+									.text-icon__img
+										svg.svg-extra(width="20" height="20" )
+											use(xlink:href="./svg-sprite.svg#extra")
+									.text-red.text-14 Экстренная ситуация
+						li
+							.text-icon.text-extrim
+								.text-red.text-14 Экстренная ситуация
+							pre.
+								.text-icon.text-extrim
+									.text-red.text-14 Экстренная ситуация
+						li
+							.text-icon.flex-box.flex-y-center
+								.text-icon__img
+									object(type="image/svg+xml" data="../img/maximize.svg" )
+								.text-14 Открыть на карте
+							
+							pre.
+								.text-icon.flex-box.flex-y-center
+									.text-icon__img
+										object(type="image/svg+xml" data="../img/maximize.svg" )
+									.text-14 Открыть на карте
+
+						li
+							a(href="#!").text-icon.text-phone +995 551 90 01 17
+							pre.
+								a(href="#!").text-icon.text-phone.text-medium +995 551 90 01 17
+						li
+							.li-box(style="background-color: blue;padding:10px;padding-bottom:10px")
+								a(href="#!").text-icon.text-phone.text-white +995 551 90 01 17
+								
+							pre.
+								a(href="#!").text-icon.text-phone.text-white +995 551 90 01 17
+						
+						li
+							a(href="#!").text-icon.text-address ул. Мелашвили 4
+							pre.
+								a(href="#!").text-icon.text-address ул. Мелашвили 4
+						li
+							a(href="#!").text-icon.text-address ул. Мелашвили 4
+								span.text-gray3 (3,5 км от вас)
+							pre.
+								a(href="#!").text-icon.text-address ул. Мелашвили 4
+									span.text-gray3 (3,5 км от вас)
+
+						li
+							.li-box(style="background: linear-gradient(225deg, #578DF6 22.38%, #5757F6 75.99%);padding:10px;padding-bottom:10px")
+								.header-title
+									h1.text-44.text-white Лучшие специалисты в сфере стоматологии
+									.text-24 Оказываем экстренную помощь
+							pre.
+								.header-title
+									h1.text-44.text-white Лучшие специалисты в сфере стоматологии
+									.text-24 Оказываем экстренную помощь
+
+
+						li
+							+card-header('ИП Вердашев А.И.', 'Константинов Константин Констатинопольский', 'Стаж 17 лет')
+							pre.
+								+doctor-card-header('ИП Вердашев А.И.', 'Константинов Константин Констатинопольский', 'Стаж 17 лет')
+						li
+							+card-price('Консультация', 'Бесплатно')
+							pre.
+								+card-price('Консультация', 'Бесплатно')
+
+						li
+							.card-serv-item
+								.text-icon.text-extrim
+									.text-red.text-14 Экстренная ситуация
+								.text-18 от 5 700 руб.
+							pre.
+								.card-serv-item
+									.text-icon.text-extrim
+										.text-red.text-14 Экстренная ситуация
+									.text-18 от 5 700 руб.
+						li
+							.card-serv-wrapper.flex-box
+								+card-price('Консультация', 'Бесплатно')
+								+card-price('Консультация', 'Бесплатно')
+								+card-price('Консультация', 'Бесплатно')
+								
+								.card-serv-item
+									.text-icon.text-extrim
+										.text-red.text-14 Экстренная ситуация
+									.text-18 от 5 700 руб.
+							pre.
+								.card-serv-wrapper.flex-box
+									+card-price('Консультация', 'Бесплатно')
+									+card-price('Консультация', 'Бесплатно')
+									+card-price('Консультация', 'Бесплатно')
+									
+									.card-serv-item
+										.text-icon.text-extrim
+											.text-red.text-14 Экстренная ситуация
+										.text-18 от 5 700 руб.
+						li
+							
+							.sale-block.text-indigo
+								.text-icon.flex-box.flex-y-center.text-indigo
+									.text-icon__img
+										svg.svg-flag(width="20" height="20" )
+											use(xlink:href="../svg-sprite.svg#svg-flag")
+									.text-14 Акции
+								.text-18 Лечение 8 зуба — бесплатно!
+							pre.
+								.sale-block.text-indigo
+									.text-icon.flex-box.flex-y-center.text-indigo
+										.text-icon__img
+											svg.svg-flag(width="20" height="20" )
+												use(xlink:href="../svg-sprite.svg#svg-flag")
+										.text-14 Акции
+										
+									.text-18 Лечение 8 зуба — бесплатно!
+						li
+							+benefitItem('user2', 'Врачи, которым доверяют', 'Средний стаж от 7 лет')
+							
+							pre.
+								+benefitItem('user2', 'Врачи, которым доверяют', 'Средний стаж от 7 лет')
+						li
+							.li-box(style="background: linear-gradient(225deg, #578DF6 22.38%, #5757F6 75.99%);padding:10px;padding-bottom:10px")
+								.title-group
+									.text-32.text-white Очень важный баннер
+									.text-orange.text-16.text-medium Сообщает о прекрасной клинике
+							pre.
+								.title-group
+									.text-32.text-white Очень важный баннер
+									.text-orange.text-16.text-medium Сообщает о прекрасной клинике
+
+
+
+
+
+
+
+

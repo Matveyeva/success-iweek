@@ -1,3 +1,43 @@
+body.full-screen{
+	padding-left: 0;
+}
+body.full-screen .container-dashboard{
+	width: 1320px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;	
+	@media(max-width:1364px){
+		width: 1140px;
+	}
+	@media(max-width:1199px){
+		width: 960px;
+	}
+	@media(max-width:991px){
+		width: 760px;
+	}
+	@media(max-width:767px){
+		width: 540px;
+	}
+	@media(max-width:574px){
+		width: 100px;
+	}
+}
+body.full-screen .ui-panel{display: none;}
+#hide-panel{
+	position: fixed;
+	right: 30px;
+	top: 10px;
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: 1px solid red;
+	border-radius: 5px;
+	font-weight: 500;
+	height: 35px;
+	white-space: nowrap;
+	z-index: 20;
+}
 .modal-visible .modal-large, .modal-visible .modal-frame{
 	transform: translateX(0)!important;
 }
@@ -154,5 +194,11 @@
 		width: 100%;
 	}
 }
-
+.ui-components>li{
+	padding-top: 10px;
+	border-top:1px dotted #9c9b9b;
+}
+.ui-components .toggle-menu{
+	display: block!important;
+}
 /*//стили для вспомогат страницы - удалить из проектп */

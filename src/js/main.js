@@ -1,178 +1,274 @@
+
 document.addEventListener("DOMContentLoaded", function (){
-	/* Локализация datepicker */
-	if($( ".datepicker" ).length > 0){
-		$.datepicker.regional['ru'] = {
-			closeText: 'Закрыть',
-			prevText: 'Предыдущий',
-			nextText: 'Следующий',
-			currentText: 'Сегодня',
-			monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-			monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
-			dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-			dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-			dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-			weekHeader: 'Не',
-			dateFormat: 'dd.mm.yy',
-			firstDay: 1,
-			isRTL: false,
-			showMonthAfterYear: false,
-			yearSuffix: ''
-		};
-		$.datepicker.setDefaults($.datepicker.regional['ru']);
-
-		$(function() {
-		$( ".datepicker" ).datepicker();
-		});
-	}
-	/* убрать пробел после последней цифры в инпуте проверки смс-кода */
-	if($('#confirmCode')){
-		$('#confirmCode').bind('input', function(){
-			console.log('123');
-			if($(this).val().length == 5){
-				console.log('456');
-				$(this).blur();
+	/*=============== клик по гамбургеру ===============*/
+	const toggleMenu = document.querySelector('#toggle-menu');
+	const mobMenu = document.querySelector('#header-mobile-menu');
+	const bodyEl = document.querySelector('body');
+	if(toggleMenu){
+		toggleMenu.addEventListener('click', function(){
+			if(toggleMenu.classList.contains('active')){
+				this.classList.remove('active');
+				mobMenu.style.display = 'none';
+			}else{
+				this.classList.add('active');
+				mobMenu.style.display = 'block';
 			}
+			
 		});
 	}
-	const overlayBg = document.querySelector('#overlay');
-	const bodyEl = document.body;
+	/*========== Скрыть мобм меню при скролле страницы ===========*/
+	document.addEventListener('scroll', function(){
+		if(window.innerWidth < 992){
 
-	/* по клику на карточку адреса показать окно modal-reestr p-119.html . вид как на 121 макете*/
-	const addressItems = document.querySelectorAll('[data-address]');
-	if(addressItems.length > 0){
-		for(let i = 0; i < addressItems.length; i++){
-			addressItems[i].addEventListener('click', (e)=>{
-				
-				e.preventDefault();
-				for(let j = 0; j < addressItems.length; j++){
-					
-					if(j == i){
-						if(addressItems[j].classList.contains('address-card--current')){
-							addressItems[j].classList.remove('address-card--current');
-							document.querySelector('#reestr-modal').classList.remove('visible');
-							bodyEl.classList.remove('noscroll');
-						}
-						else{
-							document.querySelector('#reestr-modal').classList.add('visible');
-							bodyEl.classList.add('noscroll');
-							addressItems[j].classList.add('address-card--current')	;		
-						}
-					}
-					else{
-						addressItems[j].classList.remove('address-card--current');	
-						bodyEl.classList.remove('noscroll');
-					}
-				}
-				
-			});
+			if(window.pageYOffset > 1200){
+				mobMenu.style.display = 'none';
+				toggleMenu.classList.remove('active');
+			}
 		}
-	}
-	/*карточка услуги, по клику сделать активной */
-	const serviceDisableCards = document.querySelectorAll('.service-card--disable');
-	if(serviceDisableCards.length > 0){
-		for(let item of serviceDisableCards){
-			item.addEventListener('click', function(e){
-				item.classList.remove('service-card--disable');
-			});
-		}
-	}
-
-	const serviceActiveCards = document.querySelectorAll('.service-card');
-
-	if(serviceActiveCards.length > 0){
-		for(let item of serviceActiveCards){
-
-			item.addEventListener('dblclick', function(e){
-				console.log('123');
-				if(item.classList.contains('service-card--disable')){
-					item.classList.remove('service-card--disable');
-
-				}
-				document.querySelector('.service-modal').classList.add('visible');
-
-			});
-		}
-
-	}
-	/* ==============показать модальные окна,  имеют атрибут frame-modal , кнопка, которая его показывает , имеет атрибут frame-btn, Чтобы закрыть такое окно, прописываем кнопке закрытия атрибут frame-close*/
-	const modalFramesOpen = document.querySelectorAll('[frame-btn]');
-	const modalFrames = document.querySelectorAll('[frame-modal]');
-
-	if( modalFrames.length > 0){
-		
-		const modalFramesClose = document.querySelectorAll('[frame-close]');
-		for(let item of modalFramesOpen){
-			item.addEventListener('click', function(e){
-				for(let item of  modalFrames){
-					item.classList.remove('visible');
-					bodyEl.classList.remove('noscroll');
-					overlayBg.classList.remove('active');
-					
-				}
-				e.preventDefault();
-				const itemAttr = item.getAttribute('frame-btn');
-
-				for(let frame of modalFrames){
-					const frameAttr =frame.getAttribute('frame-modal');	
-					if(frameAttr == itemAttr){
-						frame.classList.add('visible');
-						bodyEl.classList.add('noscroll');
-						overlayBg.classList.add('active');
-					}
-				}
-			});
-		}
-		/*закрыть модалки с атрибутом frame-modal*/
-		for(let item of modalFramesClose){
-			item.addEventListener('click', function(e){
-				
-				e.preventDefault();
-				item.closest('[frame-modal]').classList.remove('visible');
-				bodyEl.classList.remove('noscroll');
-				overlayBg.classList.remove('active');
-			});
-		}
-	}
-	overlayBg.addEventListener('click', function(e){
-	for(let frame of modalFrames){
-		frame.classList.remove('visible');
-		}
-		bodyEl.classList.remove('noscroll');
-		this.classList.remove('active');
 	});
 
+	/*========== Скрыть модалку при ресайзе выше 1200 ===========*/
+	const modalHiddenXl = document.querySelectorAll('.modal-hidden-xl');
 
-	//========большой сладер документов =======//
-	let docSlider = new Swiper(".doc-slider", {
-       slidesPerView: 1,
-	   spaceBetween: 24,
-       pagination: {
-			el: ".doc-slider-pagination",
+	window.addEventListener('resize', function(){
+		if(modalHiddenXl.length > 0){		
+			if(this.innerWidth > 1199){
+				bodyEl.classList.remove('noscroll');
+				for(let item of  modalHiddenXl ){
+					item.classList.remove('visible');
+				}
+			}
+		}
+		if(this.innerWidth > 991){
+			mobMenu.style.display = "block";
+		} 
+		if(this.innerWidth <= 991){
+			if(!toggleMenu.classList.contains('active')){
+				mobMenu.style.display = "none";
+			}
+		}
+	});
+	/*========= =============== RATING BLOCK ===============*/
+	const ratingBlock = document.querySelectorAll('[data-rating]');
+	if(ratingBlock){
+		ratingBlock.forEach( function(item, index) {
+			const itemActive = item.querySelector('[data-count]');
+			const itemActiveCount = itemActive.querySelectorAll('i');
+			const itemActiveLength = itemActiveCount.length
+			const itemActiveVal = itemActive.getAttribute('data-count');
+			const activeBlockWidth = +(((itemActiveVal / itemActiveLength) * 100)+0.5) ;//0.5 погрешность нп расстояние между звездами
+			itemActive.style.width =`${activeBlockWidth}%`;
+		});
+	}
+
+	/** =============== custom select ===============*/
+	const mySelectBlocks = Array.from(document.getElementsByClassName('mySelect'));
+	if(mySelectBlocks.length > 0){
+		mySelectBlocks.forEach((item, i) =>{
+			const mySelect = item.querySelector('.mySelect-input');
+			const mySelectInput = item.querySelector('.selectValue');
+			let mySelectOptions = item.querySelectorAll('.mySelect-options');
+			const mySelectIcon = item.querySelector('.mySelect-icon');
+			const mySelecDrop = item.querySelector('.mySelect-drop');
+
+			mySelect.addEventListener('click', ()=>{
+
+				if(mySelecDrop.classList.contains('active')){
+					mySelecDrop.classList.remove('active');
+					mySelectIcon.classList.remove('active');
+					mySelect.classList.remove('open');
+
+
+				}else{
+					mySelecDrop.classList.add('active');
+					mySelectIcon.classList.add('active');
+					mySelect.classList.add('open');
+				}
+
+			});
+			for(let item of mySelectOptions){
+				item.addEventListener('click', ()=>{
+					mySelecDrop.classList.remove('active');
+					mySelectIcon.classList.remove('active');
+					mySelectInput.value = item.value;
+
+				});
+			}
+		});
+		
+	}	
+	/*========== закрыть mySelect по клику вне ===========*/
+	window.addEventListener('click', function(e){
+		
+		if (!e.target.closest('.mySelect')){
+			const mySelectOpenBlocks = Array.from(document.getElementsByClassName('mySelect'));
+			
+			if(mySelectOpenBlocks.length > 0){
+				mySelectOpenBlocks.forEach((item, i) =>{
+					const mySelect = item.querySelector('.mySelect-input');
+					const mySelectInput = item.querySelector('.selectValue');
+					let mySelectOptions = item.querySelectorAll('.mySelect-options');
+					const mySelectIcon = item.querySelector('.mySelect-icon');
+					const mySelecDrop = item.querySelector('.mySelect-drop');
+					
+					mySelecDrop.classList.remove('active');
+					mySelectIcon.classList.remove('active');
+					mySelect.classList.remove('open');
+				});
+			}
+		}
+		
+	});
+     /* =============== modal с атрибутом frame-modal ===============*/ 
+    const modalFramesOpen = document.querySelectorAll('[frame-btn]');
+    const modalFrames = document.querySelectorAll('[frame-modal]');
+    if( modalFrames.length > 0){
+      
+      const modalFramesClose = document.querySelectorAll('[frame-close]');
+      for(let item of modalFramesOpen){
+        item.addEventListener('click', function(e){
+          for(let item of  modalFrames){
+            item.classList.remove('visible');
+            
+            bodyEl.classList.remove('noscroll');
+          }
+          e.preventDefault();
+          const itemAttr = item.getAttribute('frame-btn');
+
+          for(let frame of modalFrames){
+            const frameAttr =frame.getAttribute('frame-modal');	
+            if(frameAttr == itemAttr){
+              frame.classList.add('visible');
+              bodyEl.classList.add('noscroll');
+            }
+          }
+        });
+      }
+      /*=============== закрыть модалки с атрибутом frame-modal по клику на крестик===============*/
+      for(let item of modalFramesClose){
+        item.addEventListener('click', function(e){
+          e.preventDefault();
+          item.closest('[frame-modal]').classList.remove('visible');
+          bodyEl.classList.remove('noscroll');
+        });
+      }
+ 	/*=============== закрыть модалки по клику вне ===============*/
+	for(let frame of modalFrames){
+		frame.addEventListener('click', function(e){
+			if(e.target === e.currentTarget)
+				this.classList.remove(`visible`)
+				bodyEl.classList.remove('noscroll');
+		});
+	}
+
+    }
+
+	/*=============== mySelect--radio ===============*/
+	const radioSelect = document.querySelector('.mySelect--radio');
+	if(radioSelect){
+		const countryList = radioSelect.querySelectorAll('.role-country');
+		const currencyList = radioSelect.querySelectorAll('.role-currency');
+		const radioSelectInput = radioSelect.querySelector('.selectValue');
+
+		// Country select
+		for(let cntr of countryList){
+			cntr.addEventListener('click', function(e){
+				const radioSelectCntr = this.children[0].getAttribute('value');
+				radioSelectInput.value = `${radioSelectCntr} • ${radioSelectInput.value.split(`•`)[1].trim()}`
+			})
+		}
+		// Currency select
+		for(let curr of currencyList){
+			curr.addEventListener('click', function(e){
+				const radioSelectCurr = this.children[0].getAttribute('value');
+				radioSelectInput.value = `${radioSelectInput.value.split(`•`)[0].trim()} • ${radioSelectCurr}`
+			})
+		}
+	}
+	/*=============== extrim cards swiper slider ===============*/
+   
+	let dateSlider = new Swiper(".swiper-date", {
+
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		navigation: {
+          nextEl: ".arrow-right.icon-btn",
+          prevEl: ".arrow-left.icon-btn",
+        }
+
+	});
+
+	let docSlider = new Swiper(".emergency-slider", {
+	slidesPerView: 1.05,
+	spaceBetween: 8,
+	
+	pagination: {
+			el: ".extrim-cards-pagination",
 			clickable: true,
 		},
-		navigation: {
-          nextEl: ".doc-slider-next",
-          prevEl: ".doc-slider-prev",
-        },
 		speed:800,
-		loop: true
-      });
+		loop: true,		
+        breakpoints: {
+		 1024: {
+           spaceBetween:16,
+          },
+		 1200: {
+           spaceBetween:16,
+		   slidesPerView: 1.3,
+		   mousewheel: true,
+          },
+          1440: {
+           spaceBetween:32,
+		   mousewheel: true,
+          },
+		  1700:{
+			slidesPerView: 1.7,
+			 spaceBetween:32,
+			 mousewheel: true,
+		  }
+		}
+	});
+	
+	/* =============== floating button ===============*/	
+	const floatingBtn = document.querySelector('.floating-btn');
+	if(floatingBtn){
+		document.addEventListener('scroll', function(){
+			if(window.pageYOffset > 200){
+				floatingBtn.classList.add('floating-btn--visible');
+			} else{
+				floatingBtn.classList.remove('floating-btn--visible');
+			}
+		})
+	}
+	/* custom Drop*/ 
+	const customDrop = document.querySelectorAll('.customDrop');
+	if(customDrop.length > 0){
+		for(let item of customDrop){
+			const customDropBtn = item.querySelector('.customDrop__btn');
+			const customDropList = item.querySelector('.customDrop__list');
+			item.addEventListener('click', function(e){
+				if(this.classList.contains('active')){
+					this.classList.remove('active');
+				}
+				else{
+					this.classList.add('active');
+				}
+			});
+		}
+	}
+	/*========== Скрыть мобм меню  and customDrop  по клику вне ===========*/
+	window.addEventListener('click', function(e){			
+		if (!e.target.closest('.customDrop')){
+			for(let item of customDrop){
+				item.classList.remove('active');
+			}
+		}
+		if(window.innerWidth < 992){
+			if(!e.target.closest('.header-top') ){
+				mobMenu.style.display = 'none';
+				toggleMenu.classList.remove('active');
+			}
+		}
 
-	//========slider в мод окне-12 =======//
-	let categorCardsSlider = new Swiper(".categody-cards__swiper", {
-       slidesPerView: 1.6,
-	   spaceBetween: 24,
-       pagination: {
-			el: ".categody-cards-pagination",
-			clickable: true,
-		},
-		navigation: {
-          nextEl: ".categody-cards-next",
-          prevEl: ".categody-cards-prev",
-        },
-		speed:800,
-		loop: true
-      });
-
-
+	});
 });

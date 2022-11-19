@@ -1,39 +1,112 @@
 /*======= типографика ======*/
+.text-404{
+	font-size: 244px;
+	line-height: 1;
+	font-weight: 500;
+	@media (max-width: 991px) {
+		font-size: 128px;
+	}
+
+}
 .text-44,.text-32,.text-24{
 	font-size: 44px;
 	line-height: 1.27;
 	font-weight: 700;
-	font-family: $bold;
+	@media(max-width:1199px){
+		font-size: 34px;
+		font-weight: 500;
+		
+	}
+	@media(max-width:991px){
+		font-size: 24px;
+		line-height: 1.25;
+	}
+	
 }
 .text-32{
 	font-size: 32px;
 	line-height: 1.25;
-	font-family: $demi;
 	font-weight: 600;
+	@media (max-width: 1199px) {
+	  font-size: 28px;
+	  
+	}
+	@media (max-width: 991px) {
+	  font-size: 24px;
+	  line-height: 30px;
+	}
+	
 }
 .text-24{
 	font-size: 24px;
 	line-height: 1.25;
-	font-family: $demi;
+	font-weight: 500;
+	@media (max-width: 1199px) {
+		font-size: 20px;
+		
+	}
+	@media (max-width: 991px) {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+.weight-400{
+	font-weight: 400!important;
 }
 .text-bold{
-	font-family: $bold;
+	font-weight: 700;
 }
 .text-demi{
-	font-family: $demi;
+	font-weight: 600;
 }
 .text-medium{
-	font-family: $med;
+	font-weight: 500;
+}
+.text-upper{
+	text-transform: uppercase;
+}
+.text-18{
+	font-size: 18px;
+	line-height: 1.67;
+	@media (max-width: 767px) {
+		font-size: 14px;
+		line-height: 1.43;
+	}
+}
+.text-16{
+	font-size: 16px;
+	line-height: 20px;
 }
 .text-14{
 	font-size: 14px;
 	line-height: 1.43;
 }
-.text-18{
-	font-size: 18px;
-	line-height: 1.67;
+.text-12{
+	font-size: 12px;
+	line-height: 1.33;
 }
-
 .text-white{
 	color: #fff!important;
+}
+.text-red{
+	color: $coral!important;
+}
+.text-orange{
+	color: $orange;
+}
+.text-gray{
+	color: $gray;
+}
+.text-gray3{
+	color: $gray3;
+}
+.text-primary,
+.text-indigo{
+	color: $indigo!important;
+}
+.text-link{
+	color: #000;
+	&:hover{
+		color:$indigo ;
+	}
 }

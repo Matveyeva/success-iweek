@@ -1,0 +1,9 @@
+mixin mySelect(arr)
+	div(class="mySelect " + arr.addClass)
+		.mySelect-input
+			.mySelect-icon.icon-carret-mini
+			input.selectValue.input-slim(type='text' readonly='' value=''+ arr.val)
+		.mySelect-drop.scroll-vertical
+			each item in arr.itemsArr
+				input.mySelect-options(type='text' readonly='' value=''+ item)
+			

@@ -1,0 +1,52 @@
+include ../../layouts/_mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ../../ui/ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Менюшки
+				.container-dashboard__content
+					ul.ui-components
+						li(style="background-color: rgba(0,0,0, .75); height: 110px;padding-top:47px")
+							.page-nav
+								ul
+									li
+										a(href="#") Клиники
+									li.active
+										a(href="#") Цены
+									li
+										a(href="#") Детская стоматология
+									li
+										a(href="#") О нас
+
+												li(style="background-color: rgba(0,0,0, .75); height: 110px;padding-top:47px")
+							.page-nav-mobile
+								ul
+									li
+										a(href="#") Клиники
+									li.active
+										a(href="#") Цены
+									li
+										a(href="#") Детская стоматология
+									li
+										a(href="#") О нас
+
+
+		include ../../layouts/_ui.pug

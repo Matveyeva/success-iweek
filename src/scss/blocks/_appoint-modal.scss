@@ -1,0 +1,89 @@
+.appoint-modal.visible .modal-frame{
+	// top: 50%;
+	// left: 50%;
+	// right: auto;
+	// transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 520px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 16px rgba(87, 141, 246, 0.2);
+	border-radius: 16px;
+	// bottom: auto;
+	// max-height: 90vh;
+	// overflow: hidden;
+	// overflow-y: auto;
+}
+.appoint-form__head{
+	column-gap:16px;
+	padding-bottom: 32px;
+	.doc-card__foto{
+		flex-shrink:0;
+		margin-bottom: 16px;
+		@media (max-width: 767px) {
+			margin-bottom: 0;
+			width: 80px;
+			height: 80px;
+		}
+	}
+	@media (max-width: 767px) {
+		padding-bottom: 20px;
+		column-gap:12px;
+	}
+}
+.appoint-form__head-right{
+	display: flex;
+	flex-direction: column;
+	&>*{width: 100%;}
+	justify-content: space-between;
+	@media (max-width: 767px) {
+		justify-content: flex-start;
+		row-gap:12px;
+		.card-header .text-14{
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+}
+.appoint-form__info-item{
+	column-gap: 15px;
+	
+	.text-gray3{
+		width: 75px;
+	}
+	@media (max-width: 767px) {
+		font-size: 12px;
+		line-height: 12px;
+	}
+}
+.appoint-form__info-item +.appoint-form__info-item{margin-top: 4px;}
+.appoint-form__body{
+	padding-top: 24px;
+	.form-box{
+		label.text-14{
+			@media (max-width: 767px) {
+				font-size: 12px;
+			}
+		}
+	}
+	.form-box + .form-box{margin-top: 15px;}
+	@media (max-width: 767px) {
+		padding-top: 20px;
+	}
+}
+.appoint-form .form-btn{
+	padding-top: 24px;
+	.btn{
+		margin-bottom: 24px;
+		@media (max-width: 767px) {
+		width: 345px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 14px;
+		margin-bottom: 15px;
+		}
+	}
+	@media (max-width: 767px) {
+		padding-top: 15px;
+		text-align: center;
+	}
+}

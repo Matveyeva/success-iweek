@@ -1,0 +1,73 @@
+section.doc-cards-frame
+	.container
+		//======= title =======	
+		.section-title
+			h2.text-32 Поиск специалиста
+				sup 327
+		
+		//======= filters =======
+		.section-filters.block-1200
+			.doc-card__filter-group.flex-box.gap-16
+				//========= single filter select =======
+				+mySelect({addClass: 'mySelect--absolute', val:'Услуга', itemsArr:['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт']})
+				
+				//========= single filter select =======
+				.mySelect.mySelect--absolute
+					.mySelect-input
+						.mySelect-icon.icon-carret-mini
+						input.selectValue.input-slim(type='text' readonly='' value='Ближайшее время приема')
+					.mySelect-drop.scroll-vertical
+						input.mySelect-options(type='text' readonly='' value='Ближайшее время приема')
+						input.mySelect-options(type='text' readonly='' value='Ортодонт')
+						input.mySelect-options(type='text' readonly='' value='Консультация имплантолога')
+						input.mySelect-options(type='text' readonly='' value='Ветеринар')
+
+				//========= filter-toggle =======
+				.filter-toggle__block.flex-box.flex-y-center
+					label.filter-toggle-item
+						input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+						span По рейтингу
+					label.filter-toggle-item
+						input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+						span По стоимости
+					label.filter-toggle-item
+						input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+						span По отзывам
+				//========= switch-toggle =======
+				label.switch-toggle.flex-box.flex-y-center
+					input(type='checkbox' id='check' class='toggle-switch')
+					span.real-switch
+					span.custom-switch__text Экстренная помощь
+			
+			//======= checkbox group =======	
+			.checkboxes-wrapper.flex-wrapper.flex-y-center
+				//====single item ======
+				label.checkbox-label.flex-box.flex-y-center
+					input(type='checkbox' name='form-checkbox' class='real-checkbox')
+					span.custom-checkbox 
+					span.custom-checkbox__text Врачи поблизости
+				//====single item ======
+				label.checkbox-label.flex-box.flex-y-center
+					input(type='checkbox' name='form-checkbox' class='real-checkbox')
+					span.custom-checkbox 
+					span.custom-checkbox__text Круглосуточно 24/7
+				//====single item ======
+				label.checkbox-label.flex-box.flex-y-center
+					input(type='checkbox' name='form-checkbox' class='real-checkbox')
+					span.custom-checkbox 
+					span.custom-checkbox__text Выезд на дом
+				//====single item ======
+				label.checkbox-label.flex-box.flex-y-center
+					input(type='checkbox' name='form-checkbox' class='real-checkbox')
+					span.custom-checkbox 
+					span.custom-checkbox__text Детские клиники / Врачи
+		
+		.section-filters-mobile.hidden-1200
+			button.special-btn.text-14.text-gray3(frame-btn="filters-modal") Фильтр
+		
+		
+		//======== cards-wrapper =========
+		.doc-cards-wrapper
+			include doc-card.pug
+			.doc-cards-wrapper__btn
+				button.btn.btn--primary Все специалисты

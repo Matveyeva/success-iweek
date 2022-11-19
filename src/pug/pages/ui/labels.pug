@@ -1,0 +1,57 @@
+include ../../layouts/_mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ../../ui/ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Лейблы
+
+				.container-dashboard__content
+					ul.ui-components
+						li
+							.li-box(style="background-color: blue;padding:10px;padding-bottom:10px")
+								+catLabel('diagnost', 'Диагностика')
+							pre.
+								+catLabel('diagnost', 'Диагностика')
+						li
+							+label-light('Хирургия')
+							pre.
+								+label-light('Хирургия')
+						li
+							.li-box(style="background-color: blue;padding:10px;padding-bottom:10px")
+								.label-light.label-light--48.label-light--large Записаться к врачу
+							pre.
+								.label-light.label-light--48.label-light--large Записаться к врачу
+						li
+							.label-light.label-light--48.label-light--large Записаться на прием	
+
+							pre.
+								.label-light.label-light--48.label-light--large Записаться на прием	
+						li
+							.label-light.label-light--48.label-light--mini
+								img(src="../img/fb.png", width="24" alt="alt")
+								span Facebook
+
+							pre.
+								.label-light.label-light--48.label-light--mini
+								img(src="../img/fb.png", width="24" alt="alt")
+								span Facebook
+								
+
+		include ../../layouts/_ui.pug

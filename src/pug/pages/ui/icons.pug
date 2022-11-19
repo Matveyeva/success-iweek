@@ -1,7 +1,7 @@
 include ../../layouts/_mixins-links.pug
 block variables
 
-<!DOCTYPE html>
+doctype html
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
@@ -12,6 +12,7 @@ html(lang="ru")
 		meta(name="format-detection" content="telephone=no")
 		link(rel="stylesheet", href="../fonts/fonts.css")
 		link(rel="stylesheet", href="../css/main.css")
+		script(src="../js/main.js")
 		title UI-KIT
 
 	body.body-dashboard
@@ -23,5 +24,198 @@ html(lang="ru")
 				h2 Иконки
 
 				.container-dashboard__content
-					
-					
+					ul.ui-components
+						
+						li
+							svg.svg-person(width="16" height="16")
+								use(xlink:href="../img/svg-sprite.svg#svg-person")
+							pre.
+								svg.svg-person(width="16" height="16")
+									use(xlink:href="./img/svg-sprite.svg#svg-person")
+
+						li
+							svg.svg-telegram(width="20" height="20")
+								use(xlink:href="../img/svg-sprite.svg#svg-telegram")
+							pre.
+								svg.svg-telegram(width="20" height="20")
+									use(xlink:href="./img/svg-sprite.svg#svg-telegram")
+						li
+							svg.svg-whatsapp(width="20" height="20")
+								use(xlink:href="../img/svg-sprite.svg#svg-whatsapp")
+							pre.
+								svg.svg-whatsapp(width="20" height="20")
+								use(xlink:href="./img/svg-sprite.svg#svg-whatsapp")
+						li
+							svg.svg-facebook(width="20" height="20")
+								use(xlink:href="../img/svg-sprite.svg#svg-facebook")
+							pre.
+								svg.svg-facebook(width="20" height="20")
+								use(xlink:href="./img/svg-sprite.svg#svg-facebook")
+						li
+							svg.svg-viber(width="20" height="20")
+								use(xlink:href="../img/svg-sprite.svg#svg-viber")
+							pre.
+								svg.svg-viber(width="20" height="20")
+								use(xlink:href="./img/svg-sprite.svg#svg-viber")
+						li
+							.li-box(style="background-color: black;padding:10px;padding-bottom:10px")
+								a(href="#!")
+									svg.svg-tg(width="24" height="24")
+										use(xlink:href="../img/svg-sprite.svg#svg-tg")
+							pre.
+								a(href="#!")
+									svg.svg-tg(width="24" height="24")
+										use(xlink:href="./img/svg-sprite.svg#svg-tg")
+
+						li
+							.text-18 logo через png
+							.li-box(style="background-color: blue;padding:10px;padding-bottom:10px")
+								.logo
+									img(src="../img/logo.png", width="136" alt="logo")
+							pre.
+								.logo
+									img(src="./img/logo.png", width="136" alt="logo")
+						li
+							.text-18 logo через svg
+							.li-box(style="background-color: blue;padding:10px;padding-bottom:10px")
+							
+								object(type="image/svg+xml" width="136" data="./img/svg-logo.svg" class="logo")
+
+							pre.
+								object(type="image/svg+xml" data="./img//svg-logo.svg" class="logo")
+						
+						li
+							.icon-carret
+							pre.
+								.icon-carret
+						li
+							.icon-carret-mini
+							pre.
+								.icon-carret-mini
+						li
+							.icon-filter
+							pre.
+								.icon-filter
+						li
+							.text-18 gamburger
+							.toggle-menu#toggle-menu
+							pre.
+								.toggle-menu
+						li
+							.text-18 gamburger active
+							.toggle-menu.active
+							pre.
+								.toggle-menu#toggle-menu.active
+						li
+							.text-18 modal close
+							.icon-close
+							pre.
+								.icon-close
+						li
+							.icon-btn.arrow-left
+							pre.
+								.icon-btn.arrow-left
+						li
+							.icon-btn.arrow-right
+							pre.
+								.icon-btn.arrow-right
+						li
+							object(type="image/svg+xml" data="../img/extrim.svg" )
+								
+							pre.
+								object(type="image/svg+xml" data="./img/extrim.svg" )
+						li
+							object(type="image/svg+xml" data="../img/diadnost.svg" )
+							pre.
+								object(type="image/svg+xml" data="./img/diadnost.svg" )
+						li
+							object(type="image/svg+xml" data="../img/terap.svg" )
+							pre.
+								object(type="image/svg+xml" data="./img/terap.svg" )
+						li
+							object(type="image/svg+xml" data="../img/hirurg.svg" )
+								
+							pre.
+								object(type="image/svg+xml" data="./img/hhirurg.svg" )
+						li
+							object(type="image/svg+xml" data="../img/implant.svg" )
+							pre.
+								object(type="image/svg+xml" data="./img/implant.svg" )
+						li
+							object(type="image/svg+xml" data="../img/apple.svg" )
+							pre.
+								object(type="image/svg+xml" data="./img/apple.svg" )
+						li
+							object(type="image/svg+xml" data="../img/paradent.svg" )
+							pre.
+								object(type="image/svg+xml" data="./img/paradent.svg" )
+						li
+							object(type="image/svg+xml" data="../img/user2.svg" )
+
+							pre.
+								object(type="image/svg+xml" data="./img/user2.svg" )
+						li
+							object(type="image/svg+xml" data="../img/smile.svg" )
+
+							pre.
+								object(type="image/svg+xml" data="./img/smile.svg" )
+						li
+							object(type="image/svg+xml" data="../img/zap.svg" )
+
+							pre.
+								object(type="image/svg+xml" data="./img/zap.svg" )
+						li
+							object(type="image/svg+xml" data="../img/person.svg" width="16" height="16")
+
+							pre.
+								object(type="image/svg+xml" data="./img/person.svg" width="16" height="16")
+						li
+							object(type="image/svg+xml" data="../img/check.svg" )
+
+							pre.
+								object(type="image/svg+xml" data="./img/check.svg" )
+						
+						li
+							.li-box(style="background-color: black;padding:10px;padding-bottom:10px")
+								.btn-coopyright
+									.icon-plus
+									span.text-18.text-white Сотрудничать с нами 
+
+							pre.
+								.btn-coopyright
+									.icon-plus
+									span.text-18.text-white Сотрудничать с нами
+						
+						li
+							.li-box(style="background-color: blue;")
+								object(type="image/svg+xml" data="../img/extra-white.svg" )
+							pre.
+								object(type="image/svg+xml" data="./img/extra-white.svg" )
+						li
+							svg.svg-heart(width="16" height="16" )
+								use(xlink:href="../svg-sprite.svg#svg-heart")
+							pre.
+								svg.svg-heart(width="16" height="16" )
+									use(xlink:href="./svg-sprite.svg#svg-heart")
+	
+						li
+							label.check-label.flex-center.flex-box
+								input(type="checkbox")
+								svg.svg-heart(width="16" height="16" )
+									use(xlink:href="../svg-sprite.svg#svg-heart")
+							pre.
+															
+								label.check-label.flex-center.flex-box
+									input(type="checkbox")
+									svg.svg-heart(width="16" height="16" )
+										use(xlink:href="./svg-sprite.svg#svg-heart")
+						li
+							img(src="../img/tg-color.png", width="48" height="48" alt="icon")
+							pre.
+								img(src="./img/tg-color.png", width="48" height="48" alt="icon")
+						li
+							img(src="../img/tg.png", width="24" height="24" alt="icon")
+							pre.
+								img(src="./img/tg-color.png", width="48" height="48" alt="icon")
+
+		include ../../layouts/_ui.pug

@@ -1,7 +1,7 @@
 include ../../layouts/_mixins-links.pug
 block variables
 
-<!DOCTYPE html>
+doctype html
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
@@ -23,9 +23,87 @@ html(lang="ru")
 				h2 Вспомогрательные классы
 
 				.container-dashboard__content
-					//- .block(style="margin-top:50px;")
-					//- 	pre.
-					//- 		.flex-row {
-					//- 				display: flex;
-					//- 			}
-					
+					.block(style="margin-top:50px;")
+						pre.
+							.flex-box,.flex-wrapper,.flex-vertical-center{
+								display: flex!important;
+							}
+						pre.
+							.flex-column{
+								flex-direction: column;
+								&>*{width: 100%;}
+							}
+						pre.
+							.flex-wrapper{
+								flex-wrap: wrap;
+							}
+						pre.
+							.flex-center{
+								justify-content: center;
+								align-items: center;
+							}
+						pre.
+							.flex-x-center{
+								justify-content: center;
+							}
+						pre.
+							.flex-x-right{
+								justify-content: flex-end;
+							}
+						pre.
+							.flex-vertical-center{
+								align-items: center;
+							}
+						pre.
+							.flex-y-center{
+								align-items: center;
+							}
+						pre.
+							.gap-16{
+								gap: 16px;
+							}						
+						pre.
+							.gap-12{
+								gap: 12px;
+							}
+						pre.
+							.gap-8{
+								gap: 8px;
+							}
+						
+						pre.
+							.m-auto{
+								margin-left: auto;
+								margin-right: auto;
+							}
+						pre.
+							.mt-auto{
+								margin-top: auto;
+								
+							}
+						pre.
+							.w-100{
+								width: 100%!important;
+							}
+						pre.
+							.mb-8{
+									margin-bottom: 8px;
+								}
+						pre.
+							.border-b{
+									border-bottom: 1px solid  #E7E7E7;
+								}
+						pre.
+							.block-1200{
+								display: block;
+								@media (max-width: 1199px) {
+									display: none;
+								}
+							}
+						pre.
+							.flex-1200{
+								display:flex;
+								@media (max-width: 1199px) {
+									display: none;
+								}
+							}

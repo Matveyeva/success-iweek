@@ -1,0 +1,21 @@
+.main-page-content{
+	.section-title{
+		margin-bottom: 24px;
+	}
+	.doc-card__filter-group{
+		margin-bottom: 20px;
+		@media(min-width:1200px){
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	.doc-cards-wrapper__btn{text-align: center;}
+	.doc-cards-wrapper__btn .btn{
+		margin-top: 40px;
+		@media (max-width: 767px) {
+			margin-top: 20px;
+			width: 345px;
+		}
+		
+	}
+}	
