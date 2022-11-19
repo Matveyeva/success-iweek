@@ -25,6 +25,38 @@ html(lang="ru")
 				.container-dashboard__content
 					ul.ui-components
 						li
+							.form-box.form-box--icon-right
+								label.text-16.text-gray3 инпут с иконкой справа
+								.form-box-input
+									.form-box__icon
+										svg.svg-location
+											use(xlink:href="../img/svg-sprite.svg#svg-location")
+									input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+								pre.
+									.form-box.form-box--icon-right
+										label.text-16.text-gray3 строка поиска
+										.form-box-input
+											.form-box__icon
+												svg.svg-location
+													use(xlink:href="./img/svg-sprite.svg#svg-location")
+											input(type="text" placeholder="Поисковый запрос").form-input.form-input--64						
+						li
+							.form-box.form-box--icon-left
+								label.text-16.text-gray3 инпут с иконкой слева
+								.form-box-input
+									.form-box__icon
+										svg.svg-search
+											use(xlink:href="../img/svg-sprite.svg#svg-search")
+									input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+								pre.
+									.form-box.form-box--icon-left
+										label.text-16.text-gray3 строка поиска
+										.form-box-input
+											.form-box__icon
+												svg.svg-search
+													use(xlink:href="./img/svg-sprite.svg#svg-search")
+											input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+						li
 							.form-box
 								label.text-16.text-gray3 label text
 								input(type="text" placeholder="Фамилия").form-input

@@ -188,13 +188,19 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height
 	transform: rotate(180deg);
 }
 svg{
-display: inline-block;	
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
 }
 .svg-search, .svg-location{
 	width: 24px;
 	height: 24px;
 	stroke:#828282;
 	fill: transparent;
+	@media (max-width: 991px) {
+		width: 20px;
+		height: 20px;
+	}
 }
 
 .svg-info{
