@@ -19,7 +19,12 @@ html(lang="ru")
 		include ../../ui/ui-navigation.pug
 
 		block content
-			include ../../sections/header
+			+header([
+			{addClass: 'active', link: '#', title: 'Клиники'}, 
+			{addClass: '', link: 'prices.html', title: 'Цены'},
+			{addClass: '', link: '#', title: 'Детская стоматология'},
+			{addClass: '', link: 'about.html', title: 'О нас'},
+			])
 			
 		
 		include ../../layouts/_ui.pug

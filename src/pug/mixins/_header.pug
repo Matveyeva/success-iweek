@@ -9,7 +9,8 @@ mixin header(argMenu)
 							img(src="./img/logo.png", width="136" alt="logo")
 						
 						.select-city-block
-							+custom-select-dark('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'])
+							+custom-select-icon('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'], 'mySelect--absolute mySelect-input--icon mySelect--dark mySelect--38', 'svg-map')
+							
 						.toggle-menu#toggle-menu
 					
 					//========= header top  right ==========
@@ -34,7 +35,6 @@ mixin header(argMenu)
 							//=============Выбор страны и валюты на экранах от 992 пикс ================
 							.mySelect.mySelect--absolute.mySelect--dark.mySelect--radio.mySelect--currency
 								.mySelect-input
-									.mySelect-icon.icon-carret-white
 									input.selectValue.input-slim(type='text' readonly='' value='RU • RUB')
 								.mySelect-drop.scroll-vertical
 									.mySelect-drop__row

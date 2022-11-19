@@ -1,9 +1,23 @@
 mixin mySelect(arr)
-	div(class="mySelect " + arr.addClass)
+	.mySelect.mySelect--38(class=" "+ arr.addClass)&attributes(attributes)
 		.mySelect-input
-			.mySelect-icon.icon-carret-mini
-			input.selectValue.input-slim(type='text' readonly='' value=''+ arr.val)
+			input.selectValue.form-input(type='text' readonly='' value=''+ arr.val)
 		.mySelect-drop.scroll-vertical
 			each item in arr.itemsArr
 				input.mySelect-options(type='text' readonly='' value=''+ item)
+
+
+mixin custom-select-icon(placeText, items, addClass,  iconName, labelText)
+	div(class="mySelect " + addClass)&attributes(attributes)
+		if labelText
+			label.text-16.text-gray3 #{labelText}
+		.mySelect-input.form-box-input
+			if  iconName
+				.form-box__icon
+					svg(class=" "+ iconName)
+						use(xlink:href="../img/svg-sprite.svg#"+ iconName +"")
 			
+			input(class="selectValue form-input" type='text' readonly value=''+ placeText)
+		.mySelect-drop.scroll-vertical
+			each item in items
+				input.mySelect-options(type='text' readonly value=''+ item)

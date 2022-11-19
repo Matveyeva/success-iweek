@@ -18,6 +18,25 @@
 		flex-direction: column;
 		&>*{width: 100%;}
 	}
+	@media (max-width: 767px) {
+		border-radius: 0px;
+		margin-left: -15px;
+		margin-right: -15px;
+		.card-header__select{
+			padding-top: 6px;
+			padding-bottom: 12px;
+			.mySelect .mySelect-drop.active{z-index: 4;}
+		}
+		.card-header__select .mySelect .form-input{
+			height: 36px;
+			border-radius: 8px;
+		}
+	}
+}
+.swiper-slide  .doc-card{
+	border-radius: 16px;
+	margin-left: 0;
+	margin-right: 0;
 }
 .doc-card + .doc-card{
 	margin-top: 16px;
@@ -30,6 +49,7 @@
 	.card-header__list{
 		display: flex;
 		column-gap: 12px;
+		flex-wrap:wrap;
 		.text-14 +.text-14{
 			position: relative;
 			&:after{
@@ -157,7 +177,7 @@
 .doc-cards-wrapper{
 	padding-top: 40px;
 }
-.doc-card--select{
+.doc-card__form .mySelect{
 	margin-bottom: 24px;
 }
 .select-time-wrapper{

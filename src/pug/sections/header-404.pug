@@ -8,7 +8,8 @@ header.header.flex-box
 						img(src="./img/logo.png", width="136" alt="logo")
 					
 					.select-city-block
-						+custom-select-dark('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'])
+						+custom-select-icon('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'], 'mySelect--absolute mySelect-input--icon mySelect--dark mySelect--38', 'svg-map')
+					
 					.toggle-menu#toggle-menu
 				//========= header top  right ==========
 				.header-top__right#header-mobile-menu
@@ -74,3 +75,18 @@ header.header.flex-box
 		
 	//========= header-menu ==========
 	.header-menu.flex-box.flex-between
+		.container
+			.header-menu-content.flex-box.flex-between.flex-y-center
+				.page-nav
+					ul
+						li
+							a(href="#") Клиники
+						li.active
+							a(href="#") Цены
+						li
+							a(href="#") Детская стоматология
+						li
+							a(href="#") О нас
+				buttin.btn-coopyright(type="button")
+					.icon-plus
+					span.text-18.text-white Сотрудничать с нами 

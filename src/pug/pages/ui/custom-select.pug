@@ -1,0 +1,93 @@
+include ../../layouts/_mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard(style="background-color: lightblue; min-height:100vh")
+
+		include ../../ui/ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Кастомные селекты
+				.container-dashboard__content
+
+					ul.ui-components
+						li
+							+mySelect({addClass: 'mySelect--absolute', val:'Услуга', itemsArr:['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт']})
+							pre.
+								+mySelect({addClass: 'mySelect--absolute', val:'Услуга', itemsArr:['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт']})
+
+						li
+
+							h3 выпадашка высотой 64 пикс с иконкой слева
+							br
+							+custom-select-icon('Батуми', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect-input--icon mySelect--64',  'svg-location', '')
+							pre.
+								+custom-select-icon(placeText, items, addClass,  iconName, labelText)
+								
+								+custom-select-icon('Батуми', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect-input--icon  mySelect--64',  'svg-location', '')
+
+						li
+							h3 выпадашка высотой 64 пикс
+							br
+							+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect--64')
+							pre.
+								+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect--64')
+
+						li
+							h3 выпадашка высотой 44 пикс
+							br
+							+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+							pre.
+								+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+						li
+							h3 выпадашка высотой 44 пикс + icon
+							br
+							+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect-input--icon', 'svg-location')
+							pre.
+								+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+						li
+							h3 выпадашка высотой 38 пикс
+							br
+							+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect--38')
+							pre.
+								+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect--38')
+						li
+							h3 выпадашка высотой 38 пикс темная
+							br
+							+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect-input--icon mySelect--dark mySelect--38', 'svg-map')
+							pre.
+								+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect--38', 'svg-map')
+						li
+							h3 выпадашка c лейблом
+							br
+							+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute', '','текст лейбла')
+							pre.
+								+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute', '','текст лейбла')
+						li
+							h3 выпадашка c лейблом и иконкой
+							br
+							+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect-input--icon mySelect--38', 'svg-search','Введите текст для поиска')
+							pre.
+								+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect-input--icon mySelect--38', 'svg-search','Введите текст для поиска')
+						
+
+
+
+		
+		
+		
+		include ../../layouts/_ui.pug

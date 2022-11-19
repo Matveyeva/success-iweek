@@ -25,6 +25,38 @@ html(lang="ru")
 				.container-dashboard__content
 					ul.ui-components
 						li
+							.form-box.form-box--icon-right
+								label.text-16.text-gray3 инпут с иконкой справа
+								.form-box-input
+									.form-box__icon
+										svg.svg-location
+											use(xlink:href="../img/svg-sprite.svg#svg-location")
+									input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+								pre.
+									.form-box.form-box--icon-right
+										label.text-16.text-gray3 строка поиска
+										.form-box-input
+											.form-box__icon
+												svg.svg-location
+													use(xlink:href="./img/svg-sprite.svg#svg-location")
+											input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+						li
+							.form-box.form-box--icon-left
+								label.text-16.text-gray3 инпут с иконкой слева
+								.form-box-input
+									.form-box__icon
+										svg.svg-search
+											use(xlink:href="../img/svg-sprite.svg#svg-search")
+									input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+								pre.
+									.form-box.form-box--icon-left
+										label.text-16.text-gray3 строка поиска
+										.form-box-input
+											.form-box__icon
+												svg.svg-search
+													use(xlink:href="./img/svg-sprite.svg#svg-search")
+											input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+						li
 							.form-box
 								label.text-16.text-gray3 label text
 								input(type="text" placeholder="Фамилия").form-input
@@ -42,44 +74,23 @@ html(lang="ru")
 									label.text-16.text-gray3 label text
 									input(type="text" placeholder="Фамилия").form-input.input-notvalid
 									.error-text Какой-то текст ошибки
-						br
-						li
-							h3 Custom-select
-							br
-							+custom-select('Специальность','Услуга, Специалист', ['Стоматолог','Ортодонт','Консультация имплантолога','Ветеринар' ])
-							pre.
-								+custom-select('Специальность','Услуга, Специалист', ['Стоматолог','Ортодонт','Консультация имплантолога','Ветеринар' ])
-						br
-						li
-							h3 Custom-select absolute
-							br
-							+custom-select-abs('Специальность','Услуга, Специалист', ['Стоматолог','Ортодонт','Консультация имплантолога','Ветеринар' ])
-							pre.
-								+custom-select('Специальность','Услуга, Специалист', ['Стоматолог','Ортодонт','Консультация имплантолога','Ветеринар' ])
-						li(style="background-color: blue;padding:10px;padding-bottom:10px")
-							h3.text-white Custom-select dark
-							br
-							+custom-select-dark('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'])
-						
 						
 						br
 						li
-							.mySelect.mySelect--absolute.mySelect--dark.mySelect--radio
-								.mySelect-input.mySelect-input--icon-left
-									.mySelect-icon-left.icon-city
-									.mySelect-icon.icon-carret-white
+							.mySelect.mySelect--absolute.mySelect--dark.mySelect--radio.mySelect--currency
+								.mySelect-input
 									input.selectValue.input-slim(type='text' readonly='' value='RU • RUB')
 								.mySelect-drop.scroll-vertical
 									.mySelect-drop__row
 										+custom-radio('country','EN', 'English')(class="role-country")
-										+custom-radio('currency', 'USD','USD')(class="role-current")
+										+custom-radio('currency', 'USD','USD')(class="role-currency")
 										
 									.mySelect-drop__row
 										+custom-radio('country', 'RU','Русский', 'checked')(class="role-country")
-										+custom-radio('currency', 'RUB','RUB', 'checked')(class="role-current")
+										+custom-radio('currency', 'RUB','RUB', 'checked')(class="role-currency")
 									.mySelect-drop__row
 										+custom-radio('country', 'GE', 'Georgian')(class="role-country")
-										+custom-radio('currency', 'GEL','GEL')(class="role-current")
+										+custom-radio('currency', 'GEL','GEL')(class="role-currency")
 										
 						li
 							h3 Чекбоксы
