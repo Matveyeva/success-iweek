@@ -17,6 +17,10 @@
 	&:hover{
 		color: $indigo;
 	}
+	&::placeholder{
+			font-size: 16px;
+			color: $gray3;
+	}
 	
 }
 .mySelect.mySelect--38 .form-input,
