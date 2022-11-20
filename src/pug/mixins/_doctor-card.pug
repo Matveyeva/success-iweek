@@ -106,8 +106,9 @@ mixin doctor-card(docName,imgSrc, action, selectArr)
 							
 							.datepicker-block
 								.label-light  ...
-								.datepicker
-									input(type="hidden" id="datepicker_value" value="01.02.2022")
+								.datepicker-wrapper
+									.datepicker
+										input(type="hidden" id="datepicker_value" value="01.02.2022")
 						
 						.select-time-wrapper.flex-wrapper
 							+timeRadio('15:30')

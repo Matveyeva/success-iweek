@@ -1,11 +1,21 @@
 .datepicker-block{
 	position: relative;
-	.datepicker{
+	&:hover{
+	.datepicker-wrapper{display: block;}
+	.label-light{color: $indigo;}
+	}
+	.label-light{
+		border-right: 1px solid #E0E0E0!important;
+		border-radius: 0 4px 4px 0!important;
+	}
+	.datepicker-wrapper{
+		padding-top: 10px;
 		position: absolute;
 		right: 0;
-		bottom: 0;
+		bottom: 0px;
 		transform: translateY(100%);
 		z-index: 2;
+		display: none;
 	}
 	.ui-widget-header .ui-icon, .ui-datepicker-next .ui-widget-header .ui-icon{
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.8333 10H4.16658' stroke='%235757F6' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M10 4.16663L4.16667 9.99996L10 15.8333' stroke='%235757F6' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
@@ -31,6 +41,20 @@
 		border-radius: 2px;
 		color: #000;
 		border: none;
+		position: relative;
+		&:after{
+			content: "";
+			display: block;
+			width: 0px;
+			height: 0px;
+			border: 25px solid #fff;
+			border-top: 0px;
+			border-left: 25px solid transparent;
+			border-right: 25px solid transparent;
+			position: absolute;
+			top: -8px;
+			right: 2px;
+		}
 	}
 	.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{top: 8px;}
 	.ui-state-default, .ui-widget-content .ui-state-default{
