@@ -1,0 +1,33 @@
+include ../../layouts/_mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		h3 Tooltip
+		.tooltip-block
+			.tooltip-head
+				.tooltip-icon
+					svg.svg-tooltip
+						use
+				.tooltip-title Информация
+			.tooltip-body
+				p Информация, представленная на сайте в виде цен, акций и спец предложений НЕ ЯВЛЯЕТСЯ ПУБЛИЧНОЙ ОФЕРТОЙ, так как объем лечение каждого пациента зависит от индивидуальной ситуации состояния полости рта и здоровья пациента - информация носит ознакомительный характер и ориентирует о стандартном варианте лечения, не является инструкцией или рекомендацией к действию. Прежде чем использовать представленную на сайте информацию - требуется очная консультация с лечащим врачом, во многих случаях имеются противопоказания. Использование нашего сайта означает, что вы согласны с условиями его использования.
+		
+		
+		
+		
+		include ../../layouts/_ui.pug
