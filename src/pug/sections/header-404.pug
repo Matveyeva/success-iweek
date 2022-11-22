@@ -4,13 +4,14 @@ header.header.flex-box
 			//========= header top ==========
 			.header-top.flex-box.flex-between
 				.header-top__left.flex-vertical-center
-					a(href="#!").custom-logo
+					a(href="index.html").custom-logo
 						img(src="./img/logo.png", width="136" alt="logo")
 					
 					.select-city-block
 						+custom-select-icon('Батуми', ['Тбилиси','Кутаиси', 'Зугдиди','Поти'], 'mySelect--absolute mySelect-input--icon mySelect--dark mySelect--38', 'svg-map')
-					
+						
 					.toggle-menu#toggle-menu
+				
 				//========= header top  right ==========
 				.header-top__right#header-mobile-menu
 					.header-wrapper.flex-box.flex-y-center
@@ -29,6 +30,22 @@ header.header.flex-box
 							svg.svg-person(width="16" height="16")
 								use(xlink:href="./img/svg-sprite.svg#svg-person")
 							.text-white Кабинет
+						
+						//=============Выбор страны и валюты на экранах от 992 пикс ================
+						.mySelect.mySelect--absolute.mySelect--dark.mySelect--radio.mySelect--currency
+							.mySelect-input
+								input.selectValue.input-slim(type='text' readonly='' value='RU • RUB')
+							.mySelect-drop.scroll-vertical
+								.mySelect-drop__row
+									+custom-radio('country','EN', 'English')(class="role-country")
+									+custom-radio('currency', 'USD','USD')(class="role-currency")
+									
+								.mySelect-drop__row
+									+custom-radio('country', 'RU','Русский', 'checked')(class="role-country")
+									+custom-radio('currency', 'RUB','RUB', 'checked')(class="role-currency")
+								.mySelect-drop__row
+									+custom-radio('country', 'GE', 'Georgian')(class="role-country")
+									+custom-radio('currency', 'GEL','GEL')(class="role-currency")
 					
 					//========== mobile-visible block ==========
 					.mobile-menu-block
@@ -38,16 +55,51 @@ header.header.flex-box
 								li
 									a(href="#") Клиники
 								li.active
-									a(href="#") Цены
+									a(href="prices.html") Цены
 								li
 									a(href="#") Детская стоматология
 								li
-									a(href="#") О нас
+									a(href="about.html") О нас
 						
 						//========== btn-coopyright ==========
-						buttin.btn-coopyright.flex-between(type="button")
-							span.text-18.text-white Сотрудничать с нами 
-							.icon-plus
+						
+						.customDrop--dark.customDrop--relative
+							.customDrop
+								.btn-coopyright.flex-between(type="button")
+									span.text-18.text-white Сотрудничать с нами
+								.customDrop__list
+									.customDrop__list-item
+										a(href="#!").flex-vertical-center
+											svg.svg-whatsapp(width="20" height="20")
+												use(xlink:href="./img/svg-sprite.svg#svg-whatsapp")
+											.text-14 Whats App
+									.customDrop__list-item
+										a(href="#!").flex-vertical-center
+											svg.svg-telegram(width="20" height="20")
+												use(xlink:href="./img/svg-sprite.svg#svg-telegram")
+											.text-14 Telegram
+									.customDrop__list-item
+										a(href="#!").flex-vertical-center
+											svg.svg-facebook(width="20" height="20")
+												use(xlink:href="./img/svg-sprite.svg#svg-facebook")
+											.text-14 Facebook Messenger
+									.customDrop__list-item
+										a(href="#!").flex-vertical-center
+											svg.svg-viber(width="20" height="20")
+												use(xlink:href="./img/svg-sprite.svg#svg-viber")
+											.text-14 Viber
+						//=============Выбор страны и валюты на экранах от 375 до 991 пикс ================	
+						.mobile-menu-currency
+							ul
+								li
+									+custom-radio('country-mob','EN', 'English')(class="role-country")
+									+custom-radio('currency-mob', 'USD','USD')(class="role-currency")
+								li
+									+custom-radio('country-mob', 'RU','Русский', 'checked')(class="role-country")
+									+custom-radio('currency-mob', 'RUB','RUB', 'checked')(class="role-currency")
+								li
+									+custom-radio('country-mob', 'GE', 'Georgian')(class="role-country")
+									+custom-radio('currency-mob', 'GEL','GEL')(class="role-currency")
 							
 
 			//========= header center ==========
@@ -81,12 +133,13 @@ header.header.flex-box
 					ul
 						li
 							a(href="#") Клиники
-						li.active
+						li
 							a(href="#") Цены
 						li
 							a(href="#") Детская стоматология
 						li
 							a(href="#") О нас
-				buttin.btn-coopyright(type="button")
-					.icon-plus
-					span.text-18.text-white Сотрудничать с нами 
+				.header-menu-coopyright
+					include ../blocks/_custom-drop
+
+include _footer
