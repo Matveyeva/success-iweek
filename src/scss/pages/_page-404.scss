@@ -40,6 +40,19 @@
 			}
 		}
 	}
+	.footer{
+		padding-top: 64px;
+		@media (max-width: 991px) {
+			padding-top: 32px;
+		}
+	}
+	.floating-btn{
+		transform: translate(0, 10%);
+   		 opacity: 1;
+		 @media (max-width: 767px) {
+		 transform: translate(-50%, 0%);
+		 }
+	}
 	@media (max-width: 991px){
 		.header .header-top {
 			margin-bottom: 12px;

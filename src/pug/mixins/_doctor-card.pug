@@ -91,36 +91,24 @@ mixin doctor-card(docName,imgSrc, action, selectArr)
 						if selectArr
 							+mySelect(selectArr)
 						//=========выбор даты слайдер ===============
-						.swiper-date-wrapper
-							.swiper-date.swiper
-								.swiper-wrapper
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Пн, 16
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Вт, 18
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Ср, 19
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Чт, 20
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Пт, 21
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Сб, 22
-								
-								.arrow-left.icon-btn
-								.arrow-right.icon-btn
+						.doc-card__date
+							label.radiobutton-badge.label-light
+								input.label-radio(type='radio' name='date-radiobtn' )
+								span Пн, 16
+						
+							label.radiobutton-badge.label-light
+								input.label-radio(type='radio' name='date-radiobtn' )
+								span Вт, 18
+						
+							label.radiobutton-badge.label-light
+								input.label-radio(type='radio' name='date-radiobtn' )
+								span Ср, 19
+							
+							.datepicker-block
+								.label-light  ...
+								.datepicker-wrapper
+									.datepicker
+										input(type="hidden" id="datepicker_value" value="01.02.2022")
 						
 						.select-time-wrapper.flex-wrapper
 							+timeRadio('15:30')
@@ -277,43 +265,30 @@ mixin doctor-card-select(docName,imgSrc, action, selectArr)
 							.text-18 Лечение 8 зуба — бесплатно!
 			
 				//====== card select time =======
+				//====== card select time =======
 				object
 					.doc-card__form
 						if selectArr
-							.block-992.doc-card__form-select
-								+mySelect(selectArr)
+							+mySelect(selectArr)
 						//=========выбор даты слайдер ===============
-						.swiper-date-wrapper
-							.swiper-date.swiper
-								.swiper-wrapper
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Пн, 16
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Вт, 18
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Ср, 19
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Чт, 20
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Пт, 21
-									.swiper-slide
-										label.radiobutton-badge
-											input.label-radio(type='radio' name='date-radiobtn' )
-											span.label-light Сб, 22
-								
-								.arrow-left.icon-btn
-								.arrow-right.icon-btn
+						.doc-card__date
+							label.radiobutton-badge.label-light
+								input.label-radio(type='radio' name='date-radiobtn' )
+								span Пн, 16
 						
+							label.radiobutton-badge.label-light
+								input.label-radio(type='radio' name='date-radiobtn' )
+								span Вт, 18
+						
+							label.radiobutton-badge.label-light
+								input.label-radio(type='radio' name='date-radiobtn' )
+								span Ср, 19
+							
+							.datepicker-block
+								.label-light  ...
+								.datepicker-wrapper
+									.datepicker
+										input(type="hidden" id="datepicker_value" value="01.02.2022")
 						.select-time-wrapper.flex-wrapper
 							+timeRadio('15:30')
 							+timeRadio('16:30')

@@ -1,0 +1,13 @@
+.prices__title{
+	margin-bottom: 40px;
+}
+.search-block-wrapper{
+	justify-content: space-between;
+	column-gap:10px;
+	.form-box{
+		flex-grow:1;
+	}
+	.btn{
+		flex-shrink:0;
+	}
+}
