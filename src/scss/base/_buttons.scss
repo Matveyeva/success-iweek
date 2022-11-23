@@ -217,7 +217,7 @@
 	
 	&.active, &.active:focus{
 		color: $indigo;
-		background-color: rgba(87,87,246,.1);
+		background-color: $lightBlueBg;
 		border-top:4px solid $indigo;
 		
 	}

@@ -4,5 +4,44 @@
 }
 .schedule-page__table{
 	flex-grow:1;
-	background-color: red;
+	background-color: rgb(222, 219, 219);
+	table{
+		width: 100%;
+		 border-collapse: collapse;
+		 th{
+			position: sticky;
+			top:0;
+		 }
+		 th, td{
+			border: 1px solid #e6e6e6; 
+			padding: 15px 5px;
+			text-align: center;
+			min-width: 100px;
+			
+		}
+		th, td:first-child{
+			background-color: #fff;
+		}
+		th:first-child, td:first-child{
+			min-width: 60px;
+			width: 60px;
+		 }
+	}
+}
+.schedule__table-body{
+	height: 100vh;
+	overflow: auto;
+}
+.schedule__table-header{
+	border-bottom: 1px solid #E7E7E7;
+	background-color: #fff;
+	height: 33px;
+}
+.schedule__table-header-center{
+	text-align: center;
+	background-color: $lightBlueBg;
+	flex-grow:1;
+	height: 33px;
+	line-height: 33px;
+
 }
