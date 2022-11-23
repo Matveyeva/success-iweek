@@ -1,0 +1,14 @@
+.schedule-page__sidebar{
+	width: 240px;
+	padding-right: 10px;
+	flex-shrink:0;
+	&>*+*{
+		margin-top: 24px;
+	}
+	.sidebar-filters{
+		&>*+*{
+			margin-top: 8px;
+		}
+	}
+	.mydatepicker.datepicker .ui-widget-content:after{display: none;}
+}

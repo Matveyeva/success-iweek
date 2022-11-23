@@ -20,6 +20,10 @@
 
 }
 .mydatepicker.datepicker{	
+	.ui-datepicker{
+		width: 100%;
+		max-width: 260px;
+	}
 	.ui-widget-header .ui-icon, .ui-datepicker-next .ui-widget-header .ui-icon{
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.8333 10H4.16658' stroke='%235757F6' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M10 4.16663L4.16667 9.99996L10 15.8333' stroke='%235757F6' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
 	}

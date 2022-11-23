@@ -1,0 +1,12 @@
+.fixed-modal{
+	padding: 0 10px 50px 10px;
+	width: 240px;
+	background-color: #fff;
+	position: relative;
+	margin-left: -300px;
+	transition: .3s;
+	&.active{
+		margin-left:0px;
+	}
+	
+}
