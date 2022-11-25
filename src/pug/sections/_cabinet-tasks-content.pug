@@ -1,3 +1,4 @@
+//=========================== tasks-filters ======================
 .cabinet-body-header.flex-vertical-center.flex-between
 	.cabinet-tasks-filters.flex-box
 		+custom-select-icon('Запись из', ['Про Докторов', 'Онлайн запись', 'Из клиники'], 'mySelect--absolute')
@@ -9,7 +10,7 @@
 
 		+custom-select-checkbox('Врач',['Иванов', 'Петров', 'Сидоров'], 'mySelect--absolute' )
 	
-	.cabinet-body-header__btns
+	.cabinet-body-header__btns.flex-box.btn-toggle-block
 		label.btn--toggle
 			input(type='radio' name='toggle-tasks-body' class='filter-radiobtn' checked)
 			.btn
@@ -20,3 +21,20 @@
 			.btn
 				span Лист ожидания
 				span.notify-badge 4
+//=========================== dashboard-table ======================
+.dashboard-table
+	.dashboard-table-content
+		.dashboard-table-column
+			.dashboard-table-column__head.marker-color--orange Запланировано (3)
+			.dashboard-table-column__wrapper
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+
+
+	
+		.dashboard-table-column
+			.dashboard-table-column__head.marker-color--blue Запланировано (3)
+			.dashboard-table-column__wrapper

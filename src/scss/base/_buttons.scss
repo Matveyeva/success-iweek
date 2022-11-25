@@ -235,3 +235,21 @@
 		color: #fff
 	}
 }
+.btn-toggle-block{
+	.btn--toggle .btn{border-radius: 0;
+		padding-left: 12px;
+		padding-right: 12px;
+	span{
+		user-select: none;
+	}}
+	.btn--toggle:first-child{
+		.btn{
+			border-radius: 4px 0 0 4px;
+		}
+	}
+	.btn--toggle:last-child{
+		.btn{
+			border-radius: 0  4px  4px 0;
+		}
+	}
+}
