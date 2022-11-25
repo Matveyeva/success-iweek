@@ -1,0 +1,12 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_client-header
+	//=========== основной контент вкладка расписание ====================
+	.cabinet-body
+		.container-large
+			include ../sections/_schedule-page-content
+
+block variables
+	-let bodyCl = "client-cabinet"
+	-let title = "Кабинет клиента";
