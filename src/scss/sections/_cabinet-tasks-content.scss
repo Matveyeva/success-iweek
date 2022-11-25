@@ -1,0 +1,9 @@
+.cabinet-tasks-filters{
+	column-gap:16px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	.form-input{width: 260px;}
+	.ui-widget-content:after{
+		display: none;
+	}
+}
