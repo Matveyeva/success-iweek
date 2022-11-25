@@ -1,12 +1,22 @@
-.cabinet-body-header.flex-vertical-center.flex-between	
+.cabinet-body-header.flex-vertical-center.flex-between
 	.cabinet-tasks-filters.flex-box
 		+custom-select-icon('Запись из', ['Про Докторов', 'Онлайн запись', 'Из клиники'], 'mySelect--absolute')
 
 		.mydatepicker
 			input.form-input(type="text" id="datepicker" value="Дата")
 		
-		+custom-select-icon('Запись из', ['Про Докторов', 'Онлайн запись', 'Из клиники'], 'mySelect--absolute')
+		+custom-select-icon('Пациент',['Иванов', 'Петров', 'Сидоров'], 'mySelect--absolute')
 
-		+custom-select-checkbox('Пациент',['Иванов', 'Петров', 'Сидоров'], 'mySelect--absolute' )
+		+custom-select-checkbox('Врач',['Иванов', 'Петров', 'Сидоров'], 'mySelect--absolute' )
 	
 	.cabinet-body-header__btns
+		label.btn--toggle
+			input(type='radio' name='toggle-tasks-body' class='filter-radiobtn' checked)
+			.btn
+				span Статусы
+				span.notify-badge 4
+		label.btn--toggle
+			input(type='radio' name='toggle-tasks-body' class='filter-radiobtn')
+			.btn
+				span Лист ожидания
+				span.notify-badge 4

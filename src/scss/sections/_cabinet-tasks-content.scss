@@ -7,3 +7,13 @@
 		display: none;
 	}
 }
+.cabinet-body-header__btns{
+	.filter-toggle__block{
+		height: 40px;
+	}
+	.filter-toggle-item{
+		padding-left: 24px;
+		padding-right: 24px;
+		.notify-badge{margin-right: 4px; vertical-align: middle;}
+	}
+}
