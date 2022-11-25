@@ -200,3 +200,26 @@
 	}
 	
 }
+
+.btn-bt,.btn-bt:focus{
+	display: block;
+	border-top:4px solid transparent;
+	text-align: center;
+	height: 50px;
+	line-height: 46px;
+	font-size: 16px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: $gray;
+	font-weight: 500;
+	background-color: #fff;
+	border-radius: 4px 4px 0 0;
+	
+	&.active, &.active:focus{
+		color: $indigo;
+		background-color: $lightBlueBg;
+		border-top:4px solid $indigo;
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+.schedule-page{
+	display: flex;
+	
+}
+.schedule-page__table{
+	flex-grow:1;
+	background-color: rgb(222, 219, 219);
+	table{
+		width: 100%;
+		 border-collapse: collapse;
+		
+	}
+}
+
+.schedule__table-header{
+	border-bottom: 1px solid #E7E7E7;
+	background-color: #fff;
+	height: 45px;
+	background-color: $lightBlueBg;
+	.icon-btn{
+		width: 45px;
+		height: 45px;
+	}
+}
+.schedule__table-header-center{
+	text-align: center;
+	flex-grow:1;
+	height: 45px;
+	line-height: 45px;
+	
+
+}

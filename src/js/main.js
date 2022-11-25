@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	});
 
- /* ========== плагин календаря ============ */
+    /* ========== плагин календаря ============ */
   if($( ".datepicker" ).length > 0){
 		$.datepicker.regional['ru'] = {
 			closeText: 'Закрыть',
@@ -301,5 +301,20 @@ document.addEventListener("DOMContentLoaded", function (){
 		$(function(){
       $(".datepicker").datepicker();
     });
+	}
+   /*========== кастомные табы переключение кнопок ============*/
+	const customTabBtns = document.querySelectorAll('.myTabs-buttons');
+	if(customTabBtns.length > 0){
+		for(let item of customTabBtns){
+			const tabBtssItem = item.querySelectorAll('.myTabs-btn');
+			for(btn of tabBtssItem){
+				btn.addEventListener('click', function(){
+					for(itemBtn of tabBtssItem){
+						itemBtn.classList.remove('active');
+					}
+					this.classList.add('active');
+				})
+			}
+		}
 	}
 });

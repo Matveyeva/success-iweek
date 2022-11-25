@@ -1,0 +1,16 @@
+//========== календарь ==============
+.sidebar-calendar
+	.datepicker.mydatepicker
+		input(type="hidden" id="datepicker_value" value="01.02.2022")
+
+//========== выпадашки ==============
+.sidebar-filters
+	+custom-select-icon('Специальность', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+	+custom-select-icon('Сотрудник', ['Кикабидзе В.', 'Кипиани А.', 'Брегвадзе Н.', 'Чиаурелли С.', 'Оборзелли К.'], 'mySelect--absolute')
+
+//========== цветные маркеры ==============
+.sidebar-markers
+	.marker-color 1
+	.marker-color.marker-color--blue 0
+	.marker-color.marker-color--green 0
+	.marker-color.marker-color--gray 0
