@@ -9,6 +9,7 @@
 	&>*{flex-shrink: 0;}
 	overflow: hidden;
 	overflow-x: auto;
+	width: 100%;
 	align-items: flex-start;
 }
 .dashboard-table-column{
@@ -17,10 +18,8 @@
 	
 }
 .dashboard-table-column__wrapper{
-	overflow: hidden;
-	overflow-y: auto;
 	
-	max-height: 830px;
+	max-height: 730px;
 }
 .dashboard-table-column__head{
 	height: 42px;
@@ -32,6 +31,7 @@
 	 0px 1px 5px 0px rgba(0, 0, 0, .12);
 	 text-align: center;
 	 line-height: 42px;
+	 user-select: none;
 }
 .dashboard-table-column__head.green-block{
 	position: sticky;
