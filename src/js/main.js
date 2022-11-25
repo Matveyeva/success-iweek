@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			mobMenu.style.display = "block";
 		} 
 		if(this.innerWidth <= 991){
-			if(!toggleMenu.classList.contains('active')){
+			if(toggleMenu && !toggleMenu.classList.contains('active')){
 				mobMenu.style.display = "none";
 			}
 		}

@@ -1,9 +1,55 @@
 .schedule-page
 	.schedule-page__sidebar
 		include ../blocks/_cabinet-sidebar-calendar
-	.schedule-page__table
+	.schedule-page__table.minified
 		.schedule__table-header.flex-vertical-center.flex-between
 			.icon-btn.arrow-left
 			.schedule__table-header-center  23 ноября
 			.icon-btn.arrow-right
-		.schedule__table-body
+		.table-wrapper
+			.schedule-table-time-column.pb-24
+				.time-column-header
+					span Шаг
+				.time-column-scroll
+					.time-column-cell 8:00
+					.time-column-cell 8:00
+					.time-column-cell 8:00
+					.time-column-cell 8:00
+					.time-column-cell 8:00
+					.time-column-cell 8:00
+					.time-column-cell 8:00
+					.time-column-cell 8:00
+					.time-column-cell 8:00
+					.time-column-cell 8:00
+					.time-column-cell 8:00
+					.time-column-cell 8:00
+			.cabinet-table-block
+				.cabinet-table-header.pr-24
+					+nameCell
+					+nameCell
+					+nameCell
+					+nameCell
+					+nameCell
+					+nameCell
+					+nameCell
+					+nameCell
+					+nameCell
+					+nameCell
+				.schedule-scrollbar-block
+					table
+						tbody
+							+table-row
+							+table-row
+							+table-row
+							+table-row
+							+table-row
+							+table-row
+							+table-row
+							+table-row
+							+table-row
+							+table-row
+							+table-row
+							+table-row
+
+
+							
