@@ -324,17 +324,19 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 
 	/*кастомный скролл таблицы*/
-	document.querySelector('.schedule-scrollbar-block').addEventListener('scroll', function(e) {
-	horizontal = e.currentTarget.scrollLeft;
-	vertical = e.currentTarget.scrollTop;
-
-	document.querySelector('.cabinet-table-header').scrollTo(horizontal, 0)
-	});
-
-	document.querySelector('.schedule-scrollbar-block').addEventListener('scroll', function(e) {
+	if(document.querySelector('.schedule-scrollbar-block')){
+		document.querySelector('.schedule-scrollbar-block').addEventListener('scroll', function(e) {
 		horizontal = e.currentTarget.scrollLeft;
 		vertical = e.currentTarget.scrollTop;
 
-		document.querySelector('.table-wrapper .time-column-scroll').scrollTo(0, vertical)
-	});
+		document.querySelector('.cabinet-table-header').scrollTo(horizontal, 0)
+		});
+
+		document.querySelector('.schedule-scrollbar-block').addEventListener('scroll', function(e) {
+			horizontal = e.currentTarget.scrollLeft;
+			vertical = e.currentTarget.scrollTop;
+
+			document.querySelector('.table-wrapper .time-column-scroll').scrollTo(0, vertical)
+		});
+	}
 });
