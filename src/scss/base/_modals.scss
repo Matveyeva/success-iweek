@@ -20,16 +20,19 @@
 		max-width: 800px;
 		margin: 0;
 		border-radius: 0;
-
+		padding: 30px;
+	}
+	.modal-frame__body{
+		padding-top: 30px;
 	}
 	.modal-frame__head{
-		padding-left: 30px;
+		border-bottom: 1px solid #E7E7E7;
 		padding-bottom: 30px;
 	}
 	.modal-frame__footer{
 		text-align: left;
 		padding-top: 30px;
-		padding-left: 30px;
+		
 		font-size: 18px;
 		font-weight: 700;
 	}
@@ -56,11 +59,31 @@
 		span:first-child{font-weight: 700;}
 	}
 	.visiter-info{
-		p{display: flex;justify-content: space-between;}
+		p{
+			display: flex;
+			justify-content: space-between;
+			color: $indigo;
+			
+			span:first-child{
+				border-bottom: 1px solid $indigo;
+				cursor:pointer;
+			}
+			
+		}
 		p + span{margin-top: 12px; display: inline-block; }
 		.copy-icon{
 			margin-left: 16px;
 
 		}
 	}
+}
+.pause-form__head{
+	margin-bottom: 30px;
+}
+.pause-form .form-textarea{
+	margin-top: 30px;
+}
+.pause-form .form-btns{
+	margin-top: 30px;
+	justify-content: flex-end;
 }

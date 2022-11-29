@@ -1,0 +1,34 @@
+//================== pause-info ==============
+.modal-frame-wrapper.modal-frame-right(frame-modal="pause-info")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-24 Добавление перерыва
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			form.pause-form
+				.pause-form__head
+					.text-24 Кирсанова Марина Анлександровна
+					.text-16.mt-8 Онколог, Детский онколог, Врач-косметолог, Гинеколог, Маммолог
+				
+				.pause-form__title.text-bold.mb-16 Время перерыва
+				.pause-form__fields.flex-vertical-center.gap-32
+					.form-item
+						input.form-input(type="text" placeholder="Начало")
+						
+					.form-item
+						input.form-input(type="text" placeholder="Окончание")
+						
+					
+					.pause-form__.switch
+						label.switch-toggle.flex-box.flex-y-center
+							input(type='checkbox' id='check' class='toggle-switch')
+							span.real-switch
+							span.custom-switch__text Весь день
+				.form-textarea
+					textarea(placeholder="Комментарий")
+				.form-btns.flex-vertical-center.gap-32
+					button.btn.btn--orange Отменить
+					button.btn.btn--primary Добавить
+							
+

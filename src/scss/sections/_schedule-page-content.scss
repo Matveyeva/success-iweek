@@ -86,6 +86,23 @@
     display: flex;
     box-sizing: border-box;
     background-color: #fff;
+	.pause-icon__wrapper{
+		width: 30px;
+		height: 30px;
+		flex-shrink: 0;
+		border-radius: 50%;
+		background-color: #828282;
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: .2s;
+		cursor:pointer;
+		&:hover{
+			background-color: #cfcfcf;
+		}
+	}
+
 }
 .cell{
 	
