@@ -70,3 +70,17 @@
 		
 	}
 }
+.notify-badge{
+	padding: 0!important;
+	width: 20px!important;
+	height: 20px!important;
+	border-radius: 50%;
+	line-height: 20px!important;
+	text-align: center;
+	color: #fff!important;
+	font-size: 12px!important;
+	font-weight: 500;
+	background-color: $red;
+	flex-shrink: 0;
+
+}

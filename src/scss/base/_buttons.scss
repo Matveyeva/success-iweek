@@ -223,3 +223,33 @@
 	}
 
 }
+.btn--toggle{
+	.btn{
+		background-color: #fff;
+		border:2px solid #5757F6;
+		color: #5757F6;
+	}
+	input[type="radio"]:checked + .btn{
+		background-color: #5757F6;
+		border:2px solid #5757F6;
+		color: #fff
+	}
+}
+.btn-toggle-block{
+	.btn--toggle .btn{border-radius: 0;
+		padding-left: 12px;
+		padding-right: 12px;
+	span{
+		user-select: none;
+	}}
+	.btn--toggle:first-child{
+		.btn{
+			border-radius: 4px 0 0 4px;
+		}
+	}
+	.btn--toggle:last-child{
+		.btn{
+			border-radius: 0  4px  4px 0;
+		}
+	}
+}

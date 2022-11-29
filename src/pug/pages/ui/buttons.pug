@@ -26,6 +26,31 @@ html(lang="ru")
 				.container-dashboard__content
 				ul.ui-components
 					li
+						.flex-box.btn-toggle-block
+							label.btn--toggle
+								input(type='radio' name='toggle-tasks-body' class='filter-radiobtn' checked)
+								.btn
+									span Статусы
+									span.notify-badge 4
+							label.btn--toggle
+								input(type='radio' name='toggle-tasks-body' class='filter-radiobtn')
+								.btn
+									span Лист ожидания
+									span.notify-badge 4
+						pre.
+							.flex-box.btn-toggle-block
+								label.btn--toggle
+									input(type='radio' name='toggle-tasks-body' class='filter-radiobtn' checked)
+									.btn
+										span Статусы
+										span.notify-badge 4
+								label.btn--toggle
+									input(type='radio' name='toggle-tasks-body' class='filter-radiobtn')
+									.btn
+										span Лист ожидания
+										span.notify-badge 4
+					
+					li
 						.btn Button
 						pre.
 							.btn  Button

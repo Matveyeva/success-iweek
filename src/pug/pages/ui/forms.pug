@@ -25,6 +25,11 @@ html(lang="ru")
 				.container-dashboard__content
 					ul.ui-components
 						li
+							+custom-select-checkbox('Пациент',['Иванов', 'Петров', 'Сидоров'], 'mySelect--absolute' )
+							pre.
+								+custom-select-checkbox('Пациент',['Иванов', 'Петров', 'Сидоров'], 'mySelect--absolute' )
+						
+						li
 							.form-box.form-box--icon-right
 								label.text-16.text-gray3 инпут с иконкой справа
 								.form-box-input

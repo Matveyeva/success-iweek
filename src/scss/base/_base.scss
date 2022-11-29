@@ -56,6 +56,24 @@ main{
 		background-color: #E0E0E0;
 	}
 }
+.scroll-x{
+	overflow: hidden;
+	overflow-x: auto;
+	scrollbar-color: #E0E0E0 $orange;
+	scrollbar-width: 5px;
+	&::-webkit-scrollbar{
+		width: 15px;
+		height:15px;
+	}
+	&::-webkit-scrollbar-thumb{
+		height: 15px;
+		background-color: $orange;
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar-track{
+		background-color: #E0E0E0;
+	}
+}
 #overlay {
 	display: none;
 	position: fixed;

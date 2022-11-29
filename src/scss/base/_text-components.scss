@@ -98,17 +98,22 @@
 	color: rgb(239, 147, 62);
 	border-radius: 4px;
 	background-color: rgb(255, 242, 217);
+	
+	&--orange{
+		color: rgb(239, 147, 62);
+		background-color: rgb(255, 242, 217);
+	}
 	&--blue{
-		background-color: rgb(229, 242, 249);
-		color: rgb(0, 112, 192);
+		background-color: rgb(229, 242, 249)!important;
+		color: rgb(0, 112, 192)!important;
 	}
 	&--green{
-		color: rgb(51, 181, 118);
-    	background-color: rgb(224, 246, 238);
+		color: rgb(51, 181, 118)!important;
+    	background-color: rgb(224, 246, 238)!important;
 	}
 	&--gray{
-		color: rgb(117, 117, 117);
-    	background-color: rgb(247, 247, 247);
+		color: rgb(117, 117, 117)!important;
+    	background-color: rgb(247, 247, 247)!important;
 	}
 }
 .sidebar-markers{

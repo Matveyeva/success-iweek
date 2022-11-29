@@ -300,9 +300,13 @@ document.addEventListener("DOMContentLoaded", function (){
 		$.datepicker.setDefaults($.datepicker.regional['ru']);
 
 		$(function(){
-      $(".datepicker").datepicker();
-    });
+     		 $(".datepicker").datepicker();
+    	});
+
 	}
+	$(function(){
+			$("#datepicker").datepicker();
+	});
    /*========== кастомные табы переключение кнопок ============*/
 	const customTabBtns = document.querySelectorAll('.myTabs-buttons');
 	if(customTabBtns.length > 0){

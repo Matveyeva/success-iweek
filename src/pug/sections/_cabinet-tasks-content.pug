@@ -1,0 +1,82 @@
+//=========================== tasks-filters ======================
+.cabinet-body-header.flex-vertical-center.flex-between
+	.cabinet-tasks-filters.flex-box
+		+custom-select-icon('Запись из', ['Про Докторов', 'Онлайн запись', 'Из клиники'], 'mySelect--absolute')
+
+		.mydatepicker
+			input.form-input(type="text" id="datepicker" value="Дата")
+		
+		+custom-select-icon('Пациент',['Иванов', 'Петров', 'Сидоров'], 'mySelect--absolute')
+
+		+custom-select-checkbox('Врач',['Иванов', 'Петров', 'Сидоров'], 'mySelect--absolute' )
+	
+	.cabinet-body-header__btns.flex-box.btn-toggle-block
+		label.btn--toggle
+			input(type='radio' name='toggle-tasks-body' class='filter-radiobtn' checked)
+			.btn
+				span Статусы
+				span.notify-badge 4
+		label.btn--toggle
+			input(type='radio' name='toggle-tasks-body' class='filter-radiobtn')
+			.btn
+				span Лист ожидания
+				span.notify-badge 4
+//=========================== dashboard-table ======================
+.dashboard-table(data-role="dashboard")
+	.dashboard-table-content.scroll-x
+		.dashboard-table-column
+			.dashboard-table-column__head.marker-color--orange Запланировано (3)
+			.dashboard-table-column__wrapper.scroll-vertical(data-role="dashboard-column")
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+
+		.dashboard-table-column
+			.dashboard-table-column__head.marker-color--blue Запланировано (3)
+			.dashboard-table-column__wrapper.scroll-vertical(data-role="dashboard-column")
+				.dashboard-table-card
+				.dashboard-table-card
+
+
+		
+		.dashboard-table-column
+			.dashboard-table-column__head.marker-color--green Запланировано (3)
+			.dashboard-table-column__wrapper.scroll-vertical(data-role="dashboard-column")
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+
+			
+		.dashboard-table-column
+			.dashboard-table-column__head.marker-color--blue Запланировано (3)
+			.dashboard-table-column__wrapper.scroll-vertical(data-role="dashboard-column")
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+
+		.dashboard-table-column
+			.dashboard-table-column__head.marker-color--blue Запланировано (3)
+			.dashboard-table-column__wrapper.scroll-vertical(data-role="dashboard-column")
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
+
+		
+		.dashboard-table-column
+			.dashboard-table-column__head.marker-color--green Запланировано (3)
+			.dashboard-table-column__wrapper.scroll-vertical(data-role="dashboard-column")
+				.dashboard-table-card
+				.dashboard-table-card
+
+			
+		.dashboard-table-column
+			.dashboard-table-column__head.marker-color--blue Запланировано (3)
+			.dashboard-table-column__wrapper.scroll-vertical(data-role="dashboard-column")
+				.dashboard-table-card
+				.dashboard-table-card
+				.dashboard-table-card
