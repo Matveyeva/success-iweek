@@ -115,6 +115,10 @@
 		color: rgb(117, 117, 117)!important;
     	background-color: rgb(247, 247, 247)!important;
 	}
+	&--red{
+		background-color: rgb(252, 232, 232)!important;
+    	color: rgb(255, 100, 100)!important;
+	}
 }
 .sidebar-markers{
 	display: grid;
