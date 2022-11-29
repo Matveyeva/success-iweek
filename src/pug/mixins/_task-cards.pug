@@ -1,0 +1,16 @@
+mixin task-card(state)
+	a(href="#!").dashboard-table-card
+		.dtc-head
+			p Давыдова А.Ю.
+			span Создан 20 сент 10:59 
+		.dtc-body
+			.dtc-body__item
+				span Пациент
+				p Миронов Р.И.
+			.dtc-body__item
+				span Телефон
+				p 8(961)861 50-63
+		.dtc-footer
+			span 03 окт 05:00
+			.state-label #{state}
+				

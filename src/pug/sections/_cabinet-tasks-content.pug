@@ -26,7 +26,7 @@
 	//=========================== dashboard-table ======================
 	.dashboard-table(data-role="dashboard")
 		.dashboard-table-content.scroll-x
-			.dashboard-table-column
+			.dashboard-table-column.state-planer
 				.dashboard-table-column__head.marker-color--orange Запланировано (3)
 				.scroll-vertical(data-role="dashboard-column")
 					.dashboard-table-column__wrapper
@@ -43,14 +43,10 @@
 									p 8(961)861 50-63
 							.dtc-footer
 								span 03 окт 05:00
-								object
-									.state-label.marker-color--gray Выполнен
-						.dashboard-table-card
-						.dashboard-table-card
-						.dashboard-table-card
-						.dashboard-table-card
+								.state-label Запланировано
 			
-			.dashboard-table-column
+			
+			.dashboard-table-column.state-confirm
 				.dashboard-table-column__head.marker-color--blue Подтвержден (0)
 				.scroll-vertical(data-role="dashboard-column")
 					.dashboard-table-column__wrapper
@@ -58,34 +54,39 @@
 
 
 				
-			.dashboard-table-column
+			.dashboard-table-column.state-started
 				.dashboard-table-column__head.marker-color--green Начат визит (3)
 				.scroll-vertical(data-role="dashboard-column")
 					.dashboard-table-column__wrapper
-						.dashboard-table-card
-						.dashboard-table-card
-						.dashboard-table-card
+						+task-card('Начат визит')
+						+task-card('Начат визит')
+						+task-card('Начат визит')
 
-			.dashboard-table-column
+			.dashboard-table-column.state-done
 				.dashboard-table-column__head.marker-color--gray Выполнен(3)
 				.scroll-vertical(data-role="dashboard-column")
 					.dashboard-table-column__wrapper
-						.dashboard-table-card
+						+task-card('Выполнен')
+						+task-card('Выполнен')
+						+task-card('Выполнен')
 
 
 			
-			.dashboard-table-column
+			.dashboard-table-column.state-absence
 				.dashboard-table-column__head.marker-color--red Неявка (3)
 				.scroll-vertical(data-role="dashboard-column")
 					.dashboard-table-column__wrapper
-						.dashboard-table-card
-						.dashboard-table-card
+						+task-card('Неявка')
+						+task-card('Неявка')
+						+task-card('Неявка')
+						+task-card('Неявка')
 
 				
-			.dashboard-table-column
+			.dashboard-table-column.state-cancel
 				.dashboard-table-column__head.marker-color--red Отменен (3)
 				.scroll-vertical(data-role="dashboard-column")
 					.dashboard-table-column__wrapper
-						.dashboard-table-card
-						.dashboard-table-card
-						.dashboard-table-card
+						+task-card('Отменен')
+						+task-card('Отменен')
+						+task-card('Отменен')
+						+task-card('Отменен')

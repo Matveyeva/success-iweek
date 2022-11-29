@@ -125,3 +125,38 @@
 	grid-template-columns: 1fr 1fr;
 	gap:8px
 }
+.state-planer{
+	.state-label,
+	.dashboard-table-column__head{
+		color: rgb(239, 147, 62);
+		background-color: rgb(255, 242, 217);
+	}
+}
+.state-confirm{
+	.state-label,
+	.dashboard-table-column__head{
+		color: rgb(51, 181, 118)!important;
+    	background-color: rgb(224, 246, 238)!important;
+	}
+}
+.state-started{
+	.state-label,
+	.dashboard-table-column__head{
+		background-color: rgb(229, 242, 249)!important;
+		color: rgb(0, 112, 192)!important;
+	}
+}
+.state-done{
+	.state-label,
+	.dashboard-table-column__head{
+		color: rgb(117, 117, 117)!important;
+    	background-color: rgb(247, 247, 247)!important;
+	}
+}
+.state-absence,.state-cancel{
+	.state-label,
+	.dashboard-table-column__head{
+		background-color: rgb(252, 232, 232)!important;
+    	color: rgb(255, 100, 100)!important;
+	}
+}

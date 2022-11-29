@@ -45,6 +45,7 @@
 	 text-align: center;
 	 line-height: 42px;
 	 user-select: none;
+	 font-weight: 700;
 }
 .dashboard-table-column__head.green-block{
 	position: sticky;
@@ -105,5 +106,6 @@
 		line-height: 30px;
 		white-space: nowrap;
 		padding-left: 16px;
+		user-select: none;
 	}
 .dashboard-table-card:first-child{margin-top: 0;}
