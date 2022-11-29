@@ -1,0 +1,16 @@
+mixin cabHeader(arg)
+	header.cabinet-header
+		.container-large
+			.cabinet-header__content.flex-vertical-center
+				.cabinet-header__logo
+					a(href="index.html").custom-logo
+						img(src="./img/logo2.png", width="106" alt="logo")
+				.cabinet-header__menu
+					.myTabs-buttons
+						each item in arg
+							if item.addCl !==''
+								a(href=""+item.link).btn-bt.myTabs-btn.active #{item.name}
+							else
+								a(href=""+item.link).btn-bt.myTabs-btn #{item.name}
+				.cabinet-header__profile
+					.cabinet-header__avatar ТЮ

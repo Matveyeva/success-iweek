@@ -11,6 +11,10 @@
 	
 }
 .modal-frame-wrapper[frame-modal].modal-frame-right{
+	opacity: 0;
+	animation-name:slowOpen;
+	animation-duration:.5s;
+	animation-fill-mode: forwards;
 	.modal-frame{
 		position: absolute;
 		top: 0;

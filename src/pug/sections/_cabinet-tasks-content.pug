@@ -24,31 +24,18 @@
 		//- 			span Лист ожидания
 		//- 			span.notify-badge 4
 	//=========================== dashboard-table ======================
-	.dashboard-table(data-role="dashboard")
+	.dashboard-table
 		.dashboard-table-content.scroll-x
 			.dashboard-table-column.state-planer
 				.dashboard-table-column__head.marker-color--orange Запланировано (3)
-				.scroll-vertical(data-role="dashboard-column")
+				.scroll-vertical
 					.dashboard-table-column__wrapper
-						a(href="#!").dashboard-table-card
-							.dtc-head
-								p Давыдова А.Ю.
-								span Создан 20 сент 10:59 
-							.dtc-body
-								.dtc-body__item
-									span Пациент
-									p Миронов Р.И.
-								.dtc-body__item
-									span Телефон
-									p 8(961)861 50-63
-							.dtc-footer
-								span 03 окт 05:00
-								.state-label Запланировано
+						+task-card('Запланировано')
 			
 			
 			.dashboard-table-column.state-confirm
 				.dashboard-table-column__head.marker-color--blue Подтвержден (0)
-				.scroll-vertical(data-role="dashboard-column")
+				.scroll-vertical
 					.dashboard-table-column__wrapper
 						.task-empty Список задач пуст
 
@@ -56,7 +43,7 @@
 				
 			.dashboard-table-column.state-started
 				.dashboard-table-column__head.marker-color--green Начат визит (3)
-				.scroll-vertical(data-role="dashboard-column")
+				.scroll-vertical
 					.dashboard-table-column__wrapper
 						+task-card('Начат визит')
 						+task-card('Начат визит')
@@ -64,7 +51,7 @@
 
 			.dashboard-table-column.state-done
 				.dashboard-table-column__head.marker-color--gray Выполнен(3)
-				.scroll-vertical(data-role="dashboard-column")
+				.scroll-vertical
 					.dashboard-table-column__wrapper
 						+task-card('Выполнен')
 						+task-card('Выполнен')
@@ -74,7 +61,7 @@
 			
 			.dashboard-table-column.state-absence
 				.dashboard-table-column__head.marker-color--red Неявка (3)
-				.scroll-vertical(data-role="dashboard-column")
+				.scroll-vertical
 					.dashboard-table-column__wrapper
 						+task-card('Неявка')
 						+task-card('Неявка')
@@ -84,7 +71,7 @@
 				
 			.dashboard-table-column.state-cancel
 				.dashboard-table-column__head.marker-color--red Отменен (3)
-				.scroll-vertical(data-role="dashboard-column")
+				.scroll-vertical
 					.dashboard-table-column__wrapper
 						+task-card('Отменен')
 						+task-card('Отменен')

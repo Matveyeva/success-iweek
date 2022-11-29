@@ -1,7 +1,13 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_client-header
+	
+	+cabHeader([
+		{link:'schedule-page.html', addCl:'true', name: 'Расписание'}, 
+		{link:'cabinet-tasks.html', addCl:'', name: 'Задачи' }, 
+		{link:'#!', addCl:'', name: 'Пациенты'}, 
+		{link:'#!', addCl:'', name: 'Сотрудники' }
+		])
 	//=========== основной контент вкладка расписание ====================
 	.cabinet-body
 		.container-large
