@@ -24,7 +24,26 @@
 							.mydatepicker
 								input.form-input(type="text" class="datepicker" value="Окончание")
 						.form-item
-							+custom-select-icon('Специальности', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+							.mySelect.mySelect--absolute
+								.mySelect-input
+									input.selectValue.input-slim(type='text' readonly='' value='Выбрать день')
+								.mySelect-drop.scroll-vertical
+									label.checkbox-label.flex-box.flex-y-center
+										input.real-checkbox(type='checkbox' name='form-checkbox1' class='checkbox' )
+										span.custom-checkbox 
+										span.custom-checkbox__text Понед
+									
+									label.checkbox-label.flex-box.flex-y-center
+										input.real-checkbox(type='checkbox' name='form-checkbox2' class='checkbox')
+										span.custom-checkbox 
+										span.custom-checkbox__text Втор
+									
+									label.checkbox-label.flex-box.flex-y-center
+										input.real-checkbox(type='checkbox' name='form-checkbox3' class='checkbox')
+										span.custom-checkbox 
+										span.custom-checkbox__text Сред
+									
+									button.btn Кнопка
 							
 				.rules-form-block
 					.form-item
