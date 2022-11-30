@@ -69,12 +69,13 @@
 							
 				.flex-form-fields.gap-32
 					.form-item
-						input.form-input(type="text" placeholder="Начало")
+						+custom-select-icon('Начало', ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00'], 'mySelect--absolute')
 							
 					.form-item
-						input.form-input(type="text" placeholder="Окончание")
+						+custom-select-icon('Окончание',  ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00'], 'mySelect--absolute')
 
 			
 			
-			.modal-frame__footer.mt-auto.border-top
-				p Выполнен
+			.modal-frame__footer.mt-auto.border-top.flex-vertical-center.flex-between
+				button.btn.btn-44.btn--orange Отмена
+				button.btn.btn-44 Добавить
