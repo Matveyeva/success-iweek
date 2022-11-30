@@ -1,21 +1,21 @@
 //================== Правило работы сотрудника-modal ==============
 .modal-frame-wrapper.modal-frame-right.visible.rules-modal(frame-modal="rules-info")
-	.modal-frame.flex-column
+	.modal-frame.flex-column.flex-box
 		.modal-frame__head.flex-box.flex-y-center.flex-between
 			.text-24 Добавление правила графиков работы
 			.icon-close(frame-close)
-		form.rules-form
+		form.rules-form.flex-column.flex-box
 			.modal-frame__body
 				.rules-form-block
 					+custom-select-icon('Специальности', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
-				
-					.title-16 Период работы
+				.rules-form-block
+					.title-16.mb-16 Период работы
 					label.switch-toggle.flex-box.flex-y-center
 						input(type='checkbox' id='check' class='toggle-switch')
 						span.real-switch
 						span.custom-switch__text Повторять
 				
-					.rules-form-fields.flex-vertical-center.gap-32
+					.flex-form-fields.gap-32
 						.form-item
 							.mydatepicker
 								input.form-input(type="text" class="datepicker" value="Начало")
@@ -24,33 +24,55 @@
 							.mydatepicker
 								input.form-input(type="text" class="datepicker" value="Окончание")
 						.form-item
-							.mySelect.mySelect--absolute
+							.mySelect.mySelect--absolute.mySelect--multi#multi_day_picker
 								.mySelect-input
-									input.selectValue.input-slim(type='text' readonly='' value='Выбрать день')
-								.mySelect-drop.scroll-vertical
+									input.selectValue.input-slim(type='text' readonly='' value='Выбрать день' data-default='Выбрать день')
+								.mySelect-drop
 									label.checkbox-label.flex-box.flex-y-center
-										input.real-checkbox(type='checkbox' name='form-checkbox1' class='checkbox' )
+										input.real-checkbox(type='checkbox' name='form-checkbox1' class='checkbox' data-thumbnail="Пн")
 										span.custom-checkbox 
-										span.custom-checkbox__text Понед
+										span.custom-checkbox__text Понедельник
 									
 									label.checkbox-label.flex-box.flex-y-center
-										input.real-checkbox(type='checkbox' name='form-checkbox2' class='checkbox')
+										input.real-checkbox(type='checkbox' name='form-checkbox2' class='checkbox' data-thumbnail="Вт")
 										span.custom-checkbox 
-										span.custom-checkbox__text Втор
+										span.custom-checkbox__text Вторник
 									
 									label.checkbox-label.flex-box.flex-y-center
-										input.real-checkbox(type='checkbox' name='form-checkbox3' class='checkbox')
+										input.real-checkbox(type='checkbox' name='form-checkbox3' class='checkbox' data-thumbnail="Ср")
 										span.custom-checkbox 
-										span.custom-checkbox__text Сред
+										span.custom-checkbox__text Среда
 									
-									button.btn Кнопка
+									label.checkbox-label.flex-box.flex-y-center
+										input.real-checkbox(type='checkbox' name='form-checkbox3' class='checkbox' data-thumbnail="Чт")
+										span.custom-checkbox 
+										span.custom-checkbox__text Четверг
+									
+									label.checkbox-label.flex-box.flex-y-center
+										input.real-checkbox(type='checkbox' name='form-checkbox3' class='checkbox' data-thumbnail="Пт")
+										span.custom-checkbox 
+										span.custom-checkbox__text Пятница
+									
+									label.checkbox-label.flex-box.flex-y-center
+										input.real-checkbox(type='checkbox' name='form-checkbox3' class='checkbox' data-thumbnail="Сб")
+										span.custom-checkbox 
+										span.custom-checkbox__text Суббота
+									
+									label.checkbox-label.flex-box.flex-y-center
+										input.real-checkbox(type='checkbox' name='form-checkbox3' class='checkbox' data-thumbnail="Вс")
+										span.custom-checkbox 
+										span.custom-checkbox__text Воскресенье
+									
+									.mySelect-drop__btns.flex-vertical-center.flex-between.mt-16
+										button.btn.btn-38.btn--orange.cancel Отмена
+										button.btn.btn-38.confirm Применить
 							
-				.rules-form-block
+				.flex-form-fields.gap-32
 					.form-item
-							input.form-input(type="text" placeholder="Начало")
+						input.form-input(type="text" placeholder="Начало")
 							
 					.form-item
-							input.form-input(type="text" placeholder="Окончание")
+						input.form-input(type="text" placeholder="Окончание")
 
 			
 			

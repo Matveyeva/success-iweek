@@ -172,7 +172,6 @@ document.addEventListener("DOMContentLoaded", function (){
 			if(e.target === e.currentTarget){
 				this.classList.remove(`visible`)
 				bodyEl.classList.remove('noscroll');
-				
 			}
 		});
 	}
@@ -352,5 +351,56 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			document.querySelector('.table-wrapper .time-column-scroll').scrollTo(0, vertical)
 		});
+	}
+	
+	
+	/*  выпадашка с днями недели мультивыбор */
+	let multiDayPicker = document.querySelector("#multi_day_picker")
+	if(multiDayPicker){
+		initializeMultidayPicker(multiDayPicker)
+	}
+		
+
+	function initializeMultidayPicker(parentSelect){
+		// Собираем элементы управления в компоненте
+		let confirmButton = parentSelect.querySelector(".confirm")
+		let cancelButton = parentSelect.querySelector(".cancel")
+		
+		let optionCheckboxes = parentSelect.querySelectorAll("input[type=checkbox]")
+		let valueDisplay = parentSelect.querySelector("input[type=text]")
+		let dropDownMenu = parentSelect.querySelector(".mySelect-drop")
+		let dropDownField = parentSelect.querySelector(".mySelect-input")
+		
+
+		confirmButton.addEventListener("click", (e) => {
+			e.preventDefault()
+			// Обходим все инпуты и ищем чекнутые
+			let choiceList = []
+			for(let optionCheckbox of optionCheckboxes){
+				if(optionCheckbox.checked)
+					choiceList.push(optionCheckbox.getAttribute("data-thumbnail"))
+			}
+			// меняем значение текстового поля
+			valueDisplay.value = choiceList.join(", ") ? choiceList : valueDisplay.getAttribute("data-default")
+			// прячем менюшку
+			dropDownMenu.classList.remove("active");
+			dropDownField.classList.remove("open");
+		});
+		cancelButton.addEventListener("click", (e) => {
+			e.preventDefault()
+			// Обходим все инпуты и удаляем чекед
+			
+			for(let optionCheckbox of optionCheckboxes){
+				optionCheckbox.checked = false;
+			}
+
+			// меняем значение текстового поля
+			valueDisplay.value = 'Выбрать день';
+			// прячем менюшку
+			dropDownMenu.classList.remove("active");
+			dropDownField.classList.remove("open");
+		});
+		
+
 	}
 });

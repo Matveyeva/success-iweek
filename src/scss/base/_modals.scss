@@ -91,3 +91,15 @@
 	margin-top: 30px;
 	justify-content: flex-end;
 }
+.rules-form{
+	flex-grow: 1;
+}
+.rules-form-block +.rules-form-block, .flex-form-fields +.flex-form-fields, .rules-form-block + .flex-form-fields{
+	margin-top: 30px;
+}
+.flex-form-fields{
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	
+}
