@@ -290,6 +290,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
     /* ========== плагин календаря ============ */
   if($( ".datepicker" ).length > 0){
+	
 		$.datepicker.regional['ru'] = {
 			closeText: 'Закрыть',
 			prevText: 'Предыдущий',
@@ -316,6 +317,9 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	$(function(){
 			$("#datepicker").datepicker();
+			$(".datepicker").each(function(item){
+				$(item).datepicker();
+			});
 	});
    /*========== кастомные табы переключение кнопок ============*/
 	const customTabBtns = document.querySelectorAll('.myTabs-buttons');

@@ -1,0 +1,39 @@
+//================== Правило работы сотрудника-modal ==============
+.modal-frame-wrapper.modal-frame-right.visible.rules-modal(frame-modal="rules-info")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-24 Добавление правила графиков работы
+			.icon-close(frame-close)
+		form.rules-form
+			.modal-frame__body
+				.rules-form-block
+					+custom-select-icon('Специальности', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+				
+					.title-16 Период работы
+					label.switch-toggle.flex-box.flex-y-center
+						input(type='checkbox' id='check' class='toggle-switch')
+						span.real-switch
+						span.custom-switch__text Повторять
+				
+					.rules-form-fields.flex-vertical-center.gap-32
+						.form-item
+							.mydatepicker
+								input.form-input(type="text" class="datepicker" value="Начало")
+							
+						.form-item
+							.mydatepicker
+								input.form-input(type="text" class="datepicker" value="Окончание")
+						.form-item
+							+custom-select-icon('Специальности', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+							
+				.rules-form-block
+					.form-item
+							input.form-input(type="text" placeholder="Начало")
+							
+					.form-item
+							input.form-input(type="text" placeholder="Окончание")
+
+			
+			
+			.modal-frame__footer.mt-auto.border-top
+				p Выполнен
