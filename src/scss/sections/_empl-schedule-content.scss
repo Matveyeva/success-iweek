@@ -1,0 +1,21 @@
+.employee-page-content__head{
+	margin-bottom: 40px;
+}
+.employee-page-card{
+	padding: 16px;
+	background-color: #fff;
+
+	.employee-page-card__row{
+		display: flex;
+		justify-content: flex-end;
+	}
+	header{padding-bottom: 40px;}
+	header >*+*{
+		margin-top: 40px;
+	}
+}
+.employee-page-schedule{
+	min-height: 500px;
+	padding-top: 40px;
+	
+}

@@ -1,0 +1,19 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	+cabHeader([
+		{link:'schedule-page.html', addCl:'', name: 'Расписание'}, 
+		{link:'cabinet-tasks.html', addCl:'', name: 'Задачи' }, 
+		{link:'#!', addCl:'', name: 'Пациенты'}, 
+		{link:'#!', addCl:'true', name: 'Сотрудники' }
+		])
+	//=========== основной контент вкладка расписание ====================
+	.cabinet-body
+		.container-slim
+			include ../sections/_empl-schedule-content
+	include ../blocks/_pause-modal
+
+block variables
+	-let bodyCl = "client-cabinet"
+	-let title = "Кабинет клиента";

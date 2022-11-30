@@ -176,6 +176,15 @@ input[type="submit"] {
 	}
 
 }
+.container-slim{
+	width: 100%;
+	max-width: 832px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	// max-width: 1920px;
+}
 .container-large{
 	width: 100%;
 	margin-left: auto;
