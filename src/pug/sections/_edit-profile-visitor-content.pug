@@ -7,12 +7,16 @@
 			button.btn.btn--accent Удалить
 		
 	.edit-profile-content__form
+		.edit-profile-absolute
+			.flex-vertical-center.gap-32
+				button.btn.btn-44 Аллергия
+				button.btn.btn-44 Непереносимость
 		.form-fieldset
 			.grid-form-fields.gap-32
 				.form-box
 					+custom-select-icon('Взрослый', ['Недееспособный гражданин', 'Ребенок' ], 'mySelect--absolute','', 'Категория пациента', 'true')
 			
-				.flex-vertical-center.gap-32
+				.d-none.flex-vertical-center.gap-32
 					.form-box
 						label.text-16 Карта 025/У
 						input(type="text" ).form-input
@@ -20,9 +24,7 @@
 						label.text-16  Карта 043/У
 						input(type="text" ).form-input
 				
-				.flex-vertical-center.gap-32
-					button.btn.btn-44 Аллергия
-					button.btn.btn-44 Непереносимость
+
 			.grid-form-fields.gap-32
 				.form-box
 					label.text-16 Фамилия
