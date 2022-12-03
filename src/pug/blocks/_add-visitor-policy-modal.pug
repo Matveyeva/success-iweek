@@ -1,0 +1,31 @@
+//==================добавить новый страховой полис пациента ==============
+.modal-frame-wrapper.modal-frame-center.w-700(frame-modal="add-visitor-policy")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-24 Добавление полиса
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			.filters-modal__wrapper
+				form.add-policy-form
+					+custom-select-icon('Страховая компания', ['Мед-страхование', 'Капитал-страхование', 'ГосСтрах'], 'mySelect--absolute')
+					.flex-form-fields.gap-32
+						.form-item
+							input.form-input(type="text" placeholder="Серия")
+						
+						.form-item
+							input.form-input(type="text" placeholder="Номер")
+					.add-policy-form__block
+						.title-16 Срок действия полиса
+						.flex-form-fields.gap-32
+							.form-item
+								.mydatepicker
+									input.form-input(type="text" class="datepicker" value="Начало")
+								
+							.form-item
+								.mydatepicker
+									input.form-input(type="text" class="datepicker" value="Окончание")
+
+					.flex-vertical-center.flex-between.mt-40
+						button.btn.btn-44.btn--orange(frame-close) Отмена
+						button.btn.btn-44(frame-close) Добавить

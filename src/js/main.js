@@ -152,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function (){
             if(frameAttr == itemAttr){
               frame.classList.add('visible');
               bodyEl.classList.add('noscroll');
+			 
             }
           }
         });

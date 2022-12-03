@@ -41,6 +41,18 @@
 		font-weight: 700;
 	}
 }
+.modal-frame-wrapper[frame-modal].modal-frame-center{
+	
+	.modal-frame{
+		margin: auto;
+	}
+}
+.modal-frame-wrapper[frame-modal].modal-frame-center.visible{
+	display: flex;
+}
+.modal-frame-wrapper[frame-modal].w-700 .modal-frame{
+	max-width: 700px;
+}
 [frame-btn]{cursor:pointer}
 .modal-table{
 	table{
@@ -103,4 +115,8 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	
+}
+.add-policy-form__block{
+	margin-top: 32px;
+	.title-16 + .flex-form-fields{margin-top: 16px;}
 }
