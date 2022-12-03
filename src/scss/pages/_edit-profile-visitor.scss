@@ -14,3 +14,13 @@
 	background-color: #fff;
 	padding: 16px;
 }
+.grid-form-fields{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.form-fieldset>*+*{margin-top: 32px;}
+.form-fieldset +.form-fieldset{
+	margin-top: 32px;
+}
+.edit-profile-content__form .form-textarea{max-width: 1000px;}
+.edit-profile-content__form .form-box>label{color:#000!important; font-weight: 500;}

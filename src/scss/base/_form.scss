@@ -91,7 +91,10 @@ input[type='checkbox'].filter-checkbox {
 	top:0;
 	left:0;
 }
-
+sup.text-red{
+	font-size: 18px;
+	line-height: 10px;
+}
 .checkbox-label {
 	.real-checkbox:hover+.custom-checkbox {
 		background-color: $wlgray;

@@ -7,10 +7,12 @@ mixin mySelect(arr)
 				input.mySelect-options(type='text' readonly='' value=''+ item)
 
 
-mixin custom-select-icon(placeText, items, addClass,  iconName, labelText)
+mixin custom-select-icon(placeText, items, addClass,  iconName, labelText, requir)
 	div(class="mySelect " + addClass)&attributes(attributes)
 		if labelText
-			label.text-16.text-gray3 #{labelText}
+			label.text-16.text-gray3 !{labelText}
+				if requir
+					sup.text-red  *
 		.mySelect-input.form-box-input
 			if  iconName
 				.form-box__icon
