@@ -24,3 +24,10 @@
 }
 .edit-profile-content__form .form-textarea{max-width: 1000px;}
 .edit-profile-content__form .form-box>label{color:#000!important; font-weight: 500;}
+.edit-profile-footer{
+	padding-top: 16px;
+	
+	justify-content: flex-end;
+	gap:32px;
+	.btn{width: 240px;}
+}

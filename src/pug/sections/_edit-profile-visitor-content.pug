@@ -12,6 +12,17 @@
 				.form-box
 					+custom-select-icon('Взрослый', ['Недееспособный гражданин', 'Ребенок' ], 'mySelect--absolute','', 'Категория пациента', 'true')
 			
+				.flex-vertical-center.gap-32
+					.form-box
+						label.text-16 Карта 025/У
+						input(type="text" ).form-input
+					.form-box
+						label.text-16  Карта 043/У
+						input(type="text" ).form-input
+				
+				.flex-vertical-center.gap-32
+					button.btn.btn-44 Аллергия
+					button.btn.btn-44 Непереносимость
 			.grid-form-fields.gap-32
 				.form-box
 					label.text-16 Фамилия
@@ -44,10 +55,7 @@
 				.form-box.flex-vertical-center.gap-32
 					+custom-select-icon('Выбрать', ['О(I)', 'A(II)', 'B(III)', '(AB(IV))' ], 'mySelect--absolute','', 'Группа крови')
 					+custom-select-icon('Выбрать', ['Rh(+)', 'Rh(-)'], 'mySelect--absolute','', 'Резус-фактор')
-				
-				.form-box.flex-vertical-center.gap-32
-					+custom-select-icon('Выбрать', ['О(I)', 'A(II)', 'B(III)', '(AB(IV))' ], 'mySelect--absolute','', 'Группа крови')
-					+custom-select-icon('Выбрать', ['Rh(+)', 'Rh(-)'], 'mySelect--absolute','', 'Резус-фактор')
+
 			
 		.form-fieldset
 			.title-18 Контакты
@@ -95,4 +103,8 @@
 		
 		.form-fieldset
 			.form-textarea
-				textarea(type="text" placeholder="Комментарий")
+				textarea(type="text" placeholder="Комментарий о пациенте")
+		
+		.edit-profile-footer.flex-vertical-center
+			a.btn.btn-44.btn--orange(href="visitor-edit-page.html") Вернуться
+			button.btn.btn-44 Применить
