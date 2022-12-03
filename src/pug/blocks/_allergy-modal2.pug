@@ -1,0 +1,20 @@
+
+//==================добавить аллергию и непереносимость ==============
+.modal-frame-wrapper.modal-frame-center.w-700(frame-modal="exlude-modal-2")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between.mb-32
+			.text-24 Непереносимость
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			form.exlude-form
+				.exlude-form-input
+					input.form-input(type="text")
+					.icon-delete
+				button.text-icon.flex-box.flex-y-center
+					.symbol-plus &#10010;
+					span.text-18 Добавить непереносимость
+
+				.flex-vertical-center.flex-between.mt-40
+					button.btn.btn-44.btn--orange(frame-close) Отмена
+					button.btn.btn-44(frame-close) Сохранить
