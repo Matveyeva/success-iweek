@@ -1,0 +1,20 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	+cabHeader([
+		{link:'schedule-page.html', addCl:'', name: 'Расписание'}, 
+		{link:'cabinet-tasks.html', addCl:'', name: 'Задачи' }, 
+		{link:'#!', addCl:'true', name: 'Пациенты'}, 
+		{link:'#!', addCl:'', name: 'Сотрудники' }
+		])
+	//=========== основной контент редактирование пациента  ====================
+	.cabinet-body
+		.container-large
+			include ../sections/_visitor-edit-content
+	//- include ../blocks/_pause-modal
+	//- include ../blocks/_task-modal
+
+block variables
+	-let bodyCl = "client-cabinet"
+	-let title = "Кабинет клиента";

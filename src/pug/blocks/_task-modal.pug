@@ -1,5 +1,5 @@
 //================== visit-modal ==============
-.modal-frame-wrapper.modal-frame-right.visible(frame-modal="visit-info")
+.modal-frame-wrapper.modal-frame-right(frame-modal="visit-info")
 	.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
 			.text-24 Информация о приеме
@@ -26,11 +26,12 @@
 						tr.visiter-info
 							td Пациент
 							td
-								p
-									span Кузьмин Петр Павлович
-									span.edit-item(title="редактировать")
-								span 8(792)196-48-84
-									.copy-icon(title="копировать")
+								a(href="visitor-edit-page.html")
+									p
+										span Кузьмин Петр Павлович
+										span.edit-item(title="редактировать")
+									span 8(792)196-48-84
+										.copy-icon(title="копировать")
 						tr
 							td Возраст
 							td 03.06.1989 (33 года)

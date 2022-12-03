@@ -160,3 +160,12 @@
     	color: rgb(255, 100, 100)!important;
 	}
 }
+.text-row, .text-column{
+	display: flex;
+	align-items: center;
+	column-gap:32px;
+}
+.text-column{
+	display: block;
+	&>*+*{margin-top: 8px;}
+}
