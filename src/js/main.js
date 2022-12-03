@@ -425,6 +425,8 @@ document.addEventListener("DOMContentLoaded", function (){
 					const curStateHTML = dropItem.innerText;
 					 itemCurrentState.setAttribute('data-state',  dropItemData);
 					 itemCurrentState.innerHTML = curStateHTML;
+					 console.log(curStateHTML);
+					 console.log(dropItemData);
 					 item.classList.remove('active');
 					 item.setAttribute('data-role',  dropItemData);
 
@@ -432,7 +434,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 	    }
 		/*закрыть по клику вне */
-		window.addEventListener('click', function(e){			
+		window.addEventListener('click', function(e){
 		if (!e.target.closest('.state-select')){
 			for(let item of stateSelects){
 				item.classList.remove('active');

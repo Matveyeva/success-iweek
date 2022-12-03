@@ -60,11 +60,14 @@
 		transform: translateY(-50%) rotate(180deg);
 	}
 }
-[data-role="state-done"],[data-role="state-cancel"],[data-state="state-notconfirm"]{
+[data-role="state-done"],[data-role="state-cancel"]{
 	.state-select-current::before{display: none;}
 	cursor: default;
 	pointer-events: none;
 	.state-select-drop{
 		display: none;
 	}
+}
+.modal-frame__footer .state-select{
+	width: 210px;
 }
