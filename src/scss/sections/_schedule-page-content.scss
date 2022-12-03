@@ -160,8 +160,28 @@
     text-align: center;
     font-size: 14px;
     user-select: none;
+	cursor:pointer;
 	}
 }
+.schedule-table-cell:after{
+	content: '+';
+	text-align: center;
+	line-height: 46px;
+	border-radius: 8px;
+	border:1px solid #d6d5d5;
+	position: absolute;
+	top: 2px;
+	bottom: 2px;
+	left: 2px;
+	right: 2px;
+	font-size: 28px;
+	color: #d6d5d5;
+	display: none;
+}
+[class^="schedule-table-cell state-"]:after,[class^="schedule-table-cell state-"]:hover:after{
+	display: none!important;
+}
+.schedule-table-cell:hover:after{display: block;}
 .schedule-scrollbar-block::-webkit-scrollbar{
 	width: 5px;
 	height: 5px;
