@@ -17,6 +17,13 @@
 	}
 	
 }
+.dtc-footer .state-select{
+	width: 180px;
+	.state-select-current, .state-select-drop__item{
+		height: 30px;
+		line-height: 30px;
+	}
+}
 .state-select{
 	cursor: pointer;
 	.state-select-drop{
@@ -68,6 +75,6 @@
 		display: none;
 	}
 }
-.modal-frame__footer .state-select{
+.state-select{
 	width: 210px;
 }

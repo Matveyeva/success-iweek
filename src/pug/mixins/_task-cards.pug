@@ -1,9 +1,9 @@
 mixin task-card(state)
-	a(href="#!" frame-btn="visit-info").dashboard-table-card
-		.dtc-head
+	a(href="#!" ).dashboard-table-card
+		.dtc-head(frame-btn="visit-info")
 			p Давыдова А.Ю.
 			span Создан 20 сент 10:59 
-		.dtc-body
+		.dtc-body(frame-btn="visit-info")
 			.dtc-body__item
 				span Пациент
 				p Миронов Р.И.
@@ -11,6 +11,13 @@ mixin task-card(state)
 				span Телефон
 				p 8(961)861 50-63
 		.dtc-footer
-			span 03 окт 05:00
-			.state-label #{state}
+			span(frame-btn="visit-info") 03 окт 05:00
+			.state-select
+				.state-select-current(data-state="state-started") Начат прием
+				.state-select-drop
+					.state-select-drop__item(data-state="state-started") Начат прием
+					.state-select-drop__item(data-state="state-confirm") Подтвержден
+					.state-select-drop__item(data-state="state-notconfirm") Не подтвержден
+					.state-select-drop__item(data-state="state-done") Выполнен
+					.state-select-drop__item(data-state="state-cancel")  Отменен
 				
