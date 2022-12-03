@@ -1,3 +1,208 @@
+.mySelect{
+	
+	label.text-16{margin-bottom: 8px;display: inline-block}
+	&-input{
+		position: relative;
+	}
+}
+.mySelect-input{position: relative;
+}
+/*галочка в выпадашке*/
+.mySelect-input:after{
+	content:'';
+	width: 16px;
+	height: 16px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7 6.29289L12.6464 0.646447C12.8417 0.451184 13.1583 0.451184 13.3536 0.646447C13.5488 0.841709 13.5488 1.15829 13.3536 1.35355L7.35355 7.35355C7.15829 7.54882 6.84171 7.54882 6.64645 7.35355L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z' fill='%235757F6'/%3e%3c/svg%3e");
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%) rotate(0deg);
+	right: 12px;
+	transition:.3s;
+}
+.mySelect--dark .mySelect-input:after{
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7 6.29289L12.6464 0.646447C12.8417 0.451184 13.1583 0.451184 13.3536 0.646447C13.5488 0.841709 13.5488 1.15829 13.3536 1.35355L7.35355 7.35355C7.15829 7.54882 6.84171 7.54882 6.64645 7.35355L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z' fill='%23FFFFFF'/%3e%3c/svg%3e");
+}
+.mySelect-input.open:after{
+	transform: translateY(-50%) rotate(180deg);
+}
+.mySelect-drop{
+	display: flex;
+	padding-left: 16px;
+	padding-right: 16px;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 16px rgba(87, 141, 246, 0.2);
+	border-radius: 4px;
+	display: none;
+	margin-top: 8px;
+	max-height: 220px;
+}
+.mySelect-options{
+	height: 52px;
+	font-size: 14px;
+	display: block;
+	width: 100%;
+	color: $gray;
+	cursor:pointer;
+	&:hover{
+		color: $indigo;
+	}
+	&+ .mySelect-options{
+		border-top: 1px solid $wlgray;
+	}
+}
+
+.mySelect-drop.active{
+	display: block;
+}
+.mySelect-icon,.mySelect-icon-left{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 12px;
+	z-index: 1;
+	width: 16px;
+	height: 16px;
+	transition: .3s;
+	pointer-events: none;
+
+}
+.mySelect-icon-left{
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+}
+.mySelect-icon.active{
+	transform: rotate(-180deg);
+
+}
+.mySelect.mySelect--absolute{
+	position: relative;
+	.mySelect-drop.active{
+		display: block;
+		position: absolute;
+		left: 0;
+		min-width: 100%;
+		bottom: -8px;
+		transform: translateY(100%);
+		white-space: nowrap;
+		z-index: 2;
+	}
+}
+.mySelect--absolute.mySelect--absolute-top{
+	.mySelect-drop.active{
+		bottom: 0px;
+		transform: translateY(-48px);
+	}
+}
+.mySelect-input.mySelect-input--icon{
+	.selectValue{
+		padding-left: 38px;
+	}
+	.mySelect-icon-left{
+		right: 0;
+		left: 12px;
+	}
+}
+.mySelect.mySelect--dark{
+	.selectValue{
+		border: 1px solid #494966;
+		border-radius: 4px;
+		background: $gray;
+		color: #fff;
+	}
+	
+	&:hover{
+		.selectValue{
+			background: #494966;
+		}
+	}
+	&:active{
+		.selectValue{
+			background: #161628;
+			border-color: #161628;
+		}
+	}
+
+}
+/*=========== mySelect--radio ============*/
+.mySelect--radio{
+	.mySelect-drop__row{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		height: 52px;
+		align-items: center;
+		column-gap: 30px;
+		label:first-child{min-width: 95px;}
+	}
+	
+}
+.mySelect.mySelect--currency{
+	.mySelect-input{width: 121px;}
+	.mySelect-drop{
+		min-width: 200px;
+		left: auto!important;
+		right:0;
+
+	}
+	
+}
+.mySelect-input{
+	&.mySelect-input--icon{
+		.mySelect-icon-left{
+			
+			left: 24px;
+		}
+	}
+}
+
+
+.mySelect-input--icon.mySelect--38, .mySelect.mySelect-input--icon{
+	.form-box__icon{
+		width: 20px;
+		height: 20px;
+		svg{
+			width: 20px;
+			height: 20px;
+			object-fit: contain;
+		}
+	}
+	 .form-input{
+		padding-left: 35px;
+	}
+	.form-box__icon{
+		left: 8px;
+	}
+	
+}
+.mySelect-input--icon.mySelect--64{
+	 .form-input{
+		padding-left: 60px;
+	}
+	.form-box__icon{
+		left: 24px;
+	}
+	@media (max-width: 991px) {
+		.form-input{
+			padding-left: 40px;
+		}
+		.form-box__icon{
+			left: 12px;
+		}
+		svg{
+			width: 20px!important;
+			height: 20px!important;
+		}
+	}
+}
+
+
 .mySelect .checkbox-label{
 	padding-top: 12px;
 	padding-bottom: 12px;

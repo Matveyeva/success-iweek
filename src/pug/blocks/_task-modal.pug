@@ -1,5 +1,5 @@
 //================== visit-modal ==============
-.modal-frame-wrapper.modal-frame-right(frame-modal="visit-info")
+.modal-frame-wrapper.modal-frame-right.visible(frame-modal="visit-info")
 	.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
 			.text-24 Информация о приеме
@@ -35,4 +35,12 @@
 							td Возраст
 							td 03.06.1989 (33 года)
 		.modal-frame__footer.mt-auto.border-top
-			p Выполнен
+			.state-select.state-select--opentop
+				.state-select-current(data-state="state-started") Начат прием
+				.state-select-drop
+					.state-select-drop__item(data-state="state-started") Начат прием
+					.state-select-drop__item(data-state="state-confirm") Подтвержден
+					.state-select-drop__item(data-state="state-notconfirm") Не подтвержден
+					.state-select-drop__item(data-state="state-done") Выполнен
+					.state-select-drop__item(data-state="state-cancel")  Отменен
+			

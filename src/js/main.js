@@ -401,6 +401,43 @@ document.addEventListener("DOMContentLoaded", function (){
 			dropDownField.classList.remove("open");
 		});
 		
+	}
 
+	/* выпадашка с цветными состояниями приема*/
+	const stateSelects = document.querySelectorAll('.state-select');
+	if(stateSelects.length>0){
+		for(let item of stateSelects){
+			const itemCurrentState = item.querySelector('.state-select-current');
+			const itemDropSelects = item.querySelectorAll('.state-select-drop__item');
+			itemCurrentState.addEventListener('click', function(){
+				if(item.classList.contains('active')){
+					item.classList.remove('active');
+				}
+				else{
+					item.classList.add('active');
+				}
+			});
+		
+		/*клик по выпадашке */
+			for(let dropItem of itemDropSelects){
+				dropItem.addEventListener('click', function(){
+					const dropItemData = dropItem.dataset.state;
+					const curStateHTML = dropItem.innerText;
+					 itemCurrentState.setAttribute('data-state',  dropItemData);
+					 itemCurrentState.innerHTML = curStateHTML;
+					 item.classList.remove('active');
+					 item.setAttribute('data-role',  dropItemData);
+
+				});
+			}
+	    }
+		/*закрыть по клику вне */
+		window.addEventListener('click', function(e){			
+		if (!e.target.closest('.state-select')){
+			for(let item of stateSelects){
+				item.classList.remove('active');
+			}
+		}
+	});
 	}
 });
