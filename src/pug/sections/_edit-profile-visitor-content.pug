@@ -14,7 +14,7 @@
 		.form-fieldset
 			.grid-form-fields.gap-32
 				.form-box
-					+custom-select-icon('Взрослый', ['Недееспособный гражданин', 'Ребенок' ], 'mySelect--absolute','', 'Категория пациента', 'true')
+					+custom-select-icon2('Взрослый', ['Недееспособный гражданин', 'Ребенок' ], 'mySelect--absolute','', 'Категория пациента', 'true')
 			
 				.d-none.flex-vertical-center.gap-32
 					.form-box
@@ -24,7 +24,8 @@
 						label.text-16  Карта 043/У
 						input(type="text" ).form-input
 				
-
+		.form-fieldset
+			.title-18 Данные опекуна
 			.grid-form-fields.gap-32
 				.form-box
 					label.text-16 Фамилия
@@ -55,8 +56,8 @@
 						
 										
 				.form-box.flex-vertical-center.gap-32
-					+custom-select-icon('Выбрать', ['О(I)', 'A(II)', 'B(III)', '(AB(IV))' ], 'mySelect--absolute','', 'Группа крови')
-					+custom-select-icon('Выбрать', ['Rh(+)', 'Rh(-)'], 'mySelect--absolute','', 'Резус-фактор')
+					+custom-select-icon2('Выбрать', ['О(I)', 'A(II)', 'B(III)', '(AB(IV))' ], 'mySelect--absolute','', 'Группа крови')
+					+custom-select-icon2('Выбрать', ['Rh(+)', 'Rh(-)'], 'mySelect--absolute','', 'Резус-фактор')
 
 			
 		.form-fieldset

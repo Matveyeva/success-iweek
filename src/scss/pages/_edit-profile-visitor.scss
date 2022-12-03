@@ -29,11 +29,12 @@
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .form-fieldset>*+*{margin-top: 32px;}
+.form-fieldset>.title-18 + *{margin-top: 16px;}
 .form-fieldset +.form-fieldset{
 	margin-top: 32px;
 }
 .edit-profile-content__form .form-textarea{max-width: 1000px;}
-.edit-profile-content__form .form-box>label{color:#000!important; font-weight: 500;}
+.edit-profile-content__form .form-box>label, .mySelect>label{color:$gray!important; font-weight: 500;}
 .edit-profile-footer{
 	padding-top: 16px;
 	

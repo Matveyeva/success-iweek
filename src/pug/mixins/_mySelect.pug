@@ -23,6 +23,23 @@ mixin custom-select-icon(placeText, items, addClass,  iconName, labelText, requi
 		.mySelect-drop.scroll-vertical
 			each item in items
 				input.mySelect-options(type='text' readonly value=''+ item)
+//- лейбл без цвета 
+mixin custom-select-icon2(placeText, items, addClass,  iconName, labelText, requir)
+	div(class="mySelect " + addClass)&attributes(attributes)
+		if labelText
+			label.text-16 !{labelText}
+				if requir
+					sup.text-red  *
+		.mySelect-input.form-box-input
+			if  iconName
+				.form-box__icon
+					svg(class=" "+ iconName)
+						use(xlink:href="./img/svg-sprite.svg#"+ iconName +"")
+			
+			input(class="selectValue form-input" type='text' readonly value=''+ placeText)
+		.mySelect-drop.scroll-vertical
+			each item in items
+				input.mySelect-options(type='text' readonly value=''+ item)
 
 mixin custom-select-checkbox(placeText, items, addClass,  iconName, labelText)
 	div(class="mySelect " + addClass)&attributes(attributes)

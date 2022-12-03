@@ -1,0 +1,57 @@
+.employee-page-content
+	.employee-page-content__header
+		//==== строка поиска ======
+		.employee-page-search
+			.form-box.form-box--icon-left
+				.form-box-input
+					.form-box__icon
+						svg.svg-search
+							use(xlink:href="./img/svg-sprite.svg#svg-search")
+					input(type="text" placeholder="ФИО сотрудника").form-input
+	
+		//==== выпадашка ======
+		.employee-page-select
+			+custom-select-checkbox('Специальность',['Стоматолог', 'Ортодонт', 'Терапевт','Хирург', 'Гинеколог'], 'mySelect--absolute' )
+	
+		.employee-add__btn
+			button.btn Добавить сотрудника
+	
+	.employee-page-content__table
+		table
+			tbody
+				tr
+					td
+						.text-column
+							.text-18 Белова Наталья Геннадьевна
+							.text-14.text-gray3 стоматолог, хирург
+					td
+						.text-16 Приходящий
+				tr
+					td
+						.text-column
+							.text-18 Белова Наталья Геннадьевна
+							.text-14.text-gray3 стоматолог, хирург
+					td
+						.text-16 Приходящий
+				tr
+					td
+						.text-column
+							.text-18 Белова Наталья Геннадьевна
+							.text-14.text-gray3 стоматолог, хирург
+					td
+						.text-16 Приходящий
+				tr
+					td
+						.text-column
+							.text-18 Белова Наталья Геннадьевна
+							.text-14.text-gray3 стоматолог, хирург
+					td
+						.text-16 Приходящий
+				tr
+					td
+						.text-column
+							.text-18 Белова Наталья Геннадьевна
+							.text-14.text-gray3 стоматолог, хирург
+					td
+						.text-16 Приходящий
+
