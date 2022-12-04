@@ -1,0 +1,12 @@
+//==================Подтверждение удаления ==============
+.modal-frame-wrapper.modal-frame-center.confirm-modal(frame-modal="confirm-action")
+	.modal-frame.flex-column
+		.modal-frame__head
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			.title-20.text-center Вы уверены, что хотите удалить?
+			
+			.form-btns.flex-vertical-center.gap-32.mt-32
+				button.btn.btn--orange(frame-close) Отменить
+				button.btn.btn--primary(type="submit") Подтверждаю

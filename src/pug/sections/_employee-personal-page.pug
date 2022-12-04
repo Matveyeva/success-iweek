@@ -9,8 +9,8 @@
 			.employee-personal-header.flex-box.border-b
 				+card-header-personal-page('Стоматолог', 'Константинов Константин Констатинопольский', 'Стаж 17 лет')
 				.employee-personal-options.flex-box.gap-32
-					.edit-item(title="Редактировать")
-					.icon-delete(title="Удалить профиль")
+					.edit-item(title="Редактировать" frame-btn="edit-empl-profile")
+					.icon-delete(title="Удалить профиль" frame-btn="confirm-action")
 				
 			.employee-personal-place
 				.employee-personal-tabs__title
@@ -35,7 +35,7 @@
 											.text-16 Блюхера, 56
 										.employee-personal-options.flex-box.gap-32
 											.edit-item(title="Редактировать" frame-btn="edit-empl-place")
-											.icon-delete(title="Удалить")
+											.icon-delete(title="Удалить" frame-btn="confirm-action")
 
 							//=========== single block =============
 							.acor-item
@@ -49,7 +49,7 @@
 											.text-16 Герцена, 16
 										.employee-personal-options.flex-box.gap-32
 											.edit-item(title="Редактировать" frame-btn="edit-empl-place")
-											.icon-delete(title="Удалить")
+											.icon-delete(title="Удалить" frame-btn="confirm-action")
 
 					.employee-personal-place__btn.mt-32
 						.text-icon.flex-box.flex-y-center(frame-btn="add-empl-place")
