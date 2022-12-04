@@ -1,8 +1,25 @@
+//- mixin catLabel(imgSrc, title)
+//- 	a(href="#!").category-label.flex-box-inline.flex-center
+//- 		object(type="image/svg+xml" data="./img/"+ imgSrc +".svg" )
+//- 		span.text-medium #{title}
+
+//- mixin label-light(title)
+//- 	.label-light.flex-box-inline.flex-center
+//- 		span.text-medium #{title}
+
+//- mixin label-light-color(title)
+//- 	.label-light.flex-box-inline.flex-center
+//- 		span.text-medium #{title}
+
 mixin catLabel(imgSrc, title)
-	a(href="#!").category-label.flex-box-inline.flex-center
+	a(href="#!").category-label
 		object(type="image/svg+xml" data="./img/"+ imgSrc +".svg" )
 		span.text-medium #{title}
 
 mixin label-light(title)
-	.label-light.flex-box-inline.flex-center
+	.label-light
+		span.text-medium #{title}
+
+mixin label-light-color(title,addCl)
+	.label-light(class=" "+ addCl)
 		span.text-medium #{title}

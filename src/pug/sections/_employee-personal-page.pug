@@ -1,21 +1,56 @@
 .employee-personal-content
 	.employee-personal__head.border-b
-		.container-slim
+		.container-medium
 			a(href="employees-page.html").text-icon.flex-vertical-center
 				.icon-btn.arrow-left
 				.text-16 Сотрудники
 	.employee-personal-card
-		.container-slim
+		.container-medium
 			.employee-personal-header.flex-box.border-b
 				+card-header-personal-page('Стоматолог', 'Константинов Константин Констатинопольский', 'Стаж 17 лет')
 				.employee-personal-options.flex-box.gap-32
 					.edit-item(title="Редактировать")
 					.icon-delete(title="Удалить профиль")
 				
-			.employee-personal-workspace
+			.employee-personal-place
 				.employee-personal-tabs__title
 					.text-18 Данные по филиалу Ваш доктор, Блюхера 56
 				
-				.employee-personal-workspace__toggle
+				.employee-personal-place__toggle
 					.btn.btn-32 Основная информация
 					a(href="empl-schedule.html").label-light.label-light--large Расписание
+				
+				.employee-personal-place__acordion
+					.employee-acordion-content
+						.acor-container
+							//=========== single block =============
+							.acor-item
+								input#acor1(type='checkbox' name='acor')
+								label(for='acor1').text-20.text-medium.text-indigo Стоматолог
+								.acor-body
+									+label-light-color('пациенты с 10 лет', 'label--gray')
+									.flex-box.flex-between.mt-16
+										.text-column
+											.title-18 Стоматолог
+											.text-16 Блюхера, 56
+										.employee-personal-options.flex-box.gap-32
+											.edit-item(title="Редактировать")
+											.icon-delete(title="Удалить профиль")
+
+							//=========== single block =============
+							.acor-item
+								input#acor2(type='checkbox' name='acor')
+								label(for='acor2').text-20.text-medium.text-indigo Ортодонт
+								.acor-body
+									+label-light-color('пациенты с 10 лет', 'label--gray')
+									.flex-box.flex-between.mt-16
+										.text-column
+											.title-18 Ортодонт
+											.text-16 Герцена, 16
+										.employee-personal-options.flex-box.gap-32
+											.edit-item(title="Редактировать")
+											.icon-delete(title="Удалить профиль")
+
+					.text-icon.flex-box.flex-y-center(frame-btn="add-empl-place")
+						.symbol-plus &#10010;
+							span.text-18 Добавить полис

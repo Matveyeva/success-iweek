@@ -176,7 +176,7 @@ input[type="submit"] {
 	}
 
 }
-.container-slim{
+.container-slim,.container-medium{
 	width: 100%;
 	max-width: 832px;
 	margin-left: auto;
@@ -184,6 +184,9 @@ input[type="submit"] {
 	padding-left: 15px;
 	padding-right: 15px;
 	// max-width: 1920px;
+}
+.container-medium{
+	max-width: 1000px;
 }
 .container-large{
 	width: 100%;
