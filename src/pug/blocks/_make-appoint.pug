@@ -7,20 +7,74 @@
 			.icon-close(frame-close)
 			
 		.modal-frame__body
-			form.add-place-form
-				.add-place-form__fields.flex-vertical-center.gap-32
-					+custom-select-checkbox('Специальность', ['Стоматолог', 'Аллерголог', 'Терапевт', 'Кардиолог' ], 'mySelect--absolute')
-					+custom-select-checkbox('Клиника', ['Блюхера, 56', 'ИП Вердашев', 'Клиника "Сова"','Гиппократ', 'Зеленое яблоко', 'Добрый доктор' ], 'mySelect--absolute')
-				.add-place-form__fields.flex-vertical-center.gap-32
-					.form-item
-						input.form-input(type="text" placeholder="Возраст пациента от")
+			form.appointment-form
+				.appointment-form-header
+					.flex-box.btn-toggle-block
+						label.btn--toggle
+							input(type='radio' name='visitor-type'  class='filter-radiobtn' checked)
+							.btn
+								span Взрослый
+						label.btn--toggle
+							input(type='radio' name='visitor-type'  class='filter-radiobtn')
+							.btn
+								span Ребенок
 						
-					.form-item
-						input.form-input(type="text" placeholder="Возраст пациента до")
-						
+						label.btn--toggle
+							input(type='radio' name='visitor-type' class='filter-radiobtn')
+							.btn
+								span Недееспособный гражданин
+				
+				.appointment-form-body				
 					
-				.form-textarea
-					textarea(placeholder="Комментарий к пациенту")
+					.fieldset-group
+						.title-18 Данные пациента
+						
+						.edit-empl-form__name.mb-32
+							.form-box
+								label.text-16 Фамилия
+								input(type="text" value="Константинов").form-input
+							.form-box
+								label.text-16 Имя
+								input(type="text" value="Констатин").form-input
+							.form-box
+								label.text-16 Отчество
+								input(type="text" value="Констатинопольский").form-input
+					
+						.edit-empl-form__gender.flex-vertical-center.gap-32.mb-32
+							.form-box
+								label.text-16 Пол
+								.flex-vertical-center.gap-32
+									label.radiobutton-label.flex-box
+										input(type='radio' value="men" name='gender-radio'  class='real-radio' checked)
+										span.custom-radio
+										span.custom-radio__text Мужской
+									label.radiobutton-label.flex-box
+										input(type='radio' value="woomen" name='gender-radio' class='real-radio')
+										span.custom-radio
+										span.custom-radio__text Женский
+							
+							.form-box
+								label.text-16 Дата рождения
+								.mydatepicker
+									input.form-input(type="text" class="datepicker" )
+					
+					.edit-empl-form__contacts.mb-32.flex-vertical-center.gap-32
+						.form-box
+							label.text-16 Телефон
+							input(type="text" ).form-input
+						.form-box
+							label.text-16 Дополнительный телефон
+							input(type="text" ).form-input
+					
+					.fieldset-group
+						.title-18 Дата и время приема
+
+							
+							.form-box
+								label.text-16 Дата рождения
+								.mydatepicker
+									input.form-input(type="text" class="datepicker" )
+				
 				.form-btns.flex-vertical-center.gap-32.flex-between
 					button.btn.btn--orange(frame-close) Отменить
 					button.btn.btn--primary(type="submit") Сохранить
