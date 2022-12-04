@@ -1,8 +1,8 @@
-//================== добавить рабочее место сотрудника ==============
-.modal-frame-wrapper.modal-frame-right(frame-modal="add-empl-place")
+//================== редактировать рабочее место сотрудника ==============
+.modal-frame-wrapper.modal-frame-right(frame-modal="edit-empl-place")
 	.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
-			.text-24 Новое рабочее место
+			.text-24 Редактировать рабочее место
 			.icon-close(frame-close)
 			
 		.modal-frame__body
@@ -22,4 +22,5 @@
 					textarea(placeholder="Комментарий к пациенту")
 				.form-btns.flex-vertical-center.gap-32.flex-between
 					button.btn.btn--orange(frame-close) Отменить
-					button.btn.btn--primary(type="submit") Добавить
+					button.btn.btn--primary(type="submit") Сохранить
+							
