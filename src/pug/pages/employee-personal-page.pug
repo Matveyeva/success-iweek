@@ -8,12 +8,12 @@ block content
 		{link:'#!', addCl:'', name: 'Пациенты'}, 
 		{link:'employees-page.html', addCl:'true', name: 'Сотрудники' }
 		])
-	//=========== основной контент вкладка расписание ====================
+	//=========== основной контент страница одного врача ====================
 	.cabinet-body
-		.container-slim
-			include ../sections/_empl-schedule-content
-	include ../blocks/_rules-work-modal
+		.container-large
+			include ../sections/_employee-personal-page
+	//- include ../blocks/_rules-work-modal
 
 block variables
 	-let bodyCl = "client-cabinet"
-	-let title = "Кабинет клиента";
+	-let title = "Страница врача";

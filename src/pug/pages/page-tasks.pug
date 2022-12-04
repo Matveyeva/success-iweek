@@ -2,15 +2,15 @@ extends ../layouts/layout.pug
 
 block content
 	+cabHeader([
-	{link:'schedule-page.html', addCl:'', name: 'Расписание'}, 
-	{link:'cabinet-tasks.html', addCl:'true', name: 'Задачи' }, 
+	{link:'page-schedule.html', addCl:'', name: 'Расписание'}, 
+	{link:'page-tasks.html', addCl:'true', name: 'Задачи' }, 
 	{link:'#!', addCl:'', name: 'Пациенты'}, 
-	{link:'employee-page.html', addCl:'', name: 'Сотрудники' }
+	{link:'employees-page.html', addCl:'', name: 'Сотрудники' }
 	])
 	//=========== основной контент вкладка Задачи ====================
 	.cabinet-body
 		.container-large
-			include ../sections/_cabinet-tasks-content
+			include ../sections/_page-tasks-content
 	include ../blocks/_task-modal
 
 block variables

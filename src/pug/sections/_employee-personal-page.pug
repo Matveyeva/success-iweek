@@ -1,0 +1,21 @@
+.employee-personal-content
+	.employee-personal__head.border-b
+		.container-slim
+			a(href="employees-page.html").text-icon.flex-vertical-center
+				.icon-btn.arrow-left
+				.text-16 Сотрудники
+	.employee-personal-card
+		.container-slim
+			.employee-personal-header.flex-box.border-b
+				+card-header-personal-page('Стоматолог', 'Константинов Константин Констатинопольский', 'Стаж 17 лет')
+				.employee-personal-options.flex-box.gap-32
+					.edit-item(title="Редактировать")
+					.icon-delete(title="Удалить профиль")
+				
+			.employee-personal-workspace
+				.employee-personal-tabs__title
+					.text-18 Данные по филиалу Ваш доктор, Блюхера 56
+				
+				.employee-personal-workspace__toggle
+					.btn.btn-32 Основная информация
+					a(href="empl-schedule.html").label-light.label-light--large Расписание
