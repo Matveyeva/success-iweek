@@ -1,8 +1,8 @@
-//================== редактировать профиль  сотрудника ==============
-.modal-frame-wrapper.modal-frame-right(frame-modal="edit-empl-profile")
+//================== Добавить нового  сотрудника ==============
+.modal-frame-wrapper.modal-frame-right(frame-modal="add-new-empl")
 	.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
-			.text-24 Редактирование сотрудника
+			.text-24 Добавить сотрудника
 			.icon-close(frame-close)
 			
 		.modal-frame__body
@@ -10,20 +10,20 @@
 				.edit-empl-form__name.mb-32
 					.form-box
 						label.text-16 Фамилия
-						input(type="text" value="Константинов").form-input
+						input(type="text" ).form-input
 					.form-box
 						label.text-16 Имя
-						input(type="text" value="Констатин").form-input
+						input(type="text" ).form-input
 					.form-box
 						label.text-16 Отчество
-						input(type="text" value="Констатинопольский").form-input
+						input(type="text" ).form-input
 				
 				.edit-empl-form__gender.flex-vertical-center.gap-32.mb-32
 					.form-box
 						label.text-16 Пол
 						.flex-vertical-center.gap-32
 							label.radiobutton-label.flex-box
-								input(type='radio' value="men" name='gender-radio'  class='real-radio' checked)
+								input(type='radio' value="men" name='gender-radio'  class='real-radio')
 								span.custom-radio
 								span.custom-radio__text Мужской
 							label.radiobutton-label.flex-box
@@ -39,7 +39,7 @@
 				.edit-empl-form__contacts.mb-32
 					.form-box
 						label.text-16 Контакты
-						input(type="text" value="+7(927)144-55-54").form-input
+						input(type="text" placeholder="Телефон").form-input
 				
 				.edit-empl-form__duration.mb-32
 					.title-18.mb-24 Длительность приема
@@ -50,15 +50,15 @@
 				.edit-empl-form__qual.flex-vertical-center.gap-32.mb-32
 					.form-box
 						label.text-16.text-medium Стаж
-						input(type="text" value="17 лет").form-input
+						input(type="text").form-input
 					
-					+custom-select-icon2('Высшая категория', ['Без категории','Высшая категория', 'Первая категория', 'Вторая категория', 'Третья категория' ], 'mySelect--absolute','', 'Категория')
+					+custom-select-icon2('Без категории', ['Без категории', 'Высшая категория', 'Первая категория', 'Вторая категория', 'Третья категория' ], 'mySelect--absolute','', 'Категория')
 					
 					+custom-select-icon2('Кандидат м.н.', ['Без степени','Аспирант', 'Кандидат м.н.', 'Доктор м.н.', 'Профессор' ], 'mySelect--absolute','', 'Ученая степень')
 				
 				.edit-empl-form__status.mb-32
 					label.switch-toggle.flex-box.flex-y-center
-						input(type='checkbox' id='check' class='toggle-switch' checked)
+						input(type='checkbox' id='check' class='toggle-switch' )
 						span.real-switch
 						span.custom-switch__text Приходящий
 		.modal-frame__footer.mt-auto.border-top.flex-vertical-center.flex-between

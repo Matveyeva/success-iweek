@@ -1,0 +1,27 @@
+
+//================== Запись на прием через кабинет  ==============
+.modal-frame-wrapper.modal-frame-right(frame-modal="appointment-modal")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-24 Запись на прием
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			form.add-place-form
+				.add-place-form__fields.flex-vertical-center.gap-32
+					+custom-select-checkbox('Специальность', ['Стоматолог', 'Аллерголог', 'Терапевт', 'Кардиолог' ], 'mySelect--absolute')
+					+custom-select-checkbox('Клиника', ['Блюхера, 56', 'ИП Вердашев', 'Клиника "Сова"','Гиппократ', 'Зеленое яблоко', 'Добрый доктор' ], 'mySelect--absolute')
+				.add-place-form__fields.flex-vertical-center.gap-32
+					.form-item
+						input.form-input(type="text" placeholder="Возраст пациента от")
+						
+					.form-item
+						input.form-input(type="text" placeholder="Возраст пациента до")
+						
+					
+				.form-textarea
+					textarea(placeholder="Комментарий к пациенту")
+				.form-btns.flex-vertical-center.gap-32.flex-between
+					button.btn.btn--orange(frame-close) Отменить
+					button.btn.btn--primary(type="submit") Сохранить
+							
