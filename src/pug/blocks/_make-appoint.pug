@@ -24,12 +24,11 @@
 							.btn
 								span Недееспособный гражданин
 				
-				.appointment-form-body				
-					
-					.fieldset-group
-						.title-18 Данные пациента
+				.cabinet-form-body
+					.fieldset-group.mb-32
+						.title-18.mb-24 Данные пациента
 						
-						.edit-empl-form__name.mb-32
+						.cabinet-form__name.mb-32
 							.form-box
 								label.text-16 Фамилия
 								input(type="text" value="Константинов").form-input
@@ -40,7 +39,7 @@
 								label.text-16 Отчество
 								input(type="text" value="Констатинопольский").form-input
 					
-						.edit-empl-form__gender.flex-vertical-center.gap-32.mb-32
+						.cabinet-form__gender.flex-vertical-center.gap-32.mb-32
 							.form-box
 								label.text-16 Пол
 								.flex-vertical-center.gap-32
@@ -58,7 +57,7 @@
 								.mydatepicker
 									input.form-input(type="text" class="datepicker" )
 					
-					.edit-empl-form__contacts.mb-32.flex-vertical-center.gap-32
+					.cabinet-form__contacts.mb-32.flex-vertical-center.gap-32.flex-grow
 						.form-box
 							label.text-16 Телефон
 							input(type="text" ).form-input
@@ -66,14 +65,30 @@
 							label.text-16 Дополнительный телефон
 							input(type="text" ).form-input
 					
-					.fieldset-group
-						.title-18 Дата и время приема
-
-							
+					.fieldset-group.fieldset-group-time.mb-32
+						.title-18.mb-24 Дата и время приема
+						.flex-vertical-center.gap-32
 							.form-box
-								label.text-16 Дата рождения
+								label.text-16 Дата приема
 								.mydatepicker
 									input.form-input(type="text" class="datepicker" )
+							.form-box
+								+custom-select-icon2('', ['8:00','8:30', '9:00', '9:30', '10:00', '10:30', '11:00' ], 'mySelect--absolute','', 'Начало приема')
+							
+							.form-box
+								+custom-select-icon2('', ['8:00','8:30', '9:00', '9:30', '10:00', '10:30', '11:00' ], 'mySelect--absolute','', 'Окончание приема')
+				
+					.fieldset-group.fieldset-group-doctor.mb-32
+						.title-18.mb-24 Данные о враче
+						.flex-vertical-center.gap-32.flex-grow.mb-32
+							+custom-select-icon('Фамилия И.О.',['Иванов А.И.', 'Петров С.С.', 'Золотов Е. П.'], 'mySelect--absolute' )
+							
+							+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+						
+						.mb-32
+							+custom-select-icon('Рекомендовавший врач',['Иванов А.И.', 'Петров С.С.', 'Золотов Е. П.'], 'mySelect--absolute' )
+						
+						+custom-select-icon('Канал привлечения',['Google', 'Telegram', 'ВКонтакте', 'Про докторов'], 'mySelect--absolute' )
 				
 				.form-btns.flex-vertical-center.gap-32.flex-between
 					button.btn.btn--orange(frame-close) Отменить

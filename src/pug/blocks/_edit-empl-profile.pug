@@ -7,7 +7,7 @@
 			
 		.modal-frame__body
 			form.edit-empl-form
-				.edit-empl-form__name.mb-32
+				.cabinet-form__name.mb-32
 					.form-box
 						label.text-16 Фамилия
 						input(type="text" value="Константинов").form-input
@@ -18,7 +18,7 @@
 						label.text-16 Отчество
 						input(type="text" value="Констатинопольский").form-input
 				
-				.edit-empl-form__gender.flex-vertical-center.gap-32.mb-32
+				.cabinet-form__gender.flex-vertical-center.gap-32.mb-32
 					.form-box
 						label.text-16 Пол
 						.flex-vertical-center.gap-32
@@ -36,18 +36,18 @@
 						.mydatepicker
 							input.form-input(type="text" class="datepicker" )
 				
-				.edit-empl-form__contacts.mb-32
+				.cabinet-form__contacts.mb-32
 					.form-box
 						label.text-16 Контакты
 						input(type="text" value="+7(927)144-55-54").form-input
 				
-				.edit-empl-form__duration.mb-32
+				.cabinet-form__duration.mb-32
 					.title-18.mb-24 Длительность приема
 					.form-box.flex-vertical-center.gap-32
 						+custom-select-icon2('Часы', ['0','1', '2', '3', '4' ], 'mySelect--absolute',)
 						+custom-select-icon2('Минуты', ['0', '10','15', '20', '25', '30','35', '40', '45', '50','55'], 'mySelect--absolute')
 				
-				.edit-empl-form__qual.flex-vertical-center.gap-32.mb-32
+				.cabinet-form__qual.flex-vertical-center.gap-32.mb-32
 					.form-box
 						label.text-16.text-medium Стаж
 						input(type="text" value="17 лет").form-input
@@ -56,7 +56,7 @@
 					
 					+custom-select-icon2('Кандидат м.н.', ['Без степени','Аспирант', 'Кандидат м.н.', 'Доктор м.н.', 'Профессор' ], 'mySelect--absolute','', 'Ученая степень')
 				
-				.edit-empl-form__status.mb-32
+				.cabinet-form__status.mb-32
 					label.switch-toggle.flex-box.flex-y-center
 						input(type='checkbox' id='check' class='toggle-switch' checked)
 						span.real-switch
