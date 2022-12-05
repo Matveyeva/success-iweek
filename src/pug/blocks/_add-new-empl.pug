@@ -1,0 +1,66 @@
+//================== Добавить нового  сотрудника ==============
+.modal-frame-wrapper.modal-frame-right(frame-modal="add-new-empl")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-24 Добавить сотрудника
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			form.edit-empl-form
+				.cabinet-form__name.mb-32
+					.form-box
+						label.text-16 Фамилия
+						input(type="text" ).form-input
+					.form-box
+						label.text-16 Имя
+						input(type="text" ).form-input
+					.form-box
+						label.text-16 Отчество
+						input(type="text" ).form-input
+				
+				.cabinet-form__gender.flex-vertical-center.gap-32.mb-32
+					.form-box
+						label.text-16 Пол
+						.flex-vertical-center.gap-32
+							label.radiobutton-label.flex-box
+								input(type='radio' value="men" name='gender-radio'  class='real-radio')
+								span.custom-radio
+								span.custom-radio__text Мужской
+							label.radiobutton-label.flex-box
+								input(type='radio' value="woomen" name='gender-radio' class='real-radio')
+								span.custom-radio
+								span.custom-radio__text Женский
+					
+					.form-box
+						label.text-16 Дата рождения
+						.mydatepicker
+							input.form-input(type="text" class="datepicker" )
+				
+				.cabinet-form__contacts.mb-32
+					.form-box
+						label.text-16 Контакты
+						input(type="text" placeholder="Телефон").form-input
+				
+				.cabinet-form__duration.mb-32
+					.title-18.mb-24 Длительность приема
+					.form-box.flex-vertical-center.gap-32
+						+custom-select-icon2('Часы', ['0','1', '2', '3', '4' ], 'mySelect--absolute',)
+						+custom-select-icon2('Минуты', ['0', '10','15', '20', '25', '30','35', '40', '45', '50','55'], 'mySelect--absolute')
+				
+				.cabinet-form__qual.flex-vertical-center.gap-32.mb-32
+					.form-box
+						label.text-16.text-medium Стаж
+						input(type="text").form-input
+					
+					+custom-select-icon2('Без категории', ['Без категории', 'Высшая категория', 'Первая категория', 'Вторая категория', 'Третья категория' ], 'mySelect--absolute','', 'Категория')
+					
+					+custom-select-icon2('Кандидат м.н.', ['Без степени','Аспирант', 'Кандидат м.н.', 'Доктор м.н.', 'Профессор' ], 'mySelect--absolute','', 'Ученая степень')
+				
+				.cabinet-form__status.mb-32
+					label.switch-toggle.flex-box.flex-y-center
+						input(type='checkbox' class='toggle-switch' )
+						span.real-switch
+						span.custom-switch__text Приходящий
+		.modal-frame__footer.mt-auto.border-top.flex-vertical-center.flex-between
+			button.btn.btn-44.btn--orange(frame-close) Отмена
+			button.btn.btn-44 Сохранить

@@ -3,18 +3,18 @@ extends ../layouts/layout.pug
 block content
 	
 	+cabHeader([
-		{link:'schedule-page.html', addCl:'', name: 'Расписание'}, 
-		{link:'cabinet-tasks.html', addCl:'', name: 'Задачи' }, 
+		{link:'page-schedule.html', addCl:'', name: 'Расписание'}, 
+		{link:'page-tasks.html', addCl:'', name: 'Задачи' }, 
 		{link:'#!', addCl:'', name: 'Пациенты'}, 
-		{link:'employee-page.html', addCl:'true', name: 'Сотрудники' }
+		{link:'employees-page.html', addCl:'true', name: 'Сотрудники' }
 		])
 	//=========== основной контент редактирование пациента  ====================
 	.cabinet-body
 		.container-large
-			include ../sections/_employee-page-content
-	//- include ../blocks/_add-visitor-policy-modal
+			include ../sections/_employees-page-content
+	include ../blocks/_add-new-empl
 	//- include ../blocks/_task-modal
 
 block variables
-	-let bodyCl = "employee-page"
+	-let bodyCl = "employees-page"
 	-let title = "Сотрудники";

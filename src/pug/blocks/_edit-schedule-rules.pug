@@ -1,40 +1,40 @@
-//================== Правило работы сотрудника-modal ==============
-.modal-frame-wrapper.modal-frame-right.rules-modal(frame-modal="rules-info")
+//================== Редактировать Правило работы сотрудника==============
+.modal-frame-wrapper.modal-frame-right.rules-modal(frame-modal="edit-schedule-rules")
 	.modal-frame.flex-column.flex-box
 		.modal-frame__head.flex-box.flex-y-center.flex-between
-			.text-24 Добавление правила графиков работы
+			.text-24 Редактирование правила графиков работы
 			.icon-close(frame-close)
 		form.rules-form.flex-column.flex-box
 			.modal-frame__body
 				.rules-form-block
-					+custom-select-icon('Специальности', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+					+custom-select-icon2('Стоматолог', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
 				.rules-form-block
 					.title-16.mb-16 Период работы
 					label.switch-toggle.flex-box.flex-y-center
-						input(type='checkbox'  class='toggle-switch')
+						input(type='checkbox'  class='toggle-switch' checked)
 						span.real-switch
 						span.custom-switch__text Повторять
 				
 					.flex-form-fields.gap-32
 						.form-item
 							.mydatepicker
-								input.form-input(type="text" class="datepicker" value="Начало")
+								input.form-input(type="text" class="datepicker" value="15.02.2022")
 							
 						.form-item
 							.mydatepicker
-								input.form-input(type="text" class="datepicker" value="Окончание")
+								input.form-input(type="text" class="datepicker" value="20.03.2022")
 						.form-item
 							.mySelect.mySelect--absolute.mySelect--multi#multi_day_picker
 								.mySelect-input
-									input.selectValue.input-slim(type='text' readonly='' value='Выбрать день' data-default='Выбрать день')
+									input.selectValue.input-slim(type='text' readonly='' value='пн, Вт' data-default='')
 								.mySelect-drop
 									label.checkbox-label.flex-box.flex-y-center
-										input.real-checkbox(type='checkbox' name='form-checkbox1' class='checkbox' data-thumbnail="Пн")
+										input.real-checkbox(type='checkbox' name='form-checkbox1' class='checkbox' data-thumbnail="Пн" checked)
 										span.custom-checkbox 
 										span.custom-checkbox__text Понедельник
 									
 									label.checkbox-label.flex-box.flex-y-center
-										input.real-checkbox(type='checkbox' name='form-checkbox2' class='checkbox' data-thumbnail="Вт")
+										input.real-checkbox(type='checkbox' name='form-checkbox2' class='checkbox' data-thumbnail="Вт" checked)
 										span.custom-checkbox 
 										span.custom-checkbox__text Вторник
 									
@@ -71,13 +71,13 @@
 					.title-18.mb-24 Часы приема
 					.flex-vertical-center.gap-32
 						.form-item
-							+custom-select-icon('Начало', ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00'], 'mySelect--absolute')
+							+custom-select-icon2('15:00', ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00'], 'mySelect--absolute')
 								
 						.form-item
-							+custom-select-icon('Окончание',  ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00'], 'mySelect--absolute')
+							+custom-select-icon2('19:00',  ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00'], 'mySelect--absolute')
 
 			
 			
 			.modal-frame__footer.mt-auto.border-top.flex-vertical-center.flex-between
 				button.btn.btn-44.btn--orange Отмена
-				button.btn.btn-44 Добавить
+				button.btn.btn-44 Сохранить

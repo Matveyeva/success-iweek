@@ -28,6 +28,12 @@
 @import "blocks/_state-select.scss";
 @import "blocks/_cab-menu.scss";
 @import "blocks/_allergy-modal.scss";
+@import "blocks/_add-empl-place.scss";
+@import "blocks/_edit-empl-place.scss";
+@import "blocks/_confirm-action-modal.scss";
+@import "blocks/_edit-empl-profile.scss";
+@import "blocks/_make-appointment.scss";
+@import "blocks/_schedule-rules.scss";
 
 
 //sections
@@ -42,11 +48,12 @@
 @import "sections/_prices-content.scss";
 @import "sections/_clients-header.scss";
 @import "sections/_schedule-page-content.scss";
-@import "sections/_cabinet-tasks-content.scss";
+@import "sections/_page-tasks-content.scss";
 @import "sections/_dashboard-table.scss";
 @import "sections/_empl-schedule-content.scss";
 @import "sections/_visitor-edit-page.scss";
 @import "sections/_employee-page-content.scss";
+
 
 
 
@@ -58,6 +65,7 @@
 @import "pages/_cabinet-page.scss";
 @import "pages/_page-404.scss";
 @import "pages/_edit-profile-visitor.scss";
+@import "pages/_employee-personal-page.scss";
 
 //ui
  @import "ui/_ui-navigation";

@@ -1,0 +1,17 @@
+.cabinet-form__name{
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 32px;
+	row-gap: 24px;
+	.form-box:first-child{
+		width: 100%;
+	}
+	.form-box{
+		flex-grow:1 ;
+	}
+}
+.cabinet-form__gender{
+	.form-box{
+		flex-grow:1;
+	}
+}

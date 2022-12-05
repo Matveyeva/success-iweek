@@ -1,0 +1,26 @@
+.employee-personal-content{
+	.employee-personal-card{
+		background-color: #fff;
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+	.employee-personal__head{
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+	.employee-personal-header{
+		width: 100%;
+		justify-content: space-between;
+		padding-bottom: 32px;
+	}
+	.employee-personal-place{
+		padding-top: 32px;
+	}
+	.employee-personal-tabs__title{margin-bottom: 24px;}
+	.employee-acordion-content{padding-top: 32px;}
+
+	.acor-container input:checked + label + .acor-body{padding-bottom: 24px;}
+	.acor-container input:checked + label{
+
+	}
+}

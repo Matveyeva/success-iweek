@@ -1,0 +1,27 @@
+.cabinet-form-body{
+	padding-top: 32px;
+	height: calc(100vh - 260px);
+	padding-bottom: 32px;
+	padding-right: 10px;
+}
+.appointment-form {
+	.mydatepicker{width: 280px;}
+}
+.flex-grow>*{flex-grow:1}
+.modal-scroll .modal-frame{
+	padding-right: 12px!important;
+}
+.modal-scroll .modal-scroll-header{
+	padding-bottom: 24px;
+}
+.modal-scroll  .modal-scroll-footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	background: #F8FBFF;
+	padding-left: 30px;
+	padding-right: 30px;
+}
