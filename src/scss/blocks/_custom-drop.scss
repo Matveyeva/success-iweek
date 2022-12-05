@@ -2,14 +2,16 @@
 
 .customDrop{
 	position: relative;
-	
+	.customDrop__btn{
+		cursor:pointer;
+	}
 	.customDrop__list{
 		display: none;
 		position: absolute;
 		z-index: 1;
 		bottom: -18px;
 		left: 0;
-		width: 220px;
+		min-width: 220px;
 		background-color: #fff;
 		box-shadow: 0px 4px 16px rgba(87, 141, 246, 0.2);
 		border-radius: 4px;
@@ -19,7 +21,7 @@
 		padding-left: 12px;
 		padding-right: 12px;
 		
-		a{
+		&>*{
 			padding-top: 25px;
 			padding-bottom: 25px;
 			gap:8px;
@@ -37,6 +39,26 @@
 		display: none;
 	}
 	&.active .customDrop__list{display: block;}
+}
+.customDrop.customDrop--right{
+	.customDrop__list{
+		left: auto;
+		right:0;
+	}
+}
+.customDrop-filters{
+	.customDrop__btn{
+		width: 48px;
+		height: 48px;
+		border-radius: 4px;
+		border: 1px solid $gray3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:hover{
+			opacity: .5;
+		}
+	}
 }
 /*submenu-block--dark*/
 .customDrop--dark{

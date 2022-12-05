@@ -3,8 +3,9 @@
 	flex-direction: column;
 	&>*{width: 100%;}
 	height: 100%;
-	
-
+}
+.profile-form-body{
+	height:calc(100vh - 240px);
 }
 .edit-profile-content__head{
 	padding-top: 16px;
@@ -37,7 +38,7 @@
 .edit-profile-content__form .form-box>label, .mySelect>label{color:$gray!important; font-weight: 500;}
 .edit-profile-footer{
 	padding-top: 16px;
-	
+	padding-bottom: 32px;
 	justify-content: flex-end;
 	gap:32px;
 	.btn{width: 240px;}
