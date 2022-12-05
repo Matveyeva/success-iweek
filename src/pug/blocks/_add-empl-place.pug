@@ -1,12 +1,12 @@
 //================== добавить рабочее место сотрудника ==============
-.modal-frame-wrapper.modal-frame-right(frame-modal="add-empl-place")
+.modal-frame-wrapper.modal-frame-right.column-modal(frame-modal="add-empl-place")
 	.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
 			.text-24 Новое рабочее место
 			.icon-close(frame-close)
 			
 		.modal-frame__body
-			form.add-place-form
+			form.add-place-form.flex-column.gap-32
 				.add-place-form__fields.flex-vertical-center.gap-32
 					+custom-select-checkbox('Специальность', ['Стоматолог', 'Аллерголог', 'Терапевт', 'Кардиолог' ], 'mySelect--absolute')
 					+custom-select-checkbox('Клиника', ['Блюхера, 56', 'ИП Вердашев', 'Клиника "Сова"','Гиппократ', 'Зеленое яблоко', 'Добрый доктор' ], 'mySelect--absolute')
@@ -20,6 +20,7 @@
 					
 				.form-textarea
 					textarea(placeholder="Комментарий к пациенту")
-				.form-btns.flex-vertical-center.gap-32.flex-between
+				
+				.form-btns.flex-vertical-center.gap-32.flex-between.mt-auto
 					button.btn.btn--orange(frame-close) Отменить
 					button.btn.btn--primary(type="submit") Добавить

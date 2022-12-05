@@ -1,12 +1,12 @@
 //================== добавить паузу для страницы  Расписание ==============
-.modal-frame-wrapper.modal-frame-right(frame-modal="pause-info")
+.modal-frame-wrapper.modal-frame-right.column-modal(frame-modal="pause-info")
 	.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
 			.text-24 Добавление перерыва
 			.icon-close(frame-close)
 			
 		.modal-frame__body
-			form.pause-form
+			form.pause-form.flex-column.gap-32
 				.pause-form__head
 					.text-24 Кирсанова Марина Анлександровна
 					.text-16.mt-8 Онколог, Детский онколог, Врач-косметолог, Гинеколог, Маммолог
@@ -27,7 +27,7 @@
 							span.custom-switch__text Весь день
 				.form-textarea
 					textarea(placeholder="Комментарий")
-				.form-btns.flex-vertical-center.gap-32
+				.form-btns.flex-vertical-center.gap-32.mt-auto
 					button.btn.btn--orange(frame-close) Отменить
 					button.btn.btn--primary(type="submit") Добавить
 							

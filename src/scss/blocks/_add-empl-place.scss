@@ -7,3 +7,9 @@
 .add-place-form >*{
 	margin-top: 32px;
 }
+.column-modal{
+	.modal-frame__body{flex-grow:1;}
+	form{
+		min-height: 100%;
+	}
+}
