@@ -6,107 +6,108 @@
 		.edit-profile__btn
 			button.btn.btn--accent Удалить
 		
-	.edit-profile-content__form
-		.edit-profile-absolute
-			.flex-vertical-center.gap-32
-				button.btn.btn-44(frame-btn="exlude-modal") Аллергия
-				button.btn.btn-44(frame-btn="exlude-modal-2") Непереносимость
-		.form-fieldset
-			.grid-form-fields.gap-32
-				.form-box
-					+custom-select-icon2('Взрослый', ['Недееспособный гражданин', 'Ребенок' ], 'mySelect--absolute','', 'Категория пациента', 'true')
-			
-				.d-none.flex-vertical-center.gap-32
-					.form-box
-						label.text-16 Карта 025/У
-						input(type="text" ).form-input
-					.form-box
-						label.text-16  Карта 043/У
-						input(type="text" ).form-input
-				
-		.form-fieldset
-			.title-18 Данные опекуна
-			.grid-form-fields.gap-32
-				.form-box
-					label.text-16 Фамилия
-					input(type="text" placeholder="Фамилия").form-input
-				.form-box
-					label.text-16 Имя
-					input(type="text" placeholder="Имя").form-input
-				.form-box
-					label.text-16 Отчество
-					input(type="text" placeholder="Отчество").form-input
-				.form-box
-					label.text-16 Дата рождения
-					.mydatepicker
-						input.form-input(type="text" class="datepicker" value="01.01.2022")
-
-			.grid-form-fields.gap-32
-				.form-box
-					label.text-16 Пол
-					.flex-vertical-center.gap-32
-						label.radiobutton-label.flex-box
-							input(type='radio' value="men" name='gender-radio'  class='real-radio' checked)
-							span.custom-radio
-							span.custom-radio__text Мужской
-						label.radiobutton-label.flex-box
-							input(type='radio' value="woomen" name='gender-radio' class='real-radio')
-							span.custom-radio
-							span.custom-radio__text Женский
-						
-										
-				.form-box.flex-vertical-center.gap-32
-					+custom-select-icon2('Выбрать', ['О(I)', 'A(II)', 'B(III)', '(AB(IV))' ], 'mySelect--absolute','', 'Группа крови')
-					+custom-select-icon2('Выбрать', ['Rh(+)', 'Rh(-)'], 'mySelect--absolute','', 'Резус-фактор')
-
-			
-		.form-fieldset
-			.title-18 Контакты
-			.grid-form-fields.gap-32
-				.form-box
-					label.text-16 Электронный адрес
-					input(type="text" placeholder="mail@mail.ru").form-input
-				
-				.form-box
-					label.text-16 Телефон
-					input(type="text" placeholder="Телефон").form-input
-				
-				.form-box
-					label.text-16 Дополнительный номер
-					input(type="text").form-input
-
-		.form-fieldset
-			.title-18 Адрес регистрации
-			.grid-form-fields.gap-32
-				.form-box
-					label.text-16 Субъект РФ
-					input(type="text" placeholder="Московская область").form-input
-				
-				.form-box
-					label.text-16 Район
-					input(type="text" placeholder="Московский").form-input
-				
-				.form-box
-					label.text-16 Город
-					input(type="text" placeholder="Москва").form-input
-				.form-box
-					label.text-16 Населенный пункт
-					input(type="text" placeholder="Москва").form-input
-				.form-box
-					label.text-16 Улица
-					input(type="text" placeholder="Улица").form-input
-				
+	form.edit-profile-content__form
+		.profile-form-body.scroll-vertical
+			.edit-profile-absolute
 				.flex-vertical-center.gap-32
+					button.btn.btn-44(frame-btn="exlude-modal") Аллергия
+					button.btn.btn-44(frame-btn="exlude-modal-2") Непереносимость
+			.form-fieldset
+				.grid-form-fields.gap-32
 					.form-box
-						label.text-16 Дом
-						input(type="text" placeholder="Дом").form-input
+						+custom-select-icon2('Взрослый', ['Недееспособный гражданин', 'Ребенок' ], 'mySelect--absolute','', 'Категория пациента', 'true')
+				
+					.d-none.flex-vertical-center.gap-32
+						.form-box
+							label.text-16 Карта 025/У
+							input(type="text" ).form-input
+						.form-box
+							label.text-16  Карта 043/У
+							input(type="text" ).form-input
+					
+			.form-fieldset
+				.title-18 Данные опекуна
+				.grid-form-fields.gap-32
 					.form-box
-						label.text-16 Квартира
-						input(type="text" placeholder="Квартира").form-input
-		
-		.form-fieldset
-			.form-textarea
-				textarea(type="text" placeholder="Комментарий о пациенте")
+						label.text-16 Фамилия
+						input(type="text" placeholder="Фамилия").form-input
+					.form-box
+						label.text-16 Имя
+						input(type="text" placeholder="Имя").form-input
+					.form-box
+						label.text-16 Отчество
+						input(type="text" placeholder="Отчество").form-input
+					.form-box
+						label.text-16 Дата рождения
+						.mydatepicker
+							input.form-input(type="text" class="datepicker" value="01.01.2022")
+
+				.grid-form-fields.gap-32
+					.form-box
+						label.text-16 Пол
+						.flex-vertical-center.gap-32
+							label.radiobutton-label.flex-box
+								input(type='radio' value="men" name='gender-radio'  class='real-radio' checked)
+								span.custom-radio
+								span.custom-radio__text Мужской
+							label.radiobutton-label.flex-box
+								input(type='radio' value="woomen" name='gender-radio' class='real-radio')
+								span.custom-radio
+								span.custom-radio__text Женский
+							
+											
+					.form-box.flex-vertical-center.gap-32
+						+custom-select-icon2('Выбрать', ['О(I)', 'A(II)', 'B(III)', '(AB(IV))' ], 'mySelect--absolute','', 'Группа крови')
+						+custom-select-icon2('Выбрать', ['Rh(+)', 'Rh(-)'], 'mySelect--absolute','', 'Резус-фактор')
+
+				
+			.form-fieldset
+				.title-18 Контакты
+				.grid-form-fields.gap-32
+					.form-box
+						label.text-16 Электронный адрес
+						input(type="text" placeholder="mail@mail.ru").form-input
+					
+					.form-box
+						label.text-16 Телефон
+						input(type="text" placeholder="Телефон").form-input
+					
+					.form-box
+						label.text-16 Дополнительный номер
+						input(type="text").form-input
+
+			.form-fieldset
+				.title-18 Адрес регистрации
+				.grid-form-fields.gap-32
+					.form-box
+						label.text-16 Субъект РФ
+						input(type="text" placeholder="Московская область").form-input
+					
+					.form-box
+						label.text-16 Район
+						input(type="text" placeholder="Московский").form-input
+					
+					.form-box
+						label.text-16 Город
+						input(type="text" placeholder="Москва").form-input
+					.form-box
+						label.text-16 Населенный пункт
+						input(type="text" placeholder="Москва").form-input
+					.form-box
+						label.text-16 Улица
+						input(type="text" placeholder="Улица").form-input
+					
+					.flex-vertical-center.gap-32
+						.form-box
+							label.text-16 Дом
+							input(type="text" placeholder="Дом").form-input
+						.form-box
+							label.text-16 Квартира
+							input(type="text" placeholder="Квартира").form-input
+			
+			.form-fieldset
+				.form-textarea
+					textarea(type="text" placeholder="Комментарий о пациенте")
 		
 		.edit-profile-footer.flex-vertical-center
 			a.btn.btn-44.btn--orange(href="visitor-edit-page.html") Вернуться

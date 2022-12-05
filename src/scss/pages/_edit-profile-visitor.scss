@@ -1,3 +1,7 @@
+.visitor-form-page{
+	height: 100vh;
+}
+
 .edit-profile-content{
 	display: flex;
 	flex-direction: column;
@@ -38,7 +42,7 @@
 .edit-profile-content__form .form-box>label, .mySelect>label{color:$gray!important; font-weight: 500;}
 .edit-profile-footer{
 	padding-top: 16px;
-	padding-bottom: 32px;
+	
 	justify-content: flex-end;
 	gap:32px;
 	.btn{width: 240px;}
