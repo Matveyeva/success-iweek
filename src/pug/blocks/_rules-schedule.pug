@@ -1,0 +1,34 @@
+//================== Правила графиков работы модалка ==============
+.modal-frame-wrapper.modal-frame-right.schedule-rules-modal(frame-modal="schedule-rules")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-24 Правила графиков работы
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			.schedule-rules-wrapper
+				//======== одно правило ===========
+				.schedule-rules-item
+					+label-light-color('Пнб Вт', 'label--gray')
+					.flex-box.flex-between.mt-16
+						.text-column
+							.title-18 Ортодонт
+							.text-16.split-text
+								p с 15:00 - до 19:00 
+								p Постоянно
+						.employee-personal-options.flex-box.gap-32
+							.edit-item(title="Редактировать" frame-btn="edit-schedule-rules")
+							.icon-delete(title="Удалить" frame-btn="confirm-action")
+
+				//======== одно правило ===========
+				.schedule-rules-item
+					+label-light-color('Пнб Вт', 'label--gray')
+					.flex-box.flex-between.mt-16
+						.text-column
+							.title-18 Стоматолог
+							.text-16.split-text
+								p с 15:00 - до 19:00 
+								p с 15.02.22 по 20.03.22 
+						.employee-personal-options.flex-box.gap-32
+							.edit-item(title="Редактировать" frame-btn="edit-schedule-rules")
+							.icon-delete(title="Удалить" frame-btn="confirm-action")

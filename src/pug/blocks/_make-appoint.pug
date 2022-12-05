@@ -104,6 +104,16 @@
 						input(type="text" placeholder="Добавьте услугу").form-input
 		.modal-scroll-footer
 			.form-btns.flex-vertical-center.gap-32.flex-between
-				button.btn.btn--orange(frame-close) Отменить
-				button.btn.btn--primary(type="submit") Сохранить
+				//=====выпадашка ======
+				.state-select.state-select--opentop
+					.state-select-current(data-state="state-started") Начат прием
+					.state-select-drop
+						.state-select-drop__item(data-state="state-started") Начат прием
+						.state-select-drop__item(data-state="state-confirm") Подтвержден
+						.state-select-drop__item(data-state="state-notconfirm") Не подтвержден
+						.state-select-drop__item(data-state="state-done") Выполнен
+						.state-select-drop__item(data-state="state-cancel")  Отменен
+				
+				//====== кнопка ========
+				button.btn.btn--primary(type="submit") Назначить
 							
