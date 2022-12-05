@@ -2,16 +2,10 @@
 	.edit-profile-content__head.flex-vertical-center
 		.edit-profile__title.text-column
 			.text-14.text-gray3 Пациенты
-			.title-18 Редактировать профиль
-		.edit-profile__btn
-			button.btn.btn--accent Удалить
+			.title-18 Добавить профиль
 		
 	form.edit-profile-content__form
 		.profile-form-body.scroll-vertical
-			.edit-profile-absolute
-				.flex-vertical-center.gap-32
-					button.btn.btn-44(frame-btn="exlude-modal") Аллергия
-					button.btn.btn-44(frame-btn="exlude-modal-2") Непереносимость
 			.form-fieldset
 				.grid-form-fields.gap-32
 					.form-box
@@ -59,8 +53,7 @@
 					.form-box.flex-vertical-center.gap-32
 						+custom-select-icon2('Выбрать', ['О(I)', 'A(II)', 'B(III)', '(AB(IV))' ], 'mySelect--absolute','', 'Группа крови')
 						+custom-select-icon2('Выбрать', ['Rh(+)', 'Rh(-)'], 'mySelect--absolute','', 'Резус-фактор')
-
-				
+	
 			.form-fieldset
 				.title-18 Контакты
 				.grid-form-fields.gap-32
@@ -108,7 +101,7 @@
 			.form-fieldset
 				.form-textarea
 					textarea(type="text" placeholder="Комментарий о пациенте")
-		
+			
 		.edit-profile-footer.flex-vertical-center
 			a.btn.btn-44.btn--orange(href="visitor-edit-page.html") Вернуться
 			button.btn.btn-44 Применить

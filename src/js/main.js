@@ -272,6 +272,18 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
+	/* На стр Пациенты закрыть фильтры по клику на выпадашку */
+	const visitorSelectFilters = document.querySelector('#visitor-select-filters');
+	if(visitorSelectFilters){
+		const visitorSelectFiltersItem = visitorSelectFilters.querySelectorAll('.customDrop__list-item');
+			for(let item of visitorSelectFiltersItem){
+			item.addEventListener('click', function(e){
+				e.stopPropagation();
+				visitorSelectFilters.classList.remove('active');
+				console.log('123');
+			});
+		}
+	}
 	/*========== Скрыть мобм меню  and customDrop  по клику вне ===========*/
 	window.addEventListener('click', function(e){			
 		if (!e.target.closest('.customDrop')){

@@ -12,6 +12,8 @@ header.cabinet-header
 					button.btn-bt.myTabs-btn Сотрудники
 					
 			
-			.cabinet-header__profile
+			.cabinet-header__profile.flex-vertical-center.gap-32
+				+custom-select-checkbox('Блюхера, 56', ['Блюхера, 56', 'ИП Вердашев', 'Клиника "Сова"','Гиппократ', 'Зеленое яблоко', 'Добрый доктор' ], 'mySelect--absolute')
+				
 				.cabinet-header__avatar ТЮ
 			

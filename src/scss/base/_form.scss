@@ -1,4 +1,4 @@
-.form-input,.input-slim{
+.form-input,.input-slim,.form-input-48{
 	height: 44px;
 	background: #FFFFFF;
 	border: 1px solid #E0E0E0;
@@ -22,6 +22,9 @@
 			color: $gray3;
 	}
 	
+}
+.form-input-48{
+	height: 48px;
 }
 .mySelect.mySelect--38 .form-input,
 .input-slim{
@@ -159,6 +162,7 @@ sup.text-red{
 		border: 1px solid rgba(0, 0, 0, 0.25);
 		border-radius: 50%;
 		margin-right: 8px;
+		flex-shrink: 0;
 	}
 
 	

@@ -1,0 +1,119 @@
+.visitor-page-header
+	.container-large
+		.visitor-page-header__content.flex-vertical-center.flex-between
+			.visitor-page-header-left.flex-vertical-center.gap-32
+				a.btn(href="add-profile-visitor.html") Добавить пациента
+				button.btn.btn--orange Добавить базу
+				
+			.visitor-page-header-right.flex-vertical-center.gap-8
+				//=======строка поиска =====
+				.visitor-page-header__search
+					.form-box.form-box--icon-left
+						.form-box-input
+							.form-box__icon
+								svg.svg-search
+									use(xlink:href="./img/svg-sprite.svg#svg-search")
+							input(type="text" placeholder="Поисковый запрос").form-input.form-input-48
+				
+				.visitor-page-header__filters.customDrop-filters
+					.customDrop.customDrop--right#visitor-select-filters
+						.customDrop__btn
+							.icon-filter
+						.customDrop__list
+							.customDrop__list-item
+								label.radiobutton-label.flex-box
+									input(type='radio' name='currency' value='name-visitor' class='real-radio') 
+									span.custom-radio 
+									span.custom-radio__text Фио или номер телефона
+							.customDrop__list-item
+								label.radiobutton-label.flex-box
+									input(type='radio' name='currency' value='doc-number' class='real-radio') 
+									span.custom-radio 
+									span.custom-radio__text Номер медкарты
+							.customDrop__list-item
+								label.radiobutton-label.flex-box
+									input(type='radio' name='currency' value='dogovor-number' class='real-radio') 
+									span.custom-radio 
+									span.custom-radio__text Номер договора
+							.customDrop__list-item
+								label.radiobutton-label.flex-box
+									input(type='radio' name='currency' value='empl-name' class='real-radio') 
+									span.custom-radio 
+									span.custom-radio__text Врач
+							.customDrop__list-item
+								label.radiobutton-label.flex-box
+									input(type='radio' name='currency' value='visitor-bearthday' class='real-radio') 
+									span.custom-radio 
+									span.custom-radio__text Дата рождения
+
+.visitor-page-body
+	.container-large
+		.visitor-page-table
+			.visitor-page-table-row.visitor-page-table-head
+				p ФИО пациента
+				p Номер телефона
+				p Карта 025/У
+				p Карта 043/У
+				p Последняя активность
+		
+			.visitor-page-table-body
+				a(href="visitor-edit-page.html").visitor-page-table-row
+					p Алексеева Ангелина Андреевна
+					p 8(879)947-55-98
+					p
+					p
+					p
+						span.label-light.label--gray Неявка
+				
+				a(href="visitor-edit-page.html").visitor-page-table-row
+					p Алексеева Ангелина Андреевна
+					p 8(879)947-55-98
+					p
+					p
+					p
+						span.label-light.label--gray Выполнен
+				a(href="visitor-edit-page.html").visitor-page-table-row
+					p Алексеева Ангелина Андреевна
+					p 8(879)947-55-98
+					p
+					p
+					p
+						span.label-light.label--accent Неявка
+				
+				a(href="visitor-edit-page.html").visitor-page-table-row
+					p Алексеева Ангелина Андреевна
+					p 8(879)947-55-98
+					p
+					p
+					p
+						span.label-light.label--gray Выполнен
+				a(href="visitor-edit-page.html").visitor-page-table-row
+					p Алексеева Ангелина Андреевна
+					p 8(879)947-55-98
+					p
+					p
+					p
+						span.label-light.label--accent Нет активности
+				
+				a(href="visitor-edit-page.html").visitor-page-table-row
+					p Алексеева Ангелина Андреевна
+					p 8(879)947-55-98
+					p
+					p
+					p
+						span.label-light.label--gray Выполнен
+				a(href="visitor-edit-page.html").visitor-page-table-row
+					p Алексеева Ангелина Андреевна
+					p 8(879)947-55-98
+					p
+					p
+					p
+						span.label-light.label--accent Неявка
+				
+				a(href="visitor-edit-page.html").visitor-page-table-row
+					p Алексеева Ангелина Андреевна
+					p 8(879)947-55-98
+					p
+					p
+					p
+						span.label-light.label--accent Неявка

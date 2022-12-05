@@ -12,6 +12,10 @@
 	font-size: 16px;
 	color: $gray;
 	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
 	&:hover{
 		border-bottom-color: $orange;
 		color: $gray;
@@ -86,4 +90,11 @@
 }
 .label--gray{
 	background-color: rgb(247, 247, 247)!important;
+	color: #000!important;
+	border-color: rgb(247, 247, 247)!important;
+}
+.label--accent{
+	color: rgb(239, 147, 62)!important;
+	background-color: rgb(255, 242, 217)!important;
+	border-color: rgb(255, 242, 217)!important;
 }
