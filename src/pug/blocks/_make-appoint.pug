@@ -1,96 +1,109 @@
 
 //================== Запись на прием через кабинет  ==============
-.modal-frame-wrapper.modal-frame-right(frame-modal="appointment-modal")
-	.modal-frame.flex-column
+.modal-frame-wrapper.modal-frame-right.modal-scroll(frame-modal="appointment-modal")
+	form.appointment-form.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
 			.text-24 Запись на прием
 			.icon-close(frame-close)
 			
 		.modal-frame__body
-			form.appointment-form
-				.appointment-form-header
-					.flex-box.btn-toggle-block
-						label.btn--toggle
-							input(type='radio' name='visitor-type'  class='filter-radiobtn' checked)
-							.btn
-								span Взрослый
-						label.btn--toggle
-							input(type='radio' name='visitor-type'  class='filter-radiobtn')
-							.btn
-								span Ребенок
-						
-						label.btn--toggle
-							input(type='radio' name='visitor-type' class='filter-radiobtn')
-							.btn
-								span Недееспособный гражданин
-				
-				.cabinet-form-body
-					.fieldset-group.mb-32
-						.title-18.mb-24 Данные пациента
-						
-						.cabinet-form__name.mb-32
-							.form-box
-								label.text-16 Фамилия
-								input(type="text" value="Константинов").form-input
-							.form-box
-								label.text-16 Имя
-								input(type="text" value="Констатин").form-input
-							.form-box
-								label.text-16 Отчество
-								input(type="text" value="Констатинопольский").form-input
+			.appointment-form-header.modal-scroll-header
+				.flex-box.btn-toggle-block
+					label.btn--toggle
+						input(type='radio' name='visitor-type'  class='filter-radiobtn' checked)
+						.btn
+							span Взрослый
+					label.btn--toggle
+						input(type='radio' name='visitor-type'  class='filter-radiobtn')
+						.btn
+							span Ребенок
 					
-						.cabinet-form__gender.flex-vertical-center.gap-32.mb-32
-							.form-box
-								label.text-16 Пол
-								.flex-vertical-center.gap-32
-									label.radiobutton-label.flex-box
-										input(type='radio' value="men" name='gender-radio'  class='real-radio' checked)
-										span.custom-radio
-										span.custom-radio__text Мужской
-									label.radiobutton-label.flex-box
-										input(type='radio' value="woomen" name='gender-radio' class='real-radio')
-										span.custom-radio
-										span.custom-radio__text Женский
-							
-							.form-box
-								label.text-16 Дата рождения
-								.mydatepicker
-									input.form-input(type="text" class="datepicker" )
+					label.btn--toggle
+						input(type='radio' name='visitor-type' class='filter-radiobtn')
+						.btn
+							span Недееспособный гражданин
+			
+			.cabinet-form-body.scroll-vertical
+				.fieldset-group.mb-32
+					.title-18.mb-24 Данные пациента
 					
-					.cabinet-form__contacts.mb-32.flex-vertical-center.gap-32.flex-grow
+					.cabinet-form__name.mb-32
 						.form-box
-							label.text-16 Телефон
+							label.text-16 Фамилия
 							input(type="text" ).form-input
 						.form-box
-							label.text-16 Дополнительный телефон
+							label.text-16 Имя
 							input(type="text" ).form-input
-					
-					.fieldset-group.fieldset-group-time.mb-32
-						.title-18.mb-24 Дата и время приема
-						.flex-vertical-center.gap-32
-							.form-box
-								label.text-16 Дата приема
-								.mydatepicker
-									input.form-input(type="text" class="datepicker" )
-							.form-box
-								+custom-select-icon2('', ['8:00','8:30', '9:00', '9:30', '10:00', '10:30', '11:00' ], 'mySelect--absolute','', 'Начало приема')
-							
-							.form-box
-								+custom-select-icon2('', ['8:00','8:30', '9:00', '9:30', '10:00', '10:30', '11:00' ], 'mySelect--absolute','', 'Окончание приема')
+						.form-box
+							label.text-16 Отчество
+							input(type="text" ).form-input
 				
-					.fieldset-group.fieldset-group-doctor.mb-32
-						.title-18.mb-24 Данные о враче
-						.flex-vertical-center.gap-32.flex-grow.mb-32
-							+custom-select-icon('Фамилия И.О.',['Иванов А.И.', 'Петров С.С.', 'Золотов Е. П.'], 'mySelect--absolute' )
-							
-							+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+					.cabinet-form__gender.flex-vertical-center.gap-32.mb-32
+						.form-box
+							label.text-16 Пол
+							.flex-vertical-center.gap-32
+								label.radiobutton-label.flex-box
+									input(type='radio' value="men" name='gender-radio'  class='real-radio' checked)
+									span.custom-radio
+									span.custom-radio__text Мужской
+								label.radiobutton-label.flex-box
+									input(type='radio' value="woomen" name='gender-radio' class='real-radio')
+									span.custom-radio
+									span.custom-radio__text Женский
 						
-						.mb-32
-							+custom-select-icon('Рекомендовавший врач',['Иванов А.И.', 'Петров С.С.', 'Золотов Е. П.'], 'mySelect--absolute' )
+						.form-box
+							label.text-16 Дата рождения
+							.mydatepicker
+								input.form-input(type="text" class="datepicker" )
+				
+				.cabinet-form__contacts.mb-32.flex-vertical-center.gap-32.flex-grow
+					.form-box
+						label.text-16 Телефон
+						input(type="text" ).form-input
+					.form-box
+						label.text-16 Дополнительный телефон
+						input(type="text" ).form-input
+				
+				.fieldset-group.fieldset-group-time.mb-32
+					.title-18.mb-24 Дата и время приема
+					.flex-vertical-center.gap-32
+						.form-box
+							label.text-16 Дата приема
+							.mydatepicker
+								input.form-input(type="text" class="datepicker" )
+						.form-box
+							+custom-select-icon2('', ['8:00','8:30', '9:00', '9:30', '10:00', '10:30', '11:00' ], 'mySelect--absolute','', 'Начало приема')
 						
+						.form-box
+							+custom-select-icon2('', ['8:00','8:30', '9:00', '9:30', '10:00', '10:30', '11:00' ], 'mySelect--absolute','', 'Окончание приема')
+			
+				.fieldset-group.fieldset-group-doctor.mb-32
+					.title-18.mb-24 Данные о враче
+					.flex-vertical-center.gap-32.flex-grow.mb-32
+						+custom-select-icon('Фамилия И.О.',['Иванов А.И.', 'Петров С.С.', 'Золотов Е. П.'], 'mySelect--absolute' )
+						
+						+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+					
+					.mb-32
+						+custom-select-icon('Рекомендовавший врач',['Иванов А.И.', 'Петров С.С.', 'Золотов Е. П.'], 'mySelect--absolute' )
+					
+					.mb-32
 						+custom-select-icon('Канал привлечения',['Google', 'Telegram', 'ВКонтакте', 'Про докторов'], 'mySelect--absolute' )
+				.fieldset-group.mb-32
+					.form-textarea
+							textarea(placeholder="Цель визита")
+					.form-box.mt-32
+						label.switch-toggle.flex-box.flex-y-center
+							input(type='checkbox'  class='toggle-switch' )
+							span.real-switch
+							span.custom-switch__text Поместить в лист ожидания
 				
-				.form-btns.flex-vertical-center.gap-32.flex-between
-					button.btn.btn--orange(frame-close) Отменить
-					button.btn.btn--primary(type="submit") Сохранить
+				.fieldset-group.fieldset-group-doctor.mb-32
+					.title-18.mb-24 Добавить услугу
+					.form-box
+						input(type="text" placeholder="Добавьте услугу").form-input
+		.modal-scroll-footer
+			.form-btns.flex-vertical-center.gap-32.flex-between
+				button.btn.btn--orange(frame-close) Отменить
+				button.btn.btn--primary(type="submit") Сохранить
 							

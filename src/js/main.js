@@ -316,10 +316,11 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	}
 	$(function(){
-			$("#datepicker").datepicker();
-			$(".datepicker").each(function(item){
-				$(item).datepicker();
-			});
+		$("#datepicker").datepicker();
+		
+		$(".datepicker").each(function(item){
+			$(item).datepicker();
+		});
 	});
    /*========== кастомные табы переключение кнопок ============*/
 	const customTabBtns = document.querySelectorAll('.myTabs-buttons');
