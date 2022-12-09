@@ -12,7 +12,7 @@
 	}
 	.visitor-page-table-row{
 		display: grid;
-		grid-template-columns: 500px 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 500px  1fr 1fr 1fr;
 		
 		background-color: #fff;
 		&>*{
@@ -46,6 +46,6 @@
 		&>*{font-size: 16px;}
 	}
 	.visitor-page-table-body .visitor-page-table-row:nth-child(2n){
-		background-color: rgba(87,87,246, .1);
+		background-color: rgba(87,87,246, .05);
 	}
 }

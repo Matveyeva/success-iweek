@@ -1,0 +1,142 @@
+.visitor-page-body
+	.visitor-page-sidebar
+		.visitor-page-sidebar-menu.cab-menu
+			a(href="visitor-page.html") Профиль
+			//===button Посещения
+			a(href="visitor-page2.html").active Посещения
+			
+	.visitor-page-content
+		.visitor-page-content__head
+			a(href="visitor-page.html").text-icon.flex-box.flex-y-center
+				.icon-btn.arrow-left
+				.text-16 К списку пациентов
+		.visitor-page-content__main
+			.visitor-page-body
+				.container-large
+					.visitor-page-table
+						.visitor-page-table-row.visitor-page-table-head
+							.table-filter-flex
+								p Дата и время
+								.customDrop.customDrop--center
+									.customDrop__btn
+										.icon-filter
+									.customDrop__list
+										.mydatepicker
+											input.form-input(type="text" class="datepicker" value="Выберите дату" )
+							
+							.table-filter-flex
+								p Врач
+								.customDrop.customDrop--center.customDrop--slim
+									.customDrop__btn
+										.icon-filter
+									.customDrop__list
+										.customDrop__list-item 
+											p Иванова Алла Ивановна
+										.customDrop__list-item 
+											p Зинченко А.И.
+										.customDrop__list-item 
+											p Симонов Александр Юрьевич
+										.customDrop__list-item 
+											p Чигирин Анатолий Валентинович
+										.customDrop__list-item 
+											p Иволгина Алла Петровна
+							.table-filter-flex
+								p Специальность
+								.customDrop.customDrop--center.customDrop--slim
+									.customDrop__btn
+										.icon-filter
+									.customDrop__list
+										.customDrop__list-item 
+											p Стоматолог
+										.customDrop__list-item 
+											p Хирург
+										.customDrop__list-item 
+											p Дерматолог
+										.customDrop__list-item 
+											p Терапевт
+										.customDrop__list-item 
+											p Травматололг
+							.table-filter-flex
+								p Стоимость
+								
+							.table-filter-flex
+								p Статус
+								.customDrop.customDrop--center.customDrop--slim
+									.customDrop__btn
+										.icon-filter
+									.customDrop__list
+										.customDrop__list-item 
+											p.text-orange Не подтвежден
+										.customDrop__list-item 
+											p.text-primary Подтвержден
+										.customDrop__list-item 
+											p.text-green Начат визит 
+										.customDrop__list-item 
+											p.text-gray Выполнен
+										.customDrop__list-item 
+											p.text-red Неявка
+										.customDrop__list-item 
+											p.text-red Отмена
+					
+						.visitor-page-table-body
+							a(href="#!" frame-btn="visit-info").visitor-page-table-row
+								p 10.01.2021
+								p Алексеева Ангелина Андреевна
+								p хирург
+								p 0 р
+								p
+									span.label-light.label--gray Неявка
+							
+							a(href="#!" frame-btn="visit-info").visitor-page-table-row
+								p 15.03.2021
+								p Светина Анна Ивановна
+								p стоматолог
+								p 3500 р 
+								p
+									span.label-light.label--gray Выполнен
+							
+							a(href="#!" frame-btn="visit-info").visitor-page-table-row
+								p 17.06.2022
+								p Чигирин Анатолий Валентинович
+								p травматолог
+								p 0 р
+								p
+									span.label-light.label--accent Неявка
+							
+							a(href="#!" frame-btn="visit-info").visitor-page-table-row
+								p 08.08.2022
+								p Иволгин Анатолий Иванович
+								p Дерматолог
+								p 1200 р
+								p
+									span.label-light.label--gray Выполнен
+							a(href="#!" frame-btn="visit-info").visitor-page-table-row
+								p 23.09.2022
+								p Алексеева Ангелина Андреевна
+								p хирург
+								p 1100 р
+								p
+									span.label-light.label--gray Выполнен
+							
+							a(href="#!" frame-btn="visit-info").visitor-page-table-row
+								p 01.10.2022
+								p Алексеева Ангелина Андреевна
+								p хирург
+								p 1100 р
+								p
+									span.label-light.label--gray Выполнен
+							a(href="#!" frame-btn="visit-info").visitor-page-table-row
+								p 18.11.2022
+								p Иволгин Анатолий Иванович
+								p Дерматолог
+								p 0 р
+								p
+									span.label-light.label--accent Неявка
+							
+							a(href="#!" frame-btn="visit-info").visitor-page-table-row
+								p 26..11.2022
+								p Алексеева Ангелина Андреевна
+								p хирург
+								p 0 р
+								p
+									span.label-light.label--accent Неявка

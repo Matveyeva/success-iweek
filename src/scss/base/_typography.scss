@@ -98,17 +98,21 @@ font-weight: 700;
 .text-white{
 	color: #fff!important;
 }
+
 .text-red{
 	color: $coral!important;
 }
 .text-orange{
-	color: $orange;
+	color: $orange!important;;
 }
 .text-gray{
-	color: $gray;
+	color: $gray!important;;
 }
 .text-gray3{
-	color: $gray3;
+	color: $gray3!important;;
+}
+.text-green{
+	color: $green!important;;
 }
 .text-primary,
 .text-indigo{
