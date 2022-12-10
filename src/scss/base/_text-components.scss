@@ -27,10 +27,14 @@
 }
 .text-icon>*+*{margin-left: 8px;}
 .text-icon.text-phone{
+	transition: .3s;
 	&::after{background-image: url('../img/call.svg');
 	}
 	padding-left: 28px;
 	white-space: nowrap;
+	&:hover{
+		color: #CACAFF!important;
+	}
 }
 
 .text-phone.text-white{
