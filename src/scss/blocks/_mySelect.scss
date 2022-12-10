@@ -30,8 +30,12 @@
 }
 .mySelect-drop{
 	display: flex;
-	padding-left: 16px;
-	padding-right: 16px;
+	// padding-left: 16px;
+	// padding-right: 16px;
+	&>*{
+		padding-left: 16px;
+		padding-right: 16px;
+	}
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;
 	        flex-direction: column;

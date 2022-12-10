@@ -70,7 +70,10 @@
 	}
 }
 input.input-notvalid{
-	border-color: red;
+	border-color: $red;
+	&::placeholder{
+		color: $red;
+	}
 }
 label {
 	cursor: pointer;
@@ -284,7 +287,7 @@ sup.text-red{
 		line-height: 36px;
 		white-space: nowrap;
 		display: inline-block;
-		
+		height: 38px;
 	}
 	.filter-toggle-item  +.filter-toggle-item {
 		border-left:1px solid #E0E0E0;
