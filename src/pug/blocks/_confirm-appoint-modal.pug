@@ -1,0 +1,25 @@
+
+//================== модальное окно Подтверждение записи ==============
+.modal-frame-wrapper.appoint-modal.modal-frame-center(frame-modal="confirm-appoint-modal")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-32 Подтверждение записи
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			form.confirm-appoint-form
+				.hidden-input-wrapper
+					.flex-vertical-center
+						input(type="text" readonly value="+7 000 000 0000").string-input
+						button(type="button" data-role="show-hidden-input").text-indigo.text-18 Изменить номер
+					.form-row-hidden(data-role="hidden-input")
+						.form-box
+							input.form-input(type="text" placeholder="Введите номер телефона")
+				.form-box.mt-16
+					label.text-16.text-gray3 Код подтверждения
+					input(type="text" ).form-input
+				.form-btn.mt-24
+					button.btn.btn--gradient(frame-btn="done-appoint") Отправить
+				.get-code.mt-24
+					.text-12.text-gray3 Отправить повторно можно через 59 секунд...
+					.text-12.text-indigo Выслать новый код

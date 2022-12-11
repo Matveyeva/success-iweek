@@ -79,3 +79,19 @@
 		text-align: center;
 	}
 }
+.appoint-modal .appoint-data {
+	padding-bottom: 32px;
+	border-bottom: 1px solid $wlgray;
+	
+}
+.modal-frame__body.modal-frame__body--short{
+	padding-top: 32px;
+	.appoint-form__head{
+		padding-bottom: 0;
+	}
+	.doc-card__foto{
+		width: 110px;
+		height: 110px;
+	}
+	
+}

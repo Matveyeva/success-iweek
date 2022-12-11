@@ -1,0 +1,37 @@
+//================== mobile filters ==============
+.modal-frame-wrapper.appoint-modal.modal-frame-center(frame-modal="done-appoint")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-32 Вы успешно записаны
+			.icon-close(frame-close)
+			
+		.appoint-data
+			.text-18.text-gray.split-text.split-text--large
+				p 29 октября, 15:30
+				p Аллерголог
+	
+		.modal-frame__body.modal-frame__body--short
+			.appoint-form
+				.appoint-form__head.flex-box
+					.appoint-form__head-left
+						.doc-card__foto
+							img(src="./img/doctor.png", width="140" height="110" alt="alt")
+						.rating-group.block-768
+							+starRating('4.4')
+						
+					.appoint-form__head-right
+						+card-header('','Фролова Юлия Игоревна', 'Стаж 17 лет')
+						.appoint-form__info-list
+							.appoint-form__info-item.text-14.flex-box
+								span.text-gray3 Стоимость
+								span 3 000
+
+							.appoint-form__info-item.text-14.flex-box
+								span.text-gray3 Адрес
+								span ул. Мелашвили 4
+
+							.appoint-form__info-item.text-14.flex-box
+								span.text-gray3 Телефон
+								span +995 551 90 01 17
+						.rating-group.hidden-768
+							+starRating('4.4')

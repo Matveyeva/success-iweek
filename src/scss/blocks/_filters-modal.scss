@@ -25,7 +25,7 @@
 	display: block;
 }
 .modal-frame{
-	padding: 18px 15px 25px;
+	padding: 32px;
 	background: #F8FBFF;
 	border-radius: 8px;
 	overflow: hidden;
@@ -43,6 +43,10 @@
 	@media(max-width:574px){
 		border-radius: 0;
 	}
+}
+.filters-modal .modal-frame{
+	padding: 18px 15px 25px;
+
 }
 .filters-modal__group{
 	padding-top: 20px;

@@ -1,5 +1,17 @@
 
 document.addEventListener("DOMContentLoaded", function (){
+	/*========== для блоков типа Изменить телефон в мод окне ===========*/
+	const hiddenInputWraper = document.querySelectorAll('.hidden-input-wrapper');
+	if(hiddenInputWraper.length > 0){
+		for(let wrap of hiddenInputWraper){
+			const wrapBtn = wrap.querySelector('[data-role="show-hidden-input"]');
+			const wrapInput = wrap.querySelector('[data-role="hidden-input"]');
+			wrapBtn.addEventListener('click', function(e){
+				e.preventDefault();
+				wrapInput.classList.add('visible')
+			});
+		}
+	}
 	/*=============== клик по гамбургеру ===============*/
 	const toggleMenu = document.querySelector('#toggle-menu');
 	const mobMenu = document.querySelector('#header-mobile-menu');

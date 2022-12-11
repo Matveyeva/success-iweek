@@ -25,3 +25,9 @@
 	border-top:1px solid #E7E7E7;
 	}
 }
+.split-text.split-text--large{
+	&>*+*{
+		padding-left: 32px;
+		&:after{background-color: $gray3;left: 14px;}
+	}
+}

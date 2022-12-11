@@ -10,7 +10,7 @@
 	font-weight: 500;
 	width: 100%;
 	display: block;
-	cursor:pointer;
+	// cursor:pointer;
 	&:focus{
 		border: 1px solid #BDBDBD;
 	}
@@ -58,6 +58,20 @@
 		@media (max-width: 767px) {
 			font-size: 12px;
 		}
+	}
+}
+.string-input{
+	font-size: 18px;
+	line-height: 30px;
+	color: $gray;
+}
+.form-row-hidden{
+	height: 0;
+	overflow: hidden;
+	transition: .3s;
+	&.visible{
+		height: 65px;
+		padding-top: 16px;
 	}
 }
 .error-text{

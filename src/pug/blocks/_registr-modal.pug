@@ -1,0 +1,23 @@
+
+//================== модальное окно Подтверждение записи ==============
+.modal-frame-wrapper.modal-frame-center(frame-modal="registr-modal")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-32 Регистрация
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			form.login-form
+				.form-box
+					label.text-16.text-gray3 Введите логин
+					input.form-input(type="text")
+				.form-box.mt-16
+					label.text-16.text-gray3 Введите пароль
+					input(type="text" ).form-input
+				.form-box.mt-16
+					label.text-16.text-gray3 Повторить пароль
+					input(type="text" ).form-input
+				
+				.form-btn.mt-24
+					button.btn.btn--gradient.w-100 Регистрация
+				
