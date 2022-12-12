@@ -1,5 +1,4 @@
 mixin table-row1
-	//====== ячейки, для которых нет записи имеют дополнительный класс - "forbid-appoint", который делает их серого цвета.  Ячейки, в которых уже есть запись дополнительные классы в зависимости от состояния записи 'state-confirm',  'state-done', 'state-notconfirm'  Модальное окно при кике по ячейке открывается за счет атрибута frame-btn Значние атрибуда открывает модальное окно, у которого такое же значение атрибута  frame-modal.  frame-btn="appointment-modal" откроет модальное окно frame-ьщвфд="appointment-modal" ===============================================
 	tr.table-row
 		td.schedule-table-cell(frame-btn="appointment-modal")
 		td.schedule-table-cell.state-started(rowspan="2" frame-btn="visit-info")
