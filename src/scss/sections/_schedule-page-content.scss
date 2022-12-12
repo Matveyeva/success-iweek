@@ -220,3 +220,17 @@
     background-color: rgb(255, 242, 217);
 	border-left:4px solid rgb(239, 147, 62);
 }
+/*ячейка на которую нельзя записаться*/
+.schedule-table-cell.forbid-appoint{
+	background: lightgray;
+	border-color: lightgray;;
+	cursor:default;
+	&:after{
+		display: none;
+		
+	}
+	&:hover{
+		background: lightgray;
+	border-color: lightgray;;
+	}
+}

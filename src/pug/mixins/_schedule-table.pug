@@ -1,4 +1,5 @@
 mixin table-row1
+	//====== ячейки, для которых нет записи имеют дополнительный класс - "forbid-appoint", который делает их серого цвета.  Ячейки, в которых уже есть запись дополнительные классы в зависимости от состояния записи 'state-confirm',  'state-done', 'state-notconfirm'  Модальное окно при кике по ячейке открывается за счет атрибута frame-btn Значние атрибуда открывает модальное окно, у которого такое же значение атрибута  frame-modal.  frame-btn="appointment-modal" откроет модальное окно frame-ьщвфд="appointment-modal" ===============================================
 	tr.table-row
 		td.schedule-table-cell(frame-btn="appointment-modal")
 		td.schedule-table-cell.state-started(rowspan="2" frame-btn="visit-info")
@@ -10,73 +11,73 @@ mixin table-row1
 		td.schedule-table-cell(frame-btn="appointment-modal")
 		td.schedule-table-cell(frame-btn="appointment-modal")
 		td.schedule-table-cell(frame-btn="appointment-modal")
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
+		td.schedule-table-cell.forbid-appoint
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
 
 mixin table-row2
 	tr.table-row
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
 		td.schedule-table-cell.state-confirm(frame-btn="visit-info")
 			p Иванов А.А.
 			span 8:00-9:30
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
+		td.schedule-table-cell.forbid-appoint
+		td.schedule-table-cell.forbid-appoint
+		td.schedule-table-cell.forbid-appoint
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
 		//- td.schedule-table-cell
 mixin table-row3
 	tr.table-row
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
 		td.schedule-table-cell.state-done(frame-btn="visit-info")
 			p Иванов А.А.
 			span 13:00-13:30
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
+		td.schedule-table-cell.forbid-appoint
+		td.schedule-table-cell.forbid-appoint
+		td.schedule-table-cell.forbid-appoint
+		td.schedule-table-cell(frame-btn="appointment-modal")
 mixin table-row4
 	tr.table-row
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell.forbid-appoint
+		td.schedule-table-cell.forbid-appoint
+		td.schedule-table-cell(frame-btn="appointment-modal")
 		td.schedule-table-cell.state-notconfirm(frame-btn="visit-info")
 			p Иванов А.А.
 			span 15:30-16:00
-		td.schedule-table-cell
-		td.schedule-table-cell
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
 mixin table-row
 	tr.table-row
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
-		td.schedule-table-cell
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
+		td.schedule-table-cell(frame-btn="appointment-modal")
 
 mixin nameCell
 	.cell
