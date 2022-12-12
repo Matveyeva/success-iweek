@@ -56,9 +56,12 @@
 		height: 12px;
 		border-radius: 50%;
 		opacity: 1;
-		background-color: #5757F6;
+		background-color: $indigo;
 		&-active{
 			background-color: #fff;
+		}
+		&:hover{
+			background: $lindigo;
 		}			
 	}		
 }

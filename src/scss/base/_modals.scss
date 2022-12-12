@@ -53,6 +53,9 @@
 .modal-frame-wrapper[frame-modal].w-700 .modal-frame{
 	max-width: 700px;
 }
+.modal-frame-wrapper[frame-modal].w-1000 .modal-frame{
+	max-width: 1000px;
+}
 [frame-btn]{cursor:pointer}
 .modal-table{
 	table{

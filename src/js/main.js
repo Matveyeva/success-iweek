@@ -1,5 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function (){
+	
 	/*========== для блоков типа Изменить телефон в мод окне ===========*/
 	const hiddenInputWraper = document.querySelectorAll('.hidden-input-wrapper');
 	if(hiddenInputWraper.length > 0){
@@ -215,17 +216,30 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	/*=============== extrim cards swiper slider ===============*/
    
-	let dateSlider = new Swiper(".swiper-date", {
+	// let dateSlider = new Swiper(".swiper-date", {
 
-		slidesPerView: 'auto',
-		spaceBetween: 0,
-		navigation: {
-          nextEl: ".arrow-right.icon-btn",
-          prevEl: ".arrow-left.icon-btn",
-        }
+	// 	slidesPerView: 'auto',
+	// 	spaceBetween: 0,
+	// 	navigation: {
+    //       nextEl: ".arrow-right.icon-btn",
+    //       prevEl: ".arrow-left.icon-btn",
+    //     }
+
+	// });
+	/* отзывы в модальном окне */
+	let reviewSlider = new Swiper(".review-slider", {
+
+		slidesPerView: 1.7,
+		spaceBetween: 30,
+		pagination: {
+			el: ".review-slider-pagination",
+			clickable: true,
+		},
+		speed:800,
+		loop: true,	
 
 	});
-
+	/*секция Эстренный вызов нв Главной */
 	let docSlider = new Swiper(".emergency-slider", {
 	slidesPerView: 1.05,
 	spaceBetween: 8,
@@ -468,4 +482,6 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	});
 	}
+
+
 });

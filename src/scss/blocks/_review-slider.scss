@@ -1,0 +1,18 @@
+.review-slider .review-slider-pagination{
+	display: flex;
+	justify-content: center;
+	.swiper-pagination-bullet{
+		background: $indigo;
+		border:2px solid $indigo;
+		&-active{
+			background: #fff;
+		}
+		&-hover{
+			background-color: $lindigo;
+		border:2px solid $lindigo;
+		}
+	}
+}
+.owl-carousel {
+
+}
