@@ -17,7 +17,7 @@ mixin custom-select-icon(placeText, items, addClass,  iconName, labelText, requi
 			if  iconName
 				.form-box__icon
 					svg(class=" "+ iconName)
-						use(xlink:href="./img/svg-sprite.svg#"+ iconName +"")
+						use(href="./img/svg-sprite.svg#"+ iconName +"")
 			
 			input(class="selectValue form-input" type='text' readonly value=''+ placeText)
 		.mySelect-drop.scroll-vertical
@@ -34,7 +34,7 @@ mixin custom-select-icon2(placeText, items, addClass,  iconName, labelText, requ
 			if  iconName
 				.form-box__icon
 					svg(class=" "+ iconName)
-						use(xlink:href="./img/svg-sprite.svg#"+ iconName +"")
+						use(href="./img/svg-sprite.svg#"+ iconName +"")
 			
 			input(class="selectValue form-input" type='text' readonly value=''+ placeText)
 		.mySelect-drop.scroll-vertical
@@ -49,7 +49,7 @@ mixin custom-select-checkbox(placeText, items, addClass,  iconName, labelText)
 			if  iconName
 				.form-box__icon
 					svg(class=" "+ iconName)
-						use(xlink:href="./img/svg-sprite.svg#"+ iconName +"")
+						use(href="./img/svg-sprite.svg#"+ iconName +"")
 			
 			input(class="selectValue form-input" type='text' readonly value=''+ placeText)
 		.mySelect-drop.scroll-vertical

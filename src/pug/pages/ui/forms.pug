@@ -25,9 +25,9 @@ html(lang="ru")
 				.container-dashboard__content
 					ul.ui-components
 						li
-							+custom-select-checkbox('Пациент',['Иванов', 'Петров', 'Сидоров'], 'mySelect--absolute' )
+							+custom-select-checkbox('Пациент',['Беридзе Н.', 'Чикрадзе Э.', 'Кипиани Д.'], 'mySelect--absolute' )
 							pre.
-								+custom-select-checkbox('Пациент',['Иванов', 'Петров', 'Сидоров'], 'mySelect--absolute' )
+								+custom-select-checkbox('Пациент',['Беридзе Н.', 'Чикрадзе Э.', 'Кипиани Д.'], 'mySelect--absolute' )
 						
 						li
 							.form-box.form-box--icon-right
@@ -35,7 +35,7 @@ html(lang="ru")
 								.form-box-input
 									.form-box__icon
 										svg.svg-location
-											use(xlink:href="../img/svg-sprite.svg#svg-location")
+											use(href="../img/svg-sprite.svg#svg-location")
 									input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
 								pre.
 									.form-box.form-box--icon-right
@@ -43,7 +43,7 @@ html(lang="ru")
 										.form-box-input
 											.form-box__icon
 												svg.svg-location
-													use(xlink:href="./img/svg-sprite.svg#svg-location")
+													use(href="./img/svg-sprite.svg#svg-location")
 											input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
 						li
 							.form-box.form-box--icon-left
@@ -51,7 +51,7 @@ html(lang="ru")
 								.form-box-input
 									.form-box__icon
 										svg.svg-search
-											use(xlink:href="../img/svg-sprite.svg#svg-search")
+											use(href="../img/svg-sprite.svg#svg-search")
 									input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
 								pre.
 									.form-box.form-box--icon-left
@@ -59,7 +59,7 @@ html(lang="ru")
 										.form-box-input
 											.form-box__icon
 												svg.svg-search
-													use(xlink:href="./img/svg-sprite.svg#svg-search")
+													use(href="./img/svg-sprite.svg#svg-search")
 											input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
 						li
 							.form-box
@@ -104,7 +104,7 @@ html(lang="ru")
 										+custom-radio('currency', 'RUB','RUB', 'checked')(class="role-currency")
 									.mySelect-drop__row
 										+custom-radio('country', 'GE', 'Georgian')(class="role-country")
-										+custom-radio('currency', 'GEL','GEL')(class="role-currency")
+										+custom-radio('currency', '&#8382;','&#8382;')(class="role-currency")
 										
 						li
 							h3 Чекбоксы
@@ -126,7 +126,7 @@ html(lang="ru")
 							label.radiobutton-label.flex-box
 								input(type='radio' name='currency' value='gel' class='real-radio')
 								span.custom-radio
-								span.custom-radio__text GEL
+								span.custom-radio__text &#8382;
 							label.radiobutton-label.flex-box
 								input(type='radio' name='currency' value='rub' class='real-radio')
 								span.custom-radio
@@ -139,7 +139,7 @@ html(lang="ru")
 								label.flex-box
 									input(type='radio' name='currency' value='gel' class='real-radio')
 									span.custom-radio
-									span.custom-radio__text GEL
+									span.custom-radio__text &#8382;
 								label.flex-box
 									input(type='radio' name='currency' value='rub' class='real-radio')
 									span.custom-radio

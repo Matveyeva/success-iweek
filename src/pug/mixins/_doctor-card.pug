@@ -15,7 +15,7 @@ mixin card-header-personal-page(textSup, titile, textSub)
 			.text-16 Не указана
 		.text-row.mb-8
 			.text-14.text-gray3 Телефон
-			.text-16 (922)123-45-67
+			.text-16 (995)123-45-67
 		.card-header__list
 			.text-14.text-gray3 !{textSub}
 			.text-14.text-gray3 Высшая категория
@@ -50,12 +50,12 @@ mixin doctor-card(docName,imgSrc, action, selectArr)
 					label.check-label.flex-center.flex-box
 						input(type="checkbox")
 						svg.svg-heart(width="16" height="16" )
-							use(xlink:href="./img/svg-sprite.svg#svg-heart")
+							use(href="./img/svg-sprite.svg#svg-heart")
 					img(src="./img/"+ imgSrc +".png", width="140" height="140" alt="alt")
 					
 				//==== заголовок карточки  на моб версии ======
 				.doc-card__title-mobile(class="hidden-fl-992")
-					+card-header('ИП Вердашев А.И.', docName, 'Стаж 17 лет')
+					+card-header('ИП Мушкудиани Т.', docName, 'Стаж 17 лет')
 					.rating-group.hidden-992.flex-vertical-center
 						+starRating('4.4')
 						object
@@ -71,7 +71,7 @@ mixin doctor-card(docName,imgSrc, action, selectArr)
 			.doc-card__info
 				//====== card doc info =======
 				.doc-card__center
-					+card-header('ИП Вердашев А.И.', docName, 'Стаж 17 лет')(class="block-992")
+					+card-header('Мушкудиани Т.', docName, 'Стаж 17 лет')(class="block-992")
 					
 					.doc-card-cat
 						.label-light-wrapper.gap-8.flex-wrapper
@@ -81,13 +81,13 @@ mixin doctor-card(docName,imgSrc, action, selectArr)
 					
 					.card-serv-wrapper.flex-box
 						+card-price('Консультация', 'Бесплатно')
-						+card-price('Диагностика', '3 000 руб.')
-						+card-price('Хирургия', 'от 10 000 руб.')
+						+card-price('Диагностика', '100 &#8382;')
+						+card-price('Хирургия', 'от 300 &#8382;')
 						
 						.card-serv-item
 							.text-icon.weight-400.text-extrim
 								.text-red.text-14 Экстренная ситуация
-							.text-18 от 5 700 руб.
+							.text-18 от 250 &#8382;
 					
 					if action
 						//======== акция =======
@@ -95,13 +95,14 @@ mixin doctor-card(docName,imgSrc, action, selectArr)
 							.text-icon.flex-box.flex-y-center.text-indigo
 								.text-icon__img
 									svg.svg-flag(width="20" height="20" )
-										use(xlink:href="./img/svg-sprite.svg#svg-flag")
+										use(href="./img/svg-sprite.svg#svg-flag")
 								.text-14 Акции
 								
 							.text-18 Лечение 8 зуба — бесплатно!
 			
 				//====== card select time =======
 				object
+					.text-14.text-gray3.mb-8 Выберите время приема для записи онлайн
 					.doc-card__form
 						if selectArr
 							+mySelect(selectArr)
@@ -162,12 +163,12 @@ mixin doctor-card-short(docName,imgSrc)
 					label.check-label.flex-center.flex-box
 						input(type="checkbox")
 						svg.svg-heart(width="16" height="16" )
-							use(xlink:href="./img/svg-sprite.svg#svg-heart")
+							use(href="./img/svg-sprite.svg#svg-heart")
 					img(src="./img/"+ imgSrc +".png", width="140" height="140" alt="alt")
 					
 				//==== заголовок карточки  на моб версии ======
 				.doc-card__title-mobile(class="hidden-fl-992")
-					+card-header('ИП Вердашев А.И.', docName, 'Стаж 17 лет')
+					+card-header('Мушкудиани Т.', docName, 'Стаж 17 лет')
 					.rating-group.hidden-992.flex-vertical-center
 						+starRating('4.4')
 						object
@@ -183,7 +184,7 @@ mixin doctor-card-short(docName,imgSrc)
 			.doc-card__info
 				//====== card doc info =======
 				.doc-card__center
-					+card-header('ИП Вердашев А.И.', docName, 'Стаж 17 лет')(class="block-992")
+					+card-header('Мушкудиани Т.', docName, 'Стаж 17 лет')(class="block-992")
 					
 					.doc-card-cat
 						.label-light-wrapper.gap-8.flex-wrapper
@@ -193,8 +194,8 @@ mixin doctor-card-short(docName,imgSrc)
 					
 					.card-serv-wrapper.flex-box
 						+card-price('Консультация', 'Бесплатно')
-						+card-price('Диагностика', '3 000 руб.')
-						+card-price('Хирургия', 'от 10 000 руб.')
+						+card-price('Диагностика', '100 &#8382;')
+						+card-price('Хирургия', 'от 300 &#8382;')
 			.doc-card__footer
 				.doc-card__contacts.flex-vertical-center
 					object
@@ -219,7 +220,7 @@ mixin doctor-card-select(docName,imgSrc, action, selectArr)
 					label.check-label.flex-center.flex-box
 						input(type="checkbox")
 						svg.svg-heart(width="16" height="16" )
-							use(xlink:href="./img/svg-sprite.svg#svg-heart")
+							use(href="./img/svg-sprite.svg#svg-heart")
 					img(src="./img/"+ imgSrc +".png", width="140" height="140" alt="alt")
 					
 				//==== заголовок карточки  на моб версии ======
@@ -230,7 +231,7 @@ mixin doctor-card-select(docName,imgSrc, action, selectArr)
 							//========= select для моб версии ===========
 							.card-header__select
 								+mySelect(selectArr)
-						.text-24.mb-8 Константинов Константин Констатинопольский
+						.text-24.mb-8 Антадзе Тамар
 						.card-header__list
 							.text-14.text-gray3 Стаж 17 лет
 					
@@ -250,7 +251,7 @@ mixin doctor-card-select(docName,imgSrc, action, selectArr)
 			.doc-card__info
 				//====== card doc info =======
 				.doc-card__center
-					+card-header('Клиника «Dentistry»','Константинов Константин Констатинопольский', 'Стаж 17 лет')(class="block-992")
+					+card-header('Клиника «Dentistry»','Антадзе Тамар', 'Стаж 17 лет')(class="block-992")
 					
 					.doc-card-cat
 						.label-light-wrapper.gap-8.flex-wrapper
@@ -260,13 +261,13 @@ mixin doctor-card-select(docName,imgSrc, action, selectArr)
 					
 					.card-serv-wrapper.flex-box
 						+card-price('Консультация', 'Бесплатно')
-						+card-price('Диагностика', '3 000 руб.')
-						+card-price('Хирургия', 'от 10 000 руб.')
+						+card-price('Диагностика', '100 &#8382;')
+						+card-price('Хирургия', 'от 300 &#8382;')
 						
 						.card-serv-item
 							.text-icon.weight-400.text-extrim
 								.text-red.text-14 Экстренная ситуация
-							.text-18 от 5 700 руб.
+							.text-18 от 250 &#8382;
 					
 					if action
 						//======== акция =======
@@ -274,7 +275,7 @@ mixin doctor-card-select(docName,imgSrc, action, selectArr)
 							.text-icon.flex-box.flex-y-center.text-indigo
 								.text-icon__img
 									svg.svg-flag(width="20" height="20" )
-										use(xlink:href="./img/svg-sprite.svg#svg-flag")
+										use(href="./img/svg-sprite.svg#svg-flag")
 								.text-14 Акции
 								
 							.text-18 Лечение 8 зуба — бесплатно!
@@ -282,6 +283,7 @@ mixin doctor-card-select(docName,imgSrc, action, selectArr)
 				//====== card select time =======
 				//====== card select time =======
 				object
+					.text-14.text-gray3.mb-8 Выберите время приема для записи онлайн
 					.doc-card__form
 						if selectArr
 							+mySelect(selectArr)
