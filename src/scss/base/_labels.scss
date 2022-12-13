@@ -60,6 +60,22 @@
 		
 	}
 }
+.label-light.label-light--44{
+	height: 44px;
+	line-height: 44px;
+	font-size: 18px;
+	@media (max-width: 1199px) {
+		// height: 40px;
+		// line-height: 38px;
+		// font-size: 14px;
+		// padding-left: 26px;
+		// padding-right: 26px;
+		
+	}
+}
+button.label-light:hover{
+	color: $indigo;
+}
 .label-light--large{
 	padding-left: 32px;
 	padding-right: 32px;

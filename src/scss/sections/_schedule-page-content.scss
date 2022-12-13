@@ -200,23 +200,23 @@
 	color: rgb(51, 181, 118)!important;
     background-color: rgb(224, 246, 238)!important;
 	border-left:4px solid #1f815e;
-	border-radius: 4px 0 0 4px;
+	border-radius: 0;
 }
 .schedule-table-cell.state-confirm, *[data-state="state-confirm"]{
 	background-color: rgb(229, 242, 249) !important;
     color: rgb(0, 112, 192) !important;
 	border-left:4px solid rgb(0, 112, 192);
-	border-radius: 4px 0 0 4px;
+	border-radius: 0;
 }
 .schedule-table-cell.state-done, *[data-state="state-done"]{
 	color: rgb(117, 117, 117) !important;
     background-color: rgb(247, 247, 247) !important;
 	border-left:4px solid rgb(117, 117, 117);
-	border-radius: 4px 0 0 4px;
+	border-radius: 0;
 }
 .schedule-table-cell.state-notconfirm, *[data-state="state-notconfirm"],*[data-state="state-cancel"]{
 	color: rgb(239, 147, 62);
-  	 border-radius: 4px 0 0 4px;
+  	 border-radius: 0;
     background-color: rgb(255, 242, 217);
 	border-left:4px solid rgb(239, 147, 62);
 }

@@ -43,7 +43,7 @@ main{
 	overflow: hidden;
 	overflow-y: auto;
 	scrollbar-color: #E0E0E0 $orange;
-	scrollbar-width: 5px;
+	scrollbar-width: thin;
 	&::-webkit-scrollbar{
 		width: 5px;
 	}
@@ -60,13 +60,13 @@ main{
 	overflow: hidden;
 	overflow-x: auto;
 	scrollbar-color: #E0E0E0 $orange;
-	scrollbar-width: 5px;
+	scrollbar-width: thin;
 	&::-webkit-scrollbar{
 		width: 15px;
-		height:15px;
+		height:7px;
 	}
 	&::-webkit-scrollbar-thumb{
-		height: 15px;
+		height: 7px;
 		background-color: $orange;
 		border-radius: 5px;
 	}

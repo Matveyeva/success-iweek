@@ -8,15 +8,18 @@
 		
 	form.edit-profile-content__form
 		.profile-form-body.scroll-vertical
-			.edit-profile-absolute
-				.flex-vertical-center.gap-32
-					button.btn.btn-44(frame-btn="exlude-modal") Аллергия
-					button.btn.btn-44(frame-btn="exlude-modal-2") Непереносимость
+			//- .edit-profile-absolute
+			//- 	.flex-vertical-center.gap-32
+			//- 		button.btn.btn-44(frame-btn="exlude-modal") Аллергия
+			//- 		button.btn.btn-44(frame-btn="exlude-modal-2") Непереносимость
 			.form-fieldset
-				.grid-form-fields.gap-32
+				.grid-form-fields.gap-32.align-end
 					.form-box
 						+custom-select-icon2('Взрослый', ['Недееспособный гражданин', 'Ребенок' ], 'mySelect--absolute','', 'Категория пациента', 'true')
 				
+					
+					button.label-light.label-light--44.label-light--large(frame-btn="exlude-modal") Аллергия
+					button.label-light.label-light--44.label-light--large(frame-btn="exlude-modal-2") Непереносимость
 					.d-none.flex-vertical-center.gap-32
 						.form-box
 							label.text-16 Карта 025/У
@@ -24,9 +27,11 @@
 						.form-box
 							label.text-16  Карта 043/У
 							input(type="text" ).form-input
+						
+						
 					
 			.form-fieldset
-				.title-18 Данные опекуна
+				
 				.grid-form-fields.gap-32
 					.form-box
 						label.text-16 Фамилия
@@ -64,9 +69,9 @@
 			.form-fieldset
 				.title-18 Контакты
 				.grid-form-fields.gap-32
-					.form-box
-						label.text-16 Электронный адрес
-						input(type="text" placeholder="mail@mail.ru").form-input
+					//- .form-box
+					//- 	label.text-16 Электронный адрес
+					//- 	input(type="text" placeholder="mail@mail.ru").form-input
 					
 					.form-box
 						label.text-16 Телефон
@@ -77,22 +82,22 @@
 						input(type="text").form-input
 
 			.form-fieldset
-				.title-18 Адрес регистрации
+				.title-18 Адрес
 				.grid-form-fields.gap-32
-					.form-box
-						label.text-16 Субъект РФ
-						input(type="text" placeholder="Московская область").form-input
+					//- .form-box
+					//- 	label.text-16 Субъект РФ
+					//- 	input(type="text" placeholder="Московская область").form-input
 					
-					.form-box
-						label.text-16 Район
-						input(type="text" placeholder="Московский").form-input
+					//- .form-box
+					//- 	label.text-16 Район
+					//- 	input(type="text" placeholder="Московский").form-input
 					
 					.form-box
 						label.text-16 Город
-						input(type="text" placeholder="Москва").form-input
-					.form-box
-						label.text-16 Населенный пункт
-						input(type="text" placeholder="Москва").form-input
+						input(type="text" placeholder="Батуми").form-input
+					//- .form-box
+					//- 	label.text-16 Населенный пункт
+					//- 	input(type="text" placeholder="Москва").form-input
 					.form-box
 						label.text-16 Улица
 						input(type="text" placeholder="Улица").form-input
@@ -110,5 +115,5 @@
 					textarea(type="text" placeholder="Комментарий о пациенте")
 		
 		.edit-profile-footer.flex-vertical-center
-			a.btn.btn-44.btn--orange(href="visitor-edit-page.html") Вернуться
-			button.btn.btn-44 Применить
+			a.btn.btn-44.btn--orange(href="visitor-edit-page.html") Назад
+			button.btn.btn-44 Сохранить
