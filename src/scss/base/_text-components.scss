@@ -172,3 +172,12 @@
 .text-column{
 	display: block;
 }
+.border-wrapper{
+	padding: 32px;
+	border: 1px solid #E0E0E0;
+	border-radius: 16px;
+
+	@media(max-width:1023px){
+		padding: 20px;
+	}
+}
