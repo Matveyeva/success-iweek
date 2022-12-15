@@ -299,16 +299,19 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
 	/* На стр Пациенты закрыть фильтры по клику на выпадашку */
-	const visitorSelectFilters = document.querySelector('#visitor-select-filters');
-	if(visitorSelectFilters){
-		const visitorSelectFiltersItem = visitorSelectFilters.querySelectorAll('.customDrop__list-item');
-			for(let item of visitorSelectFiltersItem){
-			item.addEventListener('click', function(e){
+	const visitorSelectFilters = document.querySelectorAll('.drop-click-close');
+
+	if(visitorSelectFilters.length > 0){
+		for(let item of visitorSelectFilters){
+		const visitorSelectFiltersItem = item.querySelectorAll('.customDrop__list-item');
+			for(let el of visitorSelectFiltersItem){
+			el.addEventListener('click', function(e){
 				e.stopPropagation();
-				visitorSelectFilters.classList.remove('active');
-				console.log('123');
+				item.classList.remove('active');
+				
 			});
 		}
+	}
 	}
 	/*========== Скрыть мобм меню  and customDrop  по клику вне ===========*/
 	window.addEventListener('click', function(e){			

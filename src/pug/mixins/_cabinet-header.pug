@@ -17,4 +17,28 @@ mixin cabHeader(arg)
 						+custom-select-icon('Блюхера, 56', ['Блюхера, 56', 'ИП Вердашев', 'Клиника "Сова"','Гиппократ', 'Зеленое яблоко', 'Добрый доктор' ], 'mySelect--absolute')
 					
 					.help-info ?
-					.cabinet-header__avatar ТЮ
+					.customDrop.customDrop--right.drop-click-close
+						.customDrop__btn.round-icon
+							.icon-notify
+						.customDrop__list
+							.customDrop__list-item
+								label.radiobutton-label.flex-box
+									input(type='radio' name='currency' value='' class='real-radio') 
+									span.custom-radio
+									span.custom-radio__text Включить звук
+							.customDrop__list-item
+								label.radiobutton-label.flex-box
+									input(type='radio' name='currency' value='' class='real-radio') 
+									span.custom-radio
+									span.custom-radio__text Выключить на 5 минут
+							.customDrop__list-item
+								label.radiobutton-label.flex-box
+									input(type='radio' name='currency' value='' class='real-radio') 
+									span.custom-radio
+									span.custom-radio__text Выключить на 15 минут
+							.customDrop__list-item
+								label.radiobutton-label.flex-box
+									input(type='radio' name='currency' value='' class='real-radio') 
+									span.custom-radio
+									span.custom-radio__text Выключить на 30 минут
+					.cabinet-header__avatar ГМ

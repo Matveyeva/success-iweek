@@ -1,5 +1,5 @@
 .employee-page-content__head{
-	margin-bottom: 40px;
+	margin-bottom: 32px;
 }
 .employee-page-card{
 	padding: 16px;
@@ -9,9 +9,9 @@
 		display: flex;
 		justify-content: flex-end;
 	}
-	header{padding-bottom: 40px;}
+	header{padding-bottom: 32px;}
 	header >*+*{
-		margin-top: 40px;
+		margin-top: 24px;
 	}
 }
 .employee-page-schedule{
@@ -37,7 +37,7 @@
 .employee-schedule-calendar__date{
 	.calendar__date-item{
 		height: 120px;
-		border: 1px solid #ccc;
+		border: 1px solid #e1e1e1;
 
 		&.without-date{
 			background-color: #f7f7f7;

@@ -1,0 +1,12 @@
+.empl-schedule-form{
+	display: flex;
+	flex-direction: column;
+}
+.empl-schedule-form[ct-content]{
+	display: none;
+}
+.empl-schedule-form.ct-content--active[ct-content]{display: flex;}
+.empl-schedule-modal{
+	.tabs .filter-toggle-item{width: 150px;}
+	.filter-toggle__block{width:fit-content;}
+}

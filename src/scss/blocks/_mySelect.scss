@@ -1,9 +1,11 @@
 .mySelect{
 	
-	label.text-16{margin-bottom: 8px;display: inline-block}
+	label.text-16{margin-bottom: 8px;display: inline-block;}
 	&-input{
 		position: relative;
+		
 	}
+	.form-input{cursor:pointer;}
 }
 .mySelect-input{position: relative;
 }
