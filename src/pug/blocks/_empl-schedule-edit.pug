@@ -1,0 +1,49 @@
+//================== редактировать личное расписание-календарь сотрудника  ==============
+.modal-frame-wrapper.modal-frame-right.column-modal(frame-modal="empl-schedule-edit")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-24 Новое событие на 02 декабря
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			form.flex-column.gap-32
+				.tabs-wrapper(custom-tabs)
+					.tabs-header
+						.tabs
+							.tab(ct-btn="1")
+								label.filter-toggle-item
+									input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+									span По рейтингу
+							.tab(ct-btn="2")
+						
+								label.filter-toggle-item
+									input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+									span По стоимости
+					
+					.tabs-content
+						.tab-item.ct-content--active(ct-content="1") jjj
+						.tab-item(ct-content="2") 000
+
+				//- .pause-form__head
+				//- 	.text-24 Кирсанова Марина Анлександровна
+				//- 	.text-16.mt-8 Онколог, Детский онколог, Врач-косметолог, Гинеколог, Маммолог
+				
+				//- .pause-form__title.text-bold.mb-16 Время перерыва
+				//- .pause-form__fields.flex-vertical-center.gap-32
+				//- 	.form-item
+				//- 		input.form-input(type="text" placeholder="Начало")
+						
+				//- 	.form-item
+				//- 		input.form-input(type="text" placeholder="Окончание")
+						
+					
+				//- 	.pause-form__switch
+				//- 		label.switch-toggle.flex-box.flex-y-center
+				//- 			input(type='checkbox'  class='toggle-switch')
+				//- 			span.real-switch
+				//- 			span.custom-switch__text Весь день
+				//- .form-textarea
+				//- 	textarea(placeholder="Комментарий")
+				.form-btns.flex-vertical-center.gap-32.mt-auto
+					button.btn.btn--orange(frame-close) Отменить
+					button.btn.btn--primary(type="submit") Добавить
