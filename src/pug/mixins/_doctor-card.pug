@@ -1,6 +1,8 @@
 mixin card-header(textSup, titile, textSub)
 	.card-header&attributes(attributes)
-		.text-14.text-gray !{textSup}
+		.flex-vertical-center.gap-16
+			.text-14.text-gray !{textSup}
+			.text-14 Сертификат №10105000222
 		.text-24.mb-8 !{titile}
 		.card-header__list
 			.text-14.text-gray3 !{textSub}
@@ -8,7 +10,9 @@ mixin card-header(textSup, titile, textSub)
 
 mixin card-header-personal-page(textSup, titile, textSub)
 	.card-header&attributes(attributes)
-		.text-14.text-gray !{textSup}
+		.flex-vertical-center.gap-16
+			.text-14.text-gray !{textSup}
+			.text-14 Сертификат №10105000222
 		.text-24.mb-8 !{titile}
 		.text-row.mb-8
 			.text-14.text-gray3 Эл. почта
@@ -67,6 +71,9 @@ mixin doctor-card(docName,imgSrc, action, selectArr)
 					object
 						a(href="#!" frame-btn='review-slider').text-14.text-indigo 9 отзывов
 					
+			.card-flag
+				img(src="./img/flag/geo.png", width="64" alt="icon")
+		
 		.doc-card__body
 			.doc-card__info
 				//====== card doc info =======
