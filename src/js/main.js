@@ -214,18 +214,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			})
 		}
 	}
-	/*=============== extrim cards swiper slider ===============*/
-   
-	// let dateSlider = new Swiper(".swiper-date", {
-
-	// 	slidesPerView: 'auto',
-	// 	spaceBetween: 0,
-	// 	navigation: {
-    //       nextEl: ".arrow-right.icon-btn",
-    //       prevEl: ".arrow-left.icon-btn",
-    //     }
-
-	// });
+	
 	/* отзывы в модальном окне */
 	let reviewSlider = new Swiper(".review-slider", {
 
