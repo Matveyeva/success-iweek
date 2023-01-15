@@ -294,7 +294,11 @@ svg{
     line-height: 38px;
     -ms-flex-negative: 0;
     flex-shrink: 0;
+	transition: .5s;
 }
 .cabinet-header {
 	.round-icon{border: 1px solid #C5403A;}
+	.round-icon:hover{
+		opacity: .5;
+	}
 }

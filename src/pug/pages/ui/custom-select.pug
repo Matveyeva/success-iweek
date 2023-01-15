@@ -36,7 +36,7 @@ html(lang="ru")
 									.state-select-drop__item(data-state="state-cancel")  Отменен
 						
 						li
-							+mySelect({addClass: 'mySelect--absolute', val:'Услуга', itemsArr:['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Аллерголог', 'Терапевт']})
+							+mySelect({addClass: 'mySelect--absolute', val:'Услуга', itemsArr:['Стоматолог', 'Ортодонт']})
 							pre.
 								+mySelect({addClass: 'mySelect--absolute', val:'Услуга', itemsArr:['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Аллерголог', 'Терапевт']})
 
@@ -44,7 +44,7 @@ html(lang="ru")
 
 							h3 выпадашка высотой 64 пикс с иконкой слева
 							br
-							+custom-select-icon('Батуми', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Аллерголог', 'Терапевт'], 'mySelect--absolute mySelect-input--icon mySelect--64',  'svg-location', '')
+							+custom-select-icon('Батуми', ['Стоматолог', 'Ортодонт',], 'mySelect--absolute mySelect-input--icon mySelect--64',  'svg-location', '')
 							pre.
 								+custom-select-icon(placeText, items, addClass,  iconName, labelText)
 								

@@ -45,10 +45,10 @@ mixin starRating(num)
 			i
 			i
 
-mixin doctor-card(docName,imgSrc, action, selectArr)
+mixin doctor-card(docName,flag,imgSrc, action, selectArr)
 	a(href="#!").doc-card.flex-box
 		//====== card img =======
-		.doc-card__left
+		.doc-card__left.flex-column.flex-between
 			.doc-card__foto-block
 				.doc-card__foto
 					label.check-label.flex-center.flex-box
@@ -72,7 +72,11 @@ mixin doctor-card(docName,imgSrc, action, selectArr)
 						a(href="#!" frame-btn='review-slider').text-14.text-indigo 9 отзывов
 					
 			.card-flag
-				img(src="./img/flag/geo.png", width="64" alt="icon")
+				.card-flag__item
+					img(src="./img/flag/en-32.png", width="24" alt="icon")
+				.card-flag__item
+					img(src="./img/flag/rus-32.png", width="24" alt="icon")
+				
 		
 		.doc-card__body
 			.doc-card__info
@@ -161,10 +165,10 @@ mixin doctor-card(docName,imgSrc, action, selectArr)
 									object(type="image/svg+xml" data="./img/maximize.svg" )
 								.text-14 Открыть на карте
 
-mixin doctor-card-short(docName,imgSrc)
+mixin doctor-card-short(docName,flag,imgSrc)
 	.doc-card.flex-box
 		//====== card img =======
-		.doc-card__left
+		.doc-card__left.doc-card__left.flex-column.flex-between
 			.doc-card__foto-block
 				.doc-card__foto
 					label.check-label.flex-center.flex-box
@@ -186,7 +190,14 @@ mixin doctor-card-short(docName,imgSrc)
 					+starRating('4.4')
 					object
 						a(href="#!").text-14.text-indigo 9 отзывов
-					
+			.card-flag
+				.card-flag__item
+					img(src="./img/flag/en-32.png", width="24" alt="icon")
+				.card-flag__item
+					img(src="./img/flag/rus-32.png", width="24" alt="icon")
+				.card-flag__item
+					img(src="./img/flag/tur-32.png", width="24" alt="icon")
+		
 		.doc-card__body
 			.doc-card__info
 				//====== card doc info =======
@@ -218,10 +229,10 @@ mixin doctor-card-short(docName,imgSrc)
 									object(type="image/svg+xml" data="./img/maximize.svg" )
 								.text-14 Открыть на карте
 
-mixin doctor-card-select(docName,imgSrc, action, selectArr)
+mixin doctor-card-select(docName, imgSrc, action, selectArr)
 	a(href="#!").doc-card.flex-box
 		//====== card img =======
-		.doc-card__left
+		.doc-card__left.doc-card__left.flex-column.flex-between
 			.doc-card__foto-block
 				.doc-card__foto
 					label.check-label.flex-center.flex-box
@@ -254,6 +265,12 @@ mixin doctor-card-select(docName,imgSrc, action, selectArr)
 					object
 						a(href="#!" frame-btn='review-slider').text-14.text-indigo 9 отзывов
 					
+			.card-flag
+				.card-flag__item
+					img(src="./img/flag/en-32.png", width="24" alt="icon")
+				.card-flag__item
+					img(src="./img/flag/rus-32.png", width="24" alt="icon")
+				
 		.doc-card__body
 			.doc-card__info
 				//====== card doc info =======

@@ -5,7 +5,11 @@
 	padding-right: 10px;
 }
 .appointment-form {
-	.mydatepicker{width: 280px;}
+	.mydatepicker{width: 355px;}
+}
+.grid-355{
+	display: grid;
+	grid-template-columns: 355px 355px;
 }
 .flex-grow-1,.flex-grow>*{flex-grow:1}
 .h-100{
