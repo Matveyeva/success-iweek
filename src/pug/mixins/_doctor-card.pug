@@ -50,20 +50,25 @@ mixin doctor-card(docName,flag,imgSrc, action, selectArr)
 		//====== card img =======
 		.doc-card__left.flex-column.flex-between
 			.doc-card__foto-block
-				.doc-card__foto
-					label.check-label.flex-center.flex-box
-						input(type="checkbox")
-						svg.svg-heart(width="16" height="16" )
-							use(href="./img/svg-sprite.svg#svg-heart")
-					img(src="./img/"+ imgSrc +".png", width="140" height="140" alt="alt")
-					
-				//==== заголовок карточки  на моб версии ======
-				.doc-card__title-mobile(class="hidden-fl-992")
-					+card-header('ИП Мушкудиани Т.', docName, 'Стаж 17 лет')
+				.left-block
+					.doc-card__foto
+						label.check-label.flex-center.flex-box
+							input(type="checkbox")
+							svg.svg-heart(width="16" height="16" )
+								use(href="./img/svg-sprite.svg#svg-heart")
+						img(src="./img/"+ imgSrc +".png", width="140" height="140" alt="alt")
+					//- rating-group
 					.rating-group.hidden-992.flex-vertical-center
 						+starRating('4.4')
 						object
 							a(href="#!" frame-btn='review-slider').text-14.text-indigo 9 отзывов
+				//==== заголовок карточки  на моб версии ======
+				.doc-card__title-mobile(class="hidden-fl-992")
+					+card-header('ИП Мушкудиани Т.', docName, 'Стаж 17 лет')
+					//- .rating-group.hidden-992.flex-vertical-center
+					//- 	+starRating('4.4')
+					//- 	object
+					//- 		a(href="#!" frame-btn='review-slider').text-14.text-indigo 9 отзывов
 				
 				//====== рейтинг для декстоп версии (скрыт на моб версии)======
 				.rating-group.block-992

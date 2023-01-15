@@ -73,6 +73,9 @@
 				
 			}
 		}
+		@media(max-width:767px){
+			.text-14{font-size: 12px!important;}
+		}
 
 	}
 }
@@ -246,4 +249,14 @@
 	
 	justify-content: space-between;
 	
+}
+@media(max-width:991px){
+	.rating-group.hidden-992{
+		display: flex;
+		flex-direction: column;
+		margin-top: 4px;
+		margin-bottom: 4px;
+		align-items: flex-start;
+		row-gap:2px;
+	}
 }
