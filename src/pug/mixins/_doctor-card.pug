@@ -2,17 +2,17 @@ mixin card-header(textSup, titile, textSub)
 	.card-header&attributes(attributes)
 		.flex-vertical-center.gap-16
 			.text-14.text-gray !{textSup}
-			.text-14 Сертификат №10105000222
+			.text-14.text-gray3 Работаем со страховкой
 		.text-24.mb-8 !{titile}
 		.card-header__list
 			.text-14.text-gray3 !{textSub}
 			.text-14.text-gray3 Высшая категория
-
+		.mt-2.text-14.text-gray3 doctor@gmail.com
+			
 mixin card-header-personal-page(textSup, titile, textSub)
 	.card-header&attributes(attributes)
 		.flex-vertical-center.gap-16
 			.text-14.text-gray !{textSup}
-			.text-14 Сертификат №10105000222
 		.text-24.mb-8 !{titile}
 		.text-row.mb-8
 			.text-14.text-gray3 Эл. почта

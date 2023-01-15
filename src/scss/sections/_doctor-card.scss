@@ -231,6 +231,14 @@
 		margin-top: 0;
 		margin-left: 10px;
 	}
+	.card-header{
+		.flex-vertical-center{
+			flex-direction: column!important;
+			align-items: flex-start !important;
+			row-gap:2px!important;
+			margin-bottom: 4px;
+		}
+	}
 }
 .doc-card__title-mobile{
 	flex-direction: column;
