@@ -39,11 +39,10 @@
 					.form-box
 						label.text-16 Отчество
 						input(type="text" placeholder="Отчество").form-input
-					.form-box
-						label.text-16 Дата рождения
-						.mydatepicker
-							input.form-input(type="text" class="datepicker" value="01.01.2022")
 
+
+				
+				
 				.grid-form-fields.gap-32
 					.form-box
 						label.text-16 Пол
@@ -57,12 +56,31 @@
 								span.custom-radio
 								span.custom-radio__text Женский
 							
-											
+					
 					.form-box.flex-vertical-center.gap-32
 						+custom-select-icon2('Выбрать', ['О(I)', 'A(II)', 'B(III)', '(AB(IV))' ], 'mySelect--absolute','', 'Группа крови')
 						+custom-select-icon2('Выбрать', ['Rh(+)', 'Rh(-)'], 'mySelect--absolute','', 'Резус-фактор')
+					.form-box
+						label.text-16 Дата рождения
+						.mydatepicker
+							input.form-input(type="text" class="datepicker" value="01.01.2022")
 
-				
+			.form-fieldset
+				.grid-form-fields.gap-32
+					.form-box
+						label.text-16 Номер документа
+						input(type="text" placeholder="Номер документа").form-input
+					.form-box
+						label.text-16 Статус
+						.flex-vertical-center.gap-32
+							label.radiobutton-label.flex-box
+								input(type='radio' value="men" name='status-radio'  class='real-radio' checked)
+								span.custom-radio
+								span.custom-radio__text Резидент
+							label.radiobutton-label.flex-box
+								input(type='radio' value="woomen" name='status-radio' class='real-radio')
+								span.custom-radio
+								span.custom-radio__text Не резидент
 			.form-fieldset
 				.title-18 Контакты
 				.grid-form-fields.gap-32
@@ -108,8 +126,11 @@
 							input(type="text" placeholder="Квартира").form-input
 			
 			.form-fieldset
-				.form-textarea
-					textarea(type="text" placeholder="Комментарий о пациенте")
+				.grid-form-fields.gap-32
+					.form-textarea
+						textarea(type="text" placeholder="Диагноз")
+					.form-textarea
+						textarea(type="text" placeholder="Комментарий о пациенте")
 		
 		.edit-profile-footer.flex-vertical-center
 			a.btn.btn-44.btn--orange(href="visitor-edit-page.html") Назад
