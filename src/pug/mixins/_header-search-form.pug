@@ -105,12 +105,10 @@ mixin header2(argMenu)
 				//========= header center ==========
 				.header-center
 					.header-title
-						h1.text-44.text-white Лучшие специалисты в сфере #[a(href="#!") стоматологии]
-						.hidden-cat
-							span стоматологии
-							span паратодонтологии
-							span ортодонтологии
-							
+						h1.text-44.text-white Лучшие специалисты в сфере 
+							a.text-gradient(href="#!" data-categories="стоматологии,паратодонтологии,ортодонтологии") стоматологии
+								span.line-gradient(data-categories="стоматологии,паратодонтологии,ортодонтологии") стоматологии
+								
 						.text-24 Оказываем экстренную помощь
 					form.header-search-block.flex-box
 						.inputs-group
@@ -122,7 +120,7 @@ mixin header2(argMenu)
 									input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
 							
 							//===== выпадашка с городами =====
-							+custom-select-icon('Батуми', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Аллерголог', 'Терапевт'], 'mySelect--absolute mySelect-input--icon  mySelect--64',  'svg-location', '')
+							+custom-select-icon('Батуми', ['Кутаиси', 'Тбилиси', 'Зудгиди', 'Поти'], 'mySelect--absolute mySelect-input--icon  mySelect--64',  'svg-location', '')
 						
 						button(type="submit").btn-64.btn.btn--gradient Найти
 						//===== экстренная ситуация =====

@@ -3,3 +3,22 @@
 .hidden-cat{
 	display: none;
 }
+.text-gradient{
+	position: relative;
+	
+	background-color: 	#578DF6;
+	background: linear-gradient(225deg, #578DF6 22.38%, #5757F6 75.99%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	
+.line-gradient{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline;
+	background-repeat: no-repeat;
+	background-position: center bottom 1px;
+	background-size: 100% 2px;
+	background-image: linear-gradient(225deg, #578DF6 22.38%, #5757F6 75.99%);
+}
+}
