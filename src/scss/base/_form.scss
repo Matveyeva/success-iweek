@@ -369,3 +369,13 @@ sup.text-red{
 .agree-text .custom-checkbox{
 	flex-shrink: 0;
 }
+.inputs-group{
+	display: flex;
+	&>div:first-child input{
+		border-radius: 8px 0 0 8px!important;
+	}
+	&>div:last-child input{
+		border-radius: 0 8px 8px 0!important;
+		border-left:none;
+	}
+}

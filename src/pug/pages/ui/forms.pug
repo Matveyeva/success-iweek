@@ -25,6 +25,29 @@ html(lang="ru")
 				.container-dashboard__content
 					ul.ui-components
 						li
+							.inputs-group
+								.form-box.form-box--icon-left
+									.form-box-input
+										.form-box__icon
+											svg.svg-search
+												use(href="./img/svg-sprite.svg#svg-search")
+										input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+								
+								//===== выпадашка с городами =====
+								+custom-select-icon('Батуми', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Аллерголог', 'Терапевт'], 'mySelect--absolute mySelect-input--icon  mySelect--64',  'svg-location', '')
+							pre.
+								.inputs-group
+									.form-box.form-box--icon-left
+										.form-box-input
+											.form-box__icon
+												svg.svg-search
+													use(href="./img/svg-sprite.svg#svg-search")
+											input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+							
+							//===== выпадашка с городами =====
+							+custom-select-icon('Батуми', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Аллерголог', 'Терапевт'], 'mySelect--absolute mySelect-input--icon  mySelect--64',  'svg-location', '')
+						
+						li
 							+custom-select-checkbox('Пациент',['Беридзе Н.', 'Чикрадзе Э.', 'Кипиани Д.'], 'mySelect--absolute' )
 							pre.
 								+custom-select-checkbox('Пациент',['Беридзе Н.', 'Чикрадзе Э.', 'Кипиани Д.'], 'mySelect--absolute' )
