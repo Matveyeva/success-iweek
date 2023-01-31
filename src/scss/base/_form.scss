@@ -371,11 +371,21 @@ sup.text-red{
 }
 .inputs-group{
 	display: flex;
+	flex-grow: 2;
+	&>*{flex-grow:2}
 	&>div:first-child input{
 		border-radius: 8px 0 0 8px!important;
 	}
 	&>div:last-child input{
 		border-radius: 0 8px 8px 0!important;
 		border-left:none;
+	}
+
+	@media (max-width: 767px) {
+		flex-direction: column;
+		row-gap: 8px;
+		&>div:first-child input, &>div:last-child input{
+		border-radius: 8px !important;
+	}
 	}
 }

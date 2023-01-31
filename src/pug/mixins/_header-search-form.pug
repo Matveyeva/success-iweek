@@ -110,19 +110,20 @@ mixin header2(argMenu)
 								span.line-gradient(data-categories="стоматологии,паратодонтологии,ортодонтологии") стоматологии
 								
 						.text-24 Оказываем экстренную помощь
-					form.header-search-block.flex-box
-						.inputs-group
-							.form-box.form-box--icon-left
-								.form-box-input
-									.form-box__icon
-										svg.svg-search
-											use(href="./img/svg-sprite.svg#svg-search")
-									input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+					.header-search-block.flex-box
+						form.header-search-form(action="" method="method")
+							.inputs-group
+								.form-box.form-box--icon-left
+									.form-box-input
+										.form-box__icon
+											svg.svg-search
+												use(href="./img/svg-sprite.svg#svg-search")
+										input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+								
+								//===== выпадашка с городами =====
+								+custom-select-icon('Батуми', ['Кутаиси', 'Тбилиси', 'Зудгиди', 'Поти'], 'mySelect--absolute mySelect-input--icon  mySelect--64',  'svg-location', '')
 							
-							//===== выпадашка с городами =====
-							+custom-select-icon('Батуми', ['Кутаиси', 'Тбилиси', 'Зудгиди', 'Поти'], 'mySelect--absolute mySelect-input--icon  mySelect--64',  'svg-location', '')
-						
-						button(type="submit").btn-64.btn.btn--gradient Найти
+							button(type="submit").btn-64.btn.btn--gradient Найти
 						//===== экстренная ситуация =====
 						.header-button
 							.btn-64.btn--dark
