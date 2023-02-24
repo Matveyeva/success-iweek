@@ -106,8 +106,8 @@ mixin header2(argMenu)
 				.header-center
 					.header-title
 						h1.text-44.text-white Лучшие специалисты в сфере 
-							a.text-gradient(href="#!" data-categories="стоматологии,паратодонтологии,ортодонтологии") стоматологии
-								span.line-gradient(data-categories="стоматологии,паратодонтологии,ортодонтологии") стоматологии
+							span#change-text.text-gradient( data-categories="стоматологии,парадонтологии,ортодонтологии") стоматологии
+								span.line-gradient(data-categories="стоматологии,парадонтологии,ортодонтологии") стоматологии
 								
 						.text-24 Оказываем экстренную помощь
 					.header-search-block.flex-box
@@ -125,7 +125,7 @@ mixin header2(argMenu)
 							
 							button(type="submit").btn-64.btn.btn--gradient Найти
 						//===== экстренная ситуация =====
-						.header-button
+						.header-button.temp-hide
 							.btn-64.btn--dark
 								object(type="image/svg+xml" data="./img/extrim.svg" width="24")
 								span У меня экстренная ситуация

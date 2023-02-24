@@ -511,4 +511,37 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 
 
+	// Менять название текста в шапке с интервалом
+	const headerChange = document.querySelector('#change-text');
+	const headerUnderline = document.querySelector('#change-text span');
+
+	// Если элемент есть на странице
+	if(headerChange && headerUnderline){
+		// Строка опций
+		let options = headerChange.getAttribute('data-categories');
+		// Если опции есть		
+		if(options){
+			options = options.split(",").map(text=>text.trim());
+		}
+
+		// Если опции есть
+		if(options.length>0){
+			// Интервал смены текста в секундах
+			const interval_sec = 4;
+			// Индекс отображаемой опции		
+			let i = 0;
+
+			// Смена текста с интервалом
+			const interval = setInterval(()=>{
+				// Следующий индекс
+				i = (i+1)%options.length;
+				// Новый текст
+				headerUnderline.innerText = options[i];
+				headerChange.innerText = options[i];
+				headerChange.insertAdjacentElement('beforeend', headerUnderline)
+			}, interval_sec * 1000)
+		}
+	}
+
+
 });
