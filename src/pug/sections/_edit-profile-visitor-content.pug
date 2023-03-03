@@ -27,13 +27,13 @@
 				.grid-form-fields.gap-32
 					.form-box
 						label.text-16 Фамилия
-						input(type="text" placeholder="Фамилия").form-input
+						input(type="text" value="Миронов").form-input
 					.form-box
 						label.text-16 Имя
-						input(type="text" placeholder="Имя").form-input
+						input(type="text" value="Роман").form-input
 					.form-box
 						label.text-16 Отчество
-						input(type="text" placeholder="Отчество").form-input
+						input(type="text" value="Ильич").form-input
 				
 				.grid-form-fields.gap-32
 					.form-box
@@ -49,18 +49,18 @@
 								span.custom-radio__text Женский
 					
 					.form-box.flex-vertical-center.gap-32
-						+custom-select-icon2('Выбрать', ['О(I)', 'A(II)', 'B(III)', '(AB(IV))' ], 'mySelect--absolute','', 'Группа крови')
-						+custom-select-icon2('Выбрать', ['Rh(+)', 'Rh(-)'], 'mySelect--absolute','', 'Резус-фактор')
+						+custom-select-icon2('О(I)', ['О(I)', 'A(II)', 'B(III)', '(AB(IV))' ], 'mySelect--absolute','', 'Группа крови')
+						+custom-select-icon2('Rh(+)', ['Rh(+)', 'Rh(-)'], 'mySelect--absolute','', 'Резус-фактор')
 					.form-box
 						label.text-16 Дата рождения
 						.mydatepicker
-							input.form-input(type="text" class="datepicker" value="01.01.2022")
+							input.form-input(type="text" class="datepicker" value="01.10.1987")
 
 			.form-fieldset
 				.grid-form-fields.gap-32
 					.form-box
 						label.text-16 Номер документа
-						input(type="text" placeholder="Номер документа").form-input
+						input(type="text" value="4501-151585").form-input
 					.form-box
 						label.text-16 Статус
 						.flex-vertical-center.gap-32.block-h-44
@@ -81,7 +81,7 @@
 					
 					.form-box
 						label.text-16 Телефон
-						input(type="text" placeholder="Телефон").form-input
+						input(type="text"  value="+7(885)557-77-55").form-input
 					
 					.form-box
 						label.text-16 Дополнительный номер
@@ -100,28 +100,28 @@
 					
 					.form-box
 						label.text-16 Город
-						input(type="text" placeholder="Батуми").form-input
+						input(type="text" value="Батуми").form-input
 					//- .form-box
 					//- 	label.text-16 Населенный пункт
 					//- 	input(type="text" placeholder="Москва").form-input
 					.form-box
 						label.text-16 Улица
-						input(type="text" placeholder="Улица").form-input
+						input(type="text" value="Чайковского").form-input
 					
 					.flex-vertical-center.gap-32
 						.form-box
 							label.text-16 Дом
-							input(type="text" placeholder="Дом").form-input
+							input(type="text" value="27").form-input
 						.form-box
 							label.text-16 Квартира
-							input(type="text" placeholder="Квартира").form-input
+							input(type="text" value="3").form-input
 			
 			.form-fieldset
 				.grid-form-fields.gap-32
 					.form-textarea
-						textarea(type="text" placeholder="Диагноз")
+						textarea(type="text" value="Пульпит")
 					.form-textarea
-						textarea(type="text" placeholder="Комментарий о пациенте")
+						textarea(type="text" value="Хронический гастрит")
 		
 		.edit-profile-footer.flex-vertical-center
 			a.btn.btn-44.btn--orange(href="visitor-edit-page.html") Назад

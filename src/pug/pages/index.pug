@@ -2,10 +2,9 @@ extends ../layouts/layout.pug
 
 block content
 	.start-page
-		h1 Имя проекта
-		.start-page__cards
+		h1 IWEEK
+		.start-page__cards.mb-32
 			a(href="../ui/colors.html") UI-KIT PAGE
-			
 			//- главная
 			a(href="main.html")
 				span Главная
@@ -18,22 +17,39 @@ block content
 			//- цены	
 			a(href="prices.html")
 				span Цены
-			//- Расписание
+			//- 404
+			a(href="page-404.html")
+				span 404
 
+		h2.text-center.mb-32 Кабинет сотрудника 	
+		.start-page__cards
+		
 			a(href="page-schedule.html")
-				span Кабинет- Расписание
+				span Расписание
 
 			
 			//- Задачи
 			a(href="page-tasks.html")
-				span Кабинет- Задачи
+				span Задачи
 			
 			//- Пациенты
 			a(href="visitor-page.html")
-				span Пациенты - Профиль
+				span Пациенты
+			
+			a(href="add-profile-visitor.html")
+				span Добавить пациента
+			
+			a(href="edit-profile-visitor.html")
+				span Редактировать пациента
+			
+			a(href="duplication-modal.html")
+				span Модальное окно#[br]дублирование пациента
+			//- Пациенты
+			a(href="visitor-page.html")
+				span Пациент - Профиль
 			//- Пациенты
 			a(href="visitor-page2.html")
-				span Пациенты - Посещения
+				span Пациент - Посещения
 			//- Сотрудники
 			a(href="employees-page.html")
 				span Кабинет- Сотрудники
@@ -41,11 +57,8 @@ block content
 			a(href="confirm-appoint-modal.html")
 				span Авторизация #[br]  модальное окно
 			//- modal
-			a(href="duplication-modal.html")
-				span Такой пациент внесен в БД			
-			//- 404
-			a(href="page-404.html")
-				span 404
+
+
 
 block variables
 	-var title = "Сервис поиска услуг в Грузии";
