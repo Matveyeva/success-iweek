@@ -15,68 +15,67 @@
 				.container-large
 					.visitor-page-table
 						.visitor-page-table-row.visitor-page-table-head
-							.table-filter-flex
+							.table-filter-flex.customDrop
 								p Дата и время
-								.customDrop.customDrop--center
-									.customDrop__btn
-										.icon-filter
-									.customDrop__list
-										.mydatepicker
-											input.form-input(type="text" class="datepicker" value="Выберите дату" )
+								.customDrop__btn
+									.icon-filter
+								.customDrop__list
+									.datepicker.mydatepicker
+										input.form-input(type="hidden" class="datepicker" value="01.02.2023" )
 							
-							.table-filter-flex
+							.table-filter-flex.customDrop.customDrop--slim
 								p Врач
-								.customDrop.customDrop--center.customDrop--slim
-									.customDrop__btn
-										.icon-filter
-									.customDrop__list
-										.customDrop__list-item 
-											p Беридзе Н.а Алла Беридзе Н.на
-										.customDrop__list-item 
-											p Зинченко А.И.
-										.customDrop__list-item 
-											p Симонов Александр Юрьевич
-										.customDrop__list-item 
-											p Голетиани Мариам
-										.customDrop__list-item 
-											p Иволгина Алла Чикрадзе Э.на
-							.table-filter-flex
+								.customDrop__btn
+									.icon-filter
+									
+								.customDrop__list.scroll-vertical
+									.customDrop__list-item 
+										p Беридзе Н.а Алла Беридзе Н.на
+									.customDrop__list-item 
+										p Зинченко А.И.
+									.customDrop__list-item 
+										p Симонов Александр Юрьевич
+									.customDrop__list-item 
+										p Голетиани Мариам
+									.customDrop__list-item 
+										p Иволгина Алла Чикрадзе Э.на
+							.table-filter-flex.customDrop.customDrop--slim
 								p Специальность
-								.customDrop.customDrop--center.customDrop--slim
-									.customDrop__btn
-										.icon-filter
-									.customDrop__list
-										.customDrop__list-item 
-											p Стоматолог
-										.customDrop__list-item 
-											p Хирург
-										.customDrop__list-item 
-											p Дерматолог
-										.customDrop__list-item 
-											p Терапевт
-										.customDrop__list-item 
-											p Травматололг
+								.customDrop__btn
+									.icon-filter
+								.customDrop__list.scroll-vertical
+									.customDrop__list-item 
+										p Стоматолог
+									.customDrop__list-item 
+										p Хирург
+									.customDrop__list-item 
+										p Дерматолог
+									.customDrop__list-item 
+										p Терапевт
+									.customDrop__list-item 
+										p Травматолог
 							.table-filter-flex
 								p Стоимость
 								
-							.table-filter-flex
+							.table-filter-flex.customDrop.customDrop--slim
 								p Статус
-								.customDrop.customDrop--center.customDrop--slim
-									.customDrop__btn
-										.icon-filter
-									.customDrop__list
-										.customDrop__list-item 
-											p.text-orange Не подтвежден
-										.customDrop__list-item 
-											p.text-primary Подтвержден
-										.customDrop__list-item 
-											p.text-green Начат визит 
-										.customDrop__list-item 
-											p.text-gray Выполнен
-										.customDrop__list-item 
-											p.text-red Неявка
-										.customDrop__list-item 
-											p.text-red Отмена
+								
+								.customDrop__btn
+									.icon-filter
+								.customDrop__list.scroll-vertical
+									.customDrop__list-item 
+										p.text-orange Не подтвежден
+									.customDrop__list-item 
+										p.text-primary Подтвержден
+									.customDrop__list-item 
+										p.text-green Начат визит 
+									.customDrop__list-item 
+										p.text-gray Выполнен
+									.customDrop__list-item 
+										p.text-red Неявка
+									.customDrop__list-item 
+										p.text-red Отмена
+
 					
 						.visitor-page-table-body
 							a(href="#!" frame-btn="visit-info").visitor-page-table-row

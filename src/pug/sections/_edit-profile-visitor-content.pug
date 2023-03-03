@@ -4,8 +4,7 @@
 			.text-14.text-gray3 Пациенты
 			.title-18 Редактировать профиль
 		.edit-profile__btn
-			button.btn.btn--accent Удалить
-		
+			button.btn.btn--accent Удалить		
 	form.edit-profile-content__form
 		.profile-form-body.scroll-vertical
 			
@@ -13,7 +12,6 @@
 				.grid-form-fields.gap-32.align-end
 					.form-box
 						+custom-select-icon2('Взрослый', ['Недееспособный гражданин', 'Ребенок' ], 'mySelect--absolute','', 'Категория пациента', 'true')
-				
 					
 					button.label-light.label-light--44.label-light--large(frame-btn="exlude-modal") Аллергия
 					button.label-light.label-light--44.label-light--large(frame-btn="exlude-modal-2") Непереносимость
@@ -24,11 +22,8 @@
 						.form-box
 							label.text-16  Карта 043/У
 							input(type="text" ).form-input
-						
-						
-					
+			
 			.form-fieldset
-				
 				.grid-form-fields.gap-32
 					.form-box
 						label.text-16 Фамилия
@@ -39,9 +34,6 @@
 					.form-box
 						label.text-16 Отчество
 						input(type="text" placeholder="Отчество").form-input
-
-
-				
 				
 				.grid-form-fields.gap-32
 					.form-box
@@ -55,7 +47,6 @@
 								input(type='radio' value="woomen" name='gender-radio' class='real-radio')
 								span.custom-radio
 								span.custom-radio__text Женский
-							
 					
 					.form-box.flex-vertical-center.gap-32
 						+custom-select-icon2('Выбрать', ['О(I)', 'A(II)', 'B(III)', '(AB(IV))' ], 'mySelect--absolute','', 'Группа крови')
@@ -80,7 +71,7 @@
 							label.radiobutton-label.flex-box
 								input(type='radio' value="norezident" name='status-radio' class='real-radio')
 								span.custom-radio
-								span.custom-radio__text Не резидент
+								span.custom-radio__text Нерезидент
 			.form-fieldset
 				.title-18 Контакты
 				.grid-form-fields.gap-32

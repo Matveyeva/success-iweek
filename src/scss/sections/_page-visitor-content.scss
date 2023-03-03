@@ -10,6 +10,10 @@
 		width: 150px;
 		font-size: 16px;
 	}
+	.table-filter-flex{width: 100%; cursor:pointer;}
+	.customDrop__list{
+		max-height: 220px;
+	}
 	.visitor-page-table-row{
 		display: grid;
 		grid-template-columns: 1fr 500px  1fr 1fr 1fr;
