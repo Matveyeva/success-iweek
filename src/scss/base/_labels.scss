@@ -38,7 +38,9 @@
 	border: 1px solid #E7E7E7;
 	border-radius: 4px;
 	background-color: #fff;
-	padding: 0 12px;
+	padding: 0;
+	padding-left: 12px;
+	padding-right: 12px;
 	font-size: 14px;
 	font-weight: 400;
 	display: inline-flex;
@@ -47,6 +49,7 @@
 	column-gap:8px;
 	white-space: nowrap;
 }
+
 .label-light.label-light--48{
 	height: 48px;
 	line-height: 46px;

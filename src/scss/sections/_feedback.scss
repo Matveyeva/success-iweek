@@ -41,6 +41,7 @@
 		@media (max-width: 767px) {
 			display: block;
 		}
+		.label-light{border: none;}
 	}
 	.feedback-content__col +.feedback-content__col{
 		border-left:1px solid rgba(39, 39, 64, .2) ;

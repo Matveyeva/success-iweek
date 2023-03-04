@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			const mySelecDrop = item.querySelector('.mySelect-drop');
 
 			mySelect.addEventListener('click', ()=>{
-
+				
 				if(mySelecDrop.classList.contains('active')){
 					mySelecDrop.classList.remove('active');
 					// mySelectIcon.classList.remove('active');
