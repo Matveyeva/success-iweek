@@ -259,7 +259,15 @@ document.addEventListener("DOMContentLoaded", function (){
 		  }
 		}
 	});
-	
+	/* отзывы в модальном окне */
+	let selectTimeSwiper = new Swiper(".swiper-select-time	", {
+
+		slidesPerView: 1,
+
+		speed:800,
+		
+	});
+
 	/* =============== floating button ===============*/	
 	const floatingBtn = document.querySelector('.floating-btn');
 	if(floatingBtn){

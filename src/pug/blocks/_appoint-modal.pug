@@ -1,5 +1,5 @@
 //================== mobile filters ==============
-//- .modal-frame.appoint-modal.flex-column.visible(frame-modal="filters-modal")
+
 .modal-frame-wrapper.appoint-modal(frame-modal="appoint-modal")
 	.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
@@ -37,9 +37,195 @@
 						label.text-14.text-gray3 Специальность
 						input(type="text" readonly value="Стоматолог").form-input
 
-					.form-box
+					.form-box.form-box--icon-right
 						label.text-14.text-gray3 Дата и время приёма
-						input(type="text" readonly value="29 октября, 15:00").form-input
+						.form-box-input
+							.form-box__icon
+								svg.svg-calendar
+									use(href="./img/svg-sprite.svg#svg-calendar")
+							input(type="text" readonly value="29 октября, 15:00").form-input
+							//======== block data ============
+					.cs.swiper.swiper-select-time
+						.swiper-wrapper
+							//=======одна колонка =============
+							.swiper-slide
+								.cs-block
+									.cs-block__title.flex-wrapper
+										.cs-block__cell
+											.text-12 Пн
+											.text-14 6 марта
+										.cs-block__cell
+											.text-12 Пн
+											.text-14 6 марта
+										.cs-block__cell
+											.text-12 Пн
+											.text-14 6 марта
+										.cs-block__cell
+											.text-12 Пн
+											.text-14 6 марта
+								
+								.cs-block__content.flex-wrapper
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+							
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+							
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+							.swiper-slide
+								.cs-block
+								.cs-block__title.flex-wrapper
+									.cs-block__cell
+										.text-12 Пн
+										.text-14 6 марта
+									.cs-block__cell
+										.text-12 Пн
+										.text-14 6 марта
+									.cs-block__cell
+										.text-12 Пн
+										.text-14 6 марта
+									.cs-block__cell
+										.text-12 Пн
+										.text-14 6 марта
+								
+								.cs-block__content.flex-wrapper
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+							
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+							
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+							.swiper-slide
+								.cs-block
+								.cs-block__title.flex-wrapper
+									.cs-block__cell
+										.text-12 Пн
+										.text-14 6 марта
+									.cs-block__cell
+										.text-12 Пн
+										.text-14 6 марта
+									.cs-block__cell
+										.text-12 Пн
+										.text-14 6 марта
+									.cs-block__cell
+										.text-12 Пн
+										.text-14 6 марта
+								
+								.cs-block__content.flex-wrapper
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+							
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+							
+									.select-time-wrapper
+										+timeRadio('15:30')
+										+timeRadio('16:30')
+										+timeRadio('17:00')
+										+timeRadio('17:30')
+										+timeRadio('18:00')
+										+timeRadio('18:30')
+										+timeRadio('19:00')
+										+timeRadio('19:30')
+										+timeRadio('20:00')
+					
 					
 					.form-box
 						label.text-14.text-gray3 Ваше имя
