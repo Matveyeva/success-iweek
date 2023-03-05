@@ -40,192 +40,156 @@
 					.form-box.form-box--icon-right
 						label.text-14.text-gray3 Дата и время приёма
 						.form-box-input
-							.form-box__icon
+							button(type="button").form-box__icon#openAppointTime
 								svg.svg-calendar
 									use(href="./img/svg-sprite.svg#svg-calendar")
 							input(type="text" readonly value="29 октября, 15:00").form-input
 							//======== block data ============
-					.cs.swiper.swiper-select-time
-						.swiper-wrapper
-							//=======одна колонка =============
-							.swiper-slide
-								.cs-block
-									.cs-block__title.flex-wrapper
-										.cs-block__cell
-											.text-12 Пн
-											.text-14 6 марта
-										.cs-block__cell
-											.text-12 Пн
-											.text-14 6 марта
-										.cs-block__cell
-											.text-12 Пн
-											.text-14 6 марта
-										.cs-block__cell
-											.text-12 Пн
-											.text-14 6 марта
-								
-								.cs-block__content.flex-wrapper
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-							
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-							
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-							.swiper-slide
-								.cs-block
-								.cs-block__title.flex-wrapper
-									.cs-block__cell
-										.text-12 Пн
-										.text-14 6 марта
-									.cs-block__cell
-										.text-12 Пн
-										.text-14 6 марта
-									.cs-block__cell
-										.text-12 Пн
-										.text-14 6 марта
-									.cs-block__cell
-										.text-12 Пн
-										.text-14 6 марта
-								
-								.cs-block__content.flex-wrapper
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-							
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-							
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-							.swiper-slide
-								.cs-block
-								.cs-block__title.flex-wrapper
-									.cs-block__cell
-										.text-12 Пн
-										.text-14 6 марта
-									.cs-block__cell
-										.text-12 Пн
-										.text-14 6 марта
-									.cs-block__cell
-										.text-12 Пн
-										.text-14 6 марта
-									.cs-block__cell
-										.text-12 Пн
-										.text-14 6 марта
-								
-								.cs-block__content.flex-wrapper
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-							
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-							
-									.select-time-wrapper
-										+timeRadio('15:30')
-										+timeRadio('16:30')
-										+timeRadio('17:00')
-										+timeRadio('17:30')
-										+timeRadio('18:00')
-										+timeRadio('18:30')
-										+timeRadio('19:00')
-										+timeRadio('19:30')
-										+timeRadio('20:00')
-					
+					.cs-wrapper.visible#tableAppointTime
+						//======slider navigation=======
+						.cs-next
+							.icon-btn.arrow-right
+						.cs-prev
+							.icon-btn.arrow-left
+						
+						//======slider block=======
+						.cs.swiper.swiper-select-time
+							.swiper-wrapper
+								+csSlide({
+									argsDays:[
+										{dname:'Пн', num:'16 марта'},
+										{dname:'Вт', num:'17 марта'},
+										{dname:'Ср', num:'18 марта'},
+										{dname:'Чт', num:'19 марта'}], 
+									argsTimes:{
+										col1:[
+											{clock:'8:00', rbName:'select-time1'},
+											{clock:'8:30', rbName:'select-time1'},
+											{clock:'9:00', rbName:'select-time1'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'},
+											],
+										col2:[
+											{clock:'8:00', rbName:'select-time2'},
+											{clock:'8:30', rbName:'select-time2'},
+											{clock:'9:00', rbName:'select-time2'},
+											{clock:'9:30', rbName:'select-time2'},
+											{clock:'10:00', rbName:'select-time2'},
+											{clock:'10:30', rbName:'select-time2'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'},
+											],
+										col3:[
+											{clock:'8:00', rbName:'select-time3'},
+											{clock:'8:30', rbName:'select-time3'},
+											{clock:'9:00', rbName:'select-time3'},
+											{clock:'9:30', rbName:'select-time3'},
+											{clock:'10:00', rbName:'select-time3'},
+											{clock:'10:30', rbName:'select-time3'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'},
+											],
+										col4:[
+											{clock:'8:00', rbName:'select-time4'},
+											{clock:'8:30', rbName:'select-time4'},
+											{clock:'9:00', rbName:'select-time4'},
+											{clock:'9:30', rbName:'select-time4'},
+											{clock:'10:00', rbName:'select-time4'},
+											{clock:'10:30', rbName:'select-time4'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'},
+											],	
+									}
+									
+									}
+								)
+
+								+csSlide({
+									argsDays:[
+										{dname:'Пн', num:'16 марта'},
+										{dname:'Вт', num:'17 марта'},
+										{dname:'Ср', num:'18 марта'},
+										{dname:'Чт', num:'19 марта'}], 
+									argsTimes:{
+										col1:[
+											{clock:'8:00', rbName:'select-time1'},
+											{clock:'8:30', rbName:'select-time1'},
+											{clock:'9:00', rbName:'select-time1'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'}],
+										col2:[
+											{clock:'8:00', rbName:'select-time2'},
+											{clock:'8:30', rbName:'select-time2'},
+											{clock:'9:00', rbName:'select-time2'},
+											{clock:'9:30', rbName:'select-time2'},
+											{clock:'10:00', rbName:'select-time2'},
+											{clock:'10:30', rbName:'select-time2'}],
+										col3:[
+											{clock:'8:00', rbName:'select-time3'},
+											{clock:'8:30', rbName:'select-time3'},
+											{clock:'9:00', rbName:'select-time3'},
+											{clock:'9:30', rbName:'select-time3'},
+											{clock:'10:00', rbName:'select-time3'},
+											{clock:'10:30', rbName:'select-time3'}],
+										col4:[
+											{clock:'8:00', rbName:'select-time4'},
+											{clock:'8:30', rbName:'select-time4'},
+											{clock:'9:00', rbName:'select-time4'},
+											{clock:'9:30', rbName:'select-time4'},
+											{clock:'10:00', rbName:'select-time4'},
+											{clock:'10:30', rbName:'select-time4'}],	
+									}
+									
+									}
+								)
+								+csSlide({
+									argsDays:[
+										{dname:'Пн', num:'16 марта'},
+										{dname:'Вт', num:'17 марта'},
+										{dname:'Ср', num:'18 марта'},
+										{dname:'Чт', num:'19 марта'}], 
+									argsTimes:{
+										col1:[
+											{clock:'8:00', rbName:'select-time1'},
+											{clock:'8:30', rbName:'select-time1'},
+											{clock:'9:00', rbName:'select-time1'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'}],
+										col2:[
+											{clock:'8:00', rbName:'select-time2'},
+											{clock:'8:30', rbName:'select-time2'},
+											{clock:'9:00', rbName:'select-time2'},
+											{clock:'9:30', rbName:'select-time2'},
+											{clock:'10:00', rbName:'select-time2'},
+											{clock:'10:30', rbName:'select-time2'}],
+										col3:[
+											{clock:'8:00', rbName:'select-time3'},
+											{clock:'8:30', rbName:'select-time3'},
+											{clock:'9:00', rbName:'select-time3'},
+											{clock:'9:30', rbName:'select-time3'},
+											{clock:'10:00', rbName:'select-time3'},
+											{clock:'10:30', rbName:'select-time3'}],
+										col4:[
+											{clock:'8:00', rbName:'select-time4'},
+											{clock:'8:30', rbName:'select-time4'},
+											{clock:'9:00', rbName:'select-time4'},
+											{clock:'9:30', rbName:'select-time4'},
+											{clock:'10:00', rbName:'select-time4'},
+											{clock:'10:30', rbName:'select-time4'}],	
+									}
+									
+									}
+								)
+
 					
 					.form-box
 						label.text-14.text-gray3 Ваше имя

@@ -33,6 +33,21 @@ document.addEventListener("DOMContentLoaded", function (){
 			
 		});
 	}
+
+	/**============выбрать время записи в модальном окне на Главной стр ============= */
+	const AppointTimeOpen = document.getElementById('openAppointTime');
+	const AppointTimeOTable = document.getElementById('tableAppointTime');
+	if(AppointTimeOpen){
+		AppointTimeOpen.addEventListener('click', function(e){
+			e.preventDefault();
+			if(AppointTimeOTable.classList.contains('visible')){
+				AppointTimeOTable.classList.remove('visible')
+			}
+			else{
+				AppointTimeOTable.classList.add('visible')
+			}
+		})
+	}
 	/*========== Скрыть мобм меню при скролле страницы ===========*/
 	document.addEventListener('scroll', function(){
 		if(window.innerWidth < 992){
@@ -263,8 +278,12 @@ document.addEventListener("DOMContentLoaded", function (){
 	let selectTimeSwiper = new Swiper(".swiper-select-time	", {
 
 		slidesPerView: 1,
-
+        spaceBetween: 16,
 		speed:800,
+		navigation: {
+        nextEl: ".cs-next",
+        prevEl: ".cs-prev",
+      },
 		
 	});
 
