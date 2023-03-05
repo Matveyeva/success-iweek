@@ -1,28 +1,18 @@
 mixin csSlide(args)
-	.swiper-slide
-		.cs-block
-			.cs-block__title.flex-wrapper
-				each item in args.argsDays
-				
-					.cs-block__cell
-						.text-12 #{item.dname}
-						.text-14 #{item.num}
-			
-		.cs-inner.scroll-vertical
-			.cs-block__content.flex-wrapper
-				.cs-block-column
-					each item in args.argsTimes.col1
-						.cs-block__cell
-							+selectTime(item.clock,item.rbName)
-				.cs-block-column
-					each item in args.argsTimes.col2
-						.cs-block__cell
-							+selectTime(item.clock,item.rbName)
-				.cs-block-column
-					each item in args.argsTimes.col3
-						.cs-block__cell
-							+selectTime(item.clock,item.rbName)
-				.cs-block-column
-					each item in args.argsTimes.col4
-						.cs-block__cell
-							+selectTime(item.clock,item.rbName)
+	.cs-block__content.flex-wrapper&attributes(attributes)
+		.cs-block-column
+			each item in args.argsTimes.col1
+				.cs-block__cell
+					+selectTime(item.clock,item.rbName)
+		.cs-block-column
+			each item in args.argsTimes.col2
+				.cs-block__cell
+					+selectTime(item.clock,item.rbName)
+		.cs-block-column
+			each item in args.argsTimes.col3
+				.cs-block__cell
+					+selectTime(item.clock,item.rbName)
+		.cs-block-column
+			each item in args.argsTimes.col4
+				.cs-block__cell
+					+selectTime(item.clock,item.rbName)

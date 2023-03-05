@@ -15,32 +15,52 @@
 		.radiobutton-checkbox{width: 100%;}
 		flex-wrap: nowrap;
 	}
-	
-	&-block__cell{
-		width: calc((376px - 48px)/4);
-		// border:1px solid red;
 	}
-	.cs-block-column{
-		
-		display: grid;
-		grid-template-columns: 1fr;
-		row-gap:16px;
-	}
+.cs-block__cell{
+	width: calc((376px - 48px)/4);
+	flex-shrink:0;
 }
-.cs-head{
-	
-	width: 375px;
+.w-375{
+	width: 376px;
 	overflow: hidden;
 	margin-left: auto;
 	margin-right: auto;
-	border:1px solid red;
 }
-.cs-head-line{
+
+
+.cs-block-column{
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap:16px;
+	margin-bottom: 16px;
+}
+.cs-head, .cs-inner{
+	
+	width: 376px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.cs-inner{
+	height: 200px;
+	overflow-y: auto;
+	width: 400px;
+}
+.cs-inner-line{
+	padding-top: 16px;
+	transition: .5s;
+	width: 376px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.cs-head-line, .cs-inner-line{
 	display: flex;
+	column-gap:16px;
 }
 .cs-head__block{
 	flex-wrap: nowrap;
-	width: 375px;
+	width: 376px;
 	column-gap:16px;
 }
 .cs-head-line{
@@ -71,6 +91,10 @@
 		left: auto;
 		right:0;
 	}
+}
+.cs-next.cs-btn--disable,.cs-prev.cs-btn--disable{
+	opacity: .2;
+	cursor:default;
 }
 .cs-wrapper.visible{
 	height: 365px;

@@ -290,15 +290,20 @@ document.addEventListener("DOMContentLoaded", function (){
 	void function customSlider(){
 		const csHead = document.querySelectorAll('.cs-head__block');
 		const csHeadLine = document.querySelector('.cs-head-line');
+		const csBlock = document.querySelectorAll('.cs-block__content');
+		const csInnerLine = document.querySelector('.cs-inner-line');
 		const csBtnNext = document.querySelector('.cs-next');
     	const csBtnPrev = document.querySelector('.cs-prev');
 		
 		let activeInd = 0;
 		let activeElem1 = csHead[activeInd];
+		let activeElem2 = csBlock[activeInd];
 		const maxInd = csHead.length - 1;
 		
 		csBtnNext.addEventListener("click", handleNext);
 		csBtnPrev.addEventListener("click", handlePrev);
+
+		hideBtns();
 
 		function handleNext(e){
 			e.preventDefault();
@@ -308,10 +313,15 @@ document.addEventListener("DOMContentLoaded", function (){
 			activeElem1.classList.remove('cs-active');
 			activeElem1.nextElementSibling.classList.add('cs-active');
 
-			csHeadLine.style.transform = `translateX(-${375 * (activeInd+1)}px)`
+			activeElem2.classList.remove('cs-active');
+			activeElem2.nextElementSibling.classList.add('cs-active');
+
+			csHeadLine.style.transform = `translateX(-${392 * (activeInd+1)}px)`
+			csInnerLine.style.transform = `translateX(-${392 * (activeInd+1)}px)`
 
 			activeInd = Math.min(maxInd, activeInd + 1);
 			activeElem1 = activeElem1.nextElementSibling;
+			activeElem2 = activeElem2.nextElementSibling;
 
 			hideBtns();
 		}
@@ -324,10 +334,15 @@ document.addEventListener("DOMContentLoaded", function (){
 			activeElem1.classList.remove('cs-active');
 			activeElem1.previousElementSibling.classList.add('cs-active');
 
-			csHeadLine.style.transform = `translateX(-${375 * (activeInd-1)}px)`
+			activeElem2.classList.remove('cs-active');
+			activeElem2.previousElementSibling.classList.add('cs-active');
+
+			csHeadLine.style.transform = `translateX(-${392 * (activeInd-1)}px)`;
+			csInnerLine.style.transform = `translateX(-${392 * (activeInd-1)}px)`;
 
 			activeInd = Math.max(0, activeInd-1);
 			activeElem1 = activeElem1.previousElementSibling;
+			activeElem2 = activeElem2.previousElementSibling;
 
 			hideBtns();
 		}
@@ -335,17 +350,17 @@ document.addEventListener("DOMContentLoaded", function (){
 		function hideBtns(){
 			
 			if(activeInd === maxInd){
-				csBtnNext.classList.add("cs-next--disable");
+				csBtnNext.classList.add("cs-btn--disable");
 				return
 			}
 			
 			if(activeInd === 0){
-				csBtnPrev.classList.add("cs-prev--disable");
+				csBtnPrev.classList.add("cs-btn--disable");
 				return
 			}
 
-			csBtnNext.classList.remove("cs-next--disable");
-			csBtnPrev.classList.remove("cs-prev--disable");
+			csBtnNext.classList.remove("cs-btn--disable");
+			csBtnPrev.classList.remove("cs-btn--disable");
 		}
 
 	}();
