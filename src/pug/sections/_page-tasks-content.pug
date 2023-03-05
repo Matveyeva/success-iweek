@@ -27,7 +27,7 @@
 	.dashboard-table
 		.dashboard-table-content.scroll-x
 			.dashboard-table-column.state-planer
-				.dashboard-table-column__head.marker-color--orange Запланировано (3)
+				.dashboard-table-column__head.marker-color--orange Запланировано (1)
 				.scroll-vertical
 					.dashboard-table-column__wrapper
 						+task-card('Запланировано')
@@ -45,9 +45,9 @@
 				.dashboard-table-column__head.marker-color--green Начат визит (3)
 				.scroll-vertical
 					.dashboard-table-column__wrapper
-						+task-card('Начат визит')
-						+task-card('Начат визит')
-						+task-card('Начат визит')
+						+task-card('Начат')
+						+task-card('Начат')
+						+task-card('Начат')
 
 			.dashboard-table-column.state-done
 				.dashboard-table-column__head.marker-color--gray Выполнен(3)
@@ -60,13 +60,12 @@
 
 			
 			.dashboard-table-column.state-absence
-				.dashboard-table-column__head.marker-color--red Неявка (3)
+				.dashboard-table-column__head.marker-color--red Неявка (2)
 				.scroll-vertical
 					.dashboard-table-column__wrapper
 						+task-card('Неявка')
 						+task-card('Неявка')
-						+task-card('Неявка')
-						+task-card('Неявка')
+						
 
 				
 			.dashboard-table-column.state-cancel
@@ -76,13 +75,13 @@
 						+task-card('Отменен')
 						+task-card('Отменен')
 						+task-card('Отменен')
-						+task-card('Отменен')
+						
 			
 			.dashboard-table-column.state-expired
-				.dashboard-table-column__head.marker-color--red Просрочен (3)
+				.dashboard-table-column__head.marker-color--red Просрочен (4)
 				.scroll-vertical
 					.dashboard-table-column__wrapper
-						+task-card('Отменен')
-						+task-card('Отменен')
-						+task-card('Отменен')
-						+task-card('Отменен')
+						+task-card('Просрочен')
+						+task-card('Просрочен')
+						+task-card('Просрочен')
+						+task-card('Просрочен')

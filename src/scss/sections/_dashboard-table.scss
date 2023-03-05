@@ -1,6 +1,10 @@
 .dashboard-table{
 	width: 100%;
 	// height: calc(100vh - 51px);
+	.state-select.active .state-select-drop{
+		background-color: #fff;
+		box-shadow:0 1px 5px rgba(0,0,0, .1);
+	}
 }
 .dashboard-table-content{
 	display: flex;
