@@ -275,18 +275,81 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	});
 	/* отзывы в модальном окне */
-	let selectTimeSwiper = new Swiper(".swiper-select-time	", {
+	// let selectTimeSwiper = new Swiper(".swiper-select-time	", {
 
-		slidesPerView: 1,
-        spaceBetween: 16,
-		speed:800,
-		navigation: {
-        nextEl: ".cs-next",
-        prevEl: ".cs-prev",
-      },
+	// 	slidesPerView: 1,
+    //     spaceBetween: 16,
+	// 	speed:800,
+	// 	navigation: {
+    //     nextEl: ".cs-next",
+    //     prevEl: ".cs-prev",
+    //   },
 		
-	});
+	// });
 
+	void function customSlider(){
+		const csHead = document.querySelectorAll('.cs-head__block');
+		const csHeadLine = document.querySelector('.cs-head-line');
+		const csBtnNext = document.querySelector('.cs-next');
+    	const csBtnPrev = document.querySelector('.cs-prev');
+		
+		let activeInd = 0;
+		let activeElem1 = csHead[activeInd];
+		const maxInd = csHead.length - 1;
+		
+		csBtnNext.addEventListener("click", handleNext);
+		csBtnPrev.addEventListener("click", handlePrev);
+
+		function handleNext(e){
+			e.preventDefault();
+			
+			if(activeInd === maxInd)return;
+
+			activeElem1.classList.remove('cs-active');
+			activeElem1.nextElementSibling.classList.add('cs-active');
+
+			csHeadLine.style.transform = `translateX(-${375 * (activeInd+1)}px)`
+
+			activeInd = Math.min(maxInd, activeInd + 1);
+			activeElem1 = activeElem1.nextElementSibling;
+
+			hideBtns();
+		}
+
+		function handlePrev(e){
+			e.preventDefault();
+			
+			if(activeInd === 0)return;
+			
+			activeElem1.classList.remove('cs-active');
+			activeElem1.previousElementSibling.classList.add('cs-active');
+
+			csHeadLine.style.transform = `translateX(-${375 * (activeInd-1)}px)`
+
+			activeInd = Math.max(0, activeInd-1);
+			activeElem1 = activeElem1.previousElementSibling;
+
+			hideBtns();
+		}
+
+		function hideBtns(){
+			
+			if(activeInd === maxInd){
+				csBtnNext.classList.add("cs-next--disable");
+				return
+			}
+			
+			if(activeInd === 0){
+				csBtnPrev.classList.add("cs-prev--disable");
+				return
+			}
+
+			csBtnNext.classList.remove("cs-next--disable");
+			csBtnPrev.classList.remove("cs-prev--disable");
+		}
+
+	}();
+	
 	/* =============== floating button ===============*/	
 	const floatingBtn = document.querySelector('.floating-btn');
 	if(floatingBtn){

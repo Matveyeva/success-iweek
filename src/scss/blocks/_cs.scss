@@ -2,16 +2,12 @@
 	width: 376px;
 	margin-left: auto;
 	margin-right: auto;
-	&-block{
-
-	}
+	
 	&-block__title{
 		padding-top: 24px;
 		padding-bottom: 8px;
 	}
-	.cs-inner{
-		
-	}
+	
 	&-block__title,&-block__content{
 		column-gap:16px;
 		text-align: center;
@@ -19,8 +15,7 @@
 		.radiobutton-checkbox{width: 100%;}
 		flex-wrap: nowrap;
 	}
-	&-inner{height: 300px;
-	padding-bottom: 16px;}
+	
 	&-block__cell{
 		width: calc((376px - 48px)/4);
 		// border:1px solid red;
@@ -32,9 +27,29 @@
 		row-gap:16px;
 	}
 }
+.cs-head{
+	
+	width: 375px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	border:1px solid red;
+}
+.cs-head-line{
+	display: flex;
+}
+.cs-head__block{
+	flex-wrap: nowrap;
+	width: 375px;
+	column-gap:16px;
+}
+.cs-head-line{
+	transition: .5s;
+}
 .cs-wrapper{
 	position: relative;
 	padding-top: 0;
+	width: 485px;
 	padding-bottom: 16px;
 	height: 0;
 	overflow: hidden;
