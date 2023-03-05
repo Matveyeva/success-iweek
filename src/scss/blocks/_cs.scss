@@ -36,7 +36,7 @@
 	
 }
 .cs-table{
-	height: 200px;
+	height: 300px;
 	overflow-y: auto;
 	width: 400px;
 	margin-top: 16px;
@@ -64,14 +64,15 @@
 .cs-wrapper{
 	position: relative;
 	padding-top: 0;
-	width: 485px;
-	padding-bottom: 16px;
+	top: 16px;
+	width: 100%;
+	margin-bottom: 16px;
 	height: 0;
 	overflow: hidden;
 	transition: height .5s;
 	.cs-next,.cs-prev{
 		position: absolute;
-		top: 24px;
+		top: 0;
 		left: 0;
 		z-index: 1;
 		transition: .5s;
