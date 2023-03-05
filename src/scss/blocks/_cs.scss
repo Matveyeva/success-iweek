@@ -1,26 +1,19 @@
-.cs{
-	width: 376px;
-	margin-left: auto;
-	margin-right: auto;
+
 	
-	&-block__title{
-		padding-top: 24px;
-		padding-bottom: 8px;
-	}
-	
-	&-block__title,&-block__content{
-		column-gap:16px;
-		text-align: center;
-		label{width: 100%;}
-		.radiobutton-checkbox{width: 100%;}
-		flex-wrap: nowrap;
-	}
-	}
+.cs-table__content{
+	column-gap:16px;
+	text-align: center;
+	label{width: 100%;}
+	.radiobutton-checkbox{width: 100%;}
+	flex-wrap: nowrap;
+}
+
 .cs-block__cell{
 	width: calc((376px - 48px)/4);
 	flex-shrink:0;
+	
 }
-.w-375{
+.cs-container{
 	width: 376px;
 	overflow: hidden;
 	margin-left: auto;
@@ -28,13 +21,13 @@
 }
 
 
-.cs-block-column{
+.cs-table-column{
 	display: grid;
 	grid-template-columns: 1fr;
 	row-gap:16px;
-	margin-bottom: 16px;
+	margin-bottom: 4px;
 }
-.cs-head, .cs-inner{
+.cs-head, .cs-table{
 	
 	width: 376px;
 	overflow: hidden;
@@ -42,19 +35,21 @@
 	margin-right: auto;
 	
 }
-.cs-inner{
+.cs-table{
 	height: 200px;
 	overflow-y: auto;
 	width: 400px;
+	margin-top: 16px;
 }
-.cs-inner-line{
-	padding-top: 16px;
+.cs-table-line{
+	
 	transition: .5s;
 	width: 376px;
 	margin-left: auto;
 	margin-right: auto;
+	
 }
-.cs-head-line, .cs-inner-line{
+.cs-head-line, .cs-table-line{
 	display: flex;
 	column-gap:16px;
 }
@@ -93,7 +88,7 @@
 	}
 }
 .cs-next.cs-btn--disable,.cs-prev.cs-btn--disable{
-	opacity: .2;
+	display: none;
 	cursor:default;
 }
 .cs-wrapper.visible{

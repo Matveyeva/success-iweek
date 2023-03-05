@@ -37,7 +37,7 @@ html(lang="ru")
 			
 			//======slider block=======
 			.cs-head
-				.w-375
+				.cs-container
 					.cs-head-line.text-center
 						.cs-head__block.flex-wrapper.cs-active
 							.cs-block__cell
@@ -78,9 +78,10 @@ html(lang="ru")
 							.cs-block__cell
 								.text-12 пн
 								.text-14 27 марта
-			.cs-inner.scroll-vertical
-				.w-375
-					.cs-inner-line
+			
+			.cs-table.scroll-vertical
+				.cs-container
+					.cs-table-line
 						+csSlide({
 						argsTimes:{
 							col1:[

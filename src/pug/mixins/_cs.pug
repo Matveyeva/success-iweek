@@ -1,18 +1,18 @@
 mixin csSlide(args)
-	.cs-block__content.flex-wrapper&attributes(attributes)
-		.cs-block-column
+	.cs-table__content.flex-wrapper&attributes(attributes)
+		.cs-table-column
 			each item in args.argsTimes.col1
 				.cs-block__cell
 					+selectTime(item.clock,item.rbName)
-		.cs-block-column
+		.cs-table-column
 			each item in args.argsTimes.col2
 				.cs-block__cell
 					+selectTime(item.clock,item.rbName)
-		.cs-block-column
+		.cs-table-column
 			each item in args.argsTimes.col3
 				.cs-block__cell
 					+selectTime(item.clock,item.rbName)
-		.cs-block-column
+		.cs-table-column
 			each item in args.argsTimes.col4
 				.cs-block__cell
 					+selectTime(item.clock,item.rbName)

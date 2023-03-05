@@ -290,8 +290,8 @@ document.addEventListener("DOMContentLoaded", function (){
 	void function customSlider(){
 		const csHead = document.querySelectorAll('.cs-head__block');
 		const csHeadLine = document.querySelector('.cs-head-line');
-		const csBlock = document.querySelectorAll('.cs-block__content');
-		const csInnerLine = document.querySelector('.cs-inner-line');
+		const csBlock = document.querySelectorAll('.cs-table__content');
+		const csInnerLine = document.querySelector('.cs-table-line');
 		const csBtnNext = document.querySelector('.cs-next');
     	const csBtnPrev = document.querySelector('.cs-prev');
 		
