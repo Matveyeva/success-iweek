@@ -274,97 +274,87 @@ document.addEventListener("DOMContentLoaded", function (){
 		  }
 		}
 	});
-	/* отзывы в модальном окне */
-	// let selectTimeSwiper = new Swiper(".swiper-select-time	", {
 
-	// 	slidesPerView: 1,
-    //     spaceBetween: 16,
-	// 	speed:800,
-	// 	navigation: {
-    //     nextEl: ".cs-next",
-    //     prevEl: ".cs-prev",
-    //   },
-		
-	// });
-
-	void function customSlider(){
-		const csHead = document.querySelectorAll('.cs-head__block');
-		const csHeadLine = document.querySelector('.cs-head-line');
-		const csBlock = document.querySelectorAll('.cs-table__content');
-		const csInnerLine = document.querySelector('.cs-table-line');
-		const csBtnNext = document.querySelector('.cs-next');
-    	const csBtnPrev = document.querySelector('.cs-prev');
-		
-		let activeInd = 0;
-		let activeElem1 = csHead[activeInd];
-		let activeElem2 = csBlock[activeInd];
-		const maxInd = csHead.length - 1;
-		
-		csBtnNext.addEventListener("click", handleNext);
-		csBtnPrev.addEventListener("click", handlePrev);
-
-		hideBtns();
-
-		function handleNext(e){
-			e.preventDefault();
+	/*===выбор времени в модальном окне на Главной ===== */
+	if(document.querySelector('.appoint-modal')){
+		void function customSlider(){
+			const csHead = document.querySelectorAll('.cs-head__block');
+			const csHeadLine = document.querySelector('.cs-head-line');
+			const csBlock = document.querySelectorAll('.cs-table__content');
+			const csInnerLine = document.querySelector('.cs-table-line');
+			const csBtnNext = document.querySelector('.cs-next');
+			const csBtnPrev = document.querySelector('.cs-prev');
 			
-			if(activeInd === maxInd)return;
-
-			activeElem1.classList.remove('cs-active');
-			activeElem1.nextElementSibling.classList.add('cs-active');
-
-			activeElem2.classList.remove('cs-active');
-			activeElem2.nextElementSibling.classList.add('cs-active');
-
-			csHeadLine.style.transform = `translateX(-${392 * (activeInd+1)}px)`
-			csInnerLine.style.transform = `translateX(-${392 * (activeInd+1)}px)`
-
-			activeInd = Math.min(maxInd, activeInd + 1);
-			activeElem1 = activeElem1.nextElementSibling;
-			activeElem2 = activeElem2.nextElementSibling;
+			let activeInd = 0;
+			let activeElem1 = csHead[activeInd];
+			let activeElem2 = csBlock[activeInd];
+			const maxInd = csHead.length - 1;
+			
+			csBtnNext.addEventListener("click", handleNext);
+			csBtnPrev.addEventListener("click", handlePrev);
 
 			hideBtns();
-		}
 
-		function handlePrev(e){
-			e.preventDefault();
-			
-			if(activeInd === 0)return;
-			
-			activeElem1.classList.remove('cs-active');
-			activeElem1.previousElementSibling.classList.add('cs-active');
+			function handleNext(e){
+				e.preventDefault();
+				
+				if(activeInd === maxInd)return;
 
-			activeElem2.classList.remove('cs-active');
-			activeElem2.previousElementSibling.classList.add('cs-active');
+				activeElem1.classList.remove('cs-active');
+				activeElem1.nextElementSibling.classList.add('cs-active');
 
-			csHeadLine.style.transform = `translateX(-${392 * (activeInd-1)}px)`;
-			csInnerLine.style.transform = `translateX(-${392 * (activeInd-1)}px)`;
+				activeElem2.classList.remove('cs-active');
+				activeElem2.nextElementSibling.classList.add('cs-active');
 
-			activeInd = Math.max(0, activeInd-1);
-			activeElem1 = activeElem1.previousElementSibling;
-			activeElem2 = activeElem2.previousElementSibling;
+				csHeadLine.style.transform = `translateX(-${392 * (activeInd+1)}px)`
+				csInnerLine.style.transform = `translateX(-${392 * (activeInd+1)}px)`
 
-			hideBtns();
-		}
+				activeInd = Math.min(maxInd, activeInd + 1);
+				activeElem1 = activeElem1.nextElementSibling;
+				activeElem2 = activeElem2.nextElementSibling;
 
-		function hideBtns(){
-			
-			if(activeInd === maxInd){
-				csBtnNext.classList.add("cs-btn--disable");
-				return
-			}
-			
-			if(activeInd === 0){
-				csBtnPrev.classList.add("cs-btn--disable");
-				return
+				hideBtns();
 			}
 
-			csBtnNext.classList.remove("cs-btn--disable");
-			csBtnPrev.classList.remove("cs-btn--disable");
-		}
+			function handlePrev(e){
+				e.preventDefault();
+				
+				if(activeInd === 0)return;
+				
+				activeElem1.classList.remove('cs-active');
+				activeElem1.previousElementSibling.classList.add('cs-active');
 
-	}();
-	
+				activeElem2.classList.remove('cs-active');
+				activeElem2.previousElementSibling.classList.add('cs-active');
+
+				csHeadLine.style.transform = `translateX(-${392 * (activeInd-1)}px)`;
+				csInnerLine.style.transform = `translateX(-${392 * (activeInd-1)}px)`;
+
+				activeInd = Math.max(0, activeInd-1);
+				activeElem1 = activeElem1.previousElementSibling;
+				activeElem2 = activeElem2.previousElementSibling;
+
+				hideBtns();
+			}
+
+			function hideBtns(){
+				
+				if(activeInd === maxInd){
+					csBtnNext.classList.add("cs-btn--disable");
+					return
+				}
+				
+				if(activeInd === 0){
+					csBtnPrev.classList.add("cs-btn--disable");
+					return
+				}
+
+				csBtnNext.classList.remove("cs-btn--disable");
+				csBtnPrev.classList.remove("cs-btn--disable");
+			}
+
+		}();
+	}	
 	/* =============== floating button ===============*/	
 	const floatingBtn = document.querySelector('.floating-btn');
 	if(floatingBtn){
