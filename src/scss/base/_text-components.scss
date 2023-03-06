@@ -123,47 +123,57 @@
 		background-color: rgb(252, 232, 232)!important;
     	color: rgb(255, 100, 100)!important;
 	}
+	&--darkred{
+		background-color: rgb(231, 28, 28)!important;
+    	color: rgb(252, 232, 232)!important;
+	}
 }
 .sidebar-markers{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap:8px
 }
-.state-planer{
-	.state-label,
-	.dashboard-table-column__head{
-		color: rgb(239, 147, 62);
-		background-color: rgb(255, 242, 217);
-	}
+.state-planer .state-label,.state-planer .dashboard-table-column__head, [data-state="state-planer"] {
+
+	color: rgb(239, 147, 62);
+	background-color: rgb(255, 242, 217);
+	
 }
-.state-confirm{
-	.state-label,
-	.dashboard-table-column__head{
-		color: rgb(51, 181, 118)!important;
-    	background-color: rgb(224, 246, 238)!important;
-	}
+
+.state-expired.state-label, .state-expired .dashboard-table-column__head, [data-state="state-expired"]{
+
+	background-color: rgb(223, 203, 94)!important;
+    color: rgb(254, 0, 0)!important;
+
 }
-.state-started{
-	.state-label,
-	.dashboard-table-column__head{
-		background-color: rgb(229, 242, 249)!important;
-		color: rgb(0, 112, 192)!important;
-	}
+
+.state-confirm .state-label, .state-confirm  .dashboard-table-column__head, [data-state="state-confirm"]{
+	color: rgb(51, 181, 118)!important;
+	background-color: rgb(224, 246, 238)!important;
 }
-.state-done{
-	.state-label,
-	.dashboard-table-column__head{
-		color: rgb(117, 117, 117)!important;
-    	background-color: rgb(247, 247, 247)!important;
-	}
+
+.state-started .state-label, .state-started .dashboard-table-column__head,  [data-state="state-started"]{
+
+	background-color: rgb(229, 242, 249)!important;
+	color: rgb(0, 112, 192)!important;
+
 }
-.state-absence,.state-cancel{
-	.state-label,
-	.dashboard-table-column__head{
-		background-color: rgb(252, 232, 232)!important;
-    	color: rgb(255, 100, 100)!important;
-	}
+.state-done .state-label, .state-done .dashboard-table-column__head, [data-state="state-done"]{
+
+	color: rgb(117, 117, 117)!important;
+    background-color: rgb(247, 247, 247)!important;
+
 }
+.state-cancel  .state-label, .state-cancel .dashboard-table-column__head, [data-state="state-cancel"]{
+	background-color: rgb(252, 232, 232)!important;
+	color: rgb(255, 100, 100)!important;
+}
+
+.state-notvisit .state-label, .state-notvisit .dashboard-table-column__head, [data-state="state-notvisit"]{
+	background-color: rgb(131, 118, 118)!important;
+    color: rgb(252, 232, 232)!important;
+}
+
 .text-row, .text-column{
 	display: flex;
 	align-items: center;
