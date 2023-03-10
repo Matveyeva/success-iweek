@@ -1,11 +1,11 @@
 
-//================== модальное окно Такой пациент уже есть в БД ==============
+//============================================================================= 
+	Модальное окно Такой пациент уже есть в БД
+	Если для его отображения не требуется клик по кнопке с атрибутом frame-btn="duplication-modal" , то атрибут frame-modal="duplication-modal"  можно удалить.
+//=============================================================================
 .modal-frame-wrapper.modal-frame-center.visible(frame-modal="duplication-modal")
-	.modal-frame.flex-column
+	.modal-frame.flex-column.p-16
 		.modal-frame__head.flex-box.flex-y-center.flex-between
-			
-			.text-32 Внимание!
-			.icon-close(frame-close)
-			
+			.icon-close.ml-auto(frame-close)
 		.modal-frame__body.text-center
-			p.text-20.mt-32.mb-32 Пациент с такими данными уже внесен в Базу данных!
+			p.text-16.mb-32 Пользователь с такими данными уже зарегистрирован в системе!

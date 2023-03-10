@@ -1,0 +1,12 @@
+
+//============================================================================= 
+	Модальное окно Пользователь с таким телеф уже есть!
+	Если для его отображения не требуется клик по кнопке с атрибутом frame-btn="login-error" , то атрибут frame-modal="login-error"  можно удалить.
+//=============================================================================
+.modal-frame-wrapper.modal-frame-center.visible(frame-modal="login-error")
+	.modal-frame.flex-column.p-16
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.icon-close.ml-auto(frame-close)
+			
+		.modal-frame__body.text-center
+			p.text-16.mb-32  Пользователь с таким мобильным телефоном уже зарегистрирован, введите другой мобильный телефон или воспользуйтесь восстановлением пароля.

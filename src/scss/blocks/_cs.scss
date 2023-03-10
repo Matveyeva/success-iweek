@@ -13,6 +13,11 @@
 	flex-shrink:0;
 	
 }
+.cs-table-column .cs-block__cell{
+
+	border:1px solid rgba(0,0,0, .08);
+	border-radius: 4px;
+}
 .cs-container{
 	width: 376px;
 	overflow: hidden;
@@ -24,7 +29,8 @@
 .cs-table-column{
 	display: grid;
 	grid-template-columns: 1fr;
-	row-gap:16px;
+	row-gap:8px;
+	grid-auto-rows: 32px;
 	margin-bottom: 4px;
 }
 .cs-head, .cs-table{
@@ -36,7 +42,7 @@
 	
 }
 .cs-table{
-	height: 300px;
+	height: 240px;
 	overflow-y: auto;
 	width: 400px;
 	margin-top: 16px;
@@ -93,7 +99,7 @@
 	cursor:default;
 }
 .cs-wrapper.visible{
-	height: 365px;
+	height: 305px;
 	
 	padding-bottom: 24px;
 }

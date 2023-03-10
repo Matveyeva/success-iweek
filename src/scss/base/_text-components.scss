@@ -148,14 +148,14 @@
 }
 
 .state-confirm .state-label, .state-confirm  .dashboard-table-column__head, [data-state="state-confirm"]{
-	color: rgb(51, 181, 118)!important;
-	background-color: rgb(224, 246, 238)!important;
+
+		background-color: rgb(229, 242, 249)!important;
+	color: rgb(0, 112, 192)!important;
 }
 
 .state-started .state-label, .state-started .dashboard-table-column__head,  [data-state="state-started"]{
-
-	background-color: rgb(229, 242, 249)!important;
-	color: rgb(0, 112, 192)!important;
+	color: rgb(51, 181, 118)!important;
+	background-color: rgb(224, 246, 238)!important;
 
 }
 .state-done .state-label, .state-done .dashboard-table-column__head, [data-state="state-done"]{

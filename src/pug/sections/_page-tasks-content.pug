@@ -26,13 +26,14 @@
 	//=========================== dashboard-table ======================
 	.dashboard-table
 		.dashboard-table-content.scroll-x
+			//============================== Запланировано  =======================
 			.dashboard-table-column.state-planer
 				.dashboard-table-column__head Запланировано (1)
 				.scroll-vertical
 					.dashboard-table-column__wrapper
 						+task-card('Запланировано')
 			
-			
+			//============================== Подтвержден =======================
 			.dashboard-table-column.state-confirm
 				.dashboard-table-column__head Подтвержден (0)
 				.scroll-vertical
@@ -40,7 +41,7 @@
 						.task-empty Список задач пуст
 
 
-				
+			//============================== Начат  =======================	
 			.dashboard-table-column.state-started
 				.dashboard-table-column__head Начат визит (3)
 				.scroll-vertical
@@ -48,24 +49,8 @@
 						+task-card('Начат')
 						+task-card('Начат')
 						+task-card('Начат')
-
-			.dashboard-table-column.state-done
-				.dashboard-table-column__head Выполнен(3)
-				.scroll-vertical
-					.dashboard-table-column__wrapper
-						+task-card('Выполнен')
-						+task-card('Выполнен')
-						+task-card('Выполнен')
-
-			.dashboard-table-column.state-cancel
-				.dashboard-table-column__head Отменен (3)
-				.scroll-vertical
-					.dashboard-table-column__wrapper
-						+task-card('Отменен')
-						+task-card('Отменен')
-						+task-card('Отменен')
-						
 			
+			//============================== Просрочен  =======================
 			.dashboard-table-column.state-expired
 				.dashboard-table-column__head Просрочен (4)
 				.scroll-vertical
@@ -75,6 +60,25 @@
 						+task-card('Просрочен')
 						+task-card('Просрочен')
 			
+			//============================== Выполнен  =======================
+			.dashboard-table-column.state-done
+				.dashboard-table-column__head Выполнен(3)
+				.scroll-vertical
+					.dashboard-table-column__wrapper
+						+task-card('Выполнен')
+						+task-card('Выполнен')
+						+task-card('Выполнен')
+
+			//============================== Отменен  =======================
+			.dashboard-table-column.state-cancel
+				.dashboard-table-column__head Отменен (3)
+				.scroll-vertical
+					.dashboard-table-column__wrapper
+						+task-card('Отменен')
+						+task-card('Отменен')
+						+task-card('Отменен')
+						
+			//============================== Неявка  =======================
 			.dashboard-table-column.state-notvisit
 				.dashboard-table-column__head Неявка (2)
 				.scroll-vertical
