@@ -1,3 +1,16 @@
 .prices-table-wrapper{
 	p>span{text-transform: lowercase;}
 }
+.price-page-info{
+	margin-top: 40px;
+	.icon-info{
+		background-size: contain;
+		@media(max-width:1023px){
+			width: 15px;
+			height: 15px;
+		}
+	}
+	@media(max-width:1023px){
+		margin-top: 30px;
+	}
+}

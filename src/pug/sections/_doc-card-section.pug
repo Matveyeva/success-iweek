@@ -3,16 +3,15 @@ section.doc-cards-frame
 		//======= title =======	
 		.section-title
 			h2.text-32 Поиск специалиста
-				sup 327
-		
+				sup 327		
 		//======= filters =======
 		.section-filters.block-1200
 			.doc-card__filter-group.flex-box.gap-16
 				//========= single filter select =======
 				
-				+custom-select-icon('Услуга', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute mySelect--38 ')
+				+custom-select-icon('Услуга', ['Стоматолог', 'Ортодонт'], 'mySelect--absolute mySelect--38 ')
 				//========= single filter select =======
-				+custom-select-icon('Ближайшее время приема', ['Запись на завтра', 'Запись на выходные'], 'mySelect--absolute mySelect--38')
+				+custom-select-icon('Запись на ближайшее время', ['Запись на ближайшее время', 'Запись на завтра', 'Запись на выходные','Запись на ночные часы (с 22 до 6 часов)'], 'mySelect--absolute mySelect--38')
 				
 				//========= filter-toggle =======
 				.filter-toggle__block.flex-box.flex-y-center
@@ -53,6 +52,11 @@ section.doc-cards-frame
 					input(type='checkbox' name='form-checkbox' class='real-checkbox')
 					span.custom-checkbox 
 					span.custom-checkbox__text Детские клиники / Врачи
+				//====single item ======
+				label.checkbox-label.flex-box.flex-y-center
+					input(type='checkbox' name='form-checkbox' class='real-checkbox')
+					span.custom-checkbox 
+					span.custom-checkbox__text Работают по страховке
 		
 		.section-filters-mobile.hidden-1200
 			button.special-btn.text-14.text-gray3(frame-btn="filters-modal") Фильтр

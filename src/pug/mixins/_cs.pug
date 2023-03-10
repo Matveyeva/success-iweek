@@ -1,0 +1,46 @@
+mixin emptyTime
+	.cs-table-column
+		.cs-block__cell
+			span &mdash;
+		.cs-block__cell
+			span &mdash;
+		.cs-block__cell
+			span &mdash;
+		.cs-block__cell
+			span &mdash;
+		.cs-block__cell
+			label.radiobutton-time.flex-box.flex-y-center
+				input(type='radio' name='select-time2'  class='timetable-radiobtn')
+				span.radiobutton-checkbox 12:00
+		.cs-block__cell
+			label.radiobutton-time.flex-box.flex-y-center
+				input(type='radio' name='select-time2'  class='timetable-radiobtn')
+				span.radiobutton-checkbox 12:30
+		.cs-block__cell
+			label.radiobutton-time.flex-box.flex-y-center
+				input(type='radio' name='select-time2'  class='timetable-radiobtn')
+				span.radiobutton-checkbox 13:30
+		.cs-block__cell
+			label.radiobutton-time.flex-box.flex-y-center
+				input(type='radio' name='select-time2'  class='timetable-radiobtn')
+				span.radiobutton-checkbox 14:00
+
+mixin csSlide(args)
+	.cs-table__content.flex-wrapper&attributes(attributes)
+		.cs-table-column
+			each item in args.argsTimes.col1
+				.cs-block__cell
+					+selectTime(item.clock,item.rbName)
+		+emptyTime
+		//- .cs-table-column
+		//- 	each item in args.argsTimes.col2
+		//- 		.cs-block__cell
+		//- 			+selectTime(item.clock,item.rbName)
+		.cs-table-column
+			each item in args.argsTimes.col3
+				.cs-block__cell
+					+selectTime(item.clock,item.rbName)
+		.cs-table-column
+			each item in args.argsTimes.col4
+				.cs-block__cell
+					+selectTime(item.clock,item.rbName)

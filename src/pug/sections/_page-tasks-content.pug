@@ -3,7 +3,7 @@
 	//=========================== tasks-filters ======================
 	.cabinet-body-header.flex-vertical-center.flex-between
 		.cabinet-tasks-filters.flex-box
-			+custom-select-icon('Запись из', ['Про Докторов', 'Онлайн запись', 'Из клиники'], 'mySelect--absolute')
+			+custom-select-icon('Запись из', ['Онлайн запись', 'Из клиники'], 'mySelect--absolute')
 
 			.mydatepicker
 				input.form-input(type="text" id="datepicker" value="Дата")
@@ -11,7 +11,7 @@
 			+custom-select-icon('Пациент',['Беридзе Н.', 'Чикрадзе Э.', 'Кипиани Д.'], 'mySelect--absolute')
 
 			+custom-select-checkbox('Врач',['Беридзе Н.', 'Чикрадзе Э.', 'Кипиани Д.'], 'mySelect--absolute' )
-		
+	
 		//- .cabinet-body-header__btns.flex-box.btn-toggle-block
 		//- 	label.btn--toggle
 		//- 		input(type='radio' name='toggle-tasks-body' class='filter-radiobtn' checked)
@@ -26,54 +26,62 @@
 	//=========================== dashboard-table ======================
 	.dashboard-table
 		.dashboard-table-content.scroll-x
+			//============================== Запланировано  =======================
 			.dashboard-table-column.state-planer
-				.dashboard-table-column__head.marker-color--orange Запланировано (3)
+				.dashboard-table-column__head Запланировано (1)
 				.scroll-vertical
 					.dashboard-table-column__wrapper
 						+task-card('Запланировано')
 			
-			
+			//============================== Подтвержден =======================
 			.dashboard-table-column.state-confirm
-				.dashboard-table-column__head.marker-color--blue Подтвержден (0)
+				.dashboard-table-column__head Подтвержден (0)
 				.scroll-vertical
 					.dashboard-table-column__wrapper
 						.task-empty Список задач пуст
 
 
-				
+			//============================== Начат  =======================	
 			.dashboard-table-column.state-started
-				.dashboard-table-column__head.marker-color--green Начат визит (3)
+				.dashboard-table-column__head Начат визит (3)
 				.scroll-vertical
 					.dashboard-table-column__wrapper
-						+task-card('Начат визит')
-						+task-card('Начат визит')
-						+task-card('Начат визит')
-
-			.dashboard-table-column.state-done
-				.dashboard-table-column__head.marker-color--gray Выполнен(3)
-				.scroll-vertical
-					.dashboard-table-column__wrapper
-						+task-card('Выполнен')
-						+task-card('Выполнен')
-						+task-card('Выполнен')
-
-
+						+task-card('Начат')
+						+task-card('Начат')
+						+task-card('Начат')
 			
-			.dashboard-table-column.state-absence
-				.dashboard-table-column__head.marker-color--red Неявка (3)
+			//============================== Просрочен  =======================
+			.dashboard-table-column.state-expired
+				.dashboard-table-column__head Просрочен (4)
 				.scroll-vertical
 					.dashboard-table-column__wrapper
-						+task-card('Неявка')
-						+task-card('Неявка')
-						+task-card('Неявка')
-						+task-card('Неявка')
+						+task-card('Просрочен')
+						+task-card('Просрочен')
+						+task-card('Просрочен')
+						+task-card('Просрочен')
+			
+			//============================== Выполнен  =======================
+			.dashboard-table-column.state-done
+				.dashboard-table-column__head Выполнен(3)
+				.scroll-vertical
+					.dashboard-table-column__wrapper
+						+task-card('Выполнен')
+						+task-card('Выполнен')
+						+task-card('Выполнен')
 
-				
+			//============================== Отменен  =======================
 			.dashboard-table-column.state-cancel
-				.dashboard-table-column__head.marker-color--red Отменен (3)
+				.dashboard-table-column__head Отменен (3)
 				.scroll-vertical
 					.dashboard-table-column__wrapper
 						+task-card('Отменен')
 						+task-card('Отменен')
 						+task-card('Отменен')
-						+task-card('Отменен')
+						
+			//============================== Неявка  =======================
+			.dashboard-table-column.state-notvisit
+				.dashboard-table-column__head Неявка (2)
+				.scroll-vertical
+					.dashboard-table-column__wrapper
+						+task-card('Неявка')
+						+task-card('Неявка')

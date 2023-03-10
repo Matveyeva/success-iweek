@@ -33,6 +33,21 @@ document.addEventListener("DOMContentLoaded", function (){
 			
 		});
 	}
+
+	/**============выбрать время записи в модальном окне на Главной стр ============= */
+	const AppointTimeOpen = document.getElementById('openAppointTime');
+	const AppointTimeOTable = document.getElementById('tableAppointTime');
+	if(AppointTimeOpen){
+		AppointTimeOpen.addEventListener('click', function(e){
+			e.preventDefault();
+			if(AppointTimeOTable.classList.contains('visible')){
+				AppointTimeOTable.classList.remove('visible')
+			}
+			else{
+				AppointTimeOTable.classList.add('visible')
+			}
+		})
+	}
 	/*========== Скрыть мобм меню при скролле страницы ===========*/
 	document.addEventListener('scroll', function(){
 		if(window.innerWidth < 992){
@@ -94,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			const mySelecDrop = item.querySelector('.mySelect-drop');
 
 			mySelect.addEventListener('click', ()=>{
-
+				
 				if(mySelecDrop.classList.contains('active')){
 					mySelecDrop.classList.remove('active');
 					// mySelectIcon.classList.remove('active');
@@ -214,18 +229,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			})
 		}
 	}
-	/*=============== extrim cards swiper slider ===============*/
-   
-	// let dateSlider = new Swiper(".swiper-date", {
-
-	// 	slidesPerView: 'auto',
-	// 	spaceBetween: 0,
-	// 	navigation: {
-    //       nextEl: ".arrow-right.icon-btn",
-    //       prevEl: ".arrow-left.icon-btn",
-    //     }
-
-	// });
+	
 	/* отзывы в модальном окне */
 	let reviewSlider = new Swiper(".review-slider", {
 
@@ -270,7 +274,87 @@ document.addEventListener("DOMContentLoaded", function (){
 		  }
 		}
 	});
-	
+
+	/*===выбор времени в модальном окне на Главной ===== */
+	if(document.querySelector('.appoint-modal')){
+		void function customSlider(){
+			const csHead = document.querySelectorAll('.cs-head__block');
+			const csHeadLine = document.querySelector('.cs-head-line');
+			const csBlock = document.querySelectorAll('.cs-table__content');
+			const csInnerLine = document.querySelector('.cs-table-line');
+			const csBtnNext = document.querySelector('.cs-next');
+			const csBtnPrev = document.querySelector('.cs-prev');
+			
+			let activeInd = 0;
+			let activeElem1 = csHead[activeInd];
+			let activeElem2 = csBlock[activeInd];
+			const maxInd = csHead.length - 1;
+			
+			csBtnNext.addEventListener("click", handleNext);
+			csBtnPrev.addEventListener("click", handlePrev);
+
+			hideBtns();
+
+			function handleNext(e){
+				e.preventDefault();
+				
+				if(activeInd === maxInd)return;
+
+				activeElem1.classList.remove('cs-active');
+				activeElem1.nextElementSibling.classList.add('cs-active');
+
+				activeElem2.classList.remove('cs-active');
+				activeElem2.nextElementSibling.classList.add('cs-active');
+
+				csHeadLine.style.transform = `translateX(-${392 * (activeInd+1)}px)`
+				csInnerLine.style.transform = `translateX(-${392 * (activeInd+1)}px)`
+
+				activeInd = Math.min(maxInd, activeInd + 1);
+				activeElem1 = activeElem1.nextElementSibling;
+				activeElem2 = activeElem2.nextElementSibling;
+
+				hideBtns();
+			}
+
+			function handlePrev(e){
+				e.preventDefault();
+				
+				if(activeInd === 0)return;
+				
+				activeElem1.classList.remove('cs-active');
+				activeElem1.previousElementSibling.classList.add('cs-active');
+
+				activeElem2.classList.remove('cs-active');
+				activeElem2.previousElementSibling.classList.add('cs-active');
+
+				csHeadLine.style.transform = `translateX(-${392 * (activeInd-1)}px)`;
+				csInnerLine.style.transform = `translateX(-${392 * (activeInd-1)}px)`;
+
+				activeInd = Math.max(0, activeInd-1);
+				activeElem1 = activeElem1.previousElementSibling;
+				activeElem2 = activeElem2.previousElementSibling;
+
+				hideBtns();
+			}
+
+			function hideBtns(){
+				
+				if(activeInd === maxInd){
+					csBtnNext.classList.add("cs-btn--disable");
+					return
+				}
+				
+				if(activeInd === 0){
+					csBtnPrev.classList.add("cs-btn--disable");
+					return
+				}
+
+				csBtnNext.classList.remove("cs-btn--disable");
+				csBtnPrev.classList.remove("cs-btn--disable");
+			}
+
+		}();
+	}	
 	/* =============== floating button ===============*/	
 	const floatingBtn = document.querySelector('.floating-btn');
 	if(floatingBtn){
@@ -299,16 +383,19 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
 	/* На стр Пациенты закрыть фильтры по клику на выпадашку */
-	const visitorSelectFilters = document.querySelector('#visitor-select-filters');
-	if(visitorSelectFilters){
-		const visitorSelectFiltersItem = visitorSelectFilters.querySelectorAll('.customDrop__list-item');
-			for(let item of visitorSelectFiltersItem){
-			item.addEventListener('click', function(e){
+	const visitorSelectFilters = document.querySelectorAll('.drop-click-close');
+
+	if(visitorSelectFilters.length > 0){
+		for(let item of visitorSelectFilters){
+		const visitorSelectFiltersItem = item.querySelectorAll('.customDrop__list-item');
+			for(let el of visitorSelectFiltersItem){
+			el.addEventListener('click', function(e){
 				e.stopPropagation();
-				visitorSelectFilters.classList.remove('active');
-				console.log('123');
+				item.classList.remove('active');
+				
 			});
 		}
+	}
 	}
 	/*========== Скрыть мобм меню  and customDrop  по клику вне ===========*/
 	window.addEventListener('click', function(e){			
@@ -360,7 +447,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			$(item).datepicker();
 		});
 	});
-   /*========== кастомные табы переключение кнопок ============*/
+   /*========== кастомные табы переключение класса активности кнопок ============*/
 	const customTabBtns = document.querySelectorAll('.myTabs-buttons');
 	if(customTabBtns.length > 0){
 		for(let item of customTabBtns){
@@ -372,6 +459,41 @@ document.addEventListener("DOMContentLoaded", function (){
 					}
 					this.classList.add('active');
 				})
+			}
+		}
+	}
+   /*переключение контента у табов*/
+   	const customTabs = document.querySelectorAll('[custom-tabs]');
+	if(customTabs.length > 0){
+		for(let item of customTabs){
+			
+			const ctBtns = item.querySelectorAll('[ct-btn]');
+			const ctContents = item.querySelectorAll('[ct-content]');
+			
+			for(let i=0; i< ctBtns.length; i++){
+				 ctBtns[i].addEventListener('click', function(){
+					for(let j=0; j< ctBtns.length;j++){
+						if(j!=i){
+							 ctBtns[j].classList.remove('custom-tab--current');
+							
+							 
+						}
+						else{
+							const thisData =  this.getAttribute('ct-btn');
+							 this.classList.add('custom-tab--current');
+							
+							for(let content of ctContents){
+								content.classList.remove('ct-content--active');
+								const contentData = content.getAttribute('ct-content');
+								if(contentData == thisData){
+									content.classList.add('ct-content--active');
+								}
+							}
+						}
+
+					}
+					
+				});
 			}
 		}
 	}
@@ -481,6 +603,39 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		}
 	});
+	}
+
+
+	// Менять название текста в шапке с интервалом
+	const headerChange = document.querySelector('#change-text');
+	const headerUnderline = document.querySelector('#change-text span');
+
+	// Если элемент есть на странице
+	if(headerChange && headerUnderline){
+		// Строка опций
+		let options = headerChange.getAttribute('data-categories');
+		// Если опции есть		
+		if(options){
+			options = options.split(",").map(text=>text.trim());
+		}
+
+		// Если опции есть
+		if(options.length>0){
+			// Интервал смены текста в секундах
+			const interval_sec = 4;
+			// Индекс отображаемой опции		
+			let i = 0;
+
+			// Смена текста с интервалом
+			const interval = setInterval(()=>{
+				// Следующий индекс
+				i = (i+1)%options.length;
+				// Новый текст
+				headerUnderline.innerText = options[i];
+				headerChange.innerText = options[i];
+				headerChange.insertAdjacentElement('beforeend', headerUnderline)
+			}, interval_sec * 1000)
+		}
 	}
 
 

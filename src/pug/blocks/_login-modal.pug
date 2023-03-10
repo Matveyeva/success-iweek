@@ -1,5 +1,5 @@
 
-//================== модальное окно Подтверждение записи ==============
+//================== модальное окно Авторизация ==============
 .modal-frame-wrapper.modal-frame-center.visible(frame-modal="login-modal")
 	.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
@@ -12,8 +12,9 @@
 					label.text-16.text-gray3 Логин
 					input.form-input(type="text")
 				.form-box.mt-16
-					label.text-16.text-gray3 Пароль
+					label.text-16.text-gray3 Пароль					
 					input(type="password" ).form-input
+					a(href="#!").text-12.text-red.mt-8 Забыли пароль?
 				.form-btn.mt-24
 					button.btn.btn--gradient.w-100 Войти
 				

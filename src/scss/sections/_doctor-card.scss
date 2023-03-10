@@ -33,6 +33,17 @@
 		}
 	}
 }
+.card-flag{
+	display: flex;
+	align-items: center;
+	gap:8px;
+	&__item img{
+		width: 24px;
+		height: 24px;
+		object-fit:cover;
+
+	}
+}
 .swiper-slide  .doc-card{
 	border-radius: 16px;
 	margin-left: 0;
@@ -61,6 +72,9 @@
 				line-height: 16px;
 				
 			}
+		}
+		@media(max-width:767px){
+			.text-14{font-size: 12px!important;}
 		}
 
 	}
@@ -219,6 +233,14 @@
 	.rating-group .text-14{
 		margin-top: 0;
 		margin-left: 10px;
+	}
+	.card-header{
+		.flex-vertical-center{
+			flex-direction: column!important;
+			align-items: flex-start !important;
+			row-gap:2px!important;
+			margin-bottom: 4px;
+		}
 	}
 }
 .doc-card__title-mobile{

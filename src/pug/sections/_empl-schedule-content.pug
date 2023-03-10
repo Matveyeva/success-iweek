@@ -5,7 +5,7 @@ main.employee-page-content
 			.text-16 К профилю сотрудника
 	.employee-page-card
 		header.border-b
-			.title-18 Кирсанова Марина Анлександровна 
+			.title-18 Голетиани Мариам
 			.employee-page-card__row
 				.text-icon.flex-box.flex-y-center(frame-btn="rules-info")
 					.symbol-plus &#10010;
@@ -16,4 +16,247 @@ main.employee-page-content
 					.text-14.text-gray3 Задано 2 правила
 				.icon-btn.arrow-right
 		.employee-page-schedule
-			h1.text-44.text-center Тут будет график врача
+			.employee-schedule-header.flex-vertical-center.flex-x-right.gap-32.border-b
+				.icon-btn.arrow-left
+				.title-20  Декабрь
+				.icon-btn.arrow-right
+
+			.employee-schedule-calendar
+				.employee-schedule-calendar__day
+					.text-14 Понедельник
+					.text-14 Вторник
+					.text-14 Среда
+					.text-14 Четверг
+					.text-14 Пятница
+					.text-14 Суббота
+					.text-14 Воскресенье
+				
+				.employee-schedule-calendar__date
+					//======== Все ячейки имеют класс "calendar__date-item".  Ячейка для даты, в которую нельзя сделать запись, имеет дополнительный класс " without-date".  Ячейка, в которую внесли хотя бы одну запись, имеет дополнительный класс "not-empty-cell"
+
+					.calendar__date-item.without-date
+					.calendar__date-item.without-date
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 01
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-individual 8:00 - 20:00
+							
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+							
+						
+						span.date-value 02
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-individual 8:00 - 20:00
+						
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						span.date-value 03
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-individual 8:00 - 20:00
+						
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						span.date-value 04
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-individual 8:00 - 20:00
+						
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						span.date-value 05
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						span.date-value 06
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-individual 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						span.date-value 07
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-individual 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						span.date-value 08
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						span.date-value 09
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						span.date-value 10
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						span.date-value 11
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-individual 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						
+						span.date-value 12
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-individual 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						
+						span.date-value 13
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-individual 8:00 - 20:00
+						
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						span.date-value 14
+					
+					//========одна дата =======
+					.calendar__date-item.not-empty-cell
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-individual 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.text-rule 8:00 - 20:00
+						.calendar__date-row(frame-btn="empl-schedule-edit")
+							.svg-plus
+						span.date-value 15
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 16
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 17
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 18
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 19
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 20
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 21
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 22
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 23
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 24
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 25
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 26
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 27
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 28
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 29
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 30
+					
+					//========одна дата =======
+					.calendar__date-item(frame-btn="empl-schedule-edit")
+						.svg-plus
+						span.date-value 31
+			.employee-schedule-markers
+				.flex-vertical-center.gap-32

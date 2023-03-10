@@ -302,6 +302,7 @@ sup.text-red{
 		white-space: nowrap;
 		display: inline-block;
 		height: 38px;
+		width: 100%;
 	}
 	.filter-toggle-item  +.filter-toggle-item {
 		border-left:1px solid #E0E0E0;
@@ -363,5 +364,28 @@ sup.text-red{
 		font-size: 16px;
 		color: $gray3;
 		font-family: inherit;
+	}
+}
+.agree-text .custom-checkbox{
+	flex-shrink: 0;
+}
+.inputs-group{
+	display: flex;
+	flex-grow: 2;
+	&>*{flex-grow:2}
+	&>div:first-child input{
+		border-radius: 8px 0 0 8px!important;
+	}
+	&>div:last-child input{
+		border-radius: 0 8px 8px 0!important;
+		border-left:none;
+	}
+
+	@media (max-width: 767px) {
+		flex-direction: column;
+		row-gap: 8px;
+		&>div:first-child input, &>div:last-child input{
+		border-radius: 8px !important;
+	}
 	}
 }

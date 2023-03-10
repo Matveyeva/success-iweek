@@ -13,10 +13,13 @@
 		//==== выпадашка ======
 		.employee-page-select
 			+custom-select-checkbox('Специальность',['Стоматолог', 'Ортодонт', 'Терапевт','Хирург', 'Гинеколог'], 'mySelect--absolute' )
-	
-		.employee-add__btn(frame-btn="add-new-empl")
-			button.btn Добавить сотрудника
-	
+		.blok-wrapper.ml-auto
+			.employee-add__btn(frame-btn="add-new-empl")
+				button.btn Добавить сотрудника
+			label.switch-toggle.flex-box.flex-y-center.mt-16
+				input(type='checkbox' class='toggle-switch' )
+				span.real-switch
+				span.custom-switch__text Работаем по страховке
 	.employee-page-content__table
 		table
 			tbody
@@ -24,36 +27,36 @@
 					td
 						a(href="employee-personal-page.html")
 							.text-column
-								.text-18 Антадзе Тамар
-								.text-14.text-gray3 стоматолог, хирург
+								.text-18 Голетиани Мариам
+								.text-14.text-gray3 стоматолог, ортодонт
 					td
 						.text-16 Приходящий
 				tr
 					td
 						.text-column
 							.text-18 Антадзе Тамар
-							.text-14.text-gray3 стоматолог, хирург
+							.text-14.text-gray3 стоматолог, ортодонт
+					td
+						.text-16 Приходящий
+				tr
+					td
+						.text-column
+							.text-18 Лордкипанидзе Мария
+							.text-14.text-gray3 стоматолог, ортодонт
 					td
 						.text-16 Приходящий
 				tr
 					td
 						.text-column
 							.text-18 Антадзе Тамар
-							.text-14.text-gray3 стоматолог, хирург
+							.text-14.text-gray3 стоматолог, ортодонт
 					td
 						.text-16 Приходящий
 				tr
 					td
 						.text-column
 							.text-18 Антадзе Тамар
-							.text-14.text-gray3 стоматолог, хирург
-					td
-						.text-16 Приходящий
-				tr
-					td
-						.text-column
-							.text-18 Антадзе Тамар
-							.text-14.text-gray3 стоматолог, хирург
+							.text-14.text-gray3 стоматолог, ортодонт
 					td
 						.text-16 Приходящий
 

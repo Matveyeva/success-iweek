@@ -13,11 +13,25 @@ mixin task-card(state)
 		.dtc-footer
 			span(frame-btn="visit-info") 03 окт 05:00
 			.state-select
-				.state-select-current(data-state="state-started") Начат прием
+				if state == 'Начат'
+					.state-select-current(data-state="state-started") Начат прием
+				if state == 'Подтвержден'
+					.state-select-current(data-state="state-confirm") Подтвержден
+				if state == 'Неявка'
+					.state-select-current(data-state="state-notvisit") Неявка
+				if state == 'Выполнен'
+					.state-select-current(data-state="state-done") Выполнен
+				if state == 'Отменен'
+					.state-select-current(data-state="state-cancel")  Отменен
+				if state == 'Просрочен'
+					.state-select-current(data-state="state-expired") Просрочен
+				if state == 'Запланировано'
+					.state-select-current(data-state="state-planer") Запланировано
 				.state-select-drop
 					.state-select-drop__item(data-state="state-started") Начат прием
 					.state-select-drop__item(data-state="state-confirm") Подтвержден
-					.state-select-drop__item(data-state="state-notconfirm") Не подтвержден
+					.state-select-drop__item(data-state="state-notvisit") Неявка
 					.state-select-drop__item(data-state="state-done") Выполнен
 					.state-select-drop__item(data-state="state-cancel")  Отменен
+					.state-select-drop__item(data-state="state-planer")  Запланировано
 				

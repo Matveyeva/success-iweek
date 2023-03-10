@@ -1,5 +1,5 @@
 //================== mobile filters ==============
-//- .modal-frame.appoint-modal.flex-column.visible(frame-modal="filters-modal")
+
 .modal-frame-wrapper.appoint-modal(frame-modal="appoint-modal")
 	.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
@@ -35,11 +35,222 @@
 				.appoint-form__body
 					.form-box
 						label.text-14.text-gray3 Специальность
-						input(type="text" readonly value="Аллерголог").form-input
+						input(type="text" readonly value="Стоматолог").form-input
 
-					.form-box
+					.form-box.form-box--icon-right
 						label.text-14.text-gray3 Дата и время приёма
-						input(type="text" readonly value="29 октября, 15:00").form-input
+						.form-box-input
+							button(type="button").form-box__icon#openAppointTime
+								svg.svg-calendar
+									use(href="./img/svg-sprite.svg#svg-calendar")
+							input(type="text" readonly value="29 октября, 15:00").form-input
+							//======== block data ============
+					.cs-wrapper#tableAppointTime
+						//======slider navigation=======
+						.cs-next
+							.icon-btn.arrow-right
+						.cs-prev
+							.icon-btn.arrow-left
+						
+						//======slider block=======
+						.cs-head
+							.cs-container
+								.cs-head-line.text-center
+									.cs-head__block.flex-wrapper.cs-active
+										.cs-block__cell
+											.text-12 пн
+											.text-14 16 марта
+										.cs-block__cell
+											.text-12 пн
+											.text-14 17 марта
+										.cs-block__cell
+											.text-12 пн
+											.text-14 18 марта
+										.cs-block__cell
+											.text-12 пн
+											.text-14 19 марта
+									.cs-head__block.flex-wrapper
+										.cs-block__cell
+											.text-12 пн
+											.text-14 20 марта
+										.cs-block__cell
+											.text-12 пн
+											.text-14 21 марта
+										.cs-block__cell
+											.text-12 пн
+											.text-14 22 марта
+										.cs-block__cell
+											.text-12 пн
+											.text-14 23 марта
+									.cs-head__block.flex-wrapper
+										.cs-block__cell
+											.text-12 пн
+											.text-14 24 марта
+										.cs-block__cell
+											.text-12 пн
+											.text-14 25 марта
+										.cs-block__cell
+											.text-12 пн
+											.text-14 26 марта
+										.cs-block__cell
+											.text-12 пн
+											.text-14 27 марта
+						
+						.cs-table.scroll-vertical
+							.cs-container
+								.cs-table-line
+									+csSlide({
+									argsTimes:{
+										col1:[
+											{clock:'8:00', rbName:'select-time1'},
+											{clock:'8:30', rbName:'select-time1'},
+											{clock:'9:00', rbName:'select-time1'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'},
+											],
+										col2:[
+											{clock:'8:00', rbName:'select-time2'},
+											{clock:'8:30', rbName:'select-time2'},
+											{clock:'9:00', rbName:'select-time2'},
+											{clock:'9:30', rbName:'select-time2'},
+											{clock:'10:00', rbName:'select-time2'},
+											{clock:'10:30', rbName:'select-time2'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'},
+											],
+										col3:[
+											{clock:'8:00', rbName:'select-time3'},
+											{clock:'8:30', rbName:'select-time3'},
+											{clock:'9:00', rbName:'select-time3'},
+											{clock:'9:30', rbName:'select-time3'},
+											{clock:'10:00', rbName:'select-time3'},
+											{clock:'10:30', rbName:'select-time3'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'},
+											],
+										col4:[
+											{clock:'8:00', rbName:'select-time4'},
+											{clock:'8:30', rbName:'select-time4'},
+											{clock:'9:00', rbName:'select-time4'},
+											{clock:'9:30', rbName:'select-time4'},
+											{clock:'10:00', rbName:'select-time4'},
+											{clock:'10:30', rbName:'select-time4'},
+											{clock:'9:30', rbName:'select-time1'},
+											{clock:'10:00', rbName:'select-time1'},
+											{clock:'10:30', rbName:'select-time1'},
+											]
+										}
+									
+									}
+									)(class="cs-active")
+									+csSlide({
+										argsTimes:{
+											col1:[
+												{clock:'8:00', rbName:'select-time1'},
+												{clock:'8:30', rbName:'select-time1'},
+												{clock:'9:00', rbName:'select-time1'},
+												{clock:'9:30', rbName:'select-time1'},
+												{clock:'10:00', rbName:'select-time1'},
+												{clock:'10:30', rbName:'select-time1'},
+												{clock:'9:30', rbName:'select-time1'},
+												{clock:'10:00', rbName:'select-time1'},
+												{clock:'10:30', rbName:'select-time1'},
+												],
+											col2:[
+												{clock:'8:00', rbName:'select-time2'},
+												{clock:'8:30', rbName:'select-time2'},
+												{clock:'9:00', rbName:'select-time2'},
+												{clock:'9:30', rbName:'select-time2'},
+												{clock:'10:00', rbName:'select-time2'},
+												{clock:'10:30', rbName:'select-time2'},
+												{clock:'9:30', rbName:'select-time1'},
+												{clock:'10:00', rbName:'select-time1'},
+												{clock:'10:30', rbName:'select-time1'},
+												],
+											col3:[
+												{clock:'8:00', rbName:'select-time3'},
+												{clock:'8:30', rbName:'select-time3'},
+												{clock:'9:00', rbName:'select-time3'},
+												{clock:'9:30', rbName:'select-time3'},
+												{clock:'10:00', rbName:'select-time3'},
+												{clock:'10:30', rbName:'select-time3'},
+												{clock:'9:30', rbName:'select-time1'},
+												{clock:'10:00', rbName:'select-time1'},
+												{clock:'10:30', rbName:'select-time1'},
+												],
+											col4:[
+												{clock:'8:00', rbName:'select-time4'},
+												{clock:'8:30', rbName:'select-time4'},
+												{clock:'9:00', rbName:'select-time4'},
+												{clock:'9:30', rbName:'select-time4'},
+												{clock:'10:00', rbName:'select-time4'},
+												{clock:'10:30', rbName:'select-time4'},
+												{clock:'9:30', rbName:'select-time1'},
+												{clock:'10:00', rbName:'select-time1'},
+												{clock:'10:30', rbName:'select-time1'},
+												]
+											}
+										
+										}
+									)
+									+csSlide({
+										argsTimes:{
+											col1:[
+												{clock:'8:00', rbName:'select-time1'},
+												{clock:'8:30', rbName:'select-time1'},
+												{clock:'9:00', rbName:'select-time1'},
+												{clock:'9:30', rbName:'select-time1'},
+												{clock:'10:00', rbName:'select-time1'},
+												{clock:'10:30', rbName:'select-time1'},
+												{clock:'9:30', rbName:'select-time1'},
+												{clock:'10:00', rbName:'select-time1'},
+												{clock:'10:30', rbName:'select-time1'},
+												],
+											col2:[
+												{clock:'8:00', rbName:'select-time2'},
+												{clock:'8:30', rbName:'select-time2'},
+												{clock:'9:00', rbName:'select-time2'},
+												{clock:'9:30', rbName:'select-time2'},
+												{clock:'10:00', rbName:'select-time2'},
+												{clock:'10:30', rbName:'select-time2'},
+												{clock:'9:30', rbName:'select-time1'},
+												{clock:'10:00', rbName:'select-time1'},
+												{clock:'10:30', rbName:'select-time1'},
+												],
+											col3:[
+												{clock:'8:00', rbName:'select-time3'},
+												{clock:'8:30', rbName:'select-time3'},
+												{clock:'9:00', rbName:'select-time3'},
+												{clock:'9:30', rbName:'select-time3'},
+												{clock:'10:00', rbName:'select-time3'},
+												{clock:'10:30', rbName:'select-time3'},
+												{clock:'9:30', rbName:'select-time1'},
+												{clock:'10:00', rbName:'select-time1'},
+												{clock:'10:30', rbName:'select-time1'},
+												],
+											col4:[
+												{clock:'8:00', rbName:'select-time4'},
+												{clock:'8:30', rbName:'select-time4'},
+												{clock:'9:00', rbName:'select-time4'},
+												{clock:'9:30', rbName:'select-time4'},
+												{clock:'10:00', rbName:'select-time4'},
+												{clock:'10:30', rbName:'select-time4'},
+												{clock:'9:30', rbName:'select-time1'},
+												{clock:'10:00', rbName:'select-time1'},
+												{clock:'10:30', rbName:'select-time1'},
+												]
+											}
+										
+										}
+									)
+
+
 					
 					.form-box
 						label.text-14.text-gray3 Ваше имя
@@ -59,4 +270,8 @@
 						span.text-12.text-gray3.text-sub-input На этот номер вы получите SMS с кодом подтверждения и данные о записи
 					.form-btn
 						button(type="submit" frame-btn="confirm-appoint-modal").btn.btn--gradient Записаться
-						.agree-text.text-12.text-gray3 Нажимая «Записаться», я принимаю условия #[a.text-primary(href="#!")  пользовательского соглашения ] и даю  #[a.text-primary(href="#!") согласие на обработку персональных данных]
+						.agree-text.text-12.text-gray3
+							label.checkbox-label.flex-box.flex-y-center
+								input(type='checkbox' name='form-checkbox' class='real-checkbox')
+								span.custom-checkbox
+								p Принимаю условия #[a.text-primary(href="#!")  пользовательского соглашения ] и даю  #[a.text-primary(href="#!") согласие на обработку персональных данных]

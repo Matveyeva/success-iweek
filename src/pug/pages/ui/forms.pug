@@ -25,6 +25,29 @@ html(lang="ru")
 				.container-dashboard__content
 					ul.ui-components
 						li
+							.inputs-group
+								.form-box.form-box--icon-left
+									.form-box-input
+										.form-box__icon
+											svg.svg-search
+												use(href="./img/svg-sprite.svg#svg-search")
+										input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+								
+								//===== выпадашка с городами =====
+								+custom-select-icon('Батуми', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Аллерголог', 'Терапевт'], 'mySelect--absolute mySelect-input--icon  mySelect--64',  'svg-location', '')
+							pre.
+								.inputs-group
+									.form-box.form-box--icon-left
+										.form-box-input
+											.form-box__icon
+												svg.svg-search
+													use(href="./img/svg-sprite.svg#svg-search")
+											input(type="text" placeholder="Поисковый запрос").form-input.form-input--64
+							
+							//===== выпадашка с городами =====
+							+custom-select-icon('Батуми', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Аллерголог', 'Терапевт'], 'mySelect--absolute mySelect-input--icon  mySelect--64',  'svg-location', '')
+						
+						li
 							+custom-select-checkbox('Пациент',['Беридзе Н.', 'Чикрадзе Э.', 'Кипиани Д.'], 'mySelect--absolute' )
 							pre.
 								+custom-select-checkbox('Пациент',['Беридзе Н.', 'Чикрадзе Э.', 'Кипиани Д.'], 'mySelect--absolute' )
@@ -104,7 +127,7 @@ html(lang="ru")
 										+custom-radio('currency', 'RUB','RUB', 'checked')(class="role-currency")
 									.mySelect-drop__row
 										+custom-radio('country', 'GE', 'Georgian')(class="role-country")
-										+custom-radio('currency', '&#8382;','&#8382;')(class="role-currency")
+										+custom-radio('currency', 'GEL','GEL')(class="role-currency")
 										
 						li
 							h3 Чекбоксы
@@ -114,7 +137,7 @@ html(lang="ru")
 								span.custom-checkbox__text Normal on
 							pre.
 								label.checkbox-label.flex-box.flex-y-center
-									input(type='checkbox' name='form-checkbox' class='checkbox')
+									input(type='checkbox' name='form-checkbox' )
 									span.custom-checkbox 
 									span.custom-checkbox__text Normal on
 						li
@@ -126,7 +149,7 @@ html(lang="ru")
 							label.radiobutton-label.flex-box
 								input(type='radio' name='currency' value='gel' class='real-radio')
 								span.custom-radio
-								span.custom-radio__text &#8382;
+								span.custom-radio__text GEL
 							label.radiobutton-label.flex-box
 								input(type='radio' name='currency' value='rub' class='real-radio')
 								span.custom-radio
@@ -139,7 +162,7 @@ html(lang="ru")
 								label.flex-box
 									input(type='radio' name='currency' value='gel' class='real-radio')
 									span.custom-radio
-									span.custom-radio__text &#8382;
+									span.custom-radio__text GEL
 								label.flex-box
 									input(type='radio' name='currency' value='rub' class='real-radio')
 									span.custom-radio

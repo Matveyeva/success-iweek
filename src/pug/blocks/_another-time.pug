@@ -1,0 +1,12 @@
+
+//============================================================================= 
+	Модальное окно Время занято, выберите другое!
+	Если для его отображения не требуется клик по кнопке с атрибутом frame-btn="another-time" , то атрибут frame-modal="another-time"  можно удалить.
+//=============================================================================
+.modal-frame-wrapper.modal-frame-center.visible(frame-modal="another-time")
+	.modal-frame.flex-column.p-16
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.icon-close.ml-auto(frame-close)
+			
+		.modal-frame__body.text-center
+			p.text-16.mb-32 Время бронирования занято, выберите другое время для записи.

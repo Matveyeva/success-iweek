@@ -11,6 +11,7 @@
 @import "base/_modals.scss";
 
 //blocks
+@import "blocks/_cs.scss";
 @import "blocks/_page-nav.scss";
 @import "blocks/_header-contacts.scss";
 @import "blocks/_benefits-items.scss";
@@ -35,10 +36,12 @@
 @import "blocks/_make-appointment.scss";
 @import "blocks/_schedule-rules.scss";
 @import "blocks/_review-slider.scss";
+@import "blocks/_empl-schedule-edit.scss";
 
 
 //sections
 @import "sections/_header.scss";
+@import "sections/_header-search-block.scss";
 @import "sections/_doctor-card.scss";
 @import "sections/_partner-banner.scss";
 @import "sections/_emergency-situation.scss";

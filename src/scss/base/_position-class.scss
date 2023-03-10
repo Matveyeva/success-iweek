@@ -63,8 +63,12 @@
 	align-items: flex-end;
 }
 .mt-auto{margin-top: auto!important;}
+.ml-auto{margin-left: auto!important;}
 .mb-8{
 	margin-bottom: 8px;
+}
+.mt-2{
+	margin-top: 2px;
 }
 .mt-8{
 	margin-top: 8px;
@@ -113,6 +117,9 @@
 }
 .pr-24{
 	padding-right: 24px;
+}
+.p-16{
+	padding: 16px!important;
 }
 .w-100{
 	width: 100%!important;

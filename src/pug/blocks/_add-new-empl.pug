@@ -3,6 +3,7 @@
 	.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
 			.text-24 Добавить сотрудника
+
 			.icon-close(frame-close)
 			
 		.modal-frame__body
@@ -40,6 +41,32 @@
 					.form-box
 						label.text-16 Контакты
 						input(type="text" placeholder="Телефон").form-input
+					.form-box.mt-16
+						label.text-16 E-mail
+						input(type="text" placeholder="Email").form-input
+				
+				.cabinet-form__langs.mb-32
+					.title-18.mb-24 Языки
+					.form-box.flex-vertical-center.gap-32.mb-32
+						.form-box
+							.flex-vertical-center.gap-32
+								label.checkbox-label.flex-box.flex-y-center
+									input(type='checkbox' name=''  class='real-checkbox')
+									span.custom-checkbox 
+									span.custom-checkbox__text Грузинский
+									
+								label.checkbox-label.flex-box.flex-y-center
+									input(type='checkbox' name=''  class='real-checkbox')
+									span.custom-checkbox 
+									span.custom-checkbox__text Английский
+								label.checkbox-label.flex-box.flex-y-center
+									input(type='checkbox' name=''  class='real-checkbox')
+									span.custom-checkbox 
+									span.custom-checkbox__text Русский
+								label.checkbox-label.flex-box.flex-y-center
+									input(type='checkbox' name='' class='real-checkbox')
+									span.custom-checkbox 
+									span.custom-checkbox__text Турецкий
 				
 				.cabinet-form__duration.mb-32
 					.title-18.mb-24 Длительность приема

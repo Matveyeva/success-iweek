@@ -6,7 +6,7 @@
 			.text-24 Запись на прием
 			.icon-close(frame-close)
 			
-		.modal-frame__body
+		.modal-frame__body.scroll-vertical
 			.appointment-form-header.modal-scroll-header
 				.flex-box.btn-toggle-block
 					label.btn--toggle
@@ -23,7 +23,7 @@
 						.btn
 							span Недееспособный гражданин
 			
-			.cabinet-form-body.scroll-vertical
+			.cabinet-form-body
 				.fieldset-group.mb-32
 					.title-18.mb-24 Данные пациента
 					
@@ -38,7 +38,7 @@
 							label.text-16 Отчество
 							input(type="text" ).form-input
 				
-					.cabinet-form__gender.flex-vertical-center.gap-32.mb-32
+					.cabinet-form__gender.gap-32.mb-32.grid-355
 						.form-box
 							label.text-16 Пол
 							.flex-vertical-center.gap-32
@@ -82,13 +82,13 @@
 					.flex-vertical-center.gap-32.flex-grow.mb-32
 						+custom-select-icon('Фамилия И.О.',['Беридзе Н.', 'Чикрадзе Э. С.С.', 'Золотов Е. П.'], 'mySelect--absolute' )
 						
-						+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт', 'Консультация имплантолога', 'Ветеринар', 'Терапевт'], 'mySelect--absolute')
+						+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт'], 'mySelect--absolute')
 					
 					.mb-32
 						+custom-select-icon('Рекомендовавший врач',['Беридзе Н.', 'Чикрадзе Э. С.С.', 'Золотов Е. П.'], 'mySelect--absolute' )
 					
 					.mb-32
-						+custom-select-icon('Канал привлечения',['Google', 'Telegram', 'ВКонтакте', 'Про докторов'], 'mySelect--absolute' )
+						+custom-select-icon('Канал привлечения',[, 'Telegram','Google', 'Facebook', 'Сервис iweek'], 'mySelect--absolute' )
 				.fieldset-group.mb-32
 					.form-textarea
 							textarea(placeholder="Цель визита")
@@ -115,5 +115,5 @@
 						.state-select-drop__item(data-state="state-cancel")  Отменен
 				
 				//====== кнопка ========
-				button.btn.btn--primary(type="submit") Назначить
+				button.btn.btn--primary(type="submit") Записать на прием
 							

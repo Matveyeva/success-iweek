@@ -1,0 +1,78 @@
+//================== редактировать личное расписание-календарь сотрудника  ==============
+.modal-frame-wrapper.modal-frame-right.column-modal.empl-schedule-modal(frame-modal="empl-schedule-edit")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-24 Новое событие на 02 декабря
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			.flex-column.gap-32.h-100
+				.tabs-wrapper.h-100.flex-column(custom-tabs)
+					.tabs.filter-toggle__block.flex-box-inline
+						label.filter-toggle-item(ct-btn="1")
+							input(type='radio' name='toggle-radiobtn' class='filter-radiobtn' checked)
+							span График работы
+					
+						label.filter-toggle-item(ct-btn="2")
+							input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+							span Отпуск
+					
+					.tabs-content.pt-32.flex-grow-1
+						form.empl-schedule-form.tab-item.ct-content--active(ct-content="1")
+							.category-wrapper.flex-column.gap-16
+								label.checkbox-label.flex-box.flex-y-center
+									input.real-checkbox(type='checkbox' name='empl-cat1' )
+									span.custom-checkbox 
+									span.custom-checkbox__text Аллерголог
+								label.checkbox-label.flex-box.flex-y-center
+									input.real-checkbox(type='checkbox' name='empl-cat2' )
+									span.custom-checkbox 
+									span.custom-checkbox__text Гастроэнтеролог
+								label.checkbox-label.flex-box.flex-y-center
+									input.real-checkbox(type='checkbox' name='empl-cat3' )
+									span.custom-checkbox 
+									span.custom-checkbox__text Диетолог
+							
+							.time-wrapper.flex-vertical-center.gap-32.pt-32
+								.form-item
+									+custom-select-icon2('Начало', ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00'], 'mySelect--absolute')
+										
+								.form-item
+									+custom-select-icon2('Окончание',  ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00'], 'mySelect--absolute')
+								label.switch-toggle.flex-box.flex-y-center
+									input(type='checkbox'  class='toggle-switch')
+									span.real-switch
+									span.custom-switch__text Весь день
+						
+							.form-btns.flex-vertical-center.gap-32.mt-auto
+								button.btn.btn--accent(frame-close) Удалить
+								button.btn.btn--orange(frame-close) Отменить
+								button.btn.btn--primary(type="submit") Добавить
+						
+						//========вкладка Отпуск ======
+						form.empl-schedule-form.tab-item(ct-content="2")
+							.category-wrapper.flex-column.gap-16
+								label.radiobutton-label.flex-box.flex-y-center
+									input(type='radio' name='free-day'  class='real-radio')
+									span.custom-radio
+									span.custom-radio__text Отпуск
+								label.radiobutton-label.flex-box.flex-y-center
+									input.real-radio(type='radio' name='free-day' )
+									span.custom-radio 
+									span.custom-radio__text Отгул
+								label.radiobutton-label.flex-box.flex-y-center
+									input.real-radio(type='radio' name='free-day' )
+									span.custom-radio
+									span.custom-radio__text Праздничный день
+							
+							.time-wrapper.flex-vertical-center.gap-32.pt-32
+								.form-item
+									+custom-select-icon2('Начало', ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00'], 'mySelect--absolute')
+										
+								.form-item
+									+custom-select-icon2('Окончание',  ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00'], 'mySelect--absolute')
+							.form-btns.flex-vertical-center.gap-32.mt-auto
+								
+								button.btn.btn--orange(frame-close) Отменить
+								button.btn.btn--primary(type="submit") Добавить
+								

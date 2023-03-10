@@ -78,3 +78,6 @@
 .state-select{
 	width: 210px;
 }
+.dashboard-table-column.state-cancel, .dashboard-table-column.state-done, .dashboard-table-column.state-notvisit{
+	.state-select-current::before{display: none;}
+} 
