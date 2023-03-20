@@ -1,20 +1,56 @@
 
 //================== модальное окно Авторизация ==============
-.modal-frame-wrapper.modal-frame-center.visible(frame-modal="login-modal")
-	.modal-frame.flex-column
-		.modal-frame__head.flex-box.flex-y-center.flex-between
-			.text-32 Авторизация
-			.icon-close(frame-close)
-			
-		.modal-frame__body
+.modal-frame-wrapper.modal-frame-center.visible.w-700(frame-modal="login-modal")
+	.modal-frame.flex-column.pos-rel
+		.modal-frame__head.flex-column.flex-center.text-center
+			.icon-close.pos-abs(frame-close)
+			.modal-logo
+				img(src="./img/logo-icon.png", width="48" height="48" alt="logo")
+			.mt-16
+				p Войдите или зарегистрируйтесь
+		.modal-frame__body.pt-24
 			form.login-form
-				.form-box
-					label.text-16.text-gray3 Логин
-					input.form-input(type="text")
-				.form-box.mt-16
-					label.text-16.text-gray3 Пароль					
-					input(type="password" ).form-input
-					a(href="#!").text-12.text-red.mt-8 Забыли пароль?
+				//====радиобаттоны Пользователь / Исполнитель =======
+				.form-box.form-login-role
+					//==== Пользователь  =======
+					label.radiobutton-label.flex-box
+						input(type='radio' name='login-role' value='' class='real-radio' checked) 
+						span.custom-radio 
+						span.custom-radio__text Пользователь
+						.pos-abs
+							p Бронируйте #[strong встречи онлайн круглосуточно - для вас и вашей семьи]. Делитесь отзывами об услугах на сервисе. 
+
+					//==== Исполнитель =======
+					label.radiobutton-label.flex-box
+						input(type='radio' name='login-role' value='' class='real-radio') 
+						span.custom-radio 
+						span.custom-radio__text Исполнитель
+						.pos-abs
+							p Рассказывайте о ваших услугах, включайте запись онлайн. 
+							p Отвечайте на отзывы пользователей. 
+					
+				//======== табы Почта /Телефон ======
+				.login-variant-tabs.tabs-wrapper.pt-32(custom-tabs)
+					.tabs.filter-toggle__block.flex-box-inline
+						label.filter-toggle-item(ct-btn="1")
+							input(type='radio' name='login-variant' class='filter-radiobtn' checked)
+							span Email
+					
+						label.filter-toggle-item(ct-btn="2")
+							input(type='radio' name='login-variant' class='filter-radiobtn')
+							span Телефон
+				
+					.tabs-content.pt-32.flex-grow-1
+						div.ct-content--active(ct-content="1")
+							.form-box
+								input.form-input(type="text" placeholder="Email")
+								a(href="#!").text-link.text-red.mt-8 Сбросить пароль
+						div(ct-content="2")
+							.form-box
+								
+								input.form-input(type="text" placeholder="Телефон")
+								.text-indigo.mt-8 Отправим код
+							
 				.form-btn.mt-24
 					button.btn.btn--gradient.w-100 Войти
 				

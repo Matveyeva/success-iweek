@@ -1,8 +1,8 @@
 /*position class*/
 .pos-rel{
 	position: relative;
-	
 }
+.pos-abs{position: absolute;}
 .flex-box,.flex-wrapper,.flex-column,.flex-vertical-center{
 	display: flex!important;
 }
@@ -106,6 +106,7 @@
 .pt-32{
 	padding-top: 32px;
 }
+.pt-40{padding-top: 40px;}
 .pb-24{
 	padding-bottom: 24px;
 }

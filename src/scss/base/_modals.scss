@@ -124,3 +124,38 @@
 	margin-top: 32px;
 	.title-16 + .flex-form-fields{margin-top: 16px;}
 }
+.icon-close.pos-abs{
+	top: 10px;
+	right: 10px;
+}
+.modal-logo{
+	width: 48px;
+	height: 48px;
+}
+.form-login-role{
+	position: relative;
+	padding-bottom: 100px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	label{
+
+	}
+	label .pos-abs{
+		left: 0;
+		bottom: -65px;
+		right:0;
+		height: 50px;
+		opacity: 0;
+		
+
+	}
+	label> input:checked~ .pos-abs{opacity: 1;}
+}
+.login-variant-tabs{
+	.filter-toggle-item{
+		width: 160px;
+	}
+	.form-box{
+		a, button{display: inline-block;}
+	}
+}
