@@ -134,20 +134,7 @@
 }
 .form-login-role{
 	position: relative;
-	padding-bottom: 100px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	
-	label .pos-abs{
-		left: 0;
-		bottom: -65px;
-		right:0;
-		height: 50px;
-		opacity: 0;
-		
-
-	}
-	label> input:checked~ .pos-abs{opacity: 1;}
+	.tabs{column-gap:60px;}
 	label input:checked ~.custom-radio__text{color: $indigo;}
 	label .custom-radio__text{font-size: 18px!important;}
 }

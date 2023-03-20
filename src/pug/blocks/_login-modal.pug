@@ -11,24 +11,27 @@
 		.modal-frame__body.pt-24
 			form.login-form
 				//====радиобаттоны Пользователь / Исполнитель =======
-				.form-box.form-login-role
-					//==== Пользователь  =======
-					label.radiobutton-label.flex-box
-						input(type='radio' name='login-role' value='' class='real-radio' checked) 
-						span.custom-radio 
-						span.custom-radio__text Пользователь
-						.pos-abs
+				.form-login-role.tabs-wrapper(custom-tabs)
+					.tabs.flex-box-inline
+						//==== Пользователь  =======
+						label.radiobutton-label.flex-box.filter-toggle-item(ct-btn="1")
+							input(type='radio' name='login-role' value='' class='real-radio' checked) 
+							span.custom-radio
+							span.custom-radio__text Пользователь
+					
+						label.radiobutton-label.flex-box.filter-toggle-item(ct-btn="2")
+							input(type='radio' name='login-role' value='' class='real-radio')
+							span.custom-radio
+							span.custom-radio__text Исполнитель
+				
+					.tabs-content.pt-16.flex-grow-1
+						div.ct-content--active(ct-content="1")
 							p Бронируйте #[strong встречи онлайн круглосуточно - для вас и вашей семьи]. Делитесь отзывами об услугах на сервисе. 
-
-					//==== Исполнитель =======
-					label.radiobutton-label.flex-box
-						input(type='radio' name='login-role' value='' class='real-radio') 
-						span.custom-radio 
-						span.custom-radio__text Исполнитель
-						.pos-abs
+						
+						div(ct-content="2")
 							p Рассказывайте о ваших услугах, включайте запись онлайн. 
 							p Отвечайте на отзывы пользователей. 
-					
+				
 				//======== табы Почта /Телефон ======
 				.login-variant-tabs.tabs-wrapper.pt-32(custom-tabs)
 					.tabs.filter-toggle__block.flex-box-inline
@@ -47,7 +50,6 @@
 								a(href="#!").text-link.text-red.mt-8 Сбросить пароль
 						div(ct-content="2")
 							.form-box
-								
 								input.form-input(type="text" placeholder="Телефон")
 								.text-indigo.mt-8 Отправим код
 				
