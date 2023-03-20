@@ -149,6 +149,7 @@
 	}
 	label> input:checked~ .pos-abs{opacity: 1;}
 	label input:checked ~.custom-radio__text{color: $indigo;}
+	label .custom-radio__text{font-size: 18px!important;}
 }
 .login-variant-tabs{
 	.filter-toggle-item{
