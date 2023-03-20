@@ -16,7 +16,7 @@
 					label.radiobutton-label.flex-box
 						input(type='radio' name='login-role' value='' class='real-radio' checked) 
 						span.custom-radio 
-						span.custom-radio__text Пользователь
+						span.custom-radio__text.title-20 Пользователь
 						.pos-abs
 							p Бронируйте #[strong встречи онлайн круглосуточно - для вас и вашей семьи]. Делитесь отзывами об услугах на сервисе. 
 
@@ -24,7 +24,7 @@
 					label.radiobutton-label.flex-box
 						input(type='radio' name='login-role' value='' class='real-radio') 
 						span.custom-radio 
-						span.custom-radio__text Исполнитель
+						span.custom-radio__text.title-20 Исполнитель
 						.pos-abs
 							p Рассказывайте о ваших услугах, включайте запись онлайн. 
 							p Отвечайте на отзывы пользователей. 
@@ -50,8 +50,22 @@
 								
 								input.form-input(type="text" placeholder="Телефон")
 								.text-indigo.mt-8 Отправим код
-							
+				
+				//========= form button ======			
 				.form-btn.mt-24
 					button.btn.btn--gradient.w-100 Войти
 				
-				.form-btn.mt-24.text-center.text-18.text-indigo(frame-btn="registr-modal") Регистрация
+				//- .form-btn.mt-24.text-center.text-18.text-indigo(frame-btn="registr-modal") Регистрация
+
+				//=====login whith social ==========
+				.login-type-social.text-center.pt-32
+					p.mb-24 Войти с помощью
+					.social-group.flex-box.flex-center
+						a(href="#!")
+							img(src="./img/fb-round.png", width="40" height="40" alt="icon")
+						a(href="#!")
+							img(src="./img/inst.png", width="40" height="40" alt="icon")
+						a(href="#!")
+							img(src="./img/google.png", width="40" height="40" alt="icon")
+						a(href="#!")
+							img(src="./img/tg.png", width="40" height="40" alt="icon")

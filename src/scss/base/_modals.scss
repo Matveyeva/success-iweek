@@ -137,9 +137,7 @@
 	padding-bottom: 100px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	label{
-
-	}
+	
 	label .pos-abs{
 		left: 0;
 		bottom: -65px;
@@ -150,6 +148,7 @@
 
 	}
 	label> input:checked~ .pos-abs{opacity: 1;}
+	label input:checked ~.custom-radio__text{color: $indigo;}
 }
 .login-variant-tabs{
 	.filter-toggle-item{
@@ -158,4 +157,7 @@
 	.form-box{
 		a, button{display: inline-block;}
 	}
+}
+.social-group{
+	column-gap:32px;
 }
