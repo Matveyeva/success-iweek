@@ -8,7 +8,7 @@
 			.modal-logo
 				img(src="./img/logo-icon.png", width="48" height="48" alt="logo")
 		
-		//======= обертка для сменного, в зависимости от шага авторизации, контента ===============
+		//======= Обертка для сменного, в зависимости от шага авторизации, контента.  Контент скрыт по умолчанию, что бы он отобразился, надо диву с классом "translate-content" добавить класс "visible"  ===============
 		.translate-wrapper.pt-8.pos-rel
 			
 			//======== #1 - стартовый контент ==================
@@ -121,13 +121,13 @@
 							button.btn.btn--dark.w-100 Войти по QR-коду
 		
 			//======== #4 - контент - Восстановить пароль по телефону ==================
-			.translate-content.translate-content--restore-passw.visible
+			.translate-content.translate-content--restore-passw
 				.text-center
 					p Введите номер телефона, который привязан к аккаунту
 				.modal-frame__body.pt-40
 					form
 						.form-box
-							input.form-input.form-input--readonly(type='text' name='' readonly value="lareta@yandex.ru")
+							input.form-input.form-input--readonly(type='text' name='' readonly value="lareta_2023")
 							
 						.form-box.mt-8
 							input.form-input(type="text" name="" placeholder="+7" )
@@ -137,8 +137,26 @@
 						
 						.form-btn.mt-16
 							button.btn.btn--dark.w-100.text-14 Другой способ восстановления
-						a(href="#!").text-indigo.mt-8.d-block.text-center Не получается восстановить?
-		
+						
+			
+			//======== #5 - контент - Восстановить пароль по email ==================
+			.translate-content.translate-content--restore-passw.visible
+				.text-center
+					p Введите один из адресов email, который привязан к аккаунту
+				.modal-frame__body.pt-40
+					form
+						.form-box
+							input.form-input.form-input--readonly(type='text' name='' readonly value="lareta_2023")
+							
+						.form-box.mt-8
+							input.form-input(type="text" name="" placeholder="Email, привязанный к аккаунту" )
+						//========= form button ======
+						.form-btn.mt-24
+							button.btn.btn--gradient.w-100 Продолжить
+						
+						.form-btn.mt-16
+							button.btn.btn--dark.w-100.text-14 Другой способ восстановления
+								
 		//=======футер модального окна ==========
 		.modal-frame__footer.pt-24
 			.flex-box.flex-between
