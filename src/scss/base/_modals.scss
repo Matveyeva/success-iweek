@@ -166,16 +166,9 @@
 	transform:translateX(0);
 	display: block;
 	z-index: 2;
+	background-color: #F8FBFF;;
 }
-.translate-content--email-code{
-	// height: 200px;
-	// position: absolute;
-	// top: 0;
-	// left: 0;
-	// right: 0;
-	background-color: #fff;
-	z-index: 2;
-}
+
 .form-box.form-box--code{
 	display: flex;
 	justify-content: center;

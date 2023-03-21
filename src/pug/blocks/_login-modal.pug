@@ -12,7 +12,7 @@
 		.translate-wrapper.pt-8.pos-rel
 			
 			//======== #1 - стартовый контент ==================
-			.translate-content
+			.translate-content.visible
 				.text-center
 					p Войдите или зарегистрируйтесь
 				.modal-frame__body.pt-16
@@ -79,84 +79,6 @@
 								a(href="#!")
 									img(src="./img/tg.png", width="40" height="40" alt="icon")
 			
-			//======== #2 - контент - Введите код из почты или телефона ==================
-			.translate-content.translate-content--email-code
-				.text-center
-					p Введите код из почты. <br> Мы  отправили его на la****1@ya.ru
-				.modal-frame__body.pt-40
-					form
-						.form-box.form-box--code
-							input.sms-input(type="text" maxlength="1" tabindex="1")
-							input.sms-input(type="text" maxlength="1" tabindex="2")
-							input.sms-input(type="text" maxlength="1" tabindex="3")
-							input.sms-input(type="text" maxlength="1" tabindex="4")
-							input.sms-input(type="text" maxlength="1" tabindex="5")
-
-						//========= form button ======			
-						.form-btn.mt-24
-							button.btn.btn--gradient.w-100 Далее
-						
-						
-			//======== #3 - контент - Продолжение, если Пользователь найден в системе, при вводе почты или телефона ==================
-			.translate-content.translate-content--pass
-				.text-center
-					p Войдите, что бы продолжить
-				.modal-frame__body.pt-40
-					form
-						.form-box
-							input.form-input(type='text' name='' value="lareta@yandex.ru")
-							
-						.toggle-pass.form-box.mt-8
-							input.form-input(type="password" name="" placeholder="Введите пароль" )
-							
-							.form-item__icon
-								.ic-visible.d-none
-								.ic-hide
-							a(href="#!").mt-8.text-14.text-indigo Не помню пароль
-						//========= form button ======
-						.form-btn.mt-24
-							button.btn.btn--gradient.w-100 Далее
-						
-						.form-btn.mt-24
-							button.btn.btn--dark.w-100 Войти по QR-коду
-		
-			//======== #4 - контент - Восстановить пароль по телефону ==================
-			.translate-content.translate-content--restore-passw
-				.text-center
-					p Введите номер телефона, который привязан к аккаунту
-				.modal-frame__body.pt-40
-					form
-						.form-box
-							input.form-input.form-input--readonly(type='text' name='' readonly value="lareta_2023")
-							
-						.form-box.mt-8
-							input.form-input(type="text" name="" placeholder="+7" )
-						//========= form button ======
-						.form-btn.mt-24
-							button.btn.btn--gradient.w-100 Продолжить
-						
-						.form-btn.mt-16
-							button.btn.btn--dark.w-100.text-14 Другой способ восстановления
-						
-			
-			//======== #5 - контент - Восстановить пароль по email ==================
-			.translate-content.translate-content--restore-passw.visible
-				.text-center
-					p Введите один из адресов email, который привязан к аккаунту
-				.modal-frame__body.pt-40
-					form
-						.form-box
-							input.form-input.form-input--readonly(type='text' name='' readonly value="lareta_2023")
-							
-						.form-box.mt-8
-							input.form-input(type="text" name="" placeholder="Email, привязанный к аккаунту" )
-						//========= form button ======
-						.form-btn.mt-24
-							button.btn.btn--gradient.w-100 Продолжить
-						
-						.form-btn.mt-16
-							button.btn.btn--dark.w-100.text-14 Другой способ восстановления
-								
 		//=======футер модального окна ==========
 		.modal-frame__footer.pt-24
 			.flex-box.flex-between

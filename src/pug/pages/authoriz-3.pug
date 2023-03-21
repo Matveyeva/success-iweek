@@ -1,0 +1,52 @@
+extends ../layouts/layout.pug
+
+block content
+	button.btn.btn--orange.floating-btn.btn--shadow Записаться на прием
+	+header([
+			{addClass: 'active', link: '#', title: 'Клиники'}, 
+			{addClass: '', link: 'prices.html', title: 'Цены'},
+			{addClass: '', link: '#', title: 'Детская стоматология'},
+			{addClass: '', link: 'about.html', title: 'О нас'},
+			])
+	//================== модальное окно Авторизация ==============
+	.modal-frame-wrapper.modal-frame-center.visible(frame-modal="login-modal")
+		.modal-frame.flex-column.pos-rel
+			.modal-frame__head.flex-column.flex-center.text-center
+				.icon-close.pos-abs(frame-close)
+				.icon-btn.arrow-left.pos-abs
+				.modal-logo
+					img(src="./img/logo-icon.png", width="48" height="48" alt="logo")
+			
+			//======= Обертка для сменного, в зависимости от шага авторизации, контента.  Контент скрыт по умолчанию, что бы он отобразился, надо диву с классом "translate-content" добавить класс "visible"  ===============
+			.translate-wrapper.pt-8.pos-rel
+				
+				//======== #3 - контент - Продолжение, если Пользователь найден в системе, при вводе почты или телефона ==================
+				.translate-content.visible
+					.text-center
+						p Войдите, что бы продолжить
+					.modal-frame__body.pt-40
+						form
+							.form-box
+								input.form-input(type='text' name='' value="lareta@yandex.ru")
+								
+							.toggle-pass.form-box.mt-8
+								input.form-input(type="password" name="" placeholder="Введите пароль" )
+								
+								.form-item__icon
+									.ic-visible.d-none
+									.ic-hide
+								a(href="#!").mt-8.text-14.text-indigo Не помню пароль
+							//========= form button ======
+							.form-btn.mt-24
+								button.btn.btn--gradient.w-100 Далее
+							
+							.form-btn.mt-24
+								button.btn.btn--dark.w-100 Войти по QR-коду
+			//=======футер модального окна ==========
+			.modal-frame__footer.pt-24
+				.flex-box.flex-between
+					a(href="#!").text-indigo Перейти на iweek.ge
+					a(href="#!").text-indigo Связаться с нами
+block variables
+	-let bodyCl = "main-page"
+	-let title = "Сервис поиска услуг в Грузии";
