@@ -98,7 +98,7 @@
 						
 						
 			//======== #3 - контент - Продолжение, если Пользователь найден в системе, при вводе почты или телефона ==================
-			.translate-content.translate-content--pass.visible
+			.translate-content.translate-content--pass
 				.text-center
 					p Войдите, что бы продолжить
 				.modal-frame__body.pt-40
@@ -118,11 +118,30 @@
 							button.btn.btn--gradient.w-100 Далее
 						
 						.form-btn.mt-24
-							//======== кнопка пассивна и не кликабельна, пока у нее есть класс 'btn-disable'. Чтобы сделать кнопку активной, надо удалить у кнопки класс 'btn-disable'
 							button.btn.btn--dark.w-100 Войти по QR-коду
+		
+			//======== #4 - контент - Восстановить пароль по телефону ==================
+			.translate-content.translate-content--restore-passw.visible
+				.text-center
+					p Введите номер телефона, который привязан к аккаунту
+				.modal-frame__body.pt-40
+					form
+						.form-box
+							input.form-input.form-input--readonly(type='text' name='' readonly value="lareta@yandex.ru")
+							
+						.form-box.mt-8
+							input.form-input(type="text" name="" placeholder="+7" )
+						//========= form button ======
+						.form-btn.mt-24
+							button.btn.btn--gradient.w-100 Продолжить
+						
+						.form-btn.mt-16
+							button.btn.btn--dark.w-100.text-14 Другой способ восстановления
+						a(href="#!").text-indigo.mt-8.d-block.text-center Не получается восстановить?
 		
 		//=======футер модального окна ==========
 		.modal-frame__footer.pt-24
 			.flex-box.flex-between
 				a(href="#!").text-indigo Перейти на iweek.ge
 				a(href="#!").text-indigo Связаться с нами
+
