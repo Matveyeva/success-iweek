@@ -1,77 +1,127 @@
 
 //================== модальное окно Авторизация ==============
-.modal-frame-wrapper.modal-frame-center.visible.w-700(frame-modal="login-modal")
+.modal-frame-wrapper.modal-frame-center.visible(frame-modal="login-modal")
 	.modal-frame.flex-column.pos-rel
 		.modal-frame__head.flex-column.flex-center.text-center
 			.icon-close.pos-abs(frame-close)
+			.icon-btn.arrow-left.pos-abs
 			.modal-logo
 				img(src="./img/logo-icon.png", width="48" height="48" alt="logo")
-			.mt-16
-				p Войдите или зарегистрируйтесь
-		.modal-frame__body.pt-24
-			form.login-form
-				//====радиобаттоны Пользователь / Исполнитель =======
-				.form-login-role.tabs-wrapper(custom-tabs)
-					.tabs.flex-box-inline
-						//==== Пользователь  =======
-						label.radiobutton-label.flex-box.filter-toggle-item(ct-btn="1")
-							input(type='radio' name='login-role' value='' class='real-radio' checked) 
-							span.custom-radio
-							span.custom-radio__text Пользователь
-					
-						label.radiobutton-label.flex-box.filter-toggle-item(ct-btn="2")
-							input(type='radio' name='login-role' value='' class='real-radio')
-							span.custom-radio
-							span.custom-radio__text Исполнитель
-				
-					.tabs-content.pt-16.flex-grow-1
-						div.ct-content--active(ct-content="1")
-							p Бронируйте #[strong встречи онлайн круглосуточно - для вас и вашей семьи]. Делитесь отзывами об услугах на сервисе. 
-						
-						div(ct-content="2")
-							p Рассказывайте о ваших услугах, включайте запись онлайн. 
-							p Отвечайте на отзывы пользователей. 
-				
-				//======== табы Почта /Телефон ======
-				.login-variant-tabs.tabs-wrapper.pt-32(custom-tabs)
-					.tabs.filter-toggle__block.flex-box-inline
-						label.filter-toggle-item(ct-btn="1")
-							input(type='radio' name='login-variant' class='filter-radiobtn' checked)
-							span Email
-					
-						label.filter-toggle-item(ct-btn="2")
-							input(type='radio' name='login-variant' class='filter-radiobtn')
-							span Телефон
-				
-					.tabs-content.pt-32.flex-grow-1
-						div.ct-content--active(ct-content="1")
-							.form-box
-								input.form-input(type="text" placeholder="Email")
-								a(href="#!").text-link.text-red.mt-8 Сбросить пароль
-						div(ct-content="2")
-							.form-box
-								input.form-input(type="text" placeholder="Телефон")
-								.text-indigo.mt-8 Отправим код
-				
-				//========= form button ======			
-				.form-btn.mt-24
-					button.btn.btn--gradient.w-100 Войти
-				
-				//- .form-btn.mt-24.text-center.text-18.text-indigo(frame-btn="registr-modal") Регистрация
-
-				//=====login whith social ==========
-				.login-type-social.text-center.pt-32
-					p.mb-24 Войти с помощью
-					.social-group.flex-box.flex-center
-						a(href="#!")
-							img(src="./img/fb-round.png", width="40" height="40" alt="icon")
-						a(href="#!")
-							img(src="./img/inst.png", width="40" height="40" alt="icon")
-						a(href="#!")
-							img(src="./img/google.png", width="40" height="40" alt="icon")
-						a(href="#!")
-							img(src="./img/tg.png", width="40" height="40" alt="icon")
 		
+		//======= обертка для сменного, в зависимости от шага авторизации, контента ===============
+		.translate-wrapper.pt-8.pos-rel
+			
+			//======== #1 - стартовый контент ==================
+			.translate-content
+				.text-center
+					p Войдите или зарегистрируйтесь
+				.modal-frame__body.pt-16
+					form.login-form
+						//====радиобаттоны Пользователь / Исполнитель =======
+						.form-login-role.tabs-wrapper(custom-tabs)
+							.tabs.flex-box-inline
+								//==== Пользователь  =======
+								label.radiobutton-label.flex-box.filter-toggle-item(ct-btn="1")
+									input(type='radio' name='login-role' value='' class='real-radio' checked) 
+									span.custom-radio
+									span.custom-radio__text Пользователь
+							
+								label.radiobutton-label.flex-box.filter-toggle-item(ct-btn="2")
+									input(type='radio' name='login-role' value='' class='real-radio')
+									span.custom-radio
+									span.custom-radio__text Исполнитель
+						
+							.tabs-content.flex-grow-1
+								div.ct-content--active(ct-content="1")
+									p Бронируйте #[strong встречи онлайн круглосуточно - для вас и вашей семьи]. Делитесь отзывами об услугах на сервисе. 
+								
+								div(ct-content="2")
+									p Рассказывайте о ваших услугах, включайте запись онлайн. 
+									p Отвечайте на отзывы пользователей. 
+						
+						//======== табы Почта /Телефон ======
+						.login-variant-tabs.tabs-wrapper.pt-32(custom-tabs)
+							.tabs.filter-toggle__block.flex-box-inline
+								label.filter-toggle-item(ct-btn="1")
+									input(type='radio' name='login-variant' class='filter-radiobtn' checked)
+									span Email
+							
+								label.filter-toggle-item(ct-btn="2")
+									input(type='radio' name='login-variant' class='filter-radiobtn')
+									span Телефон
+						
+							.tabs-content.pt-32.flex-grow-1
+								div.ct-content--active(ct-content="1")
+									.form-box
+										input.form-input(type="text" placeholder="Email")
+										a(href="#!").text-link.text-red.mt-8 Сбросить пароль
+								div(ct-content="2")
+									.form-box
+										input.form-input(type="text" placeholder="Телефон")
+										.text-indigo.mt-8 Отправим код
+						
+						//========= form button ======			
+						.form-btn.mt-24
+							button.btn.btn--gradient.w-100 Войти
+						
+						//- .form-btn.mt-24.text-center.text-18.text-indigo(frame-btn="registr-modal") Регистрация
+
+						//=====login whith social ==========
+						.login-type-social.text-center.pt-32
+							p.mb-24 Войти с помощью
+							.social-group.flex-box.flex-center
+								a(href="#!")
+									img(src="./img/fb-round.png", width="40" height="40" alt="icon")
+								a(href="#!")
+									img(src="./img/inst.png", width="40" height="40" alt="icon")
+								a(href="#!")
+									img(src="./img/google.png", width="40" height="40" alt="icon")
+								a(href="#!")
+									img(src="./img/tg.png", width="40" height="40" alt="icon")
+			
+			//======== #2 - контент - Введите код из почты или телефона ==================
+			.translate-content.translate-content--email-code
+				.text-center
+					p Введите код из почты. <br> Мы  отправили его на la****1@ya.ru
+				.modal-frame__body.pt-40
+					form
+						.form-box.form-box--code
+							input.sms-input(type="text" maxlength="1" tabindex="1")
+							input.sms-input(type="text" maxlength="1" tabindex="2")
+							input.sms-input(type="text" maxlength="1" tabindex="3")
+							input.sms-input(type="text" maxlength="1" tabindex="4")
+							input.sms-input(type="text" maxlength="1" tabindex="5")
+
+						//========= form button ======			
+						.form-btn.mt-24
+							button.btn.btn--gradient.w-100 Далее
+						
+						
+			//======== #3 - контент - Продолжение, если Пользователь найден в системе, при вводе почты или телефона ==================
+			.translate-content.translate-content--pass.visible
+				.text-center
+					p Войдите, что бы продолжить
+				.modal-frame__body.pt-40
+					form
+						.form-box
+							input.form-input(type='text' name='' value="lareta@yandex.ru")
+							
+						.toggle-pass.form-box.mt-8
+							input.form-input(type="password" name="" placeholder="Введите пароль" )
+							
+							.form-item__icon
+								.ic-visible.d-none
+								.ic-hide
+							a(href="#!").mt-8.text-14.text-indigo Не помню пароль
+						//========= form button ======
+						.form-btn.mt-24
+							button.btn.btn--gradient.w-100 Далее
+						
+						.form-btn.mt-24
+							//======== кнопка пассивна и не кликабельна, пока у нее есть класс 'btn-disable'. Чтобы сделать кнопку активной, надо удалить у кнопки класс 'btn-disable'
+							button.btn.btn--dark.w-100 Войти по QR-коду
+		
+		//=======футер модального окна ==========
 		.modal-frame__footer.pt-24
 			.flex-box.flex-between
 				a(href="#!").text-indigo Перейти на iweek.ge

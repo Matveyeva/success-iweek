@@ -637,6 +637,39 @@ document.addEventListener("DOMContentLoaded", function (){
 			}, interval_sec * 1000)
 		}
 	}
+	/**======================= поле ввода смс-кода =============*/
+	$('.sms-input:first-child').focus();
 
+	$('.sms-input').on('keydown', function(e) {
+	let value = $(this).val();
+	let len = value.length;
+	let curTabIndex = parseInt($(this).attr('tabindex'));
+	let nextTabIndex = curTabIndex + 1;
+	let prevTabIndex = curTabIndex - 1;
+	if (len > 0) {
+		$(this).val(value.substr(0, 1));
+		$('[tabindex=' + nextTabIndex + ']').focus();
+	} else if (len == 0 && prevTabIndex !== 0) {
+		$('[tabindex=' + prevTabIndex + ']').focus();
+	}
+	});
+
+	   /*====== PASSWORD VISIBLE/HIDE=============*/
+	document.querySelectorAll(".toggle-pass").forEach(el=>{
+		const tglBtn = el.querySelector(".form-item__icon");
+		const inputField = el.querySelector("input");
+
+		tglBtn.addEventListener("click", (e)=>{
+		const icon1 = tglBtn.querySelector(".ic-visible");
+		const icon2 = tglBtn.querySelector(".ic-hide");
+
+		if(inputField.type === "password")
+			inputField.type = "text"
+		else inputField.type = "password";
+
+		icon1.classList.toggle("d-none");
+		icon2.classList.toggle("d-none");
+	});
+})
 
 });
