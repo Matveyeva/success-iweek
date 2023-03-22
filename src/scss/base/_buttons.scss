@@ -148,6 +148,11 @@
 .btn--gradient{
 	background: linear-gradient(225deg, #578DF6 22.38%, #5757F6 75.99%);
 }
+.btn.btn-disable{
+	cursor:default;
+	opacity: 0.3;
+	pointer-events: none;
+}
 .floating-btn{
 	position: fixed;
 	z-index: 4;

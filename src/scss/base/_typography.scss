@@ -121,7 +121,7 @@ font-weight: 700;
 .text-link{
 	color: #000;
 	&:hover{
-		color:$indigo ;
+		color:$indigo!important ;
 	}
 }
 .content-list{
