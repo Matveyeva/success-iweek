@@ -10,6 +10,7 @@
 	}
 	
 }
+.modal-frame-wrapper[frame-modal].modal-frame-left,
 .modal-frame-wrapper[frame-modal].modal-frame-right{
 	opacity: 0;
 	animation-name:slowOpen;
@@ -40,6 +41,14 @@
 		font-size: 18px;
 		font-weight: 700;
 	}
+}
+.modal-frame-wrapper[frame-modal].modal-frame-left .modal-frame{
+	right: auto;
+	left: 0;
+	max-width: 300px;
+	
+	padding-left: 0;
+	padding-right: 0;
 }
 .modal-frame-wrapper[frame-modal].modal-frame-center{
 	

@@ -1,0 +1,44 @@
+.sidebar-panel{
+	nav{
+		a{
+			display: flex;
+			font-size: 18px;
+			align-items: center;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			padding-left: 30px;
+			padding-right: 30px;
+			margin-top: 12px;
+			color: #000;
+			span:first-child{
+				width: 20px;
+				height: 20px;
+				margin-right: 16px;
+				flex-shrink:0;
+			}
+			svg{
+				width: 20px;
+				height: 20px;
+				fill: #828282;
+			}
+			svg.svg-favorite{
+				fill: transparent;
+				stroke: #828282;
+			}
+
+		}
+		a:first-child{
+			border-bottom: 1px solid rgba(130, 130, 130, .2);;
+		}
+		a:hover, a.active{
+			color: #5757F6;
+    		background-color: rgba(87, 87, 246, 0.1);
+			svg{fill: $indigo;}
+			svg.svg-favorite{
+				fill: transparent;
+				stroke: $indigo;
+			}
+		}
+		
+	}
+}
