@@ -6,6 +6,16 @@
 .svg-star, .svg-home{
 	fill:#828282;
 }
+.svg-menu{
+	cursor:pointer;
+	display: block;
+	fill: #000;
+	width: 20px;
+	height: 18px;
+	&:hover{
+		fill: $indigo;
+	}
+}
 .svg-flag{
 	fill:transparent;
 }

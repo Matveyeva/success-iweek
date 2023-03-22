@@ -41,4 +41,35 @@
 		}
 		
 	}
+	
+}
+.cabinet-header__burger{
+	width: 30px;
+	height: 19px;
+	position: relative;
+	margin-right: 25px;
+	margin-left: 25px;
+	&:after, &:before{
+		content: '';
+		height: 3px;
+		background-color: #000;
+		border-radius: 4px;
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+	&:after{
+		top: 0;
+		
+	}
+	&:before{bottom: 0;}
+	span{
+		height: 3px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 8px;
+		background-color: #000;
+		border-radius: 4px;
+	}
 }
