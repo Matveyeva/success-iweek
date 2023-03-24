@@ -1,0 +1,22 @@
+//============== модальное окно ПОИСК ГОРОДА =============
+.modal-frame-wrapper.modal-frame-right(frame-modal="select-city")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-24 Город
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			//============== строка поиска =============
+			.search-block-wrapper.flex-box
+				.form-box.form-box--icon-left
+					.form-box-input
+						.form-box__icon
+							svg.svg-search
+								use(href="./img/svg-sprite.svg#svg-search")
+						input(type="text" placeholder="Введите название города").form-input.form-input--64
+				//======== кнопка Найти ====
+				.btn.btn--gradient.btn-64 Найти
+		
+			.search-block-results.pt-40.pl-24
+				p Батуми
+				p Поти

@@ -39,9 +39,7 @@
 				stroke: $indigo;
 			}
 		}
-		
 	}
-	
 }
 .cabinet-header__burger{
 	width: 30px;
@@ -72,4 +70,57 @@
 		background-color: #000;
 		border-radius: 4px;
 	}
+}
+.cabinet-header__notify{
+	margin-left: auto;
+	margin-right: 16px;
+	position: relative;
+	span{
+		display: inline-block;
+		width: 15px;
+		height:15px;
+		border-radius: 8px;
+		background-color: $indigo;
+		text-align: center;
+		line-height: 15px;
+		color: #fff;
+		font-size: 10px;
+		
+		position: absolute;
+		top: -4px;
+		right: -6px;
+		z-index: 2;
+	}
+}
+.profile-row{
+	position: relative;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	color: #000;
+	padding-left: 30px;
+	padding-right: 30px;
+	transition: .5s;
+	&:after{
+		content: '';
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		transform: translateY(-50%) rotate(-90deg);
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='12' viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 0.96967C0.762563 0.676777 1.23744 0.676777 1.53033 0.96967L10 9.43934L18.4697 0.96967C18.7626 0.676777 19.2374 0.676777 19.5303 0.96967C19.8232 1.26256 19.8232 1.73744 19.5303 2.03033L10.5303 11.0303C10.2374 11.3232 9.76256 11.3232 9.46967 11.0303L0.46967 2.03033C0.176777 1.73744 0.176777 1.26256 0.46967 0.96967Z' fill='%23828282'/%3e%3c/svg%3e");
+		background-repeat: no-repeat;
+		background-size: auto;
+	}
+	&:hover{
+		background-color: rgba(130,130,130, .1);
+	}
+}
+.patient-profile .icon-item{
+	display: flex;
+	align-items: center;
+}
+.search-block-results p{
+	font-size: 18px;
+	line-height: 1.8;
 }

@@ -3,9 +3,18 @@
 	stroke: $coral;	
 	fill: transparent;
 }
-.svg-star, .svg-home{
+.svg-notify,.svg-star, .svg-home,.svg-pacient,.svg-reload,.svg-edit, .svg-phone{
 	fill:#828282;
+	width: 20px;
+	height: 20px;
+	flex-shrink:0;
 }
+.svg-notify{
+	cursor:pointer;
+	width: 19px;
+	height: 24px;
+}
+.svg-phone{stroke:#828282;}
 .svg-menu{
 	cursor:pointer;
 	display: block;

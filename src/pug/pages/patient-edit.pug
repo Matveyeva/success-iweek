@@ -4,14 +4,14 @@ block content
 	+patientHeader
 	//=========== основной контент  ====================
 	.cabinet-body.pt-40
-		include ../sections/_patient-main
+		include ../sections/_patient-edit
 	
-	//================== sidebar patient-page ==============
+	//================== cabinet-sidebar ==============
 	.modal-frame-wrapper.modal-frame-left(frame-modal="cabinet-sidebar")
 		.modal-frame.flex-column
 			.sidebar-panel
 				nav
-					a(href="#!" frame-btn="select-city")
+					a(href="#!")
 						span
 							svg.svg-map
 								use(href="./img/svg-sprite.svg#svg-map")
@@ -31,7 +31,7 @@ block content
 							svg.svg-calendar
 								use(href="./img/svg-sprite.svg#svg-calendar")
 						span Записи на прием
-					a(href="#!")
+					a(href="patient-review.html")
 						span
 							svg.svg-star
 								use(href="./img/svg-sprite.svg#svg-star")
@@ -41,7 +41,6 @@ block content
 							svg.svg-favorite
 								use(href="./img/svg-sprite.svg#svg-heart")
 						span Избранное
-	include ../blocks/_patient-sidebar-city.pug
 block variables
 	-let bodyCl = "patient-cabinet"
 	-let title = "Кабинет пациента | Главная";

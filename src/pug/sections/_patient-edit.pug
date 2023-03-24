@@ -1,0 +1,43 @@
+.container.container-slim
+	.patient-profile
+		a(href="#!").profile-row.flex-vertical-center.gap-16
+			
+			.icon-item
+				svg.svg-phone
+					use(href="./img/svg-sprite.svg#svg-phone")
+			
+			.patient-profile-title
+				.text-18 +7 927 104-85-55
+
+		a(href="#!" frame-btn="edit-patient-name").profile-row.flex-vertical-center.gap-16
+			
+			.icon-item
+				svg.svg-edit
+					use(href="./img/svg-sprite.svg#svg-edit")
+			
+			.patient-profile-title
+				.text-18 ФИО
+
+//================== редактировать ФИО пациента ==============
+.modal-frame-wrapper.modal-frame-right(frame-modal="edit-patient-name")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.text-24 Редактирование сотрудника
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			form.edit-empl-form
+				.cabinet-form__name.mb-32
+					.form-box
+						label.text-16 Фамилия
+						input(type="text" value="Антадзе").form-input
+					.form-box
+						label.text-16 Имя
+						input(type="text" value="Тама").form-input
+					.form-box
+						label.text-16 Отчество
+						input(type="text").form-input
+		.modal-frame__footer.mt-auto.border-top.flex-vertical-center.flex-between
+			button.btn.btn-44.btn--orange(frame-close) Отмена
+			button.btn.btn-44 Сохранить
+				
