@@ -16,31 +16,37 @@ block content
 							svg.svg-map
 								use(href="./img/svg-sprite.svg#svg-map")
 						span Балаково
+					
 					a.active(href="patient-edit.html")
 						span
 							svg.svg-pacient
 								use(href="./img/svg-sprite.svg#svg-pacient")
 						span Профиль
+					
 					a(href="patient-main.html")
 						span
 							svg.svg-home
 								use(href="./img/svg-sprite.svg#svg-home")
 						span Главная кабинета
-					a(href="#!")
+					
+					a(href="patient-history.html")
 						span
 							svg.svg-calendar
 								use(href="./img/svg-sprite.svg#svg-calendar")
 						span Записи на прием
+					
 					a(href="patient-review.html")
 						span
 							svg.svg-star
 								use(href="./img/svg-sprite.svg#svg-star")
 						span Отзывы
-					a(href="#!")
+					
+					a(href="patient-favorite.html")
 						span
 							svg.svg-favorite
 								use(href="./img/svg-sprite.svg#svg-heart")
 						span Избранное
+	include ../blocks/_patient-sidebar-city.pug
 block variables
 	-let bodyCl = "patient-cabinet"
-	-let title = "Кабинет пациента | Главная";
+	-let title = "Кабинет пациента | Редактирование";

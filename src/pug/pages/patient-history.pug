@@ -3,25 +3,25 @@ extends ../layouts/layout.pug
 block content
 	+patientHeader
 	//=========== основной контент  ====================
-	.cabinet-body.cabinet-body--patient
-		include ../sections/_patient-main
+	.cabinet-body.pt-40
+		include ../sections/_patient-edit
 	
-	//================== sidebar patient-page ==============
+	//================== cabinet-sidebar ==============
 	.modal-frame-wrapper.modal-frame-left(frame-modal="cabinet-sidebar")
 		.modal-frame.flex-column
 			.sidebar-panel
 				nav
-					a(href="#!" frame-btn="select-city")
+					a(href="#!")
 						span
 							svg.svg-map
 								use(href="./img/svg-sprite.svg#svg-map")
 						span Балаково
-					a(href="patient-edit.html")
+					a.active(href="patient-edit.html")
 						span
 							svg.svg-pacient
 								use(href="./img/svg-sprite.svg#svg-pacient")
 						span Профиль
-					a.active(href="patient-main.html")
+					a(href="patient-main.html")
 						span
 							svg.svg-home
 								use(href="./img/svg-sprite.svg#svg-home")
@@ -32,11 +32,12 @@ block content
 							svg.svg-calendar
 								use(href="./img/svg-sprite.svg#svg-calendar")
 						span Записи на прием
-					a(href="patient-reviews.html")
+					a(href="patient-review.html")
 						span
 							svg.svg-star
 								use(href="./img/svg-sprite.svg#svg-star")
 						span Отзывы
+					
 					a(href="patient-favorite.html")
 						span
 							svg.svg-favorite
@@ -45,4 +46,4 @@ block content
 	include ../blocks/_patient-sidebar-city.pug
 block variables
 	-let bodyCl = "patient-cabinet"
-	-let title = "Кабинет пациента | Главная";
+	-let title = "Кабинет пациента | Записи";
