@@ -4,7 +4,7 @@ block content
 	+patientHeader
 	//=========== основной контент  ====================
 	.cabinet-body.pt-40
-		include ../sections/_patient-edit
+		include ../sections/_patient-history
 	
 	//================== cabinet-sidebar ==============
 	.modal-frame-wrapper.modal-frame-left(frame-modal="cabinet-sidebar")
@@ -16,7 +16,7 @@ block content
 							svg.svg-map
 								use(href="./img/svg-sprite.svg#svg-map")
 						span Балаково
-					a.active(href="patient-edit.html")
+					a(href="patient-edit.html")
 						span
 							svg.svg-pacient
 								use(href="./img/svg-sprite.svg#svg-pacient")
@@ -27,7 +27,7 @@ block content
 								use(href="./img/svg-sprite.svg#svg-home")
 						span Главная кабинета
 					
-					a(href="patient-history.html")
+					a.active(href="patient-history.html")
 						span
 							svg.svg-calendar
 								use(href="./img/svg-sprite.svg#svg-calendar")

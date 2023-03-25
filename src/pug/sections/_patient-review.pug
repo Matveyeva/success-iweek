@@ -1,0 +1,83 @@
+.container.container-slim
+	.patient-profile
+		//======== блок отдельный ==========
+		.patient-profile__block
+			a(href="patient-edit.html").profile-row.profile-link.flex-vertical-center.gap-16
+				.round-icon
+					svg.svg-pacient
+						use(href="./img/svg-sprite.svg#svg-pacient")
+				
+				.patient-profile-title
+					.text-18 +7 927 104-85-55
+					.text-14.text-gray3 Профиль
+
+		//======== блок отдельный ==========
+		.patient-profile__block
+			.text-32 Запись на приём
+			.text-14.pt-16
+				p Выбирайте врача на ПроДокторов и бронируйте время прямо на сайте
+			.pt-16
+				a(href="#!").btn.btn--primary.w-100 Записаться онлайн
+		
+		//======== блок отдельный ==========
+		.patient-profile__block
+			a(href="patient-favorite.html").profile-link
+				.text-32 Избранное
+					sup 2
+		
+			.patient-favorite
+				//====single favor card ====
+				a(href="#!" target="_blank").favor-card.flex-box.gap-16
+					.favor-card__img
+						img(src="./img/doctor.png", width="100" height="100" alt="doc")
+					.favor-card__text
+						.title-20 Лордкипиани
+						.text-16 Стоматолог
+
+					//======icon=====
+					label.check-label.flex-center.flex-box
+						input(type="checkbox" checked)
+						svg.svg-heart(width="16" height="16" )
+							use(href="./img/svg-sprite.svg#svg-heart")
+				
+				//====single favor card ====
+				a(href="#!" target="_blank").favor-card.flex-box.gap-16
+					.favor-card__img
+						img(src="./img/doctor.png", width="100" height="100" alt="doc")
+					.favor-card__text
+						.title-20 Лордкипиани
+						.text-16 Стоматолог
+
+					//======icon=====
+					label.check-label.flex-center.flex-box
+						input(type="checkbox" checked)
+						svg.svg-heart(width="16" height="16" )
+							use(href="./img/svg-sprite.svg#svg-heart")
+		//======== блок отдельный ==========
+		.patient-profile__block.pt-40
+			a(href="patient-reviews.html").profile-link
+				.text-32 Ваши отзывы
+					sup 2
+			
+			.patient-reviews
+				//====single favor card ====
+				a(href="#!" target="_blank").rev-card.flex-column.gap-8
+					.rev-card__img
+						img(src="./img/doctor.png", width="50" height="50" alt="doc")
+					.rev-card__text
+						.title-16 Лордкипанидзе Мария Георгиевна
+						.text-14 Стоматолог
+
+					.rev-card__body
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+				
+				//====single favor card ====
+				a(href="#!" target="_blank").rev-card.flex-column.gap-8
+					.rev-card__img
+						img(src="./img/doctor.png", width="50" height="50" alt="doc")
+					.rev-card__text
+						.title-16 Лордкипанидзе Мария Георгиевна
+						.text-14 Стоматолог
+					.rev-card__body
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
