@@ -290,3 +290,21 @@
 		justify-content: flex-start;
 	}
 }
+.set-rating{
+	display: flex;
+	column-gap:5px;
+	input + span{
+		position: relative;
+		color: red;
+		font-size: 24px;
+		&:after{
+			content: '\2606'
+		}
+	}
+	input:checked + span{
+		position: relative;
+		&:after{
+			content: '\2605'
+		}
+	}
+}

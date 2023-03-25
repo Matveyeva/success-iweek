@@ -1,4 +1,16 @@
 .container.container-slim
+	.set-rating
+		label.checkbox-label
+			input(type='checkbox' name='form-checkbox' class='real-checkbox')
+			span
+		label.checkbox-label
+			input(type='checkbox' name='form-checkbox' class='real-checkbox')
+			span
+				use(href="./img/svg-sprite.svg#svg-star")
+		label.checkbox-label
+			input(type='checkbox' name='form-checkbox' class='real-checkbox')
+			span
+								
 	.patient-acor
 		.acor-container
 			//=========== single block =============
@@ -65,3 +77,29 @@
 								.flex-box
 									.text-16 15 Апреля 2023г
 									.text-16 11:30
+
+//================== добавить отзыв ==============
+.modal-frame-wrapper.modal-frame-right(frame-modal="patient-add-review")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.title-wrapper
+				.text-18 оставить отзыв о
+				.text-24 Лордкипанидзе Тамрико Георгиевна
+				 
+			.icon-close(frame-close)
+			
+		.modal-frame__body
+			form
+				.form-box
+					
+					.rating-star
+						
+						input(type="checkbox" name="rating-1")
+						input(type="checkbox" name="rating-1")
+						input(type="checkbox" name="rating-1")
+						input(type="checkbox" name="rating-1")
+						input(type="checkbox" name="rating-1")
+					
+		.modal-frame__footer.mt-auto.border-top.flex-vertical-center.flex-between
+			button.btn.btn-44.btn--orange(frame-close) Отмена
+			button.btn.btn-44 Сохранить

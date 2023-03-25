@@ -670,6 +670,26 @@ document.addEventListener("DOMContentLoaded", function (){
 		icon1.classList.toggle("d-none");
 		icon2.classList.toggle("d-none");
 	});
-})
+});
+    /*********оценить врача - рейтинг*********** */
+	const ratingStar = document.querySelectorAll('.set-rating');
+	if(ratingStar.length > 0){
+		for (item of ratingStar){
+			const starLabel = item.querySelectorAll('label');
+			for(let i = 0; i < starLabel.length; i++){
+				starLabel[i].addEventListener('click', function(){
+					
+					for(let j = 0; j < starLabel.length; ++j)
+					{
+						console.log(i)
+						const inputEl = starLabel[j].querySelector('input');
+						inputEl.checked = false;
+						if(j <= i)inputEl.checked = true;
+					}
+
+				})
+			}
+		}
+	}
 
 });
