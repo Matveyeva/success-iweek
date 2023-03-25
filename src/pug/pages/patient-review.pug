@@ -4,7 +4,7 @@ block content
 	+patientHeader
 	//=========== основной контент  ====================
 	.cabinet-body.pt-40
-		include ../sections/_patient-favorit
+		include ../sections/_patient-review
 	
 	//================== cabinet-sidebar ==============
 	.modal-frame-wrapper.modal-frame-left(frame-modal="cabinet-sidebar")
@@ -32,13 +32,13 @@ block content
 							svg.svg-calendar
 								use(href="./img/svg-sprite.svg#svg-calendar")
 						span Записи на прием
-					a(href="patient-review.html")
+					a.active(href="patient-review.html")
 						span
 							svg.svg-star
 								use(href="./img/svg-sprite.svg#svg-star")
 						span Отзывы
 					
-					a.active(href="patient-favorite.html")
+					a(href="patient-favorite.html")
 						span
 							svg.svg-favorite
 								use(href="./img/svg-sprite.svg#svg-heart")

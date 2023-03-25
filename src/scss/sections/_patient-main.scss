@@ -268,3 +268,15 @@
 .patient-acor .acor-container .acor-body{
 	padding-right: 0!important;
 }
+.patient-reviews.patient-reviews--all{
+	.rev-card{
+		max-width: 100%;
+	}
+	.rev-card__body p{
+		line-clamp: unset;
+		overflow: unset;
+		
+		&:after{bottom: 0;}
+	}
+
+}
