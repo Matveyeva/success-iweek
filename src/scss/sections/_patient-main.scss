@@ -295,7 +295,7 @@
 	column-gap:5px;
 	input + span{
 		position: relative;
-		color: red;
+		color: #FFB038;
 		font-size: 24px;
 		&:after{
 			content: '\2606'
@@ -305,6 +305,23 @@
 		position: relative;
 		&:after{
 			content: '\2605'
+		}
+	}
+	
+}
+.set-rating-item +.set-rating-item{margin-top: 12px;}
+.set-rating-item{
+	display: flex;
+	align-items: center;
+	column-gap:24px;
+	.text-18{
+		min-width: 300px;
+	}
+	@media (max-width: 767px) {
+	 	flex-direction: column;
+	 	align-items: flex-start;
+		.text-18{
+			min-width: unset;
 		}
 	}
 }

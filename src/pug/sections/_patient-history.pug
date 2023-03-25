@@ -1,21 +1,29 @@
+mixin rating(title, inpName)
+	.set-rating-item
+		.text-18 #{title}
+		.set-rating
+			label.checkbox-label
+				input(type='checkbox' name=''+ inpName class='real-checkbox')
+				span
+			label.checkbox-label
+				input(type='checkbox' name=''+ inpName class='real-checkbox')
+				span
+			label.checkbox-label
+				input(type='checkbox' name=''+ inpName class='real-checkbox')
+				span
+			label.checkbox-label
+				input(type='checkbox' name=''+ inpName class='real-checkbox')
+				span
+			label.checkbox-label
+				input(type='checkbox' name=''+ inpName class='real-checkbox')
+				span
+
 .container.container-slim
-	.set-rating
-		label.checkbox-label
-			input(type='checkbox' name='form-checkbox' class='real-checkbox')
-			span
-		label.checkbox-label
-			input(type='checkbox' name='form-checkbox' class='real-checkbox')
-			span
-				use(href="./img/svg-sprite.svg#svg-star")
-		label.checkbox-label
-			input(type='checkbox' name='form-checkbox' class='real-checkbox')
-			span
-								
 	.patient-acor
 		.acor-container
 			//=========== single block =============
 			.acor-item
-				input#acor1(type='checkbox' name='acor' )
+				input#acor1(type='checkbox' name='acor' checked)
 				label(for='acor1').text-20.gray-3 Архив
 				.acor-body.flex-column.gap-16
 					.cabinet-card.w-100.flex-box.gap-16
@@ -83,23 +91,30 @@
 	.modal-frame.flex-column
 		.modal-frame__head.flex-box.flex-y-center.flex-between
 			.title-wrapper
-				.text-18 оставить отзыв о
+				.text-18.mb-8 Оставить отзыв о
 				.text-24 Лордкипанидзе Тамрико Георгиевна
 				 
 			.icon-close(frame-close)
 			
 		.modal-frame__body
 			form
-				.form-box
+				.rating-wrapper
+					+rating('Тщательность обследования', 'rating-1')
+					+rating('Эффективность лечения', 'rating-2')
+					+rating('Отношение к пациенту', 'rating-3')
+					+rating('Информирование пациента', 'rating-4')
+					+rating('Посоветуете ли Вы врача?', 'rating-5')
+				
+				.form-box.mt-24
+					label.text-16 Клиника
 					
-					.rating-star
-						
-						input(type="checkbox" name="rating-1")
-						input(type="checkbox" name="rating-1")
-						input(type="checkbox" name="rating-1")
-						input(type="checkbox" name="rating-1")
-						input(type="checkbox" name="rating-1")
-					
+					+custom-select-icon('Блюхера, 56', ['Блюхера, 56', 'ИП Вердашев', 'Клиника "Сова"','Гиппократ', 'Зеленое яблоко', 'Добрый доктор' ], 'mySelect--absolute')
+		
+				.form-box.mt-24
+					label.text-16 Дата посещения
+					.mydatepicker
+						input.form-input(type="text" class="datepicker" value="01.10.2022")
+		
 		.modal-frame__footer.mt-auto.border-top.flex-vertical-center.flex-between
 			button.btn.btn-44.btn--orange(frame-close) Отмена
 			button.btn.btn-44 Сохранить
