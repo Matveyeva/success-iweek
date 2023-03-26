@@ -114,6 +114,18 @@ mixin rating(title, inpName)
 					label.text-16 Дата посещения
 					.mydatepicker
 						input.form-input(type="text" class="datepicker" value="01.10.2022")
+				.form-box.mt-24
+					label.text-16 Как прошел прием
+					.form-textarea
+						textarea(placeholder="Расскажите, как обратились к врачу, как прошел прием, помогло ли лечение.")
+				.form-box.mt-24
+					label.text-16 Понравилось
+					.form-textarea
+						textarea(placeholder="Здесь можно указать главные плюсы")
+				.form-box.mt-24
+					label.text-16 Не понравилось
+					.form-textarea
+						textarea(placeholder="Какие недостатки вы отметили")
 		
 		.modal-frame__footer.mt-auto.border-top.flex-vertical-center.flex-between
 			button.btn.btn-44.btn--orange(frame-close) Отмена

@@ -4,7 +4,15 @@ block content
 	+patientHeader
 	//=========== основной контент  ====================
 	.cabinet-body.pt-40
-		include ../sections/_patient-edit
+		.container.container-slim
+			.patient-profile
+				.text-20 Избранное
+				//============ контент, если не отмечен ни один врач в избранное ===================
+				.favor-empty.flex-column.gap-16.flex-center.text-center.m-auto
+					.title-20 Здесь будут избранные врачи и клиники
+					.text-18 Нажимайте сердечки, что бы сохранить тех, кто вам понравился
+					a(href="#!").btn.btn--primary Найти врача
+			
 	
 	//================== cabinet-sidebar ==============
 	.modal-frame-wrapper.modal-frame-left(frame-modal="cabinet-sidebar")
@@ -16,13 +24,11 @@ block content
 							svg.svg-map
 								use(href="./img/svg-sprite.svg#svg-map")
 						span Балаково
-					
-					a.active(href="patient-edit.html")
+					a(href="patient-edit.html")
 						span
 							svg.svg-pacient
 								use(href="./img/svg-sprite.svg#svg-pacient")
 						span Профиль
-					
 					a(href="patient-main.html")
 						span
 							svg.svg-home
@@ -34,14 +40,13 @@ block content
 							svg.svg-calendar
 								use(href="./img/svg-sprite.svg#svg-calendar")
 						span Записи на прием
-					
 					a(href="patient-reviews.html")
 						span
 							svg.svg-star
 								use(href="./img/svg-sprite.svg#svg-star")
 						span Отзывы
 					
-					a(href="patient-favorite.html")
+					a.active(href="patient-favorite.html")
 						span
 							svg.svg-favorite
 								use(href="./img/svg-sprite.svg#svg-heart")
@@ -49,4 +54,4 @@ block content
 	include ../blocks/_patient-sidebar-city.pug
 block variables
 	-let bodyCl = "patient-cabinet"
-	-let title = "Кабинет пациента | Редактирование";
+	-let title = "Кабинет пациента | Избранное";

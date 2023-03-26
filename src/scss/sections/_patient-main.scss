@@ -273,11 +273,10 @@
 .patient-reviews.patient-reviews--all{
 	.rev-card{
 		max-width: 100%;
+		height: auto;
 	}
 	.rev-card__body p{
-		line-clamp: unset;
-		overflow: unset;
-		
+		line-clamp: 20;
 		&:after{bottom: 0;}
 	}
 
@@ -292,17 +291,20 @@
 }
 .set-rating{
 	display: flex;
+	align-items: center;
 	column-gap:5px;
 	input + span{
 		position: relative;
 		color: #FFB038;
-		font-size: 24px;
+		font-size: 30px;
+		line-height: 1;
 		&:after{
 			content: '\2606'
 		}
 	}
 	input:checked + span{
 		position: relative;
+		line-height: 1;
 		&:after{
 			content: '\2605'
 		}
@@ -316,6 +318,7 @@
 	column-gap:24px;
 	.text-18{
 		min-width: 300px;
+		line-height: 1.2;
 	}
 	@media (max-width: 767px) {
 	 	flex-direction: column;
@@ -325,3 +328,4 @@
 		}
 	}
 }
+.favor-empty{margin-top: 30%;}
