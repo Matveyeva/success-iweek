@@ -26,6 +26,30 @@ mixin rating(title, inpName)
 		.acor-container
 			//=========== single block =============
 			.acor-item
+				input#acor2(type='checkbox' name='acor'  checked)
+				label(for='acor2').text-20.text-indigo Предстоящие
+				.acor-body.flex-column.gap-16
+					.cabinet-card.w-100.flex-box.gap-16
+						.cabinet-card__img
+							img(src="./img/doctor2.png", width="100" height="100" alt="doc")
+						.cabinet-card__block.flex-box
+							.cabinet-card__text
+								.title-20 Голетиани М.К.
+								.text-16 Стоматолог
+								.cabinet-card__btn
+									button(frame-btn="cancel-appointment").btn.btn--orange.btn-32 	Отменить
+							.cabinet-card__date
+								
+								.text-16 "Клинк-Orto"
+								.flex-box
+									.text-16 15 Апреля 2023г
+									.text-16 11:30
+								+label-light('Подтвержден')(class="text-green")
+							
+			
+			
+			//=========== single block =============
+			.acor-item
 				input#acor1(type='checkbox' name='acor' )
 				label(for='acor1').text-20.gray-3 Архив
 				.acor-body.flex-column.gap-16
@@ -43,6 +67,7 @@ mixin rating(title, inpName)
 								.flex-box
 									.text-16 10 Ноября 2022г
 									.text-16 18:30
+								+label-light('Завершен')(class="text-gray")
 					
 					.cabinet-card.w-100.flex-box.gap-16
 						.cabinet-card__img
@@ -51,13 +76,14 @@ mixin rating(title, inpName)
 							.cabinet-card__text
 								.title-20 Лордкипиани Т.Г.
 								.text-16 Стоматолог
-								.cabinet-card__btn
-									button(frame-btn="patient-add-review").btn.btn--primary.btn-32 	Оставить отзыв						
+												
 							.cabinet-card__date
 								.text-16 "Орто-Дент"
 								.flex-box
 									.text-16 15 Ноября 2022г
 									.text-16 10:30
+								+label-light('Отменен')(class="text-red")
+								
 					
 					.cabinet-card.w-100.flex-box.gap-16
 						.cabinet-card__img
@@ -71,23 +97,8 @@ mixin rating(title, inpName)
 								.flex-box
 									.text-16 20 Ноября 2022г
 									.text-16 14:00
-			//=========== single block =============
-			.acor-item
-				input#acor2(type='checkbox' name='acor' )
-				label(for='acor2').text-20.text-indigo Предстоящие
-				.acor-body.flex-column.gap-16
-					.cabinet-card.w-100.flex-box.gap-16
-						.cabinet-card__img
-							img(src="./img/doctor.png", width="100" height="100" alt="doc")
-						.cabinet-card__block.flex-box
-							.cabinet-card__text
-								.title-20 Голетиани Т.Г.
-								.text-16 Стоматолог
-							.cabinet-card__date
-								.text-16 "Клинк-Orto"
-								.flex-box
-									.text-16 15 Апреля 2023г
-									.text-16 11:30
+								+label-light('Неявка')(class="text-red")
+								
 
 //================== добавить отзыв ==============
 .modal-frame-wrapper.modal-frame-right(frame-modal="patient-add-review")
@@ -134,3 +145,28 @@ mixin rating(title, inpName)
 		.modal-frame__footer.mt-auto.border-top.flex-vertical-center.flex-between
 			button.btn.btn-44.btn--orange(frame-close) Отмена
 			button.btn.btn-44 Сохранить
+
+//============================================================================= 
+	Модальное окно Подтверждение отмены записи
+	
+//=============================================================================
+.modal-frame-wrapper.modal-frame-center(frame-modal="cancel-appointment")
+	.modal-frame.flex-column.p-16
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.icon-close.ml-auto(frame-close)
+			
+		.modal-frame__body.text-center
+			p.text-16.mb-24 Вы действительно хотите отменить запись?
+			.btn.btn-44.mb-32(frame-close frame-btn="check-cancel-appointment") Подтвердить
+
+//============================================================================= 
+	Модальное окно Отмена подтверждена
+//=============================================================================
+.modal-frame-wrapper.modal-frame-center(frame-modal="check-cancel-appointment")
+	.modal-frame.flex-column.p-16
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.icon-close.ml-auto(frame-close)
+			
+		.modal-frame__body.text-center
+			p.text-16.mb-24 Запись отменена!
+			.btn.btn-44.mb-32(frame-close) ок

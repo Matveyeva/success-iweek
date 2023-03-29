@@ -4,6 +4,30 @@
 			a(href="patient-main.html").icon-btn.arrow-left.pos-abs
 			.text-20 Ваши отзывы
 		
+		//===== карточки ожидающие отзыва ======
+		.patient-reviews.patient-reviews--expectation 
+			//====single  card ====
+			.rev-card.flex-column.gap-8
+				.rev-card__img
+					img(src="./img/doctor.png", width="50" height="50" alt="doc")
+				.rev-card__text
+					.title-16 Голетиани Мариам Константиновна
+					.text-14 Ортодонт
+					button(frame-btn="patient-add-review").btn.btn-32 	Оставить отзыв
+				.rev-card__body
+							
+		
+			//====single  card ====
+			.rev-card.flex-column.gap-8
+				.rev-card__img
+					img(src="./img/doctor.png", width="50" height="50" alt="doc")
+				.rev-card__text
+					.title-16 Лордкипанидзе Мария Георгиевна
+					.text-14 Стоматолог
+					button(frame-btn="patient-add-review").btn.btn-32 	Оставить отзыв
+				.rev-card__body
+		
+		//===== карточки с оставленными отзывами ======
 		.patient-reviews.patient-reviews--all
 			//====single  card ====
 			.rev-card.flex-column.gap-8
@@ -12,17 +36,61 @@
 				.rev-card__text
 					.title-16 Лордкипанидзе Мария Георгиевна
 					.text-14 Стоматолог
-
+					+starRating('4')
 				.rev-card__body
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
 			
 			//====single  card ====
 			.rev-card.flex-column.gap-8
 				.rev-card__img
 					img(src="./img/doctor.png", width="50" height="50" alt="doc")
 				.rev-card__text
-					.title-16 Лордкипанидзе Мария Георгиевна
+					.title-16 Голетиани Мариам Константиновна
 					.text-14 Стоматолог
+					+starRating('5')
 				.rev-card__body
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+//================== добавить отзыв ==============
+.modal-frame-wrapper.modal-frame-right(frame-modal="patient-add-review")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.title-wrapper
+				.text-18.mb-8 Оставить отзыв о
+				.text-24 Лордкипанидзе Тамрико Георгиевна
+			.icon-close(frame-close)
+		.modal-frame__body
+			form
+				//=======рейтинг работает через скрипт в main.js  строка 674 (комментарий: оценить врача - рейтинг) ===========
+				.rating-wrapper
+					+rating('Тщательность обследования', 'rating-1')
+					+rating('Эффективность лечения', 'rating-2')
+					+rating('Отношение к пациенту', 'rating-3')
+					+rating('Информирование пациента', 'rating-4')
+					+rating('Посоветуете ли Вы врача?', 'rating-5')
+				
+				.form-box.mt-24
+					label.text-16 Клиника
+					
+					+custom-select-icon('Блюхера, 56', ['Блюхера, 56', 'ИП Вердашев', 'Клиника "Сова"','Гиппократ', 'Зеленое яблоко', 'Добрый доктор' ], 'mySelect--absolute')
+		
+				.form-box.mt-24
+					label.text-16 Дата посещения
+					.mydatepicker
+						input.form-input(type="text" class="datepicker" value="01.10.2022")
+				.form-box.mt-24
+					label.text-16 Как прошел прием
+					.form-textarea
+						textarea(placeholder="Расскажите, как обратились к врачу, как прошел прием, помогло ли лечение.")
+				.form-box.mt-24
+					label.text-16 Понравилось
+					.form-textarea
+						textarea(placeholder="Здесь можно указать главные плюсы")
+				.form-box.mt-24
+					label.text-16 Не понравилось
+					.form-textarea
+						textarea(placeholder="Какие недостатки вы отметили")
+		
+		.modal-frame__footer.mt-auto.border-top.flex-vertical-center.flex-between
+			button.btn.btn-44.btn--orange(frame-close) Отмена
+			button.btn.btn-44 Сохранить

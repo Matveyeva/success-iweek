@@ -1,3 +1,13 @@
+.patient-cabinet .cabinet-header{
+	position: sticky;
+	top:0;
+	z-index: 5;
+	background-color: #fff;
+}
+.cabinet-body.cabinet-body--patient{
+	padding-bottom: 60px;
+	height: auto;
+}
 .sidebar-panel{
 	nav{
 		a{
@@ -100,8 +110,8 @@
 	}
 }
 .patient-profile__block{
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 .profile-link{
 	position: relative;
@@ -133,6 +143,13 @@
 		background-color: rgba(130,130,130, .2);
 	}
 }
+.patient-profile-content .profile-link{
+	background-color: rgba(255, 255, 255, .7);
+	&:hover{
+		background-color: rgba(130,130,130, .1);
+	}
+	& + .profile-link{margin-top: 10px;}
+}
 .profile-row.profile-link{
 	
 	padding-top: 24px;
@@ -157,8 +174,8 @@
 	transition: .5s;
 	position: relative;
 	width: 100%;
-	max-width: 375px;
-	height: 108px;
+	max-width: 387px;
+	height: 115px;
 	margin-top: 10px;
 	box-shadow: 0px 0px 12px -2px rgba(0,0,0,.2), 0px 1px 1px rgba(0,0,0,.14), 0px 1px 3px 0px rgba(0,0,0,.12);
 	border-radius: 8px;
@@ -168,10 +185,18 @@
 		width: 80px;
 		height: 80px;
 		img{
-			width: 80px;
-			height: 80px;
+			width: 100%;
+			height:100%;
 			object-fit: cover;
 		}
+		@media (max-width: 767px) {
+			width: 50px;
+			height: 50px;
+		}
+	}
+	.btn.btn-32{
+		height: 32px!important;
+		line-height: 32px!important;
 	}
 	&__text{
 		flex-grow:1;
@@ -190,7 +215,7 @@
 	row-gap:32px;
 }
 .rev-card{
-	height: 210px;
+	height: 255px;
 	color: #000;
 	&__img{
 		width: 50px;
@@ -248,13 +273,20 @@
 	.cabinet-card__block{
 		gap:16px;
 		flex-grow:1;
-		.cabinet-card__text{flex-grow: 1;}
+		.cabinet-card__text{
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+		}
 		@media (max-width: 767px) {
 		flex-direction: column;
 			gap:4px;
 		}
 	}
 	.cabinet-card__date{
+		display: flex;
+		flex-direction: column;
+		
 		 .flex-box{
 			flex-direction: column;
 			gap:4px;
@@ -263,7 +295,10 @@
 				column-gap: 24px;
 			}
 		}
-		&>*+*{margin-top: 4px;	}
+		&>*+*{margin-top: 6px;	}
+		@media (max-width: 767px) {
+		.label-light{order:2; margin-top: 8px; width:fit-content; align-self: flex-end;}
+		}
 	}
 	
 }
@@ -283,12 +318,9 @@
 
 }
 .cabinet-card__btn{
-	padding-top: 16px;
+	padding-top: 8px;
+	margin-top: auto;
 	display: flex;
-	justify-content: center;
-	@media (max-width: 767px) {
-		justify-content: flex-start;
-	}
 }
 .set-rating{
 	display: flex;
@@ -341,4 +373,17 @@
 		}
 		
 	}
+}
+.profile-link.profile-link--inportant{
+	background-color: rgba(241, 155, 72, .5);
+	.text-32>sup{color: $red;}
+}
+.patient-profile__block .profile-link .text-32{
+	font-size: 28px;
+	line-height: 1.2;
+	@media (max-width: 991px) {
+		font-size: 20px;
+		line-height: 1.2;
+	}
+	
 }

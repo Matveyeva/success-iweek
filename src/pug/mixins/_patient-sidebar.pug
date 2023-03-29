@@ -34,3 +34,23 @@ mixin patient-sidebar
 							svg.svg-favorite
 								use(href="./img/svg-sprite.svg#svg-heart")
 						span Избранное
+
+mixin rating(title, inpName)
+	.set-rating-item
+		.text-18 #{title}
+		.set-rating
+			label.checkbox-label
+				input(type='checkbox' name=''+ inpName class='real-checkbox')
+				span
+			label.checkbox-label
+				input(type='checkbox' name=''+ inpName class='real-checkbox')
+				span
+			label.checkbox-label
+				input(type='checkbox' name=''+ inpName class='real-checkbox')
+				span
+			label.checkbox-label
+				input(type='checkbox' name=''+ inpName class='real-checkbox')
+				span
+			label.checkbox-label
+				input(type='checkbox' name=''+ inpName class='real-checkbox')
+				span

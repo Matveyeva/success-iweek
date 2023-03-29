@@ -15,10 +15,70 @@
 		.patient-profile__block
 			.text-32 Запись на приём
 			.text-14.pt-16
-				p Выбирайте врача на ПроДокторов и бронируйте время прямо на сайте
+				p Выбирайте специалиста и бронируйте время на #[a.text-dark.title-16(href="main2.html") iweek.ge]
 			.pt-16
-				a(href="#!").btn.btn--primary.w-100 Записаться онлайн
+				a(href="main2.html").btn.btn--primary.w-100 Записаться онлайн
 		
+		//======== блок отдельный ==========
+		.patient-profile__block
+			a(href="patient-history.html").profile-link.profile-link--inportant
+				.text-32 Предстоящие визиты
+					sup 1		
+			.patient-appoint.pt-40
+				.cabinet-card.w-100.flex-box.gap-16
+					.cabinet-card__img
+						img(src="./img/doctor2.png", width="100" height="100" alt="doc")
+					.cabinet-card__block.flex-box
+						.cabinet-card__text
+							.title-20 Голетиани М.К.
+							.text-16 Стоматолог
+							.cabinet-card__btn
+								button(frame-btn="cancel-appointment").btn.btn--orange.btn-32 	Отменить запись
+						
+						.cabinet-card__date
+							.text-16 "Клинк-Orto"
+							.flex-box
+								.text-16 15 Апреля 2023г
+								.text-16 11:30
+							+label-light('Подтвержден')(class="text-green")
+			
+		//======== блок отдельный ==========
+		.patient-profile__block
+			a(href="patient-reviews.html").profile-link.profile-link--inportant
+				.text-32 Ожидают вашего отзыва
+					sup 2
+			.patient-favorite
+				//====single favor card ====
+				a(href="#!" target="_blank").cabinet-card.flex-box.gap-16
+					.cabinet-card__img
+						img(src="./img/doctor.png", width="100" height="100" alt="doc")
+					.cabinet-card__text
+						.title-20 Лордкипиани Т.К
+						.text-16 Стоматолог
+						.cabinet-card__btn
+							button(frame-btn="patient-add-review").btn.btn-32 	Оставить отзыв
+					
+					//======icon=====
+					label.check-label.flex-center.flex-box
+						input(type="checkbox" checked)
+						svg.svg-heart(width="16" height="16" )
+							use(href="./img/svg-sprite.svg#svg-heart")
+				
+				//====single favor card ====
+				a(href="#!" target="_blank").cabinet-card.flex-box.gap-16
+					.cabinet-card__img
+						img(src="./img/doctor2.png", width="100" height="100" alt="doc")
+					.cabinet-card__text
+						.title-20 Голетиани М.К.
+						.text-16 Ортодонт
+						.cabinet-card__btn
+							button(frame-btn="patient-add-review").btn.btn-32 	Оставить отзыв
+					//======icon=====
+					label.check-label.flex-center.flex-box
+						input(type="checkbox" checked)
+						svg.svg-heart(width="16" height="16" )
+							use(href="./img/svg-sprite.svg#svg-heart")
+
 		//======== блок отдельный ==========
 		.patient-profile__block
 			a(href="patient-favorite.html").profile-link
@@ -31,8 +91,8 @@
 					.cabinet-card__img
 						img(src="./img/doctor.png", width="100" height="100" alt="doc")
 					.cabinet-card__text
-						.title-20 Лордкипиани
-						.text-16 Стоматолог
+						.title-20 Голетиани М.К
+						.text-16 Ортодонт
 
 					//======icon=====
 					label.check-label.flex-center.flex-box
@@ -45,7 +105,7 @@
 					.cabinet-card__img
 						img(src="./img/doctor.png", width="100" height="100" alt="doc")
 					.cabinet-card__text
-						.title-20 Лордкипиани
+						.title-20 Лордкипиани М.Г.
 						.text-16 Стоматолог
 
 					//======icon=====
@@ -63,11 +123,11 @@
 				//====single favor card ====
 				a(href="#!" target="_blank").rev-card.flex-column.gap-8
 					.rev-card__img
-						img(src="./img/doctor.png", width="50" height="50" alt="doc")
+						img(src="./img/doctor2.png", width="50" height="50" alt="doc")
 					.rev-card__text
-						.title-16 Лордкипанидзе Мария Георгиевна
-						.text-14 Стоматолог
-
+						.title-16 Голетиани Мариам Константиновна
+						.text-14 Ортодонт
+						+starRating('5')
 					.rev-card__body
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
@@ -79,5 +139,70 @@
 					.rev-card__text
 						.title-16 Лордкипанидзе Мария Георгиевна
 						.text-14 Стоматолог
+						+starRating('4')
 					.rev-card__body
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+//=============Модальное окно Подтверждение отмены записи =================
+.modal-frame-wrapper.modal-frame-center(frame-modal="cancel-appointment")
+	.modal-frame.flex-column.p-16
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.icon-close.ml-auto(frame-close)
+			
+		.modal-frame__body.text-center
+			p.text-16.mb-24 Вы действительно хотите отменить запись?
+			.btn.btn-44.mb-32(frame-close frame-btn="check-cancel-appointment") Подтвердить
+
+//===============================Модальное окно Отмена подтверждена======================
+.modal-frame-wrapper.modal-frame-center(frame-modal="check-cancel-appointment")
+	.modal-frame.flex-column.p-16
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.icon-close.ml-auto(frame-close)
+			
+		.modal-frame__body.text-center
+			p.text-16.mb-24 Запись отменена!
+			.btn.btn-44.mb-32(frame-close) ок
+
+//================== добавить отзыв ==============
+.modal-frame-wrapper.modal-frame-right(frame-modal="patient-add-review")
+	.modal-frame.flex-column
+		.modal-frame__head.flex-box.flex-y-center.flex-between
+			.title-wrapper
+				.text-18.mb-8 Оставить отзыв о
+				.text-24 Лордкипанидзе Мария Георгиевна
+			.icon-close(frame-close)
+		.modal-frame__body
+			form
+				//=======рейтинг работает через скрипт в main.js  строка 674 (комментарий: оценить врача - рейтинг) ===========
+				.rating-wrapper
+					+rating('Тщательность обследования', 'rating-1')
+					+rating('Эффективность лечения', 'rating-2')
+					+rating('Отношение к пациенту', 'rating-3')
+					+rating('Информирование пациента', 'rating-4')
+					+rating('Посоветуете ли Вы врача?', 'rating-5')
+				
+				.form-box.mt-24
+					label.text-16 Клиника
+					
+					+custom-select-icon('Блюхера, 56', ['Блюхера, 56', 'ИП Вердашев', 'Клиника "Сова"','Гиппократ', 'Зеленое яблоко', 'Добрый доктор' ], 'mySelect--absolute')
+		
+				.form-box.mt-24
+					label.text-16 Дата посещения
+					.mydatepicker
+						input.form-input(type="text" class="datepicker" value="01.10.2022")
+				.form-box.mt-24
+					label.text-16 Как прошел прием
+					.form-textarea
+						textarea(placeholder="Расскажите, как обратились к врачу, как прошел прием, помогло ли лечение.")
+				.form-box.mt-24
+					label.text-16 Понравилось
+					.form-textarea
+						textarea(placeholder="Здесь можно указать главные плюсы")
+				.form-box.mt-24
+					label.text-16 Не понравилось
+					.form-textarea
+						textarea(placeholder="Какие недостатки вы отметили")
+		
+		.modal-frame__footer.mt-auto.border-top.flex-vertical-center.flex-between
+			button.btn.btn-44.btn--orange(frame-close) Отмена
+			button.btn.btn-44 Сохранить
