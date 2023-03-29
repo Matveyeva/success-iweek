@@ -27,7 +27,7 @@ block content
 					.text-center
 						p Войдите или зарегистрируйтесь
 					.modal-frame__body.pt-16
-						form.login-form
+						form.login-form.required-inputs-form
 							//====радиобаттоны Пользователь / Исполнитель =======
 							.form-login-role.tabs-wrapper(custom-tabs)
 								.tabs.flex-box-inline
@@ -64,16 +64,16 @@ block content
 								.tabs-content.pt-32.flex-grow-1
 									div.ct-content--active(ct-content="1")
 										.form-box
-											input.form-input(type="text" placeholder="Email")
+											input.form-input.required-input(type="email" placeholder="Email")
 											a(href="#!").text-link.text-red.mt-8 Сбросить пароль
 									div(ct-content="2")
 										.form-box
-											input.form-input(type="text" placeholder="Телефон")
+											input.form-input.required-input(type="tel" placeholder="Телефон")
 											.text-indigo.mt-8 Отправим код
 							
 							//========= form button ======			
 							.form-btn.mt-24
-								button.btn.btn--gradient.w-100 Войти
+								button.btn.btn--gradient.w-100.display-required Войти
 							
 							//- .form-btn.mt-24.text-center.text-18.text-indigo(frame-btn="registr-modal") Регистрация
 

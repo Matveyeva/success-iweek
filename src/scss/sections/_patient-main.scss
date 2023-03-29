@@ -111,6 +111,7 @@
 	padding-left: 24px;
 	padding-right: 24px;
 	color: #000;
+	background-color: rgba(130,130,130, .1);
 	&:after{
 		content: '';
 		width: 24px;
@@ -129,7 +130,7 @@
 		}
 	}
 	&:hover{
-		background-color: rgba(130,130,130, .1);
+		background-color: rgba(130,130,130, .2);
 	}
 }
 .profile-row.profile-link{
@@ -329,3 +330,15 @@
 	}
 }
 .favor-empty{margin-top: 30%;}
+.patient-profile-title{
+	position: relative;
+	text-align: center;
+	.icon-btn{
+		left: 0;
+		top: 0;
+		&:hover{
+			opacity: .4;
+		}
+		
+	}
+}

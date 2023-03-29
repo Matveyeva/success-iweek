@@ -19,11 +19,14 @@ mixin rating(title, inpName)
 				span
 
 .container.container-slim
+	.patient-profile-title.mb-32
+		a(href="patient-main.html").icon-btn.arrow-left.pos-abs
+		.text-20 Записи
 	.patient-acor
 		.acor-container
 			//=========== single block =============
 			.acor-item
-				input#acor1(type='checkbox' name='acor' checked)
+				input#acor1(type='checkbox' name='acor' )
 				label(for='acor1').text-20.gray-3 Архив
 				.acor-body.flex-column.gap-16
 					.cabinet-card.w-100.flex-box.gap-16
@@ -70,7 +73,7 @@ mixin rating(title, inpName)
 									.text-16 14:00
 			//=========== single block =============
 			.acor-item
-				input#acor2(type='checkbox' name='acor' checked)
+				input#acor2(type='checkbox' name='acor' )
 				label(for='acor2').text-20.text-indigo Предстоящие
 				.acor-body.flex-column.gap-16
 					.cabinet-card.w-100.flex-box.gap-16

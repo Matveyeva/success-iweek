@@ -6,7 +6,9 @@ block content
 	.cabinet-body.pt-40
 		.container.container-slim
 			.patient-profile
-				.text-20 Избранное
+				.patient-profile-title.mb-32
+					a(href="patient-main.html").icon-btn.arrow-left.pos-abs
+					.text-20 Избранное
 				//============ контент, если не отмечен ни один врач в избранное ===================
 				.favor-empty.flex-column.gap-16.flex-center.text-center.m-auto
 					.title-20 Здесь будут избранные врачи и клиники
@@ -23,7 +25,7 @@ block content
 						span
 							svg.svg-map
 								use(href="./img/svg-sprite.svg#svg-map")
-						span Балаково
+						span Батуми
 					a(href="patient-edit.html")
 						span
 							svg.svg-pacient

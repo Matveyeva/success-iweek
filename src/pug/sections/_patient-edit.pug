@@ -1,33 +1,38 @@
 .container.container-slim
-	.patient-profile
-		a(href="#!" frame-btn="edit-patient-phone").profile-row.profile-link.flex-vertical-center.gap-16
-			.icon-item
-				svg.svg-phone
-					use(href="./img/svg-sprite.svg#svg-phone")
-			
-			.patient-profile-title
-				.text-18 +7 927 104-85-55
 
-		a(href="#!" frame-btn="edit-patient-name").profile-row.profile-link.flex-vertical-center.gap-16
-			.icon-item
-				svg.svg-edit
-					use(href="./img/svg-sprite.svg#svg-edit")
+	.patient-profile
+		.patient-profile-title.mb-32
+			a(href="patient-main.html").icon-btn.arrow-left.pos-abs
+			.text-20 Редактировать данные
+		.patient-profile-content
+			a(href="#!" frame-btn="edit-patient-phone").profile-row.profile-link.flex-vertical-center.gap-16
+				.icon-item
+					svg.svg-phone
+						use(href="./img/svg-sprite.svg#svg-phone")
+				
+				.patient-profile-title
+					.text-18 +7 927 104-85-55
+
+			a(href="#!" frame-btn="edit-patient-name").profile-row.profile-link.flex-vertical-center.gap-16
+				.icon-item
+					svg.svg-edit
+						use(href="./img/svg-sprite.svg#svg-edit")
+				
+				.patient-profile-title
+					.text-18 ФИО
 			
-			.patient-profile-title
-				.text-18 ФИО
-		
-		a(href="#!" frame-btn="edit-patient-birthday").profile-row.profile-link.flex-vertical-center.gap-16
-			.icon-item
-				svg.svg-calendar
-					use(href="./img/svg-sprite.svg#svg-calendar")
+			a(href="#!" frame-btn="edit-patient-birthday").profile-row.profile-link.flex-vertical-center.gap-16
+				.icon-item
+					svg.svg-calendar
+						use(href="./img/svg-sprite.svg#svg-calendar")
+				
+				.patient-profile-title
+					.text-18 Дата рождения
 			
-			.patient-profile-title
-				.text-18 Дата рождения
-		
-		a(href="#!" frame-btn="edit-patient-email").profile-row.profile-link.flex-vertical-center.gap-16
-			.icon-item @
-			.patient-profile-title
-				.text-18 la******ta@yandex.ru
+			a(href="#!" frame-btn="edit-patient-email").profile-row.profile-link.flex-vertical-center.gap-16
+				.icon-item @
+				.patient-profile-title
+					.text-18 la******ta@yandex.ru
 
 //================== редактировать ФИО пациента ==============
 .modal-frame-wrapper.modal-frame-right(frame-modal="edit-patient-name")
