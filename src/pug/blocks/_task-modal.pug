@@ -1,7 +1,7 @@
 //================== Информация о приеме мод окно ==============
 .modal-frame-wrapper.modal-frame-right(frame-modal="visit-info")
 	.modal-frame.flex-column
-		.modal-frame__head.flex-box.flex-y-center.flex-between
+		.modal-frame__head.border-none.flex-box.flex-y-center.flex-between
 			.text-24 Информация о приеме
 			.icon-close(frame-close)
 			
@@ -10,8 +10,23 @@
 				table
 					tbody
 						tr
-							td Дата и время
-							td 28 нояб., 09:00—09:30
+							td Дата
+							td.edit-visit-date
+								.mydatepicker
+									input.form-input(type="text" class="datepicker" value="20.04.2023")
+						tr.edit-visit-time
+							td Время
+							td.flex-vertical-center.gap-16
+								span c
+								.flex-vertical-center.gap-4
+									input.form-input(type="number" name="" value="09")
+									span :
+									input.form-input(type="number" name="" value="30")
+								span до
+								.flex-vertical-center.gap-4
+									input.form-input(type="number" name="" value="10")
+									span :
+									input.form-input(type="number" name="" value="30")
 						tr.doctor-info
 							td Врач
 							td
