@@ -714,8 +714,7 @@ document.addEventListener("DOMContentLoaded", function (){
 					if ( !el.value || 
 						(el.type === 'email' && !validate(emailRegex,el.value)) || 
 						(el.type === 'tel' && !validate(phoneRegex, el.value))) {
-							console.log(el)
-							console.log(el.classList);
+							
 							el.classList.add('required-input-novalid');
 					}
 				});
@@ -729,5 +728,15 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 
 	}
-
+	/* close tooltip-modal стр Задачи, редактирования времени*/
+	const tooltipModal = document.querySelectorAll('.tooltip-modal');
+	if(tooltipModal.length > 0){
+		for(item of tooltipModal){
+			const itemCloseBtn = item.querySelector('.tooltip-close');
+			itemCloseBtn.addEventListener('click', (e)=>{
+				e.preventDefault();
+				item.classList.remove('visible');
+			})
+		}
+	}
 });

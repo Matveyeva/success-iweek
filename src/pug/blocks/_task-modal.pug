@@ -17,6 +17,11 @@
 						tr.edit-visit-time
 							td Время
 							td.flex-vertical-center.gap-16
+								//== окошко  .tooltip-error-text отображается при наличии класса visible. Оно содержит информацию, что время не может быть выбрано. Сейчас по дефолту сделано отображаемым, что бы показать, что оно сверстано== 
+								.tooltip-error-text.visible.tooltip-modal
+									p Время не может быть выбрано
+									.btn.btn-32.mt-8.tooltip-close ок
+								
 								span c
 								.flex-vertical-center.gap-4
 									input.form-input(type="number" name="" value="09")
