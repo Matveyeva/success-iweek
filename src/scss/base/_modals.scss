@@ -144,7 +144,11 @@
 }
 .form-login-role{
 	position: relative;
-	.tabs{column-gap:40px;}
+	.tabs{column-gap:40px;
+		@media (max-width: 767px) {
+			column-gap:30px;
+		}
+	}
 	.tabs-content{
 		min-height: 96px;
 		padding-top: 12px;
