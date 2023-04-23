@@ -19,7 +19,8 @@
 							td.flex-vertical-center.gap-16
 								//== окошко  .tooltip-error-text отображается при наличии класса visible. Оно содержит информацию, что время не может быть выбрано. Сейчас по дефолту сделано отображаемым, что бы показать, что оно сверстано== 
 								.tooltip-error-text.visible.tooltip-modal
-									p Время не может быть выбрано
+									p Время недоступно,
+									p выберите другое
 									.btn.btn-32.mt-8.tooltip-close ок
 								
 								span c
@@ -55,7 +56,7 @@
 						tr
 							td Возраст
 							td 03.06.1989 (33 года)
-		.modal-frame__footer.mt-auto.border-top
+		.modal-frame__footer.mt-auto
 			.state-select.state-select--opentop
 				.state-select-current(data-state="state-started") Начат прием
 				.state-select-drop

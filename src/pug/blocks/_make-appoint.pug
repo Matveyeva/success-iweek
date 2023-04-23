@@ -24,10 +24,10 @@
 							span Недееспособный гражданин
 			
 			.cabinet-form-body
-				.fieldset-group.mb-32
+				.fieldset-group.mb-24
 					.title-18.mb-24 Данные пациента
 					
-					.cabinet-form__name.mb-32
+					.cabinet-form__name.mb-24
 						.form-box
 							label.text-16 Фамилия
 							input(type="text" ).form-input
@@ -38,7 +38,7 @@
 							label.text-16 Отчество
 							input(type="text" ).form-input
 				
-					.cabinet-form__gender.gap-32.mb-32.grid-355
+					.cabinet-form__gender.gap-32.mb-24.grid-355
 						.form-box
 							label.text-16 Пол
 							.flex-vertical-center.gap-32
@@ -56,7 +56,7 @@
 							.mydatepicker
 								input.form-input(type="text" class="datepicker" )
 				
-				.cabinet-form__contacts.mb-32.flex-vertical-center.gap-32.flex-grow
+				.cabinet-form__contacts.mb-24.flex-vertical-center.gap-32.flex-grow
 					.form-box
 						label.text-16 Телефон
 						input(type="text" ).form-input
@@ -64,7 +64,7 @@
 						label.text-16 Дополнительный телефон
 						input(type="text" ).form-input
 				
-				.fieldset-group.fieldset-group-time.mb-32
+				.fieldset-group.fieldset-group-time.mb-24
 					.title-18.mb-24 Дата и время приема
 					.flex-vertical-center.gap-32
 						.form-box
@@ -77,31 +77,32 @@
 						.form-box
 							+custom-select-icon2('', ['8:00','8:30', '9:00', '9:30', '10:00', '10:30', '11:00' ], 'mySelect--absolute','', 'Окончание приема')
 			
-				.fieldset-group.fieldset-group-doctor.mb-32
+				.fieldset-group.fieldset-group-doctor.mb-24
 					.title-18.mb-24 Данные о враче
-					.flex-vertical-center.gap-32.flex-grow.mb-32
+					.flex-vertical-center.gap-32.flex-grow.mb-24
 						+custom-select-icon('Фамилия И.О.',['Беридзе Н.', 'Чикрадзе Э. С.С.', 'Золотов Е. П.'], 'mySelect--absolute' )
 						
 						+custom-select-icon('Специалист', ['Стоматолог', 'Ортодонт'], 'mySelect--absolute')
 					
-					.mb-32
+					.mb-24
 						+custom-select-icon('Рекомендовавший врач',['Беридзе Н.', 'Чикрадзе Э. С.С.', 'Золотов Е. П.'], 'mySelect--absolute' )
 					
-					.mb-32
+					.mb-24
 						+custom-select-icon('Канал привлечения',[, 'Telegram','Google', 'Facebook', 'Сервис iweek'], 'mySelect--absolute' )
-				.fieldset-group.mb-32
+				.fieldset-group.fieldset-group-doctor.mb-24
+					.title-18.mb-24 Добавить услугу
+					+mySelect({addClass: '', val:'Услуга', itemsArr:['Санация полости рта', 'Лечение кариеса зубов','Лечение пульпита', 'Пломбирование каналов зубов', 'Удаление нерва зуба', 'Кариес между зубами']})
+				
+				.fieldset-group.mb-24
 					.form-textarea
 							textarea(placeholder="Цель визита")
-					.form-box.mt-32
-						label.switch-toggle.flex-box.flex-y-center
-							input(type='checkbox'  class='toggle-switch' )
-							span.real-switch
-							span.custom-switch__text Поместить в лист ожидания
+					//- .form-box.mt-32
+					//- 	label.switch-toggle.flex-box.flex-y-center
+					//- 		input(type='checkbox'  class='toggle-switch' )
+					//- 		span.real-switch
+					//- 		span.custom-switch__text Поместить в лист ожидания
 				
-				.fieldset-group.fieldset-group-doctor.mb-32
-					.title-18.mb-24 Добавить услугу
-					.form-box
-						input(type="text" placeholder="Добавьте услугу").form-input
+				
 		.modal-scroll-footer
 			.form-btns.flex-vertical-center.gap-32.flex-between
 				//=====выпадашка ======

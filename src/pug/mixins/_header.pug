@@ -27,10 +27,14 @@ mixin header(argMenu)
 								.phone-block
 									a(href="#!").text-icon.text-phone.text-white +995 551 405 123
 
-							a(href="page-schedule.html").btn.btn-mini.dark-btn
+							//- a(href="page-schedule.html").btn.btn-mini.dark-btn
+							//- 	svg.svg-person(width="16" height="16")
+							//- 		use(href="./img/svg-sprite.svg#svg-person")
+							//- 	.text-white Кабинет
+							button.btn.btn-mini.dark-btn(frame-btn="login-modal")
 								svg.svg-person(width="16" height="16")
 									use(href="./img/svg-sprite.svg#svg-person")
-								.text-white Кабинет
+								.text-white Войти
 							
 							//=============Выбор страны и валюты на экранах от 992 пикс ================
 							.mySelect.mySelect--absolute.mySelect--dark.mySelect--radio.mySelect--currency

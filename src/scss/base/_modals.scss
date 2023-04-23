@@ -74,7 +74,7 @@
 	td{
 		padding: 20px;
 		border-top:1px solid #E7E7E7;
-		border-bottom: 1px solid #E7E7E7;
+		// border-bottom: 1px solid #E7E7E7;
 		font-size: 18px;
 		line-height: 1.5;
 		&:first-child{
@@ -87,6 +87,7 @@
 		span{display: block;}
 		span:first-child{font-weight: 700;}
 	}
+	tr:last-child td{border-bottom:1px solid #E7E7E7;}
 	.visiter-info{
 		p{
 			display: flex;
@@ -241,13 +242,14 @@
 	.tooltip-error-text{
 		width: 320px;
 		padding: 12px;
-		border:1px solid $gray3;
+		border:1px solid #e7e7e7;
+		
 		border-radius: 4px;
 		font-size: 16px;
 		text-align: center;
 		position: absolute;
 		left: 177px;
-		top: -3px;
+		top: -16px;
 		z-index: 3;
 		background-color: #fff;
 		display: none;
@@ -258,4 +260,7 @@
 .modal-frame-wrapper .modal-frame__head.border-none{
 	border-bottom: 0px!important;
 	padding-bottom: 0!important;
+}
+.modal-scroll  .modal-frame__body.scroll-vertical{
+	max-height: calc(100vh - 240px);
 }
