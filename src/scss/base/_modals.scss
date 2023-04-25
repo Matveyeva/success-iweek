@@ -42,6 +42,12 @@
 		font-weight: 700;
 	}
 }
+.modal-frame-wrapper[frame-modal].modal-frame-right{
+	.modal-frame__head{
+		border-bottom: 0px;
+		
+	}
+}
 .modal-frame-wrapper[frame-modal].modal-frame-left .modal-frame{
 	right: auto;
 	left: 0;
@@ -240,16 +246,17 @@
 	position: relative;
 	
 	.tooltip-error-text{
-		width: 320px;
-		padding: 12px;
-		border:1px solid #e7e7e7;
 		
+		padding: 12px;
+		box-shadow: 0 0 12px #e7e7e7;
+		width:260px;
+		height:70px;
 		border-radius: 4px;
 		font-size: 16px;
 		text-align: center;
 		position: absolute;
-		left: 177px;
-		top: -16px;
+		left: 20px;
+		top: -77px;
 		z-index: 3;
 		background-color: #fff;
 		display: none;
@@ -263,4 +270,13 @@
 }
 .modal-scroll  .modal-frame__body.scroll-vertical{
 	max-height: calc(100vh - 240px);
+}
+.tooltip-modal.tooltip-modal--mini{
+	
+	.tooltip-close{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		border: none;
+	}
 }

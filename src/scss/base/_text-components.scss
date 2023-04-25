@@ -142,8 +142,8 @@
 
 .state-expired.state-label, .state-expired .dashboard-table-column__head, [data-state="state-expired"]{
 
-	background-color: rgb(223, 203, 94)!important;
-    color: rgb(254, 0, 0)!important;
+	background-color: rgb(255, 118, 94)!important;
+    color:  rgb(204, 77, 56)!important;
 
 }
 
@@ -161,7 +161,7 @@
 .state-done .state-label, .state-done .dashboard-table-column__head, [data-state="state-done"]{
 
 	color: rgb(117, 117, 117)!important;
-    background-color: rgb(247, 247, 247)!important;
+    background-color: rgb(227, 225, 227)!important;
 
 }
 .state-cancel  .state-label, .state-cancel .dashboard-table-column__head, [data-state="state-cancel"]{

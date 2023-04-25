@@ -7,7 +7,16 @@
 	.employee-personal-card
 		.container-medium
 			.employee-personal-header.flex-box.border-b
-				+card-header-personal-page('Стоматолог', 'Голетиани Мариам', 'Стаж 17 лет')
+				.flex-box.gap-32
+					form.avatar-form(enctype="multipart/form-data")
+						.employee-personal-foto
+							img(src="./img/avatar.svg", width="155" height="155" alt="foto")
+						
+						fieldset
+							input#file.inputfile(type="file", multiple)
+							label.btn-32.btn--orange(for="file") Загрузить фото
+							
+					+card-header-personal-page('Стоматолог', 'Голетиани Мариам', 'Стаж 17 лет')
 				.employee-personal-options.flex-box.gap-32
 					.edit-item(title="Редактировать" frame-btn="edit-empl-profile")
 					.icon-delete(title="Удалить профиль" frame-btn="confirm-action")

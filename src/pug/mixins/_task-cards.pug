@@ -25,13 +25,13 @@ mixin task-card(state)
 					.state-select-current(data-state="state-cancel")  Отменен
 				if state == 'Просрочен'
 					.state-select-current(data-state="state-expired") Просрочен
-				if state == 'Запланировано'
-					.state-select-current(data-state="state-planer") Запланировано
+				if state == 'Запланирован'
+					.state-select-current(data-state="state-planer") Запланирован
 				.state-select-drop
 					.state-select-drop__item(data-state="state-started") Начат прием
 					.state-select-drop__item(data-state="state-confirm") Подтвержден
 					.state-select-drop__item(data-state="state-notvisit") Неявка
 					.state-select-drop__item(data-state="state-done") Выполнен
 					.state-select-drop__item(data-state="state-cancel")  Отменен
-					.state-select-drop__item(data-state="state-planer")  Запланировано
+					.state-select-drop__item(data-state="state-planer")  Запланирован
 				

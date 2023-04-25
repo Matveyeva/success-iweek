@@ -400,3 +400,35 @@ input::-webkit-inner-spin-button {
 .required-input.required-input-novalid{
 	border: 1px solid red;
 }
+.avatar-form{
+	width: 155px;
+
+}
+/*КАСТОМНЫЙ ВЫБОР ФАЙЛА*/
+ .inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+
+}
+
+.employee-personal-foto{
+	background-position: center;
+	background-size:cover;
+	width: 155px;
+	height: 155px;
+	box-shadow:0 0 12px rgba(0,0,0, .12);
+	margin-bottom: 12px;	
+	img{
+		width: 155px;
+		height: 155px;
+		object-fit: cover;
+	}
+}
+fieldset {
+	border:none;
+	padding: 0;
+}

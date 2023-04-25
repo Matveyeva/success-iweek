@@ -17,22 +17,26 @@
 						tr.edit-visit-time
 							td Время
 							td.flex-vertical-center.gap-16
-								//== окошко  .tooltip-error-text отображается при наличии класса visible. Оно содержит информацию, что время не может быть выбрано. Сейчас по дефолту сделано отображаемым, что бы показать, что оно сверстано== 
-								.tooltip-error-text.visible.tooltip-modal
-									p Время недоступно,
-									p выберите другое
-									.btn.btn-32.mt-8.tooltip-close ок
+								//== окошко  tooltip-error-text отображается при наличии класса visible. Оно содержит информацию, что время не может быть выбрано. Сейчас по дефолту у него есть класс visible, что оно отображалось. Рендерить его надо внутри дива с классом pos-rel после инпутов
+								//=== Инпуту красную рамку задает класс input-notvalid== 
+								
 								
 								span c
-								.flex-vertical-center.gap-4
-									input.form-input(type="number" name="" value="09")
+								.flex-vertical-center.gap-4.pos-rel
+									input.form-input.input-notvalid(type="number" name="" value="09")
 									span :
-									input.form-input(type="number" name="" value="30")
+									input.form-input.input-notvalid(type="number" name="" value="30")
+									.tooltip-error-text.tooltip-modal.tooltip-modal--mini.text-12.visible
+										p Время недоступно, 
+										p выберите другое
+										.tooltip-close.icon-close
 								span до
-								.flex-vertical-center.gap-4
+								//==== класс .input-notvalid задает красную рамку для инпут. Класс visible делает видимым  тултип
+								.flex-vertical-center.gap-4.pos-rel
 									input.form-input(type="number" name="" value="10")
 									span :
 									input.form-input(type="number" name="" value="30")
+									
 						tr.doctor-info
 							td Врач
 							td
@@ -56,7 +60,7 @@
 						tr
 							td Возраст
 							td 03.06.1989 (33 года)
-		.modal-frame__footer.mt-auto
+		.modal-frame__footer.mt-auto.flex-box
 			.state-select.state-select--opentop
 				.state-select-current(data-state="state-started") Начат прием
 				.state-select-drop
@@ -65,5 +69,5 @@
 					.state-select-drop__item(data-state="state-notconfirm") Не подтвержден
 					.state-select-drop__item(data-state="state-done") Выполнен
 					.state-select-drop__item(data-state="state-cancel")  Отменен
-					
-			
+			.ml-auto
+				button.btn.btn-44 Сохранить
