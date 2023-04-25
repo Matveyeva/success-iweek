@@ -280,3 +280,9 @@
 		border: none;
 	}
 }
+.icon-close.pos-abs{
+	border:none;
+	top: 5px;
+	right: 5px;
+	&:hover{border:1px solid #dedede;}
+}

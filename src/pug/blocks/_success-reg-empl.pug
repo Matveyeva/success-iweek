@@ -4,12 +4,10 @@
 	Если для его отображения не требуется клик по кнопке с атрибутом frame-btn="ssuccess-reg-empl" , то атрибут frame-modal="success-reg-empl"  можно удалить.
 //=============================================================================
 .modal-frame-wrapper.modal-frame-center.visible.w-1000(frame-modal="success-reg-empl")
-	.modal-frame.flex-column.p-16
-		.modal-frame__head.flex-box.flex-y-center.flex-between
-			.icon-close.ml-auto(frame-close)
-			
+	.modal-frame.flex-column.p-32.pos-rel
+		.icon-close.pos-abs(frame-close)
 		.modal-frame__body
-			.flex-column.flex-center.mb-32.gap-12.text-center
+			.flex-column.flex-center.gap-12.text-center
 				.title-20 Благодарим за проявленный интерес к нашему сервису.
 				.text-20.flex-column.flex-center.gap-8
 					p На сегодняшний день, сотрудничество с исполнителями,

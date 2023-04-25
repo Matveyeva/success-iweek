@@ -4,9 +4,9 @@
 	Если для его отображения не требуется клик по кнопке с атрибутом frame-btn="success-reg" , то атрибут frame-modal="success-reg"  можно удалить.
 //=============================================================================
 .modal-frame-wrapper.modal-frame-center.visible(frame-modal="success-reg")
-	.modal-frame.flex-column.p-16
+	.modal-frame.flex-column.p-32.pos-rel
 		.modal-frame__head.flex-box.flex-y-center.flex-between
-			.icon-close.ml-auto(frame-close)
+			.icon-close.pos-abs(frame-close)
 			
 		.modal-frame__body.text-center
-			p.text-16.mb-32 Вы зарегистрированы в системе бронирования услуг. Вы можете управлять бронированием прямо из личного кабинета.
+			p.text-16 Вы зарегистрированы в системе бронирования услуг. Вы можете управлять бронированием прямо из личного кабинета.

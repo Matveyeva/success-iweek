@@ -1,0 +1,31 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	+cabHeader([
+		{link:'page-schedule.html', addCl:'true', name: 'Расписание'}, 
+		{link:'page-tasks.html', addCl:'', name: 'Задачи' }, 
+		{link:'visitor-page.html', addCl:'', name: 'Пациенты'}, 
+		{link:'employees-page.html', addCl:'', name: 'Сотрудники' }
+		])
+	
+	//====== ячейки, для которых нет записи имеют дополнительный класс - "forbid-appoint", который делает их серого цвета.  Ячейки, в которых уже есть запись дополнительные классы в зависимости от состояния записи 'state-confirm',  'state-done', 'state-notconfirm'  Модальное окно при кике по ячейке открывается за счет атрибута frame-btn Значние атрибуда открывает модальное окно, у которого такое же значение атрибута  frame-modal.  frame-btn="appointment-modal" откроет модальное окно frame-modal="appointment-modal" ===============================================
+	.cabinet-body
+		.container-large
+			include ../sections/_schedule-page-content
+	include ../blocks/_pause-modal
+	include ../blocks/_task-modal
+	include ../blocks/_make-appoint
+	
+	//============	Модальное окно Вы не сохранили внесенные изменения! =====
+	.modal-frame-wrapper.modal-frame-center.visible(frame-modal="save-changes")
+		.modal-frame.flex-column.p-32.pos-rel
+			
+			.icon-close.pos-abs(frame-close)
+			.modal-frame__body.text-center
+				p.text-16 Вы не сохранили внесенные изменения!
+
+
+block variables
+	-let bodyCl = "client-cabinet"
+	-let title = "Кабинет клиента";
