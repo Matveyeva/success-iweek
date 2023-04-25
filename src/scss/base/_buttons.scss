@@ -275,3 +275,17 @@
 		}
 	}
 }
+.btn-reset{
+	min-width: 211px;
+	display: flex;
+	font-size: 16px;
+	font-weight: 500;
+	color: $gray;
+	align-items: center;
+	.icon-close{border: none;
+	background-color: transparent;}
+	&:hover{
+		color:$coral ;
+	}
+
+}

@@ -164,6 +164,7 @@ sup.text-red{
 }
 .checkboxes-wrapper{
 	gap:24px;
+	row-gap: 16px;
 	@media (max-width: 1199px) {
 		gap:15px;
 	}
