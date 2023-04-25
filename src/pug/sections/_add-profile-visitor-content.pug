@@ -26,9 +26,11 @@
 				.grid-form-fields.gap-32
 					.form-box
 						label.text-16 Фамилия
+							sup.text-red *
 						input(type="text" placeholder="Фамилия").form-input
 					.form-box
 						label.text-16 Имя
+							sup.text-red *
 						input(type="text" placeholder="Имя").form-input
 					.form-box
 						label.text-16 Отчество
@@ -52,6 +54,7 @@
 						+custom-select-icon2('Выбрать', ['Rh(+)', 'Rh(-)'], 'mySelect--absolute','', 'Резус-фактор')
 					.form-box
 						label.text-16 Дата рождения
+							sup.text-red  *
 						.mydatepicker
 							input.form-input(type="text" class="datepicker" value="01.01.2022")
 

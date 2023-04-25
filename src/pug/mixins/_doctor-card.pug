@@ -11,7 +11,17 @@ mixin card-header(textSup, titile, textSub)
 			.text-14.text-gray3 Мануальный терапевт
 			.text-14.text-gray3 !{textSub}
 			.text-14.text-gray3 Высшая категория
-		
+
+mixin card-header-short(textSup, titile, textSub)
+	.card-header&attributes(attributes)
+		.flex-vertical-center.gap-16
+			if textSup
+				.text-14.text-gray !{textSup}
+			.text-14.text-gray3 Работаем со страховкой
+		.text-24.mb-8 !{titile}
+		.card-header__list
+			.text-14.text-gray3 !{textSub}
+			.text-14.text-gray3 Высшая категория		
 			
 mixin card-header-personal-page(textSup, titile, textSub)
 	.card-header&attributes(attributes)
