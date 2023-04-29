@@ -25,8 +25,13 @@
 	}
 }
 .employee-personal-place__toggle{
-	&>*{
-		border-radius: 0!important;
-	}
+	display: flex;
+	column-gap:8px;
+	a{color: inherit;
+		transition: .3s;
+	&:hover{
+		background-color: $indigo;
+		color: #fff;
+	}}
 	
 }
