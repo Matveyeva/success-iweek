@@ -3,3 +3,25 @@ main.employee-page-content
 		a(href="employee-personal-page.html").text-icon.flex-box.flex-y-center
 			.icon-btn.arrow-left
 			.text-16 Оказываемые услуги
+	
+	.employee-page-services
+		.employee-page-services__block.flex-box.gap-20
+			.form-box.form-box--icon-left
+				
+				//==== инпут=====
+				.form-box-input
+					input(type="text" placeholder="Введите название услуги").form-input
+				
+				//====иконка лупа===
+				.form-box__icon
+					svg.svg-search
+						use(href="../img/svg-sprite.svg#svg-search")
+				
+				
+				//====== .autocomplit-list -заготовка под блок с фамилиями для автоподстановки. Скрыта через класс d-none 
+				.autocomplete-list.scroll-vertical
+					ul
+						li Стоматолог
+						li Ортодонт
+						li Хирург
+			button.btn.btn--primary.btn-38 Все услуги
