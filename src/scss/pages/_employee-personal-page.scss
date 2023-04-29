@@ -39,4 +39,70 @@
 	.form-box{
 		flex-grow: 1;
 	}
+	.form-box__icon{
+		left: 16px;
+		height: 24px;
+	}
+}
+.services-table{
+	padding-top: 40px;	
+}
+.services-table-row{
+	display: flex;
+	justify-content: space-between;
+	column-gap:8px;
+	height: 55px;
+	align-items: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	transition: .3s;
+	.checkbox-label{flex-grow:1; height: 100%;}
+	.service-price-val{
+		width: 80px;
+		flex-shrink: 0;
+		font-size: 18px;
+	}
+	.mySelect{
+		width: 60px;
+		flex-shrink: 0;
+		.form-input{
+			border: none;
+		}
+		.mySelect-input:after{
+			width: 12px;
+			height: 12px;
+		}
+	}
+	.service-price-val {
+		input{
+			width: 100%;
+			border-bottom: 1px solid #E0E0E0;
+			background-color: transparent;
+			font-size: 18px;
+			text-align: right;
+		}
+	}
+	.icon-delete{
+		margin-left: 40px;
+	}
+
+}
+
+.services-table-row:nth-child(even){
+	background-color: #fff;
+}
+.services-table-row:hover,.services-table-row:nth-child(even):hover{
+	background-color: rgba(131, 131, 255, .2);
+}
+.mySelect.mySelect--slim{
+	.form-input{
+		height: 28px;
+		background-color: transparent;
+	}
+	.mySelect-options{
+		height: 28px;
+	}
+	.mySelect-drop.active{
+		bottom: -2px;
+	}
 }

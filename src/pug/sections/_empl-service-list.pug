@@ -2,26 +2,100 @@ main.employee-page-content
 	.employee-page-content__head
 		a(href="employee-personal-page.html").text-icon.flex-box.flex-y-center
 			.icon-btn.arrow-left
-			.text-16 Оказываемые услуги
+			.text-16 Выбор услуг
 	
 	.employee-page-services
 		.employee-page-services__block.flex-box.gap-20
-			.form-box.form-box--icon-left
+			.form-box
+				.form-box-input.pos-rel
+					+custom-select-checkbox('Выбрать услугу (не более 10)',['Стоматология', 'Ортодонтия', 'Хирургия'], 'mySelect--absolute' )
+					
+					
+					//====== .autocomplit-list -заготовка под блок с услугами для автоподстановки. Скрыта через класс d-none 
+					.autocomplete-list.scroll-vertical.d-none
+						ul
+							li Стоматология
+							li Ортодонтия
+							li Хирургия
+
+			button.btn.btn--orange.btn-38 Добавить
+		
+		//====service-table
+		.services-table
+			
+			.services-table-row
+				label.checkbox-label.flex-box.flex-y-center
+					input(type='checkbox' name='' class='real-checkbox')
+					span.custom-checkbox
+					span.custom-checkbox__text Выбрать все
+					
+			//====table single row ====	
+			.services-table-row
+				label.checkbox-label.flex-box.flex-y-center
+					input(type='checkbox' name='' class='real-checkbox')
+					span.custom-checkbox
+					span.custom-checkbox__text Консультация
 				
-				//==== инпут=====
-				.form-box-input
-					input(type="text" placeholder="Введите название услуги").form-input
+				//==== ввести стоимость услуги ====
+				.form-box.service-price-val
+					input(type="text" placeholder="0")
 				
-				//====иконка лупа===
-				.form-box__icon
-					svg.svg-search
-						use(href="../img/svg-sprite.svg#svg-search")
+				//===== выбор валюты ===
+				+custom-select-icon('₾', ['₾', '$', '₽'], 'mySelect--absolute mySelect--slim')
 				
+				//=== иконка Удалить ====
+				.icon-delete
+			
+			
+			//====table single row ====	
+			.services-table-row
+				label.checkbox-label.flex-box.flex-y-center
+					input(type='checkbox' name='' class='real-checkbox')
+					span.custom-checkbox
+					span.custom-checkbox__text Первичный прием
 				
-				//====== .autocomplit-list -заготовка под блок с фамилиями для автоподстановки. Скрыта через класс d-none 
-				.autocomplete-list.scroll-vertical
-					ul
-						li Стоматолог
-						li Ортодонт
-						li Хирург
-			button.btn.btn--primary.btn-38 Все услуги
+				//==== ввести стоимость услуги ====
+				.form-box.service-price-val
+					input(type="text" placeholder="0")
+				
+				//===== выбор валюты ===
+				+custom-select-icon('₾', ['₾', '$', '₽'], 'mySelect--absolute mySelect--slim')
+				
+				//=== иконка Удалить ====
+				.icon-delete
+
+			//====table single row ====	
+			.services-table-row
+				label.checkbox-label.flex-box.flex-y-center
+					input(type='checkbox' name='' class='real-checkbox')
+					span.custom-checkbox
+					span.custom-checkbox__text Вторичный прием
+				
+				//==== ввести стоимость услуги ====
+				.form-box.service-price-val
+					input(type="text" placeholder="0")
+				
+				//===== выбор валюты ===
+				+custom-select-icon('₾', ['₾', '$', '₽'], 'mySelect--absolute mySelect--slim')
+				
+				//=== иконка Удалить ====
+				.icon-delete
+			//====table single row ====	
+			.services-table-row
+				label.checkbox-label.flex-box.flex-y-center
+					input(type='checkbox' name='' class='real-checkbox')
+					span.custom-checkbox
+					span.custom-checkbox__text Вторичный прием
+				
+				//==== ввести стоимость услуги ====
+				.form-box.service-price-val
+					input(type="text" placeholder="0")
+				
+				//===== выбор валюты ===
+				+custom-select-icon('₾', ['₾', '$', '₽'], 'mySelect--absolute mySelect--slim')
+				
+				//=== иконка Удалить ====
+				.icon-delete
+			//====== кнопка Сохранить =====
+			.mt-40.flex-x-right
+				button.btn.btn--primary Сохранить
