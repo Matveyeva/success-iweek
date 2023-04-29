@@ -11,13 +11,9 @@ block content
 	//=========== основной контент вкладка расписание ====================
 	.cabinet-body
 		.container-slim
-			include ../sections/_empl-schedule-content
-	include ../blocks/_rules-work-modal
-	include ../blocks/_rules-schedule
-	include ../blocks/_confirm-action-modal
-	include ../blocks/_edit-schedule-rules
-	include ../blocks/_empl-schedule-edit
+			include ../sections/_empl-service-list
+	
 
 block variables
 	-let bodyCl = "client-cabinet"
-	-let title = "Кабинет сотрудника | График работы";
+	-let title = "Кабинет сотрудника | Услуги";
