@@ -51,11 +51,13 @@
 		background: #fff;
 		border-bottom: 1px solid #e6e6e6;
 		border-right: 1px solid #e6e6e6;
+		border-left: 1px solid #e6e6e6;
 	}
 	.time-column-scroll{
 		height: calc(100% - 50px);/*высота колонки со временем*/
     	overflow: hidden;
    	    border-right: 1px solid #e6e6e6;
+   	    border-left: 1px solid #e6e6e6;
 		padding-bottom: 15px;
 		
 	}

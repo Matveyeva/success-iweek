@@ -28,9 +28,16 @@
 					.title-18.mb-24 Данные пациента
 					
 					.cabinet-form__name.mb-24
-						.form-box
+						.form-box.pos-rel
 							label.text-16 Фамилия
 							input(type="text" ).form-input
+
+							//====== .autocomplit-list -заготовка под блок с фамилиями для автоподстановки. Скрыта через класс d-none. 
+							.autocomplete-list.scroll-vertical.d-none
+								ul
+									li Иванидзе
+									li Иванидзе
+									li Иванидзе
 						.form-box
 							label.text-16 Имя
 							input(type="text" ).form-input
@@ -57,9 +64,16 @@
 								input.form-input(type="text" class="datepicker" )
 				
 				.cabinet-form__contacts.mb-24.flex-vertical-center.gap-32.flex-grow
-					.form-box
+					.form-box.pos-rel
 						label.text-16 Телефон
 						input(type="text" ).form-input
+						
+						//====== .autocomplit-list -заготовка под блок с фамилиями для автоподстановки. Скрыта через класс d-none. 
+						.autocomplete-list.scroll-vertical
+							ul
+								li +9995888777
+								li +9995888777
+								li +9995888777
 					.form-box
 						label.text-16 Дополнительный телефон
 						input(type="text" ).form-input
