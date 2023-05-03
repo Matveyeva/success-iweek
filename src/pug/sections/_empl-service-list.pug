@@ -8,16 +8,8 @@ main.employee-page-content
 		.employee-page-services__block.flex-box.gap-20
 			.form-box
 				.form-box-input.pos-rel
-					+custom-select-checkbox('Выбрать услугу (не более 10)',['Стоматология', 'Ортодонтия', 'Хирургия'], 'mySelect--absolute' )
+					+custom-select-checkbox('Выбрать услугу (не более 10)',['Стоматология', 'Ортодонтия', 'Хирургия', 'Хирургия','Стоматология', 'Ортодонтия', 'Хирургия', 'Хирургия'], 'mySelect--absolute' )
 					
-					
-					//====== .autocomplit-list -заготовка под блок с услугами для автоподстановки. Скрыта через класс d-none 
-					.autocomplete-list.scroll-vertical.d-none
-						ul
-							li Стоматология
-							li Ортодонтия
-							li Хирургия
-
 			button.btn.btn--orange.btn-38 Добавить
 		
 		//====service-table

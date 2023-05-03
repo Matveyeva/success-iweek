@@ -245,7 +245,9 @@
 .edit-visit-time{
 	position: relative;
 	
-	.tooltip-error-text{
+	
+}
+.tooltip-error-text{
 		
 		padding: 12px;
 		box-shadow: 0 0 12px #e7e7e7;
@@ -262,8 +264,6 @@
 		display: none;
 		&.visible{display: block;}
 	}
-}
-
 .modal-frame-wrapper .modal-frame__head.border-none{
 	border-bottom: 0px!important;
 	padding-bottom: 0!important;
@@ -278,7 +278,8 @@
 		top: 0px;
 		right: 0px;
 		border: none;
-	}
+		
+	}.icon-close{width: 20px; height: 20px;}
 }
 .icon-close.pos-abs{
 	border:none;

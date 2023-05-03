@@ -61,6 +61,7 @@
 		}
 	}
 }
+.form-box--260{width: 260px;}
 .string-input{
 	font-size: 18px;
 	line-height: 30px;
@@ -89,6 +90,7 @@ input.input-notvalid{
 	&::placeholder{
 		color: $red;
 	}
+	color: red;
 }
 label {
 	cursor: pointer;

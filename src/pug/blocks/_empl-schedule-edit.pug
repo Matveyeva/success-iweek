@@ -55,7 +55,7 @@
 						form.empl-schedule-form.tab-item(ct-content="2")
 							.category-wrapper.flex-column.gap-16
 								label.radiobutton-label.flex-box.flex-y-center
-									input(type='radio' name='free-day'  class='real-radio')
+									input(type='radio' name='free-day'  class='real-radio' checked)
 									span.custom-radio
 									span.custom-radio__text Отпуск
 								label.radiobutton-label.flex-box.flex-y-center
@@ -68,11 +68,22 @@
 									span.custom-radio__text Праздничный день
 							
 							.time-wrapper.flex-vertical-center.gap-32.pt-32
-								.form-item
-									+custom-select-icon2('Начало', ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00'], 'mySelect--absolute')
-										
-								.form-item
-									+custom-select-icon2('Окончание',  ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00'], 'mySelect--absolute')
+								.form-box.form-box--260
+									label.text-16 Начало
+									.mydatepicker
+										input.form-input(type="text" class="datepicker" placeholder="Выбрать дату")
+								.form-box.form-box--260.pos-rel
+									label.text-16 Окончание
+									
+									//===== Если пользователь выбрал дату Окончание раньше, чем дата Начало , инпуту добавляется класс input-notvalid, который задает красный цвет рамки и текста у инпута. Так же показывается тултип с классом tooltip-error-text. Сейчас это окно видимо, за счет класса visible
+									.mydatepicker
+										input.form-input.input-notvalid(type="text" class="datepicker" placeholder="Выбрать дату")
+									
+									
+									.tooltip-error-text.tooltip-modal.tooltip-modal--mini.text-12.visible
+										p Дата #[strong Окончание] не может быть раньше даты #[strong Начало]
+										.tooltip-close.icon-close
+									
 							
 							.form-btns.flex-vertical-center.gap-20.mt-auto
 								button.btn.btn--primary(type="submit") Добавить
