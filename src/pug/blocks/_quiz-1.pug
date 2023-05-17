@@ -1,0 +1,74 @@
+.quiz-plate.plate_1
+	//====== progress =======
+	.quiz-progress
+		span
+	.quiz-plate__body
+		.quiz-plate__form
+			//====радиобаттоны Юр лицо / Физ лицо
+			.emlp-reg-status(custom-tabs)
+				.tabs.flex-box-inline
+					//==== Юридическое лицо =======
+					label.radiobutton-label.flex-box.filter-toggle-item(ct-btn="1")
+						input(type='radio' name='emlp_status' value='' class='real-radio' checked) 
+						span.custom-radio
+						span.text-18 Юридическое лицо
+				
+					label.radiobutton-label.flex-box.filter-toggle-item(ct-btn="2")
+						input(type='radio' name='emlp_status' value='' class='real-radio')
+						span.custom-radio
+						span.text-18 Физическое лицо
+
+			
+				.tabs-content.flex-grow-1
+					//====== контент для Юр лица======
+					div.ct-content--active(ct-content="1")
+						.form-box
+							label.text-16.text-gray3 Название компании
+							input(type="text" ).form-input
+
+						.form-box
+							label.text-16.text-gray3 ИНН
+							input(type="text" ).form-input
+						.form-box
+							label.text-16.text-gray3 КПП
+							input(type="text" ).form-input
+						.form-box
+							label.text-16.text-gray3 Наименование банка
+							input(type="text" ).form-input
+
+						.form-box
+							label.text-16.text-gray3 БИК
+							input(type="text" ).form-input
+						.form-box
+							label.text-16.text-gray3 Расчетный счет
+							input(type="text" ).form-input
+
+
+
+
+
+					
+					//====== контент для Физ лица======
+					div(ct-content="2")
+						
+						.form-box
+							label.text-16.text-gray3 ФИО
+							input(type="text" ).form-input
+						.form-box
+							label.text-16.text-gray3 ИНН
+							input(type="text" ).form-input
+						.form-box
+							label.text-16.text-gray3 БИК
+							input(type="text" ).form-input
+
+						.form-box
+							label.text-16.text-gray3 Наименование банка
+							input(type="text" ).form-input
+						.form-box
+							label.text-16.text-gray3 Номер счета
+							input(type="text" ).form-input
+
+
+	.quiz-plate__footer.flex-vertical-center.gap-20
+		button.btn.btn--primary Назад
+		button.btn.btn--orange Далее

@@ -1,0 +1,36 @@
+.quiz-plate.plate_2
+	//====== progress =======
+	.quiz-progress
+		span
+	.quiz-plate__body
+		.quiz-plate__title
+			.text-24 Заполните контактные данные о себе
+			.text-18 Эти данные необходимы для работы на сервисе, и для связи с заказчиками. Мы не передаем ваши данные третьим лицам. 
+		.quiz-plate__form
+			.form-box
+				label.text-16.text-gray3 Ваш город  
+				input(type="text" ).form-input
+			.form-box
+				label.text-16.text-gray3 Имя 
+				input(type="text" ).form-input
+
+			.form-box
+				label.text-16.text-gray3 Фамилия 
+				input(type="text" ).form-input
+			.form-box
+				label.text-16.text-gray3 Дата рождения
+				.mydatepicker
+					input.form-input(type="text" class="datepicker" )
+			.form-box
+				label.text-16.text-gray3 Номер телефона 
+				input(type="text" ).form-input
+
+			.form-box
+				label.text-16.text-gray3 Электронная почта 
+				input(type="text" ).form-input
+
+	.quiz-plate__footer.flex-vertical-center.gap-20
+		button.btn.btn--primary Назад
+		button.btn.btn--orange Далее
+	.confirm-text.mt-8
+		p.text-12 Продолжая верификацию, вы подтверждаете, что проходите ее впервые, указываете достоверную информацию о себе и своих услугах, и соглашаетесь на обработку #[a(href="#!") персональных данных]

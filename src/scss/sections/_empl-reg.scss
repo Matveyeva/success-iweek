@@ -1,3 +1,11 @@
+.container-600{
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.quiz-plate__form{
+	padding-top: 40px;
+}
 .empl-reg-content{
 	position: relative;
 	
@@ -11,8 +19,11 @@
 	}
 	.empl-reg-btn{
 		padding-top: 60px;
-		.btn{min-width: 200px;}
+		
 	}
+}
+.quiz-plate__footer{
+	.btn{min-width: 200px; flex-grow:1}
 }
 .empl-quiz__body{
 	position: relative;
@@ -39,9 +50,17 @@
 		width: 20%;
 	}
 }
+.quiz-plate.plate_2{
+	.quiz-progress span{width: 40%;}
+}
 .quiz-plate__body{
 	padding-top: 60px;
+	.form-box+.form-box {
+			margin-top: 16px;
+		}
+	
 }
+.registr-quiz .quiz-plate__footer{padding-top: 40px;}
 .emlp-reg-status{
 	.tabs{
 		column-gap: 60px;
@@ -53,7 +72,12 @@
 	.radiobutton-label .real-radio:checked+.custom-radio +span{
 		color: $indigo;
 	}
- .tabs-content {
-	.form-box +.form-box{margin-top: 16px;}
- }
+
+}
+.quiz-plate__title{
+	text-align: center;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	&>*+*{margin-top: 16px;}
 }
