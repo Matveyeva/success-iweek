@@ -1,0 +1,141 @@
+mixin catalog-menu(obj)
+	.catalog-menu#cat-menu
+		a(href="#!").btn
+			
+			span Выбрать услугу
+			
+		//==== меню Уровень #1 =====
+		.catalog-menu-drop
+			ul.scroll-y
+				each item in obj
+					li
+						a(href="#!"+ item.link) 
+							//- svg(class="svg-"+ item.svg)
+							//- 	use(href="./img/svgSprite.svg#svg-"+ item.svg +"")
+							span !{item.text}
+						if item.menuArr
+							//==== меню Уровень #2 =====
+							.catalog-menu-submenu
+								ul.scroll-y
+									each menuEl in item.menuArr
+										li
+											a(href="#!"+ menuEl.link) !{ menuEl.text}
+											if menuEl.subMenu
+												//==== меню Уровень #3 =====
+												.catalog-menu-submenu
+													ul.scroll-y
+														each menuElSub in menuEl.subMenu
+															li 
+																a(href="#!"+  menuElSub.link) !{ menuElSub.text}
+																if menuElSub.subMenu
+																	//==== меню Уровень #4 =====
+																	.catalog-menu-submenu
+																		ul.scroll-y
+																			each menuItem in  menuElSub.subMenu
+																				li
+																					a(href="#!"+   menuItem.link) !{  menuItem.text}
+
+.quiz-plate.plate_3
+	//====== progress =======
+	.quiz-progress
+		span
+	.quiz-plate__body
+		.quiz-plate__title
+			.h2 Какие услуги вы предоставляете?
+
+			p Выберите одну или несколько категорий услуг. Изменить их можно будет в вашем профиле после прохождения регистрации.
+
+		+catalog-menu([
+			{
+				link:'', text:'Медицинские', svg:'cat1',
+				menuArr: [
+					{link:'', text: 'AV ресиверы'},
+					{link:'', text: 'MP3 плееры'},
+					{link:'', text: 'Акустические системы (колонки)'}, 
+					{link:'', text: 'Музыкальные центры'},
+					{link:'', text: 'Наушники и гарнитуры'},
+					{link:'', text: 'Системы домашнего кинотеатра'},
+					{link:'', text: 'Усилители'},
+					]
+			}, 
+			{
+				link:'', text:'Туристические',svg:'cat2',
+				menuArr:[
+					{link:'', text:'Встраиваемая техника',
+					subMenu:[
+						{link:'', text:'Вытяжки'},
+						{link:'', text:'Варочные поверхности'},
+						{link:'', text:'Духовые шкафы'},
+						{link:'', text:'Посудомоечные машины'},
+						{link:'', text:'Подогреватели посуды'},
+					]
+					},
+					{link:'', text:'Для дачи и сада'},
+					{link:'', text:'Климатическая техника',
+					subMenu:[
+						{link:'', text:'Обогреватели'},
+						{link:'', text:'Вентиляторы'},
+						{link:'', text:'Увлажнители воздуха'},
+						{link:'', text:'Очистители воздуха'},
+						{link:'', text:'Осушители воздуха'},
+						{link:'', text:'Кондинционеры'},
+					]},
+					{link:'', text:'Крупная бытовая техника',
+					subMenu:[
+						{link:'', text:'Холодильники'},
+						{link:'', text:'Стиральные машины'},
+						{link:'', text:'Газовые и электроплиты'},
+						{link:'', text:'Морозильные камеры'},
+						{link:'', text:'Сушильные машины'},
+						{link:'', text:'Стирально-сушильные машины'},
+					]
+					},
+					{link:'', text:'Мелкая бытовая техника',
+					subMenu:[
+						{link:'', text:'Соковыжималки'},
+						{link:'', text:'Минимойки'},
+						{link:'', text:'Ломтерезки'},
+						{link:'', text:'Швейные машинки и оверлоки'},
+						{link:'', text:'Фритюрницы'},
+						{link:'', text:'Кухонные комбайны'},
+					]},
+					{link:'', text:'Посуда',
+					subMenu:[
+						{link:'', text:'Столовые приборы',
+							subMenu:[{link:'', text:'Ложки'}]
+							},
+						{link:'', text:'Кухонные инструменты',
+							subMenu:[
+							{link:'', text:'Шумовки, ложки'}]
+						},
+						{link:'', text:'Кухонная посуда',
+							subMenu:[
+								{link:'', text:'Чайники'},
+								{link:'', text:'Чашки, кружки, бокалы'},
+								{link:'', text:'Заварочные чайники, кофейники'},
+								{link:'', text:'Миски'},
+								{link:'', text:'Сковороды, воки, сотейники, овалы'},
+							]
+						},
+						{link:'', text:'Распродажа посуды'},
+						{link:'', text:'Аксессуары',
+							subMenu:[
+								{link:'', text:'Мельницы, солонки, наборы для масла и уксуса'}]
+						}
+					]},
+					{link:'', text:'Тонометры'},
+					{link:'', text:'Электроинструмент',
+					subMenu:[
+						{link:'', text:'Измерительный инструмент'},
+						{link:'', text:'Аксессуары для электроинструментов'},
+						{link:'', text:'Дрели'},
+						{link:'', text:'Технические фены'},
+						{link:'', text:'Шуруповерты'},
+						{link:'', text:'Электроотвертки'},
+					]},
+				]
+			},
+			{
+				link:'', text:'Фото и видео'
+			}
+		])
