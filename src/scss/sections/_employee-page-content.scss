@@ -5,16 +5,23 @@
 	height: 100%;
 }
 .employee-page-content__header{
+	position: relative;
+	
 	padding-top: 32px;
 	padding-bottom: 32px;
 	display: flex;
-	align-items: center;
+	// align-items: center;
 	column-gap: 32px;
 	.employee-page-search{
 		width:400px;
 	} 
 	.employee-page-select{
 		width: 360px;
+	}
+	.btn-reset-wrapper{
+		position: absolute;
+		bottom: 26px;
+		left: 0;
 	}
 	
 }

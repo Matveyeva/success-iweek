@@ -9,6 +9,7 @@
 						svg.svg-search
 							use(href="./img/svg-sprite.svg#svg-search")
 					input(type="text" placeholder="ФИО сотрудника").form-input
+
 	
 		//==== выпадашка ======
 		.employee-page-select
@@ -20,6 +21,12 @@
 				input(type='checkbox' class='toggle-switch' )
 				span.real-switch
 				span.custom-switch__text Работаем по страховке
+	
+		//======= сбросить фильтры ==============
+		.btn-reset-wrapper
+			button.btn-reset
+				.icon-close
+				span Сбросить фильтры
 	.employee-page-content__table
 		table
 			tbody
