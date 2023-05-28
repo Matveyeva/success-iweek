@@ -14,28 +14,29 @@ mixin catalog-menu(obj)
 							//- 	use(href="./img/svgSprite.svg#svg-"+ item.svg +"")
 							span !{item.text}
 						if item.menuArr
-							//==== меню Уровень #2 =====
+							//==== меню Уровень #1 =====
 							.catalog-menu-submenu
 								ul.scroll-y
 									each menuEl in item.menuArr
 										li
-											a(href="#!"+ menuEl.link) !{ menuEl.text}
+											input(type="text" readonly value=""+ menuEl.text)
+											.carret-right
 											if menuEl.subMenu
-												//==== меню Уровень #3 =====
+												//==== меню Уровень #2 =====
 												.catalog-menu-submenu
 													ul.scroll-y
 														each menuElSub in menuEl.subMenu
 															li 
 																a(href="#!"+  menuElSub.link) !{ menuElSub.text}
 																if menuElSub.subMenu
-																	//==== меню Уровень #4 =====
+																	//==== меню Уровень #3 =====
 																	.catalog-menu-submenu
 																		ul.scroll-y
 																			each menuItem in  menuElSub.subMenu
 																				li
 																					a(href="#!"+   menuItem.link) !{  menuItem.text}
 
-.quiz-plate.plate_3
+.quiz-plate.plate_3.quiz-plate--active
 	//====== progress =======
 	.quiz-progress
 		span
@@ -136,6 +137,26 @@ mixin catalog-menu(obj)
 				]
 			},
 			{
-				link:'', text:'Фото и видео'
+				link:'', text:'Фото и видео', svg:'cat1',
+				menuArr:[
+					{link:'', text:'Выбрать все подкатегории',
+					subMenu:[
+						{link:'', text:'Фотосъемка'},
+						{link:'', text:'Видеосъемка'},
+						{link:'', text:'Запись аудио'},
+						{link:'', text:'Обработка фотографий'},
+						{link:'', text:'Модели для съемок'},
+						{link:'', text:'Монтаж и цветокоррекция'},
+						{link:'', text:'Аренда оборудования '},
+					]
+				}]	
 			}
 		])
+		
+
+
+
+
+
+
+
