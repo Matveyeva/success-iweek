@@ -6,7 +6,7 @@
 }
 .employee-page-content__header{
 	position: relative;
-	
+	align-items:flex-start;
 	padding-top: 32px;
 	padding-bottom: 32px;
 	display: flex;
@@ -18,10 +18,10 @@
 	.employee-page-select{
 		width: 360px;
 	}
-	.btn-reset-wrapper{
-		position: absolute;
-		bottom: 26px;
-		left: 0;
+	.employee-page-reset{
+		height: 44px;
+		display: flex;
+		align-items: center;
 	}
 	
 }
@@ -55,4 +55,7 @@
 	td:last-child{
 		width: 180px;
 	}
+}
+.langs-wrapper .btn-reset{
+	min-width: unset;
 }

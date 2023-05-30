@@ -117,9 +117,9 @@ main.employee-page-content
 					//========одна дата =======
 					.calendar__date-item.not-empty-cell
 						.calendar__date-row(frame-btn="empl-schedule-edit")
-							.text-rule 8:00 - 20:00
+							.text-holiday 8:00 - 20:00
 						.calendar__date-row(frame-btn="empl-schedule-edit")
-							.text-rule 8:00 - 20:00
+							.svg-plus
 						.calendar__date-row(frame-btn="empl-schedule-edit")
 							.svg-plus
 						span.date-value 09
@@ -127,9 +127,9 @@ main.employee-page-content
 					//========одна дата =======
 					.calendar__date-item.not-empty-cell
 						.calendar__date-row(frame-btn="empl-schedule-edit")
-							.text-rule 8:00 - 20:00
+							.text-holiday 8:00 - 20:00
 						.calendar__date-row(frame-btn="empl-schedule-edit")
-							.text-rule 8:00 - 20:00
+							.svg-plus
 						.calendar__date-row(frame-btn="empl-schedule-edit")
 							.svg-plus
 						span.date-value 10
@@ -258,5 +258,18 @@ main.employee-page-content
 					.calendar__date-item(frame-btn="empl-schedule-edit")
 						.svg-plus
 						span.date-value 31
+			
 			.employee-schedule-markers
 				.flex-vertical-center.gap-32
+					.green-marker
+						.markers-item
+							span
+							p График по правилам
+					.orange-marker
+						.markers-item
+							span
+							p Индивидуальный график
+					.red-marker
+						.markers-item
+							span
+							p Отпуск/Отгул

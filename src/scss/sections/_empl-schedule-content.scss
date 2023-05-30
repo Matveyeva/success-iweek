@@ -81,7 +81,7 @@
 		justify-content: flex-start;
 		.svg-plus{width: 20px; height: 20px;}
 	}
-	.text-individual, .text-rule{
+	.text-individual, .text-rule,.text-holiday{
 		color: #ef933e;
        background-color: rgba(239,147,62,.3);
 		width: 100%;
@@ -93,6 +93,14 @@
     	background-color: rgb(224, 246, 238);
 		
 	}
+	.text-holiday {
+		color: white;
+		background-color: #EC6660;
+
+	}
+}
+.employee-schedule-markers{
+	margin-top: 24px;
 }
 .calendar__date-item{
 	cursor:pointer;

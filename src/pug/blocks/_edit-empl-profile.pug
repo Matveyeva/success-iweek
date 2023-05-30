@@ -48,6 +48,16 @@
 						
 					+custom-select-checkbox('Выбрать язык',['Грузинский', 'Английский', 'Русский', 'Турецкий'], 'mySelect--absolute' )
 					
+					//==== Блок в который добавляются выбранные языки, с возможностью удаления по клику на иконку-крестик
+					.langs-wrapper.flex-vertical-center.gap-32.mt-8
+						button.btn-reset
+							span Грузинский
+							.icon-close
+						button.btn-reset
+							span Английский
+							.icon-close
+				
+
 				.cabinet-form__duration.mb-32
 					.title-18.mb-24 Длительность приема
 					.form-box.flex-vertical-center.gap-32

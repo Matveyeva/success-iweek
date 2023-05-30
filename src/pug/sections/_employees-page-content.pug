@@ -14,6 +14,12 @@
 		//==== выпадашка ======
 		.employee-page-select
 			+custom-select-checkbox('Специальность',['Стоматолог', 'Ортодонт', 'Терапевт','Хирург', 'Гинеколог'], 'mySelect--absolute' )
+		//======= сбросить фильтры ==============
+		.employee-page-reset
+			button.btn-reset
+				.icon-close
+				span Сбросить фильтры
+		
 		.blok-wrapper.ml-auto
 			.employee-add__btn(frame-btn="add-new-empl")
 				button.btn Добавить сотрудника
@@ -22,11 +28,7 @@
 				span.real-switch
 				span.custom-switch__text Работаем по страховке
 	
-		//======= сбросить фильтры ==============
-		.btn-reset-wrapper
-			button.btn-reset
-				.icon-close
-				span Сбросить фильтры
+	
 	.employee-page-content__table
 		table
 			tbody
