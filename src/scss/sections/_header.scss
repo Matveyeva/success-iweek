@@ -76,6 +76,11 @@
 	@media (max-width: 991px) {
 		gap:8px;
 	}
+	object{
+		width: 24px;
+		flex-shrink: 0;
+
+	}
 }
 /*header-menu-desktop*/
 .header-menu{
