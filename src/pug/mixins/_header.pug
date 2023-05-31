@@ -244,8 +244,8 @@ mixin header3(argMenu)
 						h1.text-44.text-white Лучшие специалисты в сфере 
 							span#change-text.text-gradient( data-categories="туристических услуг,медицины,красоты и здоровья, услуг для детей, образования") туристических услуг
 								span.line-gradient(data-categories="туристических услуг,медицины,красоты и здоровья, услуг для детей, образования") туристических услуг
-								
-					.header-search-block.flex-box.mb-32
+					
+					.header-search-block.header-search-single.flex-box.mb-16
 						form.header-search-form(action="" method="method")
 							.inputs-group
 								.form-box.form-box--icon-left
@@ -254,12 +254,8 @@ mixin header3(argMenu)
 											svg.svg-search
 												use(href="./img/svg-sprite.svg#svg-search")
 										input(type="text" placeholder="Специалист, услуга").form-input.form-input--64
-								
-								//===== выпадашка с городами =====
-								+custom-select-icon('Батуми', ['Кутаиси', 'Тбилиси', 'Зудгиди', 'Поти'], 'mySelect--absolute mySelect-input--icon  mySelect--64',  'svg-location', '')
-							
-							button(type="submit").btn-64.btn.btn--gradient Найти					
 					
+							button(type="submit").btn-64.btn.btn--gradient Найти
 					
 					.header-categories.flex-box
 						+catLabel('pin-map', 'Туристические услуги')
