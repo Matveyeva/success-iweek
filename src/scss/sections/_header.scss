@@ -20,7 +20,7 @@
 	}
 	&>*{width: 100%;}
 	.header-top{
-		margin-bottom: 64px;
+		margin-bottom: 93px;
 		align-items: center;
 		@media (max-width: 991px) {
 			flex-direction: column;
@@ -40,6 +40,10 @@
 	.header-center{
 		.header-title{
 			margin-bottom: 36px;
+			
+			.text-44 {
+					font-size: 46px;
+				}
 			@media(max-width:1439px){
 				.text-44{font-size: 38px;}
 			}
@@ -79,7 +83,7 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
-		top: 24px;
+		top: 32px;
 		background-color: #F8FBFF;
 	}
 }
@@ -88,23 +92,24 @@
 	z-index: 2;
 	border:2px solid #272740;
 	border-radius: 8px;
+	overflow: hidden;
 	.header-search-form {
 				
 		flex-grow: 1;
 	.inputs-group{ flex-grow:2}
 	}
-	.form-input.form-input--64,
+	.form-input.form-input--64{height: 60px;}
 	.mySelect.mySelect--64 .form-input {
 		height: 44px;
 	}
 
 	.inputs-group>div:last-child input {
-		border-radius: 8px 0 0 8px!important;
+		border-radius: 5px 0 0 5px!important;
 	}
-    .btn[type=submit]{margin-left: 0;border-radius: 0 8px 8px 0;}
+    .btn[type=submit]{margin-left: 0;border-radius: 0 5px 5px 0;}
 	.btn-64 {
-		line-height: 44px;
-		height: 44px;
+		line-height: 60px;
+		height: 60px;
 	}
 }
 .select-city-block{
