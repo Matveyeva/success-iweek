@@ -739,4 +739,67 @@ document.addEventListener("DOMContentLoaded", function (){
 			})
 		}
 	}
+	
+	/*=======input range  диапахон цен в строке с фильтрами  */
+	"use strict";
+
+	function Slider(slider) {
+
+		this.slider = slider;
+
+		slider.addEventListener('input', function () {
+			this.updateSliderOutput();
+			this.updateSliderLevel();
+		}.bind(this), false);
+
+		this.level = function () {
+			// actual slider
+			let level = this.slider.querySelector('.price-range-input');
+			
+			return level.value;
+		}
+
+		this.levelString = function () {
+			return parseInt(this.level());
+		}
+
+		this.adjust = function () {
+			const input = this.slider.querySelector('.price-range-input');
+
+			const rangeMin = input ? input.min : 0;
+			const rangeMax = input ? input.max : 0;
+
+			return (100 / (rangeMax - rangeMin))
+		}
+		
+		this.updateSliderOutput = function () {
+			// number indicator below slider
+			let output = this.slider.querySelector('.price-range-output');
+			// slider circle handle
+			let thumb = this.slider.querySelector('.price-range-thumb');
+			output.value = this.levelString();
+			console.log(this.adjust());
+			output.style.left = this.levelString() * this.adjust() + '%';
+			thumb.style.left = this.levelString() * this.adjust() + '%';
+		}
+
+		this.updateSliderLevel = function () {
+			// dark gray part of slider
+			let level = this.slider.querySelector('.price-range-level');
+			level.style.width = this.levelString() * this.adjust() + '%';
+		}
+
+	
+	}
+
+	let volumeSlider = document.getElementById('price-range');
+	let volumeSliderMobile = document.getElementById('price-range-mobile');
+	
+	if (volumeSlider) {
+		new Slider(volumeSlider);
+	}
+	if (volumeSliderMobile){
+		new Slider(volumeSliderMobile);
+	}
+	
 });

@@ -4,7 +4,7 @@ section.doc-cards-frame#main-content
 		.section-title
 			h2.text-32 Поиск специалиста
 				sup 327		
-		//======= filters =======
+		//======= filters  версия с кнопкой Экстренная помощь=======
 		.section-filters.block-1200
 			.doc-card__filter-group.flex-box.gap-16
 				//========= single filter select =======
@@ -29,7 +29,42 @@ section.doc-cards-frame#main-content
 					input(type='checkbox'  class='toggle-switch')
 					span.real-switch
 					span.custom-switch__text Экстренная помощь
-			
+		
+		//======= filters версия с ползунком стоимости =======
+		.section-filters.block-1200
+			.doc-card__filter-group.flex-vertical-center.gap-16
+				//========= single filter select =======
+				
+				+custom-select-icon('Услуга', ['Стоматолог', 'Ортодонт'], 'mySelect--absolute mySelect--38 ')
+				//========= single filter select =======
+				+custom-select-icon('Запись на ближайшее время', ['Запись на ближайшее время', 'Запись на завтра', 'Запись на выходные','Запись на ночные часы (с 22 до 6 часов)'], 'mySelect--absolute mySelect--38')
+				
+				//========= filter-toggle =======
+				.filter-toggle__block.flex-box.flex-y-center
+					label.filter-toggle-item
+						input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+						span По рейтингу
+					label.filter-toggle-item
+						input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+						span По стоимости
+					label.filter-toggle-item
+						input(type='radio' name='toggle-radiobtn' class='filter-radiobtn')
+						span По отзывам
+				
+				//=======диапазон стоимости Этот блок дублируется в модальноем окне .filters-modal с фильтрами на моб версии. =====
+				.desktop-filters-range
+					.price-range-wrapper
+						.text-14 стоимость не более
+						#price-range.price-range-slider
+							
+							output.price-range-output 1500
+							
+							.price-range-track
+								.price-range-thumb
+								.price-range-level
+							input.price-range-input(type='range' value='1500' min="0" max="3000")
+
+
 			//======= checkbox group =======	
 			.checkboxes-wrapper.flex-wrapper.flex-y-center
 				//====single item ======
@@ -57,10 +92,15 @@ section.doc-cards-frame#main-content
 					input(type='checkbox' name='form-checkbox' class='real-checkbox')
 					span.custom-checkbox 
 					span.custom-checkbox__text Работают по страховке
+				
+
+				
 				.ml-auto
 					button.btn-reset
 						.icon-close
 						span Сбросить фильтры
+	
+		
 		
 		.section-filters-mobile.hidden-1200
 			button.special-btn.text-14.text-gray3(frame-btn="filters-modal") Фильтр

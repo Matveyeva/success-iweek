@@ -54,6 +54,19 @@
 						span.real-switch
 						span.custom-switch__text Экстренная помощь
 				
+				.filters-modal__group.filters-modal__range
+					//==== этот блок дублируется на дексктоп версии в стрке с фильтрами =======
+					.price-range-wrapper
+						.text-14 стоимость не более
+						#price-range-mobile.price-range-slider
+							
+							output.price-range-output 1500
+							
+							.price-range-track
+								.price-range-thumb
+								.price-range-level
+							input.price-range-input(type='range' value='1500' min="0" max="3000")
+				
 				.filters-modal__group
 					.gap-15
 						//====single item ======
